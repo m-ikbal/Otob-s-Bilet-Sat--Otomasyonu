@@ -39,6 +39,7 @@ namespace Otobus_Otomasyon
         {
             string kullaniciAdi = txtKullaniciAdi.Text;
             string sifre = txtSifre.Text;
+            
 
             // Boş alan kontrolü
             if (string.IsNullOrEmpty(kullaniciAdi))
@@ -60,6 +61,10 @@ namespace Otobus_Otomasyon
                 MessageBox.Show("Kullanıcı Adı veya şifre hatalı", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            kullanici.sonGirisTarihi = DateTime.Now;
+            db.SaveChanges();
+
 
             // Kullanıcı rolüne göre işlem yap
             Session.KullaniciId = kullanici.kullaniciId;
