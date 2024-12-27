@@ -1,0 +1,930 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OBSODBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Araclar">
+          <Key>
+            <PropertyRef Name="aracId" />
+          </Key>
+          <Property Name="aracId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="aracAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="aracTipi" Type="varchar" MaxLength="50" />
+          <Property Name="aracPlakasi" Type="nvarchar" MaxLength="50" />
+          <Property Name="aracKapasitesi" Type="int" />
+        </EntityType>
+        <EntityType Name="BakimKayitlari">
+          <Key>
+            <PropertyRef Name="BakimId" />
+          </Key>
+          <Property Name="BakimId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AracId" Type="int" />
+          <Property Name="BakimTarihi" Type="datetime" />
+          <Property Name="BakimTipi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="text" />
+          <Property Name="BakimMaliyeti" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="ServisMerkezi" Type="nvarchar" MaxLength="100" />
+          <Property Name="SorumuKisi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Durum" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Biletler">
+          <Key>
+            <PropertyRef Name="biletId" />
+          </Key>
+          <Property Name="biletId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="biletTarih" Type="datetime" />
+          <Property Name="koltukId" Type="int" />
+          <Property Name="seferId" Type="int" />
+          <Property Name="yolcuId" Type="int" />
+          <Property Name="kullaniciId" Type="int" />
+          <Property Name="aracId" Type="int" />
+          <Property Name="PnrNumarasi" Type="nvarchar" MaxLength="50" />
+          <Property Name="biletUcreti" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="odemeYontemi" Type="nvarchar" MaxLength="50" />
+          <Property Name="BiletDurumu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Koltuklar">
+          <Key>
+            <PropertyRef Name="koltukId" />
+          </Key>
+          <Property Name="koltukId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="koltukNo" Type="int" />
+          <Property Name="koltukDurum" Type="nvarchar" MaxLength="50" />
+          <Property Name="aracId" Type="int" />
+        </EntityType>
+        <EntityType Name="Kullanicilar">
+          <Key>
+            <PropertyRef Name="kullaniciId" />
+          </Key>
+          <Property Name="kullaniciId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kullaniciAd" Type="nvarchar" MaxLength="50" />
+          <Property Name="kullaniciSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="kullaniciAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="kullaniciSifre" Type="nvarchar" MaxLength="50" />
+          <Property Name="kullaniciEposta" Type="nvarchar" MaxLength="50" />
+          <Property Name="kullaniciRol" Type="nvarchar" MaxLength="50" />
+          <Property Name="sonGirisTarihi" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Mesafeler">
+          <Key>
+            <PropertyRef Name="MesafeId" />
+          </Key>
+          <Property Name="MesafeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KalkisSehirId" Type="int" />
+          <Property Name="VarisSehirId" Type="int" />
+          <Property Name="MesafeKm" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="TahminiSureSaat" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="UcrefFaktoru" Type="decimal" Precision="5" Scale="2" />
+        </EntityType>
+        <EntityType Name="OdemeKayitlari">
+          <Key>
+            <PropertyRef Name="OdemeId" />
+          </Key>
+          <Property Name="OdemeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BiletId" Type="int" />
+          <Property Name="OdemeTarihi" Type="datetime" />
+          <Property Name="OdemeMiktari" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="OdemeYontemi" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Rezervasyon">
+          <Key>
+            <PropertyRef Name="RezerveId" />
+          </Key>
+          <Property Name="RezerveId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BiletId" Type="int" />
+          <Property Name="AracId" Type="int" />
+          <Property Name="KoltukId" Type="int" />
+          <Property Name="YolcuId" Type="int" />
+          <Property Name="KullaniciId" Type="int" />
+          <Property Name="SeferId" Type="int" />
+          <Property Name="RezerveTarihi" Type="datetime" />
+          <Property Name="OdemeDurumu" Type="nvarchar" MaxLength="50" />
+          <Property Name="RezerveDurumu" Type="bit" />
+        </EntityType>
+        <EntityType Name="Seferler">
+          <Key>
+            <PropertyRef Name="seferId" />
+          </Key>
+          <Property Name="seferId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VarisSaati" Type="datetime" />
+          <Property Name="KalkisSaati" Type="datetime" />
+          <Property Name="seferTarihi" Type="datetime" />
+          <Property Name="Kalkis" Type="nvarchar" MaxLength="50" />
+          <Property Name="Varis" Type="nvarchar" MaxLength="50" />
+          <Property Name="aracId" Type="int" />
+          <Property Name="seferDurum" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sehirler">
+          <Key>
+            <PropertyRef Name="sehirId" />
+          </Key>
+          <Property Name="sehirId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sehirAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="sehirPlaka" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SifreSifirlamaTokeni">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Token" Type="nvarchar" MaxLength="50" />
+          <Property Name="SonKullanmaTarihi" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Yolcular">
+          <Key>
+            <PropertyRef Name="yolcuId" />
+          </Key>
+          <Property Name="yolcuId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="yolcuAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="yolcuSoyadi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="yolcuTc" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="yolcuTelNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="yolcuEposta" Type="nvarchar" MaxLength="50" />
+          <Property Name="yolcuDogumTarihi" Type="date" />
+          <Property Name="yolcuCinsiyet" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_BakimKayitlari_Araclar">
+          <End Role="Araclar" Type="Self.Araclar" Multiplicity="0..1" />
+          <End Role="BakimKayitlari" Type="Self.BakimKayitlari" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Araclar">
+              <PropertyRef Name="aracId" />
+            </Principal>
+            <Dependent Role="BakimKayitlari">
+              <PropertyRef Name="AracId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Biletler_Araclar">
+          <End Role="Araclar" Type="Self.Araclar" Multiplicity="0..1" />
+          <End Role="Biletler" Type="Self.Biletler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Araclar">
+              <PropertyRef Name="aracId" />
+            </Principal>
+            <Dependent Role="Biletler">
+              <PropertyRef Name="aracId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Biletler_Koltuklar">
+          <End Role="Koltuklar" Type="Self.Koltuklar" Multiplicity="0..1" />
+          <End Role="Biletler" Type="Self.Biletler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Koltuklar">
+              <PropertyRef Name="koltukId" />
+            </Principal>
+            <Dependent Role="Biletler">
+              <PropertyRef Name="koltukId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Biletler_Kullanicilar">
+          <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+          <End Role="Biletler" Type="Self.Biletler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kullanicilar">
+              <PropertyRef Name="kullaniciId" />
+            </Principal>
+            <Dependent Role="Biletler">
+              <PropertyRef Name="kullaniciId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Biletler_Musteriler">
+          <End Role="Yolcular" Type="Self.Yolcular" Multiplicity="0..1" />
+          <End Role="Biletler" Type="Self.Biletler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Yolcular">
+              <PropertyRef Name="yolcuId" />
+            </Principal>
+            <Dependent Role="Biletler">
+              <PropertyRef Name="yolcuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Biletler_Seferler">
+          <End Role="Seferler" Type="Self.Seferler" Multiplicity="0..1" />
+          <End Role="Biletler" Type="Self.Biletler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Seferler">
+              <PropertyRef Name="seferId" />
+            </Principal>
+            <Dependent Role="Biletler">
+              <PropertyRef Name="seferId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Koltuklar_Araclar">
+          <End Role="Araclar" Type="Self.Araclar" Multiplicity="0..1" />
+          <End Role="Koltuklar" Type="Self.Koltuklar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Araclar">
+              <PropertyRef Name="aracId" />
+            </Principal>
+            <Dependent Role="Koltuklar">
+              <PropertyRef Name="aracId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mesafeler_Sehirler">
+          <End Role="Sehirler" Type="Self.Sehirler" Multiplicity="0..1" />
+          <End Role="Mesafeler" Type="Self.Mesafeler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sehirler">
+              <PropertyRef Name="sehirId" />
+            </Principal>
+            <Dependent Role="Mesafeler">
+              <PropertyRef Name="KalkisSehirId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mesafeler_Sehirler1">
+          <End Role="Sehirler" Type="Self.Sehirler" Multiplicity="0..1" />
+          <End Role="Mesafeler" Type="Self.Mesafeler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sehirler">
+              <PropertyRef Name="sehirId" />
+            </Principal>
+            <Dependent Role="Mesafeler">
+              <PropertyRef Name="VarisSehirId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Seferler_Araclar">
+          <End Role="Araclar" Type="Self.Araclar" Multiplicity="0..1" />
+          <End Role="Seferler" Type="Self.Seferler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Araclar">
+              <PropertyRef Name="aracId" />
+            </Principal>
+            <Dependent Role="Seferler">
+              <PropertyRef Name="aracId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="BiletListesi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SeferListesi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="OBSODBModelStoreContainer">
+          <EntitySet Name="Araclar" EntityType="Self.Araclar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BakimKayitlari" EntityType="Self.BakimKayitlari" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Biletler" EntityType="Self.Biletler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Koltuklar" EntityType="Self.Koltuklar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mesafeler" EntityType="Self.Mesafeler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OdemeKayitlari" EntityType="Self.OdemeKayitlari" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rezervasyon" EntityType="Self.Rezervasyon" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Seferler" EntityType="Self.Seferler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sehirler" EntityType="Self.Sehirler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SifreSifirlamaTokeni" EntityType="Self.SifreSifirlamaTokeni" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Yolcular" EntityType="Self.Yolcular" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BakimKayitlari_Araclar" Association="Self.FK_BakimKayitlari_Araclar">
+            <End Role="Araclar" EntitySet="Araclar" />
+            <End Role="BakimKayitlari" EntitySet="BakimKayitlari" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Biletler_Araclar" Association="Self.FK_Biletler_Araclar">
+            <End Role="Araclar" EntitySet="Araclar" />
+            <End Role="Biletler" EntitySet="Biletler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Biletler_Koltuklar" Association="Self.FK_Biletler_Koltuklar">
+            <End Role="Koltuklar" EntitySet="Koltuklar" />
+            <End Role="Biletler" EntitySet="Biletler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Biletler_Kullanicilar" Association="Self.FK_Biletler_Kullanicilar">
+            <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+            <End Role="Biletler" EntitySet="Biletler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Biletler_Musteriler" Association="Self.FK_Biletler_Musteriler">
+            <End Role="Yolcular" EntitySet="Yolcular" />
+            <End Role="Biletler" EntitySet="Biletler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Biletler_Seferler" Association="Self.FK_Biletler_Seferler">
+            <End Role="Seferler" EntitySet="Seferler" />
+            <End Role="Biletler" EntitySet="Biletler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Koltuklar_Araclar" Association="Self.FK_Koltuklar_Araclar">
+            <End Role="Araclar" EntitySet="Araclar" />
+            <End Role="Koltuklar" EntitySet="Koltuklar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mesafeler_Sehirler" Association="Self.FK_Mesafeler_Sehirler">
+            <End Role="Sehirler" EntitySet="Sehirler" />
+            <End Role="Mesafeler" EntitySet="Mesafeler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mesafeler_Sehirler1" Association="Self.FK_Mesafeler_Sehirler1">
+            <End Role="Sehirler" EntitySet="Sehirler" />
+            <End Role="Mesafeler" EntitySet="Mesafeler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Seferler_Araclar" Association="Self.FK_Seferler_Araclar">
+            <End Role="Araclar" EntitySet="Araclar" />
+            <End Role="Seferler" EntitySet="Seferler" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OBSODBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Araclar">
+          <Key>
+            <PropertyRef Name="aracId" />
+          </Key>
+          <Property Name="aracId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="aracAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="aracTipi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="aracPlakasi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="aracKapasitesi" Type="Int32" />
+          <NavigationProperty Name="BakimKayitlari" Relationship="Self.FK_BakimKayitlari_Araclar" FromRole="Araclar" ToRole="BakimKayitlari" />
+          <NavigationProperty Name="Biletler" Relationship="Self.FK_Biletler_Araclar" FromRole="Araclar" ToRole="Biletler" />
+          <NavigationProperty Name="Seferler" Relationship="Self.FK_Seferler_Araclar" FromRole="Araclar" ToRole="Seferler" />
+          <NavigationProperty Name="Koltuklar" Relationship="OBSODBModel.FK_Koltuklar_Araclar" FromRole="Araclar" ToRole="Koltuklar" />
+        </EntityType>
+        <EntityType Name="BakimKayitlari">
+          <Key>
+            <PropertyRef Name="BakimId" />
+          </Key>
+          <Property Name="BakimId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AracId" Type="Int32" />
+          <Property Name="BakimTarihi" Type="DateTime" Precision="3" />
+          <Property Name="BakimTipi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="BakimMaliyeti" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ServisMerkezi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SorumuKisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Durum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Araclar" Relationship="Self.FK_BakimKayitlari_Araclar" FromRole="BakimKayitlari" ToRole="Araclar" />
+        </EntityType>
+        <EntityType Name="Biletler">
+          <Key>
+            <PropertyRef Name="biletId" />
+          </Key>
+          <Property Name="biletId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="biletTarih" Type="DateTime" />
+          <Property Name="koltukId" Type="Int32" />
+          <Property Name="seferId" Type="Int32" />
+          <Property Name="yolcuId" Type="Int32" />
+          <Property Name="kullaniciId" Type="Int32" />
+          <Property Name="aracId" Type="Int32" />
+          <Property Name="PnrNumarasi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="biletUcreti" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="odemeYontemi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Araclar" Relationship="Self.FK_Biletler_Araclar" FromRole="Biletler" ToRole="Araclar" />
+          <NavigationProperty Name="Koltuklar" Relationship="Self.FK_Biletler_Koltuklar" FromRole="Biletler" ToRole="Koltuklar" />
+          <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_Biletler_Kullanicilar" FromRole="Biletler" ToRole="Kullanicilar" />
+          <NavigationProperty Name="Yolcular" Relationship="Self.FK_Biletler_Musteriler" FromRole="Biletler" ToRole="Yolcular" />
+          <NavigationProperty Name="Seferler" Relationship="Self.FK_Biletler_Seferler" FromRole="Biletler" ToRole="Seferler" />
+          <Property Name="BiletDurumu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Koltuklar">
+          <Key>
+            <PropertyRef Name="koltukId" />
+          </Key>
+          <Property Name="koltukId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="koltukNo" Type="Int32" />
+          <Property Name="koltukDurum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Biletler" Relationship="Self.FK_Biletler_Koltuklar" FromRole="Koltuklar" ToRole="Biletler" />
+          <Property Name="aracId" Type="Int32" />
+          <NavigationProperty Name="Araclar" Relationship="OBSODBModel.FK_Koltuklar_Araclar" FromRole="Koltuklar" ToRole="Araclar" />
+        </EntityType>
+        <EntityType Name="Kullanicilar">
+          <Key>
+            <PropertyRef Name="kullaniciId" />
+          </Key>
+          <Property Name="kullaniciId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kullaniciAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kullaniciSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kullaniciSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kullaniciEposta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kullaniciRol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sonGirisTarihi" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Biletler" Relationship="Self.FK_Biletler_Kullanicilar" FromRole="Kullanicilar" ToRole="Biletler" />
+        </EntityType>
+        <EntityType Name="Mesafeler">
+          <Key>
+            <PropertyRef Name="MesafeId" />
+          </Key>
+          <Property Name="MesafeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KalkisSehirId" Type="Int32" />
+          <Property Name="VarisSehirId" Type="Int32" />
+          <Property Name="MesafeKm" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="TahminiSureSaat" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="UcrefFaktoru" Type="Decimal" Precision="5" Scale="2" />
+          <NavigationProperty Name="Sehirler" Relationship="Self.FK_Mesafeler_Sehirler" FromRole="Mesafeler" ToRole="Sehirler" />
+          <NavigationProperty Name="Sehirler1" Relationship="Self.FK_Mesafeler_Sehirler1" FromRole="Mesafeler" ToRole="Sehirler" />
+        </EntityType>
+        <EntityType Name="OdemeKayitlari">
+          <Key>
+            <PropertyRef Name="OdemeId" />
+          </Key>
+          <Property Name="OdemeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BiletId" Type="Int32" />
+          <Property Name="OdemeTarihi" Type="DateTime" Precision="3" />
+          <Property Name="OdemeMiktari" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="OdemeYontemi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Rezervasyon">
+          <Key>
+            <PropertyRef Name="RezerveId" />
+          </Key>
+          <Property Name="RezerveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BiletId" Type="Int32" />
+          <Property Name="AracId" Type="Int32" />
+          <Property Name="KoltukId" Type="Int32" />
+          <Property Name="YolcuId" Type="Int32" />
+          <Property Name="KullaniciId" Type="Int32" />
+          <Property Name="SeferId" Type="Int32" />
+          <Property Name="RezerveTarihi" Type="DateTime" Precision="3" />
+          <Property Name="OdemeDurumu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RezerveDurumu" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Seferler">
+          <Key>
+            <PropertyRef Name="seferId" />
+          </Key>
+          <Property Name="seferId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VarisSaati" Type="DateTime" Precision="3" />
+          <Property Name="KalkisSaati" Type="DateTime" Precision="3" />
+          <Property Name="seferTarihi" Type="DateTime" Precision="3" />
+          <Property Name="Kalkis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Varis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="aracId" Type="Int32" />
+          <Property Name="seferDurum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Araclar" Relationship="Self.FK_Seferler_Araclar" FromRole="Seferler" ToRole="Araclar" />
+          <NavigationProperty Name="Biletler" Relationship="Self.FK_Biletler_Seferler" FromRole="Seferler" ToRole="Biletler" />
+        </EntityType>
+        <EntityType Name="Sehirler">
+          <Key>
+            <PropertyRef Name="sehirId" />
+          </Key>
+          <Property Name="sehirId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sehirAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sehirPlaka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Mesafeler" Relationship="Self.FK_Mesafeler_Sehirler" FromRole="Sehirler" ToRole="Mesafeler" />
+          <NavigationProperty Name="Mesafeler1" Relationship="Self.FK_Mesafeler_Sehirler1" FromRole="Sehirler" ToRole="Mesafeler" />
+        </EntityType>
+        <EntityType Name="SifreSifirlamaTokeni">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Token" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SonKullanmaTarihi" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Yolcular">
+          <Key>
+            <PropertyRef Name="yolcuId" />
+          </Key>
+          <Property Name="yolcuId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="yolcuAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="yolcuSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="yolcuTc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="yolcuTelNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="yolcuEposta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="yolcuDogumTarihi" Type="DateTime" Precision="0" />
+          <Property Name="yolcuCinsiyet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Biletler" Relationship="Self.FK_Biletler_Musteriler" FromRole="Yolcular" ToRole="Biletler" />
+        </EntityType>
+        <Association Name="FK_BakimKayitlari_Araclar">
+          <End Role="Araclar" Type="Self.Araclar" Multiplicity="0..1" />
+          <End Role="BakimKayitlari" Type="Self.BakimKayitlari" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Araclar">
+              <PropertyRef Name="aracId" />
+            </Principal>
+            <Dependent Role="BakimKayitlari">
+              <PropertyRef Name="AracId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Biletler_Araclar">
+          <End Role="Araclar" Type="Self.Araclar" Multiplicity="0..1" />
+          <End Role="Biletler" Type="Self.Biletler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Araclar">
+              <PropertyRef Name="aracId" />
+            </Principal>
+            <Dependent Role="Biletler">
+              <PropertyRef Name="aracId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Seferler_Araclar">
+          <End Role="Araclar" Type="Self.Araclar" Multiplicity="0..1" />
+          <End Role="Seferler" Type="Self.Seferler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Araclar">
+              <PropertyRef Name="aracId" />
+            </Principal>
+            <Dependent Role="Seferler">
+              <PropertyRef Name="aracId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Biletler_Koltuklar">
+          <End Role="Koltuklar" Type="Self.Koltuklar" Multiplicity="0..1" />
+          <End Role="Biletler" Type="Self.Biletler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Koltuklar">
+              <PropertyRef Name="koltukId" />
+            </Principal>
+            <Dependent Role="Biletler">
+              <PropertyRef Name="koltukId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Biletler_Kullanicilar">
+          <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+          <End Role="Biletler" Type="Self.Biletler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kullanicilar">
+              <PropertyRef Name="kullaniciId" />
+            </Principal>
+            <Dependent Role="Biletler">
+              <PropertyRef Name="kullaniciId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Biletler_Musteriler">
+          <End Role="Yolcular" Type="Self.Yolcular" Multiplicity="0..1" />
+          <End Role="Biletler" Type="Self.Biletler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Yolcular">
+              <PropertyRef Name="yolcuId" />
+            </Principal>
+            <Dependent Role="Biletler">
+              <PropertyRef Name="yolcuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Biletler_Seferler">
+          <End Role="Seferler" Type="Self.Seferler" Multiplicity="0..1" />
+          <End Role="Biletler" Type="Self.Biletler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Seferler">
+              <PropertyRef Name="seferId" />
+            </Principal>
+            <Dependent Role="Biletler">
+              <PropertyRef Name="seferId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mesafeler_Sehirler">
+          <End Role="Sehirler" Type="Self.Sehirler" Multiplicity="0..1" />
+          <End Role="Mesafeler" Type="Self.Mesafeler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sehirler">
+              <PropertyRef Name="sehirId" />
+            </Principal>
+            <Dependent Role="Mesafeler">
+              <PropertyRef Name="KalkisSehirId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mesafeler_Sehirler1">
+          <End Role="Sehirler" Type="Self.Sehirler" Multiplicity="0..1" />
+          <End Role="Mesafeler" Type="Self.Mesafeler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sehirler">
+              <PropertyRef Name="sehirId" />
+            </Principal>
+            <Dependent Role="Mesafeler">
+              <PropertyRef Name="VarisSehirId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OBSODBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Araclar" EntityType="Self.Araclar" />
+          <EntitySet Name="BakimKayitlari" EntityType="Self.BakimKayitlari" />
+          <EntitySet Name="Biletler" EntityType="Self.Biletler" />
+          <EntitySet Name="Koltuklar" EntityType="Self.Koltuklar" />
+          <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" />
+          <EntitySet Name="Mesafeler" EntityType="Self.Mesafeler" />
+          <EntitySet Name="OdemeKayitlari" EntityType="Self.OdemeKayitlari" />
+          <EntitySet Name="Rezervasyon" EntityType="Self.Rezervasyon" />
+          <EntitySet Name="Seferler" EntityType="Self.Seferler" />
+          <EntitySet Name="Sehirler" EntityType="Self.Sehirler" />
+          <EntitySet Name="SifreSifirlamaTokeni" EntityType="Self.SifreSifirlamaTokeni" />
+          <EntitySet Name="Yolcular" EntityType="Self.Yolcular" />
+          <AssociationSet Name="FK_BakimKayitlari_Araclar" Association="Self.FK_BakimKayitlari_Araclar">
+            <End Role="Araclar" EntitySet="Araclar" />
+            <End Role="BakimKayitlari" EntitySet="BakimKayitlari" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Biletler_Araclar" Association="Self.FK_Biletler_Araclar">
+            <End Role="Araclar" EntitySet="Araclar" />
+            <End Role="Biletler" EntitySet="Biletler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Seferler_Araclar" Association="Self.FK_Seferler_Araclar">
+            <End Role="Araclar" EntitySet="Araclar" />
+            <End Role="Seferler" EntitySet="Seferler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Biletler_Koltuklar" Association="Self.FK_Biletler_Koltuklar">
+            <End Role="Koltuklar" EntitySet="Koltuklar" />
+            <End Role="Biletler" EntitySet="Biletler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Biletler_Kullanicilar" Association="Self.FK_Biletler_Kullanicilar">
+            <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+            <End Role="Biletler" EntitySet="Biletler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Biletler_Musteriler" Association="Self.FK_Biletler_Musteriler">
+            <End Role="Yolcular" EntitySet="Yolcular" />
+            <End Role="Biletler" EntitySet="Biletler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Biletler_Seferler" Association="Self.FK_Biletler_Seferler">
+            <End Role="Seferler" EntitySet="Seferler" />
+            <End Role="Biletler" EntitySet="Biletler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mesafeler_Sehirler" Association="Self.FK_Mesafeler_Sehirler">
+            <End Role="Sehirler" EntitySet="Sehirler" />
+            <End Role="Mesafeler" EntitySet="Mesafeler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mesafeler_Sehirler1" Association="Self.FK_Mesafeler_Sehirler1">
+            <End Role="Sehirler" EntitySet="Sehirler" />
+            <End Role="Mesafeler" EntitySet="Mesafeler" />
+          </AssociationSet>
+          <FunctionImport Name="SeferListesi" ReturnType="Collection(OBSODBModel.SeferListesi_Result)" />
+          <AssociationSet Name="FK_Koltuklar_Araclar" Association="OBSODBModel.FK_Koltuklar_Araclar">
+            <End Role="Araclar" EntitySet="Araclar" />
+            <End Role="Koltuklar" EntitySet="Koltuklar" />
+          </AssociationSet>
+          <FunctionImport Name="BiletListesi" ReturnType="Collection(OBSODBModel.BiletListesi_Result2)" />
+        </EntityContainer>
+        <ComplexType Name="SeferListesi_Result">
+          <Property Type="Int32" Name="SeferId" Nullable="false" />
+          <Property Type="DateTime" Name="Varış_Saati" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Kalkış_Saati" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Sefer_Tarihi" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Kalkış_Yeri" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Varış_Yeri" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Sefer_Durumu" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Araç_Türü" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="BiletListesi_Result">
+          <Property Type="DateTime" Name="biletTarih" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="koltukNo" Nullable="true" />
+          <Property Type="String" Name="PnrNumarasi" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="biletUcreti" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Int32" Name="Bilet_Numarası" Nullable="false" />
+          <Property Type="String" Name="Ad_Soyad" Nullable="false" MaxLength="101" />
+          <Property Type="String" Name="Kalkış_Yeri" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Varış_Yeri" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="BiletDurumu" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="BiletListesi_Result1">
+          <Property Type="Int32" Name="Bilet_Numarası" Nullable="false" />
+          <Property Type="String" Name="Ad_Soyad" Nullable="false" MaxLength="101" />
+          <Property Type="String" Name="Kalkış_Yeri" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Varış_Yeri" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="biletTarih" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="koltukNo" Nullable="true" />
+          <Property Type="String" Name="PnrNumarasi" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="biletUcreti" Nullable="true" Precision="10" Scale="2" />
+        </ComplexType>
+        <Association Name="FK_Koltuklar_Araclar">
+          <End Type="OBSODBModel.Araclar" Role="Araclar" Multiplicity="0..1" />
+          <End Type="OBSODBModel.Koltuklar" Role="Koltuklar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Araclar">
+              <PropertyRef Name="aracId" />
+            </Principal>
+            <Dependent Role="Koltuklar">
+              <PropertyRef Name="aracId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="BiletListesi2_Result">
+          <Property Type="Int32" Name="Bilet_Numarası" Nullable="false" />
+          <Property Type="String" Name="Ad_Soyad" Nullable="false" MaxLength="101" />
+          <Property Type="String" Name="Kalkış_Yeri" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Varış_Yeri" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="biletTarih" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="koltukNo" Nullable="true" />
+          <Property Type="String" Name="PnrNumarasi" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="biletUcreti" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="String" Name="BiletDurumu" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="BiletListesi_Result2">
+          <Property Type="Int32" Name="Bilet_Numarası" Nullable="false" />
+          <Property Type="String" Name="Ad_Soyad" Nullable="false" MaxLength="101" />
+          <Property Type="String" Name="Kalkış_Yeri" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Varış_Yeri" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="biletTarih" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="koltukNo" Nullable="true" />
+          <Property Type="String" Name="PnrNumarasi" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="biletUcreti" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="String" Name="BiletDurumu" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OBSODBModelStoreContainer" CdmEntityContainer="OBSODBEntities">
+          <EntitySetMapping Name="Araclar">
+            <EntityTypeMapping TypeName="OBSODBModel.Araclar">
+              <MappingFragment StoreEntitySet="Araclar">
+                <ScalarProperty Name="aracId" ColumnName="aracId" />
+                <ScalarProperty Name="aracAdi" ColumnName="aracAdi" />
+                <ScalarProperty Name="aracTipi" ColumnName="aracTipi" />
+                <ScalarProperty Name="aracPlakasi" ColumnName="aracPlakasi" />
+                <ScalarProperty Name="aracKapasitesi" ColumnName="aracKapasitesi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BakimKayitlari">
+            <EntityTypeMapping TypeName="OBSODBModel.BakimKayitlari">
+              <MappingFragment StoreEntitySet="BakimKayitlari">
+                <ScalarProperty Name="BakimId" ColumnName="BakimId" />
+                <ScalarProperty Name="AracId" ColumnName="AracId" />
+                <ScalarProperty Name="BakimTarihi" ColumnName="BakimTarihi" />
+                <ScalarProperty Name="BakimTipi" ColumnName="BakimTipi" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="BakimMaliyeti" ColumnName="BakimMaliyeti" />
+                <ScalarProperty Name="ServisMerkezi" ColumnName="ServisMerkezi" />
+                <ScalarProperty Name="SorumuKisi" ColumnName="SorumuKisi" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Biletler">
+            <EntityTypeMapping TypeName="OBSODBModel.Biletler">
+              <MappingFragment StoreEntitySet="Biletler">
+                <ScalarProperty Name="BiletDurumu" ColumnName="BiletDurumu" />
+                <ScalarProperty Name="biletId" ColumnName="biletId" />
+                <ScalarProperty Name="biletTarih" ColumnName="biletTarih" />
+                <ScalarProperty Name="koltukId" ColumnName="koltukId" />
+                <ScalarProperty Name="seferId" ColumnName="seferId" />
+                <ScalarProperty Name="yolcuId" ColumnName="yolcuId" />
+                <ScalarProperty Name="kullaniciId" ColumnName="kullaniciId" />
+                <ScalarProperty Name="aracId" ColumnName="aracId" />
+                <ScalarProperty Name="PnrNumarasi" ColumnName="PnrNumarasi" />
+                <ScalarProperty Name="biletUcreti" ColumnName="biletUcreti" />
+                <ScalarProperty Name="odemeYontemi" ColumnName="odemeYontemi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Koltuklar">
+            <EntityTypeMapping TypeName="OBSODBModel.Koltuklar">
+              <MappingFragment StoreEntitySet="Koltuklar">
+                <ScalarProperty Name="aracId" ColumnName="aracId" />
+                <ScalarProperty Name="koltukId" ColumnName="koltukId" />
+                <ScalarProperty Name="koltukNo" ColumnName="koltukNo" />
+                <ScalarProperty Name="koltukDurum" ColumnName="koltukDurum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kullanicilar">
+            <EntityTypeMapping TypeName="OBSODBModel.Kullanicilar">
+              <MappingFragment StoreEntitySet="Kullanicilar">
+                <ScalarProperty Name="kullaniciId" ColumnName="kullaniciId" />
+                <ScalarProperty Name="kullaniciAd" ColumnName="kullaniciAd" />
+                <ScalarProperty Name="kullaniciSoyad" ColumnName="kullaniciSoyad" />
+                <ScalarProperty Name="kullaniciAdi" ColumnName="kullaniciAdi" />
+                <ScalarProperty Name="kullaniciSifre" ColumnName="kullaniciSifre" />
+                <ScalarProperty Name="kullaniciEposta" ColumnName="kullaniciEposta" />
+                <ScalarProperty Name="kullaniciRol" ColumnName="kullaniciRol" />
+                <ScalarProperty Name="sonGirisTarihi" ColumnName="sonGirisTarihi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mesafeler">
+            <EntityTypeMapping TypeName="OBSODBModel.Mesafeler">
+              <MappingFragment StoreEntitySet="Mesafeler">
+                <ScalarProperty Name="MesafeId" ColumnName="MesafeId" />
+                <ScalarProperty Name="KalkisSehirId" ColumnName="KalkisSehirId" />
+                <ScalarProperty Name="VarisSehirId" ColumnName="VarisSehirId" />
+                <ScalarProperty Name="MesafeKm" ColumnName="MesafeKm" />
+                <ScalarProperty Name="TahminiSureSaat" ColumnName="TahminiSureSaat" />
+                <ScalarProperty Name="UcrefFaktoru" ColumnName="UcrefFaktoru" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OdemeKayitlari">
+            <EntityTypeMapping TypeName="OBSODBModel.OdemeKayitlari">
+              <MappingFragment StoreEntitySet="OdemeKayitlari">
+                <ScalarProperty Name="OdemeId" ColumnName="OdemeId" />
+                <ScalarProperty Name="BiletId" ColumnName="BiletId" />
+                <ScalarProperty Name="OdemeTarihi" ColumnName="OdemeTarihi" />
+                <ScalarProperty Name="OdemeMiktari" ColumnName="OdemeMiktari" />
+                <ScalarProperty Name="OdemeYontemi" ColumnName="OdemeYontemi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rezervasyon">
+            <EntityTypeMapping TypeName="OBSODBModel.Rezervasyon">
+              <MappingFragment StoreEntitySet="Rezervasyon">
+                <ScalarProperty Name="RezerveId" ColumnName="RezerveId" />
+                <ScalarProperty Name="BiletId" ColumnName="BiletId" />
+                <ScalarProperty Name="AracId" ColumnName="AracId" />
+                <ScalarProperty Name="KoltukId" ColumnName="KoltukId" />
+                <ScalarProperty Name="YolcuId" ColumnName="YolcuId" />
+                <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+                <ScalarProperty Name="SeferId" ColumnName="SeferId" />
+                <ScalarProperty Name="RezerveTarihi" ColumnName="RezerveTarihi" />
+                <ScalarProperty Name="OdemeDurumu" ColumnName="OdemeDurumu" />
+                <ScalarProperty Name="RezerveDurumu" ColumnName="RezerveDurumu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Seferler">
+            <EntityTypeMapping TypeName="OBSODBModel.Seferler">
+              <MappingFragment StoreEntitySet="Seferler">
+                <ScalarProperty Name="seferId" ColumnName="seferId" />
+                <ScalarProperty Name="VarisSaati" ColumnName="VarisSaati" />
+                <ScalarProperty Name="KalkisSaati" ColumnName="KalkisSaati" />
+                <ScalarProperty Name="seferTarihi" ColumnName="seferTarihi" />
+                <ScalarProperty Name="Kalkis" ColumnName="Kalkis" />
+                <ScalarProperty Name="Varis" ColumnName="Varis" />
+                <ScalarProperty Name="aracId" ColumnName="aracId" />
+                <ScalarProperty Name="seferDurum" ColumnName="seferDurum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sehirler">
+            <EntityTypeMapping TypeName="OBSODBModel.Sehirler">
+              <MappingFragment StoreEntitySet="Sehirler">
+                <ScalarProperty Name="sehirId" ColumnName="sehirId" />
+                <ScalarProperty Name="sehirAdi" ColumnName="sehirAdi" />
+                <ScalarProperty Name="sehirPlaka" ColumnName="sehirPlaka" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SifreSifirlamaTokeni">
+            <EntityTypeMapping TypeName="OBSODBModel.SifreSifirlamaTokeni">
+              <MappingFragment StoreEntitySet="SifreSifirlamaTokeni">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="SonKullanmaTarihi" ColumnName="SonKullanmaTarihi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Yolcular">
+            <EntityTypeMapping TypeName="OBSODBModel.Yolcular">
+              <MappingFragment StoreEntitySet="Yolcular">
+                <ScalarProperty Name="yolcuId" ColumnName="yolcuId" />
+                <ScalarProperty Name="yolcuAdi" ColumnName="yolcuAdi" />
+                <ScalarProperty Name="yolcuSoyadi" ColumnName="yolcuSoyadi" />
+                <ScalarProperty Name="yolcuTc" ColumnName="yolcuTc" />
+                <ScalarProperty Name="yolcuTelNo" ColumnName="yolcuTelNo" />
+                <ScalarProperty Name="yolcuEposta" ColumnName="yolcuEposta" />
+                <ScalarProperty Name="yolcuDogumTarihi" ColumnName="yolcuDogumTarihi" />
+                <ScalarProperty Name="yolcuCinsiyet" ColumnName="yolcuCinsiyet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SeferListesi" FunctionName="OBSODBModel.Store.SeferListesi">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OBSODBModel.SeferListesi_Result">
+                <ScalarProperty Name="SeferId" ColumnName="SeferId" />
+                <ScalarProperty Name="Varış_Saati" ColumnName="Varış Saati" />
+                <ScalarProperty Name="Kalkış_Saati" ColumnName="Kalkış Saati" />
+                <ScalarProperty Name="Sefer_Tarihi" ColumnName="Sefer Tarihi" />
+                <ScalarProperty Name="Kalkış_Yeri" ColumnName="Kalkış Yeri" />
+                <ScalarProperty Name="Varış_Yeri" ColumnName="Varış Yeri" />
+                <ScalarProperty Name="Sefer_Durumu" ColumnName="Sefer Durumu" />
+                <ScalarProperty Name="Araç_Türü" ColumnName="Araç Türü" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="BiletListesi" FunctionName="OBSODBModel.Store.BiletListesi">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OBSODBModel.BiletListesi_Result2">
+                <ScalarProperty Name="Bilet_Numarası" ColumnName="Bilet Numarası" />
+                <ScalarProperty Name="Ad_Soyad" ColumnName="Ad Soyad" />
+                <ScalarProperty Name="Kalkış_Yeri" ColumnName="Kalkış Yeri" />
+                <ScalarProperty Name="Varış_Yeri" ColumnName="Varış Yeri" />
+                <ScalarProperty Name="biletTarih" ColumnName="biletTarih" />
+                <ScalarProperty Name="koltukNo" ColumnName="koltukNo" />
+                <ScalarProperty Name="PnrNumarasi" ColumnName="PnrNumarasi" />
+                <ScalarProperty Name="biletUcreti" ColumnName="biletUcreti" />
+                <ScalarProperty Name="BiletDurumu" ColumnName="BiletDurumu" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

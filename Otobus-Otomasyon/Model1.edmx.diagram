@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a2d34226f85c4e8d9b2cd3de806a6b2f" Name="Diagram1">
+        <EntityTypeShape EntityType="OBSODBModel.Araclar" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OBSODBModel.BakimKayitlari" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OBSODBModel.Biletler" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OBSODBModel.Koltuklar" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OBSODBModel.Kullanicilar" Width="1.5" PointX="3" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OBSODBModel.Mesafeler" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="OBSODBModel.OdemeKayitlari" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OBSODBModel.Rezervasyon" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OBSODBModel.Seferler" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OBSODBModel.Sehirler" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OBSODBModel.SifreSifirlamaTokeni" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OBSODBModel.Yolcular" Width="1.5" PointX="3" PointY="20.25" IsExpanded="true" />
+        <AssociationConnector Association="OBSODBModel.FK_BakimKayitlari_Araclar" ManuallyRouted="false" />
+        <AssociationConnector Association="OBSODBModel.FK_Biletler_Araclar" ManuallyRouted="false" />
+        <AssociationConnector Association="OBSODBModel.FK_Seferler_Araclar" ManuallyRouted="false" />
+        <AssociationConnector Association="OBSODBModel.FK_Biletler_Koltuklar" ManuallyRouted="false" />
+        <AssociationConnector Association="OBSODBModel.FK_Biletler_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="OBSODBModel.FK_Biletler_Musteriler" ManuallyRouted="false" />
+        <AssociationConnector Association="OBSODBModel.FK_Biletler_Seferler" ManuallyRouted="false" />
+        <AssociationConnector Association="OBSODBModel.FK_Mesafeler_Sehirler" ManuallyRouted="false" />
+        <AssociationConnector Association="OBSODBModel.FK_Mesafeler_Sehirler1" ManuallyRouted="false" />
+        <AssociationConnector Association="OBSODBModel.FK_Koltuklar_Araclar" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
