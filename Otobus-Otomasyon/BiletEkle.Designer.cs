@@ -492,7 +492,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtwSeferler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtwSeferler.ColumnHeadersHeight = 4;
+            this.dtwSeferler.ColumnHeadersHeight = 25;
             this.dtwSeferler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -520,7 +520,7 @@
             this.dtwSeferler.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtwSeferler.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dtwSeferler.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtwSeferler.ThemeStyle.HeaderStyle.Height = 4;
+            this.dtwSeferler.ThemeStyle.HeaderStyle.Height = 25;
             this.dtwSeferler.ThemeStyle.ReadOnly = false;
             this.dtwSeferler.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtwSeferler.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;

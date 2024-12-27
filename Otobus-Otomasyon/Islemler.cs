@@ -348,6 +348,15 @@ namespace Otobus_Otomasyon
             Application.Exit();
         }
 
-       
+        private void AracButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            AracIslemleri AracIslemleriForm = new AracIslemleri();
+            FormGoster(AracIslemleriForm);
+        }
     }
 }

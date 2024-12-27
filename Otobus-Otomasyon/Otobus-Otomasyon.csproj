@@ -85,6 +85,12 @@
     <Compile Include="Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="AracIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracIslemleri.Designer.cs">
+      <DependentUpon>AracIslemleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Araclar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -282,6 +288,9 @@
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AracIslemleri.resx">
+      <DependentUpon>AracIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BiletEkle.resx">
       <DependentUpon>BiletEkle.cs</DependentUpon>
     </EmbeddedResource>
@@ -431,6 +440,8 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="otobus %282%29.ico" />
+    <None Include="Resources\front-of-bus.png" />
+    <None Include="Resources\4047339-bus-model-modern-school-transport-transportation-trip_113493.png" />
     <None Include="Resources\enter.png" />
     <None Include="Resources\vecteezy_car-steering-wheel_52933686.png" />
     <None Include="Resources\car-seat.png" />

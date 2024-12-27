@@ -39,6 +39,9 @@
             this.BiletTimer = new System.Windows.Forms.Timer(this.components);
             this.SidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.panel28 = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtYolcuAdi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnBiletAra = new Guna.UI2.WinForms.Guna2Button();
             this.btnIptalEt = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -49,9 +52,6 @@
             this.panel32 = new System.Windows.Forms.Panel();
             this.dgwBiletIptalEt = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtYolcuAdi = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwBiletIptalEt)).BeginInit();
             this.SuspendLayout();
@@ -99,6 +99,46 @@
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(510, 291);
             this.panel28.TabIndex = 8;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(52, 150);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(98, 27);
+            this.guna2HtmlLabel1.TabIndex = 34;
+            this.guna2HtmlLabel1.Text = "Yolcu Adı :";
+            // 
+            // txtYolcuAdi
+            // 
+            this.txtYolcuAdi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtYolcuAdi.DefaultText = "";
+            this.txtYolcuAdi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtYolcuAdi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtYolcuAdi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtYolcuAdi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtYolcuAdi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtYolcuAdi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtYolcuAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtYolcuAdi.Location = new System.Drawing.Point(164, 150);
+            this.txtYolcuAdi.Name = "txtYolcuAdi";
+            this.txtYolcuAdi.PasswordChar = '\0';
+            this.txtYolcuAdi.PlaceholderText = "";
+            this.txtYolcuAdi.SelectedText = "";
+            this.txtYolcuAdi.Size = new System.Drawing.Size(237, 36);
+            this.txtYolcuAdi.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(38, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(432, 20);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Lütfen İptal Etmek İstediğiniz Biletin PNR numarasını giriniz:";
             // 
             // btnBiletAra
             // 
@@ -210,7 +250,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgwBiletIptalEt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgwBiletIptalEt.ColumnHeadersHeight = 4;
+            this.dgwBiletIptalEt.ColumnHeadersHeight = 25;
             this.dgwBiletIptalEt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -238,7 +278,7 @@
             this.dgwBiletIptalEt.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgwBiletIptalEt.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgwBiletIptalEt.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgwBiletIptalEt.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgwBiletIptalEt.ThemeStyle.HeaderStyle.Height = 25;
             this.dgwBiletIptalEt.ThemeStyle.ReadOnly = false;
             this.dgwBiletIptalEt.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgwBiletIptalEt.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -257,46 +297,6 @@
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(161, 39);
             this.guna2HtmlLabel5.TabIndex = 6;
             this.guna2HtmlLabel5.Text = "Bilet İptal Et";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(38, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(432, 20);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Lütfen İptal Etmek İstediğiniz Biletin PNR numarasını giriniz:";
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(52, 150);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(98, 27);
-            this.guna2HtmlLabel1.TabIndex = 34;
-            this.guna2HtmlLabel1.Text = "Yolcu Adı :";
-            // 
-            // txtYolcuAdi
-            // 
-            this.txtYolcuAdi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtYolcuAdi.DefaultText = "";
-            this.txtYolcuAdi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtYolcuAdi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtYolcuAdi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtYolcuAdi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtYolcuAdi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtYolcuAdi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtYolcuAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtYolcuAdi.Location = new System.Drawing.Point(164, 150);
-            this.txtYolcuAdi.Name = "txtYolcuAdi";
-            this.txtYolcuAdi.PasswordChar = '\0';
-            this.txtYolcuAdi.PlaceholderText = "";
-            this.txtYolcuAdi.SelectedText = "";
-            this.txtYolcuAdi.Size = new System.Drawing.Size(237, 36);
-            this.txtYolcuAdi.TabIndex = 33;
             // 
             // BiletIptalEt
             // 

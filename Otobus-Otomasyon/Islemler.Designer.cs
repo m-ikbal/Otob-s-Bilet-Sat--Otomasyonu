@@ -80,6 +80,8 @@
             this.KullaniciButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel22 = new System.Windows.Forms.Panel();
             this.KullaniciEkleButton = new Guna.UI2.WinForms.Guna2Button();
+            this.AracContainer = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.CikisContainer = new System.Windows.Forms.Panel();
             this.CikisYapButton = new Guna.UI2.WinForms.Guna2Button();
             this.SidebarTimer = new System.Windows.Forms.Timer(this.components);
@@ -115,6 +117,7 @@
             this.panel20.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
+            this.AracContainer.SuspendLayout();
             this.CikisContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,6 +130,7 @@
             this.Sidebar.Controls.Add(this.SeferContainer);
             this.Sidebar.Controls.Add(this.RezervasyonContainer);
             this.Sidebar.Controls.Add(this.KullaniciContainer);
+            this.Sidebar.Controls.Add(this.AracContainer);
             this.Sidebar.Controls.Add(this.CikisContainer);
             this.Sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.Sidebar.Location = new System.Drawing.Point(0, 0);
@@ -860,10 +864,38 @@
             this.KullaniciEkleButton.TextOffset = new System.Drawing.Point(-45, 0);
             this.KullaniciEkleButton.Click += new System.EventHandler(this.KullaniciEkleButton_Click);
             // 
+            // AracContainer
+            // 
+            this.AracContainer.Controls.Add(this.guna2Button1);
+            this.AracContainer.Location = new System.Drawing.Point(3, 427);
+            this.AracContainer.Name = "AracContainer";
+            this.AracContainer.Size = new System.Drawing.Size(291, 54);
+            this.AracContainer.TabIndex = 3;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Image = global::Otobus_Otomasyon.Properties.Resources.front_of_bus;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.ImageOffset = new System.Drawing.Point(32, 0);
+            this.guna2Button1.Location = new System.Drawing.Point(-22, -8);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(323, 71);
+            this.guna2Button1.TabIndex = 2;
+            this.guna2Button1.Text = "Araç İşlemleri";
+            this.guna2Button1.TextOffset = new System.Drawing.Point(-40, 0);
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // CikisContainer
             // 
             this.CikisContainer.Controls.Add(this.CikisYapButton);
-            this.CikisContainer.Location = new System.Drawing.Point(3, 427);
+            this.CikisContainer.Location = new System.Drawing.Point(3, 487);
             this.CikisContainer.Name = "CikisContainer";
             this.CikisContainer.Size = new System.Drawing.Size(291, 54);
             this.CikisContainer.TabIndex = 2;
@@ -879,7 +911,7 @@
             this.CikisYapButton.ForeColor = System.Drawing.Color.Black;
             this.CikisYapButton.Image = global::Otobus_Otomasyon.Properties.Resources.signout_106525;
             this.CikisYapButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.CikisYapButton.ImageOffset = new System.Drawing.Point(35, 0);
+            this.CikisYapButton.ImageOffset = new System.Drawing.Point(33, 0);
             this.CikisYapButton.Location = new System.Drawing.Point(-22, -8);
             this.CikisYapButton.Name = "CikisYapButton";
             this.CikisYapButton.Size = new System.Drawing.Size(323, 71);
@@ -968,6 +1000,7 @@
             this.panel20.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
+            this.AracContainer.ResumeLayout(false);
             this.CikisContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1033,6 +1066,8 @@
         private System.Windows.Forms.Panel panel7;
         private Guna.UI2.WinForms.Guna2Button RezervasyonEkleButton;
         public System.Windows.Forms.Panel KullaniciContainer;
+        private System.Windows.Forms.Panel AracContainer;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
 

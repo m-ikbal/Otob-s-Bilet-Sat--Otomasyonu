@@ -101,7 +101,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgwBiletleriGoruntule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgwBiletleriGoruntule.ColumnHeadersHeight = 4;
+            this.dgwBiletleriGoruntule.ColumnHeadersHeight = 25;
             this.dgwBiletleriGoruntule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -129,7 +129,7 @@
             this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.Height = 25;
             this.dgwBiletleriGoruntule.ThemeStyle.ReadOnly = false;
             this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
