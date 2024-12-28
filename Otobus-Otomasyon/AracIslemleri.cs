@@ -50,30 +50,29 @@ namespace Otobus_Otomasyon
             var koltuklar = new List<Koltuklar>();
 
             if (aracTipi == "2+1")
-            {
-                int toplamKoltuk = 22; // Toplam eklenmesi gereken koltuk sayısı
-                int koltukSayacı = 1; // Koltuk numaralarını doğru takip etmek için
+            { // Toplam eklenmesi gereken koltuk sayısı
+                int koltukSayaci = 1; // Koltuk numaralarını doğru takip etmek için
 
-                for (int sıra = 1; sıra <= 22; sıra++) // Koltukları sıraya göre ayarla
+                for (int sira = 1; sira <= 22; sira++) // Koltukları siraya göre ayarla
                 {
-                    if (sıra == 1 || sıra == 4 || sıra == 7 || sıra == 10 || sıra == 11 || sıra == 14 || sıra == 17 || sıra == 20)
+                    if (sira == 1 || sira == 4 || sira == 7 || sira == 10 || sira == 11 || sira == 14 || sira == 17 || sira == 20)
                     {
                         // Sol tarafa koltuk ekle
                         koltuklar.Add(new Koltuklar
                         {
                             aracId = araclar.aracId,
-                            koltukNo = koltukSayacı++,
+                            koltukNo = koltukSayaci++,
                             koltukKonum = "Sol",
                             koltukDurum = "Boş"
                         });
                     }
-                    else if (sıra == 2 || sıra == 3 || sıra == 5 || sıra == 6 || sıra == 8 || sıra == 9 || sıra == 12 || sıra == 13 || sıra == 15 || sıra == 16 || sıra == 18 || sıra == 19 || sıra == 21 || sıra == 22)
+                    else if (sira == 2 || sira == 3 || sira == 5 || sira == 6 || sira == 8 || sira == 9 || sira == 12 || sira == 13 || sira == 15 || sira == 16 || sira == 18 || sira == 19 || sira == 21 || sira == 22)
                     {
                         // Sağ tarafa koltuk ekle
                         koltuklar.Add(new Koltuklar
                         {
                             aracId = araclar.aracId,
-                            koltukNo = koltukSayacı++,
+                            koltukNo = koltukSayaci++,
                             koltukKonum = "Sağ",
                             koltukDurum = "Boş"
                         });
@@ -83,28 +82,28 @@ namespace Otobus_Otomasyon
             else if (aracTipi == "2+2")
             {
                 int toplamKoltuk = 30;
-                int koltukSayacı = 1; // Koltuklar numaralarını doğru takip etmek için
+                int koltukSayaci = 1; // Koltuklar numaralarını doğru takip etmek için
 
-                for (int sıra = 1; sıra <= 7; sıra++) // İlk 7 sıra tamamen dolu
+                for (int sira = 1; sira <= 7; sira++) // İlk 7 sira tamamen dolu
                 {
                     // Sol tarafta 2 Koltuklar
                     koltuklar.Add(new Koltuklar
                     {
                         aracId = araclar.aracId,
-                        koltukNo = koltukSayacı++,
+                        koltukNo = koltukSayaci++,
                         koltukKonum = "Sol",
                         koltukDurum = "Boş"
                     });
                     koltuklar.Add(new Koltuklar
                     {
                         aracId = araclar.aracId,
-                        koltukNo = koltukSayacı++,
+                        koltukNo = koltukSayaci++,
                         koltukKonum = "Sol",
                         koltukDurum = "Boş"
                     });
 
                     // Sağ tarafta 2 koltuk (Özel durum: 13 ve 14'ten sonra sağ taraf boş bırakılır)
-                    if (koltukSayacı == 15 || koltukSayacı == 16)
+                    if (koltukSayaci == 15 || koltukSayaci == 16)
                     {
                         continue; // Sağ tarafı boş geç
                     }
@@ -112,56 +111,56 @@ namespace Otobus_Otomasyon
                     koltuklar.Add(new Koltuklar
                     {
                         aracId = araclar.aracId,
-                        koltukNo = koltukSayacı++,
+                        koltukNo = koltukSayaci++,
                         koltukKonum = "Sağ",
                         koltukDurum = "Boş"
                     });
                     koltuklar.Add(new Koltuklar
                     {
                         aracId = araclar.aracId,
-                        koltukNo = koltukSayacı++,
+                        koltukNo = koltukSayaci++,
                         koltukKonum = "Sağ",
                         koltukDurum = "Boş"
                     });
                 }
 
-                // 8. sırada sadece 2 koltuk ekle
-                if (koltukSayacı <= toplamKoltuk)
+                // 8. sirada sadece 2 koltuk ekle
+                if (koltukSayaci <= toplamKoltuk)
                 {
                     // Sol tarafta 2 koltuk
                     koltuklar.Add(new Koltuklar
                     {
                         aracId = araclar.aracId,
-                        koltukNo = koltukSayacı++,
+                        koltukNo = koltukSayaci++,
                         koltukKonum = "Sol",
                         koltukDurum = "Boş"
                     });
-                    if (koltukSayacı <= toplamKoltuk)
+                    if (koltukSayaci <= toplamKoltuk)
                     {
                         koltuklar.Add(new Koltuklar
                         {
                             aracId = araclar.aracId,
-                            koltukNo = koltukSayacı++,
+                            koltukNo = koltukSayaci++,
                             koltukKonum = "Sol",
                             koltukDurum = "Boş"
                         });
                     }
-                    if (koltukSayacı <= toplamKoltuk)
+                    if (koltukSayaci <= toplamKoltuk)
                     {
                         koltuklar.Add(new Koltuklar
                         {
                             aracId = araclar.aracId,
-                            koltukNo = koltukSayacı++,
+                            koltukNo = koltukSayaci++,
                             koltukKonum = "Sağ",
                             koltukDurum = "Boş"
                         });
                     }
-                    if (koltukSayacı <= toplamKoltuk)
+                    if (koltukSayaci <= toplamKoltuk)
                     {
                         koltuklar.Add(new Koltuklar
                         {
                             aracId = araclar.aracId,
-                            koltukNo = koltukSayacı++,
+                            koltukNo = koltukSayaci++,
                             koltukKonum = "Sağ",
                             koltukDurum = "Boş"
                         });
