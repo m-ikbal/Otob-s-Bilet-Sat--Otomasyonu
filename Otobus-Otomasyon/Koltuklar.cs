@@ -24,9 +24,12 @@ namespace Otobus_Otomasyon
         public Nullable<int> koltukNo { get; set; }
         public string koltukDurum { get; set; }
         public Nullable<int> aracId { get; set; }
+        public string koltukKonum { get; set; }
+        public Nullable<int> RezerveId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Biletler> Biletler { get; set; }
         public virtual Araclar Araclar { get; set; }
+        public virtual Rezervasyon Rezervasyon { get; set; }
     }
 }

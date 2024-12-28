@@ -32,9 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAracKapasitesi = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAracPlakasi = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -44,20 +44,20 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbAracAdi = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbAracTipi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAracEkle = new Guna.UI2.WinForms.Guna2Button();
             this.panel43 = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox12 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel36 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel44 = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -77,24 +77,25 @@
             this.guna2HtmlLabel7.TabIndex = 25;
             this.guna2HtmlLabel7.Text = "Araç Kapasitesi  :";
             // 
-            // guna2TextBox4
+            // txtAracKapasitesi
             // 
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(566, 145);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox4.TabIndex = 24;
+            this.txtAracKapasitesi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAracKapasitesi.DefaultText = "";
+            this.txtAracKapasitesi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAracKapasitesi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAracKapasitesi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAracKapasitesi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAracKapasitesi.Enabled = false;
+            this.txtAracKapasitesi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAracKapasitesi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAracKapasitesi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAracKapasitesi.Location = new System.Drawing.Point(566, 145);
+            this.txtAracKapasitesi.Name = "txtAracKapasitesi";
+            this.txtAracKapasitesi.PasswordChar = '\0';
+            this.txtAracKapasitesi.PlaceholderText = "";
+            this.txtAracKapasitesi.SelectedText = "";
+            this.txtAracKapasitesi.Size = new System.Drawing.Size(200, 36);
+            this.txtAracKapasitesi.TabIndex = 24;
             // 
             // guna2HtmlLabel8
             // 
@@ -107,24 +108,24 @@
             this.guna2HtmlLabel8.TabIndex = 23;
             this.guna2HtmlLabel8.Text = "Araç Plakası  :";
             // 
-            // guna2TextBox5
+            // txtAracPlakasi
             // 
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Location = new System.Drawing.Point(566, 90);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderText = "";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox5.TabIndex = 22;
+            this.txtAracPlakasi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAracPlakasi.DefaultText = "";
+            this.txtAracPlakasi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAracPlakasi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAracPlakasi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAracPlakasi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAracPlakasi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAracPlakasi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAracPlakasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAracPlakasi.Location = new System.Drawing.Point(566, 90);
+            this.txtAracPlakasi.Name = "txtAracPlakasi";
+            this.txtAracPlakasi.PasswordChar = '\0';
+            this.txtAracPlakasi.PlaceholderText = "";
+            this.txtAracPlakasi.SelectedText = "";
+            this.txtAracPlakasi.Size = new System.Drawing.Size(200, 36);
+            this.txtAracPlakasi.TabIndex = 22;
             // 
             // guna2HtmlLabel6
             // 
@@ -222,35 +223,40 @@
             this.guna2ComboBox2.Size = new System.Drawing.Size(198, 36);
             this.guna2ComboBox2.TabIndex = 26;
             // 
-            // guna2ComboBox3
+            // cmbAracAdi
             // 
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox3.ItemHeight = 30;
-            this.guna2ComboBox3.Location = new System.Drawing.Point(150, 145);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.Size = new System.Drawing.Size(198, 36);
-            this.guna2ComboBox3.TabIndex = 27;
+            this.cmbAracAdi.BackColor = System.Drawing.Color.Transparent;
+            this.cmbAracAdi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbAracAdi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAracAdi.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbAracAdi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbAracAdi.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbAracAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbAracAdi.ItemHeight = 30;
+            this.cmbAracAdi.Items.AddRange(new object[] {
+            "Mercedes Travego"});
+            this.cmbAracAdi.Location = new System.Drawing.Point(150, 145);
+            this.cmbAracAdi.Name = "cmbAracAdi";
+            this.cmbAracAdi.Size = new System.Drawing.Size(198, 36);
+            this.cmbAracAdi.TabIndex = 27;
             // 
-            // guna2ComboBox4
+            // cmbAracTipi
             // 
-            this.guna2ComboBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox4.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox4.ItemHeight = 30;
-            this.guna2ComboBox4.Location = new System.Drawing.Point(150, 200);
-            this.guna2ComboBox4.Name = "guna2ComboBox4";
-            this.guna2ComboBox4.Size = new System.Drawing.Size(198, 36);
-            this.guna2ComboBox4.TabIndex = 28;
+            this.cmbAracTipi.BackColor = System.Drawing.Color.Transparent;
+            this.cmbAracTipi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbAracTipi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAracTipi.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbAracTipi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbAracTipi.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbAracTipi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbAracTipi.ItemHeight = 30;
+            this.cmbAracTipi.Items.AddRange(new object[] {
+            "2+2",
+            "2+1"});
+            this.cmbAracTipi.Location = new System.Drawing.Point(150, 200);
+            this.cmbAracTipi.Name = "cmbAracTipi";
+            this.cmbAracTipi.Size = new System.Drawing.Size(198, 36);
+            this.cmbAracTipi.TabIndex = 28;
             // 
             // guna2HtmlLabel3
             // 
@@ -348,9 +354,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.guna2HtmlLabel7);
-            this.panel1.Controls.Add(this.guna2TextBox4);
+            this.panel1.Controls.Add(this.txtAracKapasitesi);
             this.panel1.Controls.Add(this.guna2HtmlLabel8);
-            this.panel1.Controls.Add(this.guna2TextBox5);
+            this.panel1.Controls.Add(this.txtAracPlakasi);
             this.panel1.Controls.Add(this.guna2HtmlLabel6);
             this.panel1.Controls.Add(this.guna2HtmlLabel5);
             this.panel1.Controls.Add(this.guna2HtmlLabel4);
@@ -359,8 +365,8 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.guna2ComboBox2);
-            this.panel1.Controls.Add(this.guna2ComboBox3);
-            this.panel1.Controls.Add(this.guna2ComboBox4);
+            this.panel1.Controls.Add(this.cmbAracAdi);
+            this.panel1.Controls.Add(this.cmbAracTipi);
             this.panel1.Location = new System.Drawing.Point(148, 511);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(799, 267);
@@ -381,20 +387,21 @@
             this.guna2Button4.TabIndex = 37;
             this.guna2Button4.Text = "Güncelle";
             // 
-            // guna2Button5
+            // btnAracEkle
             // 
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Location = new System.Drawing.Point(121, 804);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(185, 62);
-            this.guna2Button5.TabIndex = 38;
-            this.guna2Button5.Text = "Ekle";
+            this.btnAracEkle.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAracEkle.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAracEkle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAracEkle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAracEkle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnAracEkle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAracEkle.ForeColor = System.Drawing.Color.White;
+            this.btnAracEkle.Location = new System.Drawing.Point(121, 804);
+            this.btnAracEkle.Name = "btnAracEkle";
+            this.btnAracEkle.Size = new System.Drawing.Size(185, 62);
+            this.btnAracEkle.TabIndex = 38;
+            this.btnAracEkle.Text = "Ekle";
+            this.btnAracEkle.Click += new System.EventHandler(this.btnAracEkle_Click);
             // 
             // panel43
             // 
@@ -407,6 +414,21 @@
             this.panel43.Name = "panel43";
             this.panel43.Size = new System.Drawing.Size(797, 97);
             this.panel43.TabIndex = 39;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(605, 45);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(146, 45);
+            this.guna2Button1.TabIndex = 37;
+            this.guna2Button1.Text = "Ara";
             // 
             // guna2TextBox12
             // 
@@ -447,21 +469,6 @@
             this.panel44.Size = new System.Drawing.Size(797, 37);
             this.panel44.TabIndex = 0;
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(605, 45);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(146, 45);
-            this.guna2Button1.TabIndex = 37;
-            this.guna2Button1.Text = "Ara";
-            // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
@@ -479,7 +486,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 875);
             this.Controls.Add(this.panel43);
-            this.Controls.Add(this.guna2Button5);
+            this.Controls.Add(this.btnAracEkle);
             this.Controls.Add(this.guna2Button4);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2DataGridView1);
@@ -504,9 +511,9 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox txtAracKapasitesi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox txtAracPlakasi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
@@ -516,15 +523,15 @@
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbAracAdi;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbAracTipi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btnAracEkle;
         private System.Windows.Forms.Panel panel43;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox12;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel36;

@@ -27,6 +27,8 @@
         <AssociationConnector Association="OBSODBModel.FK_Mesafeler_Sehirler" ManuallyRouted="false" />
         <AssociationConnector Association="OBSODBModel.FK_Mesafeler_Sehirler1" ManuallyRouted="false" />
         <AssociationConnector Association="OBSODBModel.FK_Koltuklar_Araclar" />
+        <EntityTypeShape EntityType="OBSODBModel.sysdiagrams" Width="1.5" PointX="8.375" PointY="4.75" />
+        <AssociationConnector Association="OBSODBModel.FK_Koltuklar_Rezervasyon" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -39,6 +39,7 @@ namespace Otobus_Otomasyon
         public virtual DbSet<Sehirler> Sehirler { get; set; }
         public virtual DbSet<SifreSifirlamaTokeni> SifreSifirlamaTokeni { get; set; }
         public virtual DbSet<Yolcular> Yolcular { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     
         public virtual ObjectResult<SeferListesi_Result> SeferListesi()
         {

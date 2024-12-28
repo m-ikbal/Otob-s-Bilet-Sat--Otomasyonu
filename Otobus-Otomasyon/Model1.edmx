@@ -34,7 +34,7 @@
             <PropertyRef Name="biletId" />
           </Key>
           <Property Name="biletId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="biletTarih" Type="datetime" />
+          <Property Name="biletTarih" Type="date" />
           <Property Name="koltukId" Type="int" />
           <Property Name="seferId" Type="int" />
           <Property Name="yolcuId" Type="int" />
@@ -53,6 +53,8 @@
           <Property Name="koltukNo" Type="int" />
           <Property Name="koltukDurum" Type="nvarchar" MaxLength="50" />
           <Property Name="aracId" Type="int" />
+          <Property Name="koltukKonum" Type="nvarchar" MaxLength="50" />
+          <Property Name="RezerveId" Type="int" />
         </EntityType>
         <EntityType Name="Kullanicilar">
           <Key>
@@ -132,6 +134,16 @@
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
           <Property Name="Token" Type="nvarchar" MaxLength="50" />
           <Property Name="SonKullanmaTarihi" Type="datetime" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="Yolcular">
           <Key>
@@ -230,6 +242,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Koltuklar_Rezervasyon">
+          <End Role="Rezervasyon" Type="Self.Rezervasyon" Multiplicity="0..1" />
+          <End Role="Koltuklar" Type="Self.Koltuklar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rezervasyon">
+              <PropertyRef Name="RezerveId" />
+            </Principal>
+            <Dependent Role="Koltuklar">
+              <PropertyRef Name="RezerveId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Mesafeler_Sehirler">
           <End Role="Sehirler" Type="Self.Sehirler" Multiplicity="0..1" />
           <End Role="Mesafeler" Type="Self.Mesafeler" Multiplicity="*" />
@@ -280,6 +304,7 @@
           <EntitySet Name="Seferler" EntityType="Self.Seferler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sehirler" EntityType="Self.Sehirler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SifreSifirlamaTokeni" EntityType="Self.SifreSifirlamaTokeni" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Yolcular" EntityType="Self.Yolcular" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_BakimKayitlari_Araclar" Association="Self.FK_BakimKayitlari_Araclar">
             <End Role="Araclar" EntitySet="Araclar" />
@@ -307,6 +332,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_Koltuklar_Araclar" Association="Self.FK_Koltuklar_Araclar">
             <End Role="Araclar" EntitySet="Araclar" />
+            <End Role="Koltuklar" EntitySet="Koltuklar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Koltuklar_Rezervasyon" Association="Self.FK_Koltuklar_Rezervasyon">
+            <End Role="Rezervasyon" EntitySet="Rezervasyon" />
             <End Role="Koltuklar" EntitySet="Koltuklar" />
           </AssociationSet>
           <AssociationSet Name="FK_Mesafeler_Sehirler" Association="Self.FK_Mesafeler_Sehirler">
@@ -360,7 +389,7 @@
             <PropertyRef Name="biletId" />
           </Key>
           <Property Name="biletId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="biletTarih" Type="DateTime" />
+          <Property Name="biletTarih" Type="DateTime" Precision="0" />
           <Property Name="koltukId" Type="Int32" />
           <Property Name="seferId" Type="Int32" />
           <Property Name="yolcuId" Type="Int32" />
@@ -386,6 +415,9 @@
           <NavigationProperty Name="Biletler" Relationship="Self.FK_Biletler_Koltuklar" FromRole="Koltuklar" ToRole="Biletler" />
           <Property Name="aracId" Type="Int32" />
           <NavigationProperty Name="Araclar" Relationship="OBSODBModel.FK_Koltuklar_Araclar" FromRole="Koltuklar" ToRole="Araclar" />
+          <Property Name="koltukKonum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RezerveId" Type="Int32" />
+          <NavigationProperty Name="Rezervasyon" Relationship="OBSODBModel.FK_Koltuklar_Rezervasyon" FromRole="Koltuklar" ToRole="Rezervasyon" />
         </EntityType>
         <EntityType Name="Kullanicilar">
           <Key>
@@ -438,6 +470,7 @@
           <Property Name="RezerveTarihi" Type="DateTime" Precision="3" />
           <Property Name="OdemeDurumu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="RezerveDurumu" Type="Boolean" />
+          <NavigationProperty Name="Koltuklar" Relationship="OBSODBModel.FK_Koltuklar_Rezervasyon" FromRole="Rezervasyon" ToRole="Koltuklar" />
         </EntityType>
         <EntityType Name="Seferler">
           <Key>
@@ -650,6 +683,11 @@
             <End Role="Koltuklar" EntitySet="Koltuklar" />
           </AssociationSet>
           <FunctionImport Name="BiletListesi" ReturnType="Collection(OBSODBModel.BiletListesi_Result2)" />
+          <EntitySet Name="sysdiagrams" EntityType="OBSODBModel.sysdiagrams" />
+          <AssociationSet Name="FK_Koltuklar_Rezervasyon" Association="OBSODBModel.FK_Koltuklar_Rezervasyon">
+            <End Role="Rezervasyon" EntitySet="Rezervasyon" />
+            <End Role="Koltuklar" EntitySet="Koltuklar" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="SeferListesi_Result">
           <Property Type="Int32" Name="SeferId" Nullable="false" />
@@ -716,6 +754,28 @@
           <Property Type="Decimal" Name="biletUcreti" Nullable="true" Precision="10" Scale="2" />
           <Property Type="String" Name="BiletDurumu" Nullable="true" MaxLength="50" />
         </ComplexType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Koltuklar_Rezervasyon">
+          <End Type="OBSODBModel.Rezervasyon" Role="Rezervasyon" Multiplicity="0..1" />
+          <End Type="OBSODBModel.Koltuklar" Role="Koltuklar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rezervasyon">
+              <PropertyRef Name="RezerveId" />
+            </Principal>
+            <Dependent Role="Koltuklar">
+              <PropertyRef Name="RezerveId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -768,6 +828,8 @@
           <EntitySetMapping Name="Koltuklar">
             <EntityTypeMapping TypeName="OBSODBModel.Koltuklar">
               <MappingFragment StoreEntitySet="Koltuklar">
+                <ScalarProperty Name="RezerveId" ColumnName="RezerveId" />
+                <ScalarProperty Name="koltukKonum" ColumnName="koltukKonum" />
                 <ScalarProperty Name="aracId" ColumnName="aracId" />
                 <ScalarProperty Name="koltukId" ColumnName="koltukId" />
                 <ScalarProperty Name="koltukNo" ColumnName="koltukNo" />
@@ -904,6 +966,17 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="OBSODBModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

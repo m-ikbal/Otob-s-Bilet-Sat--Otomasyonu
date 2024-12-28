@@ -14,6 +14,12 @@ namespace Otobus_Otomasyon
     
     public partial class Rezervasyon
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Rezervasyon()
+        {
+            this.Koltuklar = new HashSet<Koltuklar>();
+        }
+    
         public int RezerveId { get; set; }
         public Nullable<int> BiletId { get; set; }
         public Nullable<int> AracId { get; set; }
@@ -24,5 +30,8 @@ namespace Otobus_Otomasyon
         public Nullable<System.DateTime> RezerveTarihi { get; set; }
         public string OdemeDurumu { get; set; }
         public Nullable<bool> RezerveDurumu { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Koltuklar> Koltuklar { get; set; }
     }
 }
