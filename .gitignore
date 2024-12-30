@@ -10,6 +10,15 @@
 *.userosscache
 *.sln.docstates
 
+# Entity Framework Designer-generated files
+Model1.Context.cs
+Model1.Context.tt
+Model1.Designer.cs
+Model1.cs
+Model1.edmx
+Model1.edmx.diagram
+Model1.tt
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

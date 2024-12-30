@@ -387,7 +387,7 @@
             this.btnBiletListele.Name = "btnBiletListele";
             this.btnBiletListele.Size = new System.Drawing.Size(203, 67);
             this.btnBiletListele.TabIndex = 28;
-            this.btnBiletListele.Text = "Biletleri Listele";
+            this.btnBiletListele.Text = "Tüm Biletleri Listele";
             this.btnBiletListele.Click += new System.EventHandler(this.btnBiletListele_Click);
             // 
             // panel9

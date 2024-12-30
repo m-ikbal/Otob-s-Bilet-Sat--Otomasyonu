@@ -239,11 +239,14 @@
     <Compile Include="RezervasyonGuncelle.Designer.cs">
       <DependentUpon>RezervasyonGuncelle.cs</DependentUpon>
     </Compile>
-    <Compile Include="RezervasyonSil.cs">
+    <Compile Include="RezervasyonIptalEt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RezervasyonSil.Designer.cs">
-      <DependentUpon>RezervasyonSil.cs</DependentUpon>
+    <Compile Include="RezervasyonIptalEt.Designer.cs">
+      <DependentUpon>RezervasyonIptalEt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RezervasyonListesi_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="SeferEkle.cs">
       <SubType>Form</SubType>
@@ -269,11 +272,11 @@
     <Compile Include="SeferListesi_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="SeferSil.cs">
+    <Compile Include="SeferIptalEt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SeferSil.Designer.cs">
-      <DependentUpon>SeferSil.cs</DependentUpon>
+    <Compile Include="SeferIptalEt.Designer.cs">
+      <DependentUpon>SeferIptalEt.cs</DependentUpon>
     </Compile>
     <Compile Include="Sehirler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -349,8 +352,8 @@
     <EmbeddedResource Include="RezervasyonGuncelle.resx">
       <DependentUpon>RezervasyonGuncelle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RezervasyonSil.resx">
-      <DependentUpon>RezervasyonSil.cs</DependentUpon>
+    <EmbeddedResource Include="RezervasyonIptalEt.resx">
+      <DependentUpon>RezervasyonIptalEt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeferEkle.resx">
       <DependentUpon>SeferEkle.cs</DependentUpon>
@@ -361,8 +364,8 @@
     <EmbeddedResource Include="SeferGuncelle.resx">
       <DependentUpon>SeferGuncelle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SeferSil.resx">
-      <DependentUpon>SeferSil.cs</DependentUpon>
+    <EmbeddedResource Include="SeferIptalEt.resx">
+      <DependentUpon>SeferIptalEt.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

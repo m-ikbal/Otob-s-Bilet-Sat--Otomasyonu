@@ -29,9 +29,15 @@ namespace Otobus_Otomasyon
         public Nullable<int> SeferId { get; set; }
         public Nullable<System.DateTime> RezerveTarihi { get; set; }
         public string OdemeDurumu { get; set; }
-        public Nullable<bool> RezerveDurumu { get; set; }
+        public string RezerveDurumu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Koltuklar> Koltuklar { get; set; }
+        public virtual Araclar Araclar { get; set; }
+        public virtual Biletler Biletler { get; set; }
+        public virtual Kullanicilar Kullanicilar { get; set; }
+        public virtual Seferler Seferler { get; set; }
+        public virtual Yolcular Yolcular { get; set; }
+        public virtual Koltuklar Koltuklar1 { get; set; }
     }
 }

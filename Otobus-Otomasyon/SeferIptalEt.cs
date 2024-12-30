@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Otobus_Otomasyon
 {
-    public partial class RezervasyonSil : Form
+    public partial class SeferIptalEt : Form
     {
-        public RezervasyonSil()
+        public SeferIptalEt()
         {
             InitializeComponent();
         }

@@ -7,8 +7,8 @@
       <Diagram DiagramId="a2d34226f85c4e8d9b2cd3de806a6b2f" Name="Diagram1">
         <EntityTypeShape EntityType="OBSODBModel.Araclar" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="OBSODBModel.BakimKayitlari" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="OBSODBModel.Biletler" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="OBSODBModel.Koltuklar" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OBSODBModel.Biletler" Width="1.5" PointX="8.875" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OBSODBModel.Koltuklar" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="OBSODBModel.Kullanicilar" Width="1.5" PointX="3" PointY="16.75" IsExpanded="true" />
         <EntityTypeShape EntityType="OBSODBModel.Mesafeler" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="OBSODBModel.OdemeKayitlari" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
@@ -29,6 +29,12 @@
         <AssociationConnector Association="OBSODBModel.FK_Koltuklar_Araclar" />
         <EntityTypeShape EntityType="OBSODBModel.sysdiagrams" Width="1.5" PointX="8.375" PointY="4.75" />
         <AssociationConnector Association="OBSODBModel.FK_Koltuklar_Rezervasyon" />
+        <AssociationConnector Association="OBSODBModel.FK_Rezervasyon_Araclar" />
+        <AssociationConnector Association="OBSODBModel.FK_Rezervasyon_Biletler" />
+        <AssociationConnector Association="OBSODBModel.FK_Rezervasyon_Kullanicilar" />
+        <AssociationConnector Association="OBSODBModel.FK_Rezervasyon_Seferler" />
+        <AssociationConnector Association="OBSODBModel.FK_Rezervasyon_Yolcular" />
+        <AssociationConnector Association="OBSODBModel.FK_Rezervasyon_Koltuklar" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

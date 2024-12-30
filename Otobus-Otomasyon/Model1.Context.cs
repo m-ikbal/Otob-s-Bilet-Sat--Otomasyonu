@@ -50,5 +50,10 @@ namespace Otobus_Otomasyon
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BiletListesi_Result2>("BiletListesi");
         }
+    
+        public virtual ObjectResult<RezervasyonListesi_Result> RezervasyonListesi()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RezervasyonListesi_Result>("RezervasyonListesi");
+        }
     }
 }

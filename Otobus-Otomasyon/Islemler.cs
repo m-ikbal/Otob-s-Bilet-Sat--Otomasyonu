@@ -122,7 +122,7 @@ namespace Otobus_Otomasyon
 
         private void SeferSilButton_Click(object sender, EventArgs e)
         {
-            SeferSil SeferSilForn = new SeferSil();
+            SeferIptalEt SeferSilForn = new SeferIptalEt();
             FormGoster(SeferSilForn);
         }
 
@@ -151,7 +151,7 @@ namespace Otobus_Otomasyon
 
         private void RezervasyonSilButton_Click(object sender, EventArgs e)
         {
-            RezervasyonSil RezervasyonSilForn = new RezervasyonSil();
+            RezervasyonIptalEt RezervasyonSilForn = new RezervasyonIptalEt();
             FormGoster(RezervasyonSilForn);
         }
 
