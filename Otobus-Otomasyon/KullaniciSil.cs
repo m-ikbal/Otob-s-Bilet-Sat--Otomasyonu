@@ -16,5 +16,47 @@ namespace Otobus_Otomasyon
         {
             InitializeComponent();
         }
+
+        OBSODBEntities db = new OBSODBEntities();
+        private void KullaniciListele()
+        {
+            var query = from item in db.Kullanicilar
+                        select new
+                        {
+                            KullanıcıId = item.kullaniciId,
+                            Ad = item.kullaniciAd,
+                            Soyad = item.kullaniciSoyad,
+                            KullanıcıAdı = item.kullaniciAdi,
+                            Şifre = item.kullaniciSifre,
+                            Eposta = item.kullaniciEposta,
+                            Rol = item.kullaniciRol,
+                            SonGiris = item.sonGirisTarihi
+                        };
+            dgwKullanicilar.DataSource = query.ToList();
+        }
+
+        private void dgwKullanicilar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            KullaniciListele();
+        }
+
+        private void btnKullaniciSil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = int.Parse(txtKullaniciId.Text);
+                var kullanici = db.Kullanicilar.Find(id);
+                db.Kullanicilar.Remove(kullanici);
+                db.SaveChanges();
+                MessageBox.Show("Kullanıcı Silindi");
+                KullaniciListele();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Hata", ex.Message);
+            }
+
+        }
     }
 }

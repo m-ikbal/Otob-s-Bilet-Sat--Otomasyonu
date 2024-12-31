@@ -22,8 +22,8 @@ namespace Otobus_Otomasyon
         }
     
         public int seferId { get; set; }
-        public Nullable<System.DateTime> VarisSaati { get; set; }
-        public Nullable<System.DateTime> KalkisSaati { get; set; }
+        public Nullable<System.TimeSpan> VarisSaati { get; set; }
+        public Nullable<System.TimeSpan> KalkisSaati { get; set; }
         public Nullable<System.DateTime> seferTarihi { get; set; }
         public string Kalkis { get; set; }
         public string Varis { get; set; }

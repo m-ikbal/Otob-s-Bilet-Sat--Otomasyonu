@@ -20,6 +20,8 @@ namespace Otobus_Otomasyon
         OBSODBEntities db = new OBSODBEntities();
         private void SeferEkle_Load(object sender, EventArgs e)
         {
+            dgwSeferler.DataSource = db.SeferListesi().ToList();
+
             var values = db.Sehirler.ToList();
             var values2 = db.Sehirler.ToList();
             var values3 = db.Araclar.ToList();
@@ -47,8 +49,8 @@ namespace Otobus_Otomasyon
                     Kalkis = cmbSeferNereden.Text,
                     Varis = cmbSeferNereye.Text,
                     seferTarihi = dtpTarih.Value,
-                    KalkisSaati = DateTime.Parse(mskKalkisSaati.Text),
-                    VarisSaati = DateTime.Parse(mskVarisSaati.Text),
+                    KalkisSaati = TimeSpan.Parse(mskKalkisSaati.Text),
+                    VarisSaati = TimeSpan.Parse(mskVarisSaati.Text),
                     seferDurum = cmbSeferDurumu.Text,
                     aracId = Convert.ToInt32(cmbOtobusTipi.SelectedValue)
                 };

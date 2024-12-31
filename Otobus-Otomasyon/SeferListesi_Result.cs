@@ -13,13 +13,13 @@ namespace Otobus_Otomasyon
     
     public partial class SeferListesi_Result
     {
-        public int SeferId { get; set; }
-        public Nullable<System.DateTime> Varış_Saati { get; set; }
-        public Nullable<System.DateTime> Kalkış_Saati { get; set; }
+        public Nullable<System.TimeSpan> Varış_Saati { get; set; }
+        public Nullable<System.TimeSpan> Kalkış_Saati { get; set; }
         public Nullable<System.DateTime> Sefer_Tarihi { get; set; }
         public string Kalkış_Yeri { get; set; }
         public string Varış_Yeri { get; set; }
         public string Sefer_Durumu { get; set; }
         public string Araç_Türü { get; set; }
+        public int Sefer_Numarası { get; set; }
     }
 }

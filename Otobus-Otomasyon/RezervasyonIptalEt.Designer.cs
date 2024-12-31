@@ -116,11 +116,11 @@
             this.guna2HtmlLabel35.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel35.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel35.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel35.Location = new System.Drawing.Point(227, 11);
+            this.guna2HtmlLabel35.Location = new System.Drawing.Point(152, 19);
             this.guna2HtmlLabel35.Name = "guna2HtmlLabel35";
-            this.guna2HtmlLabel35.Size = new System.Drawing.Size(217, 42);
+            this.guna2HtmlLabel35.Size = new System.Drawing.Size(281, 42);
             this.guna2HtmlLabel35.TabIndex = 0;
-            this.guna2HtmlLabel35.Text = "Rezervasyon Sil";
+            this.guna2HtmlLabel35.Text = "Rezervasyon İptal Et";
             // 
             // dgwRezervasyonListesi
             // 

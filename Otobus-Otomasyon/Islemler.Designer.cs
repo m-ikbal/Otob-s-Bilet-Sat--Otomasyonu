@@ -81,7 +81,7 @@
             this.panel22 = new System.Windows.Forms.Panel();
             this.KullaniciEkleButton = new Guna.UI2.WinForms.Guna2Button();
             this.AracContainer = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.AracButton = new Guna.UI2.WinForms.Guna2Button();
             this.CikisContainer = new System.Windows.Forms.Panel();
             this.CikisYapButton = new Guna.UI2.WinForms.Guna2Button();
             this.SidebarTimer = new System.Windows.Forms.Timer(this.components);
@@ -326,7 +326,7 @@
             this.BiletButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.BiletButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.BiletButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BiletButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BiletButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.BiletButton.ForeColor = System.Drawing.Color.Black;
             this.BiletButton.Image = global::Otobus_Otomasyon.Properties.Resources.concertticket_83678;
             this.BiletButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -866,31 +866,31 @@
             // 
             // AracContainer
             // 
-            this.AracContainer.Controls.Add(this.guna2Button1);
+            this.AracContainer.Controls.Add(this.AracButton);
             this.AracContainer.Location = new System.Drawing.Point(3, 427);
             this.AracContainer.Name = "AracContainer";
             this.AracContainer.Size = new System.Drawing.Size(291, 54);
             this.AracContainer.TabIndex = 3;
             // 
-            // guna2Button1
+            // AracButton
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Image = global::Otobus_Otomasyon.Properties.Resources.front_of_bus;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(32, 0);
-            this.guna2Button1.Location = new System.Drawing.Point(-22, -8);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(323, 71);
-            this.guna2Button1.TabIndex = 2;
-            this.guna2Button1.Text = "Araç İşlemleri";
-            this.guna2Button1.TextOffset = new System.Drawing.Point(-40, 0);
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.AracButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AracButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AracButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AracButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AracButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AracButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.AracButton.ForeColor = System.Drawing.Color.Black;
+            this.AracButton.Image = global::Otobus_Otomasyon.Properties.Resources.front_of_bus;
+            this.AracButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.AracButton.ImageOffset = new System.Drawing.Point(32, 0);
+            this.AracButton.Location = new System.Drawing.Point(-22, -8);
+            this.AracButton.Name = "AracButton";
+            this.AracButton.Size = new System.Drawing.Size(323, 71);
+            this.AracButton.TabIndex = 2;
+            this.AracButton.Text = "Araç İşlemleri";
+            this.AracButton.TextOffset = new System.Drawing.Point(-40, 0);
+            this.AracButton.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // CikisContainer
             // 
@@ -1067,7 +1067,7 @@
         private Guna.UI2.WinForms.Guna2Button RezervasyonEkleButton;
         public System.Windows.Forms.Panel KullaniciContainer;
         private System.Windows.Forms.Panel AracContainer;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button AracButton;
     }
 }
 

@@ -110,9 +110,9 @@
             <PropertyRef Name="seferId" />
           </Key>
           <Property Name="seferId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="VarisSaati" Type="datetime" />
-          <Property Name="KalkisSaati" Type="datetime" />
-          <Property Name="seferTarihi" Type="datetime" />
+          <Property Name="VarisSaati" Type="time" Precision="7" />
+          <Property Name="KalkisSaati" Type="time" Precision="7" />
+          <Property Name="seferTarihi" Type="date" />
           <Property Name="Kalkis" Type="nvarchar" MaxLength="50" />
           <Property Name="Varis" Type="nvarchar" MaxLength="50" />
           <Property Name="aracId" Type="int" />
@@ -584,9 +584,9 @@
             <PropertyRef Name="seferId" />
           </Key>
           <Property Name="seferId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="VarisSaati" Type="DateTime" Precision="3" />
-          <Property Name="KalkisSaati" Type="DateTime" Precision="3" />
-          <Property Name="seferTarihi" Type="DateTime" Precision="3" />
+          <Property Name="VarisSaati" Type="Time" />
+          <Property Name="KalkisSaati" Type="Time" />
+          <Property Name="seferTarihi" Type="DateTime" />
           <Property Name="Kalkis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Varis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="aracId" Type="Int32" />
@@ -824,14 +824,14 @@
           </AssociationSet>
         </EntityContainer>
         <ComplexType Name="SeferListesi_Result">
-          <Property Type="Int32" Name="SeferId" Nullable="false" />
-          <Property Type="DateTime" Name="Varış_Saati" Nullable="true" Precision="23" />
-          <Property Type="DateTime" Name="Kalkış_Saati" Nullable="true" Precision="23" />
-          <Property Type="DateTime" Name="Sefer_Tarihi" Nullable="true" Precision="23" />
+          <Property Type="Time" Name="Varış_Saati" Nullable="true" />
+          <Property Type="Time" Name="Kalkış_Saati" Nullable="true" />
+          <Property Type="DateTime" Name="Sefer_Tarihi" Nullable="true" />
           <Property Type="String" Name="Kalkış_Yeri" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Varış_Yeri" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Sefer_Durumu" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Araç_Türü" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Sefer_Numarası" Nullable="false" />
         </ComplexType>
         <ComplexType Name="BiletListesi_Result">
           <Property Type="DateTime" Name="biletTarih" Nullable="true" Precision="23" />
@@ -1159,7 +1159,6 @@
           <FunctionImportMapping FunctionImportName="SeferListesi" FunctionName="OBSODBModel.Store.SeferListesi">
             <ResultMapping>
               <ComplexTypeMapping TypeName="OBSODBModel.SeferListesi_Result">
-                <ScalarProperty Name="SeferId" ColumnName="SeferId" />
                 <ScalarProperty Name="Varış_Saati" ColumnName="Varış Saati" />
                 <ScalarProperty Name="Kalkış_Saati" ColumnName="Kalkış Saati" />
                 <ScalarProperty Name="Sefer_Tarihi" ColumnName="Sefer Tarihi" />
@@ -1167,6 +1166,7 @@
                 <ScalarProperty Name="Varış_Yeri" ColumnName="Varış Yeri" />
                 <ScalarProperty Name="Sefer_Durumu" ColumnName="Sefer Durumu" />
                 <ScalarProperty Name="Araç_Türü" ColumnName="Araç Türü" />
+                <ScalarProperty Name="Sefer_Numarası" ColumnName="Sefer Numarası" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
