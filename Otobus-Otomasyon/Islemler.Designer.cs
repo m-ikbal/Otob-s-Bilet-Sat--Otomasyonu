@@ -305,7 +305,7 @@
             this.BiletSilButton.Name = "BiletSilButton";
             this.BiletSilButton.Size = new System.Drawing.Size(323, 71);
             this.BiletSilButton.TabIndex = 2;
-            this.BiletSilButton.Text = "    Bilet Sil";
+            this.BiletSilButton.Text = "       Bilet İptal";
             this.BiletSilButton.TextOffset = new System.Drawing.Point(-60, 0);
             this.BiletSilButton.Click += new System.EventHandler(this.BiletSilButton_Click);
             // 
@@ -470,7 +470,7 @@
             this.SeferSilButton.Name = "SeferSilButton";
             this.SeferSilButton.Size = new System.Drawing.Size(323, 71);
             this.SeferSilButton.TabIndex = 2;
-            this.SeferSilButton.Text = "    Sefer Sil";
+            this.SeferSilButton.Text = "       Sefer İptal";
             this.SeferSilButton.TextOffset = new System.Drawing.Point(-60, 0);
             this.SeferSilButton.Click += new System.EventHandler(this.SeferSilButton_Click);
             // 
@@ -665,7 +665,7 @@
             this.RezervasyonSilButton.Name = "RezervasyonSilButton";
             this.RezervasyonSilButton.Size = new System.Drawing.Size(323, 71);
             this.RezervasyonSilButton.TabIndex = 2;
-            this.RezervasyonSilButton.Text = "    Rezervasyon Sil";
+            this.RezervasyonSilButton.Text = "       Rezervasyon İptal";
             this.RezervasyonSilButton.TextOffset = new System.Drawing.Point(-40, 0);
             this.RezervasyonSilButton.Click += new System.EventHandler(this.RezervasyonSilButton_Click);
             // 
