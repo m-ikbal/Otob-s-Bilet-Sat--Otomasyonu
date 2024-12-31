@@ -163,6 +163,12 @@
     <Compile Include="Koltuklar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="KoltukSecim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KoltukSecim.Designer.cs">
+      <DependentUpon>KoltukSecim.cs</DependentUpon>
+    </Compile>
     <Compile Include="KullaniciEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Koltuk2.resx">
       <DependentUpon>Koltuk2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KoltukSecim.resx">
+      <DependentUpon>KoltukSecim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KullaniciEkle.resx">
       <DependentUpon>KullaniciEkle.cs</DependentUpon>
