@@ -80,6 +80,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(180, 60);
             this.guna2Button3.TabIndex = 2;
             this.guna2Button3.Text = "Erkek";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2HtmlLabel1
             // 

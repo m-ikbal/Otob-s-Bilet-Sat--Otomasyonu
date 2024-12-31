@@ -15,6 +15,12 @@ namespace Otobus_Otomasyon
         public KoltukSecim()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
