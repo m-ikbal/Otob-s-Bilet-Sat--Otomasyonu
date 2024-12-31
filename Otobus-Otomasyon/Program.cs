@@ -16,7 +16,7 @@ namespace Otobus_Otomasyon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Koltuk2());
+            Application.Run(new Koltuk1());
         }
     }
 }
