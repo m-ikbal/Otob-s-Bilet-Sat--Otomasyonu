@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Infrastructure;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -32,17 +33,31 @@ namespace Otobus_Otomasyon
             return new string(code);
         }
 
-        private void BiletEkle_Load(object sender, EventArgs e)
+        private void KoltukDurumuGuncelle(int? aracId, int koltukNo)
         {
-            dtwSeferler.DataSource = db.SeferListesi().ToList();
+            var koltuk = db.Koltuklar.FirstOrDefault(x => x.aracId == aracId && x.koltukNo == koltukNo);
+            if (koltuk != null)
+            {
+                koltuk.koltukDurum = "Dolu";
+                db.SaveChanges();
+            }
+            else
+            {
+                MessageBox.Show("Koltuk bulunamadı!");
+            }
         }
 
-        private void dtwSeferler_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void BiletEkle_Load(object sender, EventArgs e)
+        {
+            dgwSeferler.DataSource = db.SeferListesi().ToList();
+        }
+
+        private void dgwSeferler_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                string seferId = dtwSeferler.Rows[e.RowIndex].Cells[0].Value.ToString();
-                string aracTuru = dtwSeferler.Rows[e.RowIndex].Cells[7].Value.ToString();
+                string seferId = dgwSeferler.Rows[e.RowIndex].Cells[7].Value.ToString();
+                string aracTuru = dgwSeferler.Rows[e.RowIndex].Cells[6].Value.ToString();
 
                 txtSeferId.Text = seferId;
                 txtAracTuru.Text = aracTuru;
@@ -53,11 +68,13 @@ namespace Otobus_Otomasyon
         {
             if (txtAracTuru.Text == "2+2")
             {
-                Koltuk1 koltuk1 = new Koltuk1();
+                int seferId = int.Parse(txtSeferId.Text);
+                Koltuk1 koltuk1 = new Koltuk1(seferId);
                 koltuk1.Show();
             }
             else
             {
+                int seferId = int.Parse(txtSeferId.Text);
                 Koltuk2 koltuk2 = new Koltuk2();
                 koltuk2.Show();
             }
@@ -70,42 +87,61 @@ namespace Otobus_Otomasyon
                 Yolcular yolcular = new Yolcular();
                 yolcular.yolcuAdi = txtYolcuAdi.Text;
                 yolcular.yolcuSoyadi = txtYolcuSoyadi.Text;
-                yolcular.yolcuCinsiyet = cmbYolcuCinsiyet.Text;
+                yolcular.yolcuCinsiyet = txtCinsiyet.Text;
                 yolcular.yolcuDogumTarihi = DateTime.Parse(mskDogumTarih.Text);
                 yolcular.yolcuTelNo = mskYolcuTelNo.Text;
                 yolcular.yolcuTc = txtYolcuTc.Text;
-                db.Yolcular.Add(yolcular);
-                db.SaveChanges();
+                yolcular.yolcuEposta = txtYolcuEposta.Text;
+                if (yolcular.yolcuAdi == "" || yolcular.yolcuSoyadi == "" || yolcular.yolcuCinsiyet == "" || yolcular.yolcuDogumTarihi == null || yolcular.yolcuTelNo == "" || yolcular.yolcuTc == "" || yolcular.yolcuEposta == "")
+                {
+                    MessageBox.Show("Lütfen tüm alanları doldurunuz!");
+                    return;
+                }
+                else
+                {
+                    db.Yolcular.Add(yolcular);
+                    db.SaveChanges();
+                }
 
                 var yolcuAdi = txtYolcuAdi.Text;
                 var yolcu = db.Yolcular
                            .Where(y => y.yolcuAdi == yolcuAdi)
                            .Select(y => new { y.yolcuId, y.yolcuAdi })
                            .FirstOrDefault();
+
                 int seferId = int.Parse(txtSeferId.Text);
                 var aracId = db.Seferler.Where(s => s.seferId == seferId)
                             .Select(s => s.aracId)
                             .FirstOrDefault();
+
+                int koltukNo = int.Parse(txtKoltukNo.Text);
+                var koltukId = db.Koltuklar
+                               .Where(k => k.aracId == aracId && k.koltukNo == koltukNo)
+                               .Select(k => k.koltukId)
+                               .FirstOrDefault();
+
                 Biletler biletler = new Biletler()
                 {
-                    
                     biletTarih = DateTime.Now,
                     kullaniciId = Session.KullaniciId,
                     yolcuId = yolcu.yolcuId,
                     aracId = aracId,
                     seferId = seferId,
+                    koltukId = koltukId,
                     PnrNumarasi = GenerateRandomCode(8),
                     biletUcreti = 1000,
                     odemeYontemi = cmbOdemeTuru.Text,
                     BiletDurumu = "Aktif"
                 };
                 db.Biletler.Add(biletler);
+                KoltukDurumuGuncelle(aracId, koltukNo);
                 db.SaveChanges();
                 MessageBox.Show("Bilet başarıyla eklendi!");
             }
-            catch (Exception ex)
+            catch (DbUpdateException ex)
             {
-                MessageBox.Show(ex.InnerException?.Message ?? ex.Message);
+                Console.WriteLine(ex.InnerException?.Message);
+                throw;
             }
         }
     }

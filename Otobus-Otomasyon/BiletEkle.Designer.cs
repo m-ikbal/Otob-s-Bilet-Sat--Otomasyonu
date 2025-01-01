@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.mskYolcuTelNo = new System.Windows.Forms.MaskedTextBox();
@@ -40,10 +40,10 @@
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtYolcuEposta = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtKoltukNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtAracTuru = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnKoltukSec = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtBiletUcreti = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -62,24 +62,23 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtYolcuSoyadi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dtwSeferler = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dgwSeferler = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtYolcuAdi = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.btnBiletEkle = new Guna.UI2.WinForms.Guna2Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCinsiyet = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtYolcuTc = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cmbYolcuCinsiyet = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmbOdemeTuru = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtwSeferler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwSeferler)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -183,10 +182,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtKoltukNo);
             this.panel2.Controls.Add(this.guna2HtmlLabel15);
             this.panel2.Controls.Add(this.txtAracTuru);
             this.panel2.Controls.Add(this.btnKoltukSec);
-            this.panel2.Controls.Add(this.guna2NumericUpDown1);
             this.panel2.Controls.Add(this.guna2HtmlLabel11);
             this.panel2.Controls.Add(this.txtBiletUcreti);
             this.panel2.Controls.Add(this.guna2HtmlLabel10);
@@ -200,6 +199,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(341, 320);
             this.panel2.TabIndex = 30;
+            // 
+            // txtKoltukNo
+            // 
+            this.txtKoltukNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtKoltukNo.DefaultText = "";
+            this.txtKoltukNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtKoltukNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtKoltukNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKoltukNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKoltukNo.Enabled = false;
+            this.txtKoltukNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKoltukNo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKoltukNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKoltukNo.Location = new System.Drawing.Point(124, 150);
+            this.txtKoltukNo.Name = "txtKoltukNo";
+            this.txtKoltukNo.PasswordChar = '\0';
+            this.txtKoltukNo.PlaceholderText = "";
+            this.txtKoltukNo.SelectedText = "";
+            this.txtKoltukNo.Size = new System.Drawing.Size(210, 36);
+            this.txtKoltukNo.TabIndex = 38;
             // 
             // guna2HtmlLabel15
             // 
@@ -247,20 +266,6 @@
             this.btnKoltukSec.TabIndex = 15;
             this.btnKoltukSec.Text = "Koltuk Seçmek İçin Tıklayın";
             this.btnKoltukSec.Click += new System.EventHandler(this.btnKoltukSec_Click);
-            // 
-            // guna2NumericUpDown1
-            // 
-            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown1.Enabled = false;
-            this.guna2NumericUpDown1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(124, 150);
-            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(210, 36);
-            this.guna2NumericUpDown1.TabIndex = 14;
-            this.guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.guna2NumericUpDown1.UpDownButtonForeColor = System.Drawing.Color.White;
             // 
             // guna2HtmlLabel11
             // 
@@ -479,57 +484,57 @@
             this.txtYolcuSoyadi.Size = new System.Drawing.Size(200, 36);
             this.txtYolcuSoyadi.TabIndex = 6;
             // 
-            // dtwSeferler
+            // dgwSeferler
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtwSeferler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtwSeferler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtwSeferler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtwSeferler.ColumnHeadersHeight = 25;
-            this.dtwSeferler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtwSeferler.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtwSeferler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtwSeferler.Location = new System.Drawing.Point(6, 43);
-            this.dtwSeferler.Name = "dtwSeferler";
-            this.dtwSeferler.RowHeadersVisible = false;
-            this.dtwSeferler.Size = new System.Drawing.Size(1070, 311);
-            this.dtwSeferler.TabIndex = 28;
-            this.dtwSeferler.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtwSeferler.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtwSeferler.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtwSeferler.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtwSeferler.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtwSeferler.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.dtwSeferler.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtwSeferler.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtwSeferler.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtwSeferler.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtwSeferler.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtwSeferler.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtwSeferler.ThemeStyle.HeaderStyle.Height = 25;
-            this.dtwSeferler.ThemeStyle.ReadOnly = false;
-            this.dtwSeferler.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtwSeferler.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtwSeferler.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtwSeferler.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtwSeferler.ThemeStyle.RowsStyle.Height = 22;
-            this.dtwSeferler.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtwSeferler.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtwSeferler.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtwSeferler_CellDoubleClick);
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgwSeferler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgwSeferler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwSeferler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgwSeferler.ColumnHeadersHeight = 25;
+            this.dgwSeferler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwSeferler.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgwSeferler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgwSeferler.Location = new System.Drawing.Point(6, 43);
+            this.dgwSeferler.Name = "dgwSeferler";
+            this.dgwSeferler.RowHeadersVisible = false;
+            this.dgwSeferler.Size = new System.Drawing.Size(1070, 311);
+            this.dgwSeferler.TabIndex = 28;
+            this.dgwSeferler.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgwSeferler.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgwSeferler.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgwSeferler.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgwSeferler.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgwSeferler.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.dgwSeferler.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgwSeferler.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgwSeferler.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgwSeferler.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgwSeferler.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgwSeferler.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgwSeferler.ThemeStyle.HeaderStyle.Height = 25;
+            this.dgwSeferler.ThemeStyle.ReadOnly = false;
+            this.dgwSeferler.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgwSeferler.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgwSeferler.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgwSeferler.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgwSeferler.ThemeStyle.RowsStyle.Height = 22;
+            this.dgwSeferler.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgwSeferler.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgwSeferler.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwSeferler_CellDoubleClick);
             // 
             // txtYolcuAdi
             // 
@@ -592,6 +597,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtCinsiyet);
             this.panel1.Controls.Add(this.guna2Panel1);
             this.panel1.Controls.Add(this.guna2Panel2);
             this.panel1.Controls.Add(this.guna2HtmlLabel13);
@@ -610,12 +616,31 @@
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.cmbYolcuCinsiyet);
             this.panel1.Controls.Add(this.cmbOdemeTuru);
             this.panel1.Location = new System.Drawing.Point(13, 382);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(710, 320);
             this.panel1.TabIndex = 29;
+            // 
+            // txtCinsiyet
+            // 
+            this.txtCinsiyet.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCinsiyet.DefaultText = "";
+            this.txtCinsiyet.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCinsiyet.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCinsiyet.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCinsiyet.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCinsiyet.Enabled = false;
+            this.txtCinsiyet.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCinsiyet.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCinsiyet.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCinsiyet.Location = new System.Drawing.Point(503, 200);
+            this.txtCinsiyet.Name = "txtCinsiyet";
+            this.txtCinsiyet.PasswordChar = '\0';
+            this.txtCinsiyet.PlaceholderText = "";
+            this.txtCinsiyet.SelectedText = "";
+            this.txtCinsiyet.Size = new System.Drawing.Size(200, 36);
+            this.txtCinsiyet.TabIndex = 30;
             // 
             // txtYolcuTc
             // 
@@ -665,24 +690,6 @@
             this.panel3.Size = new System.Drawing.Size(710, 53);
             this.panel3.TabIndex = 0;
             // 
-            // cmbYolcuCinsiyet
-            // 
-            this.cmbYolcuCinsiyet.BackColor = System.Drawing.Color.Transparent;
-            this.cmbYolcuCinsiyet.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbYolcuCinsiyet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbYolcuCinsiyet.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbYolcuCinsiyet.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbYolcuCinsiyet.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbYolcuCinsiyet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbYolcuCinsiyet.ItemHeight = 30;
-            this.cmbYolcuCinsiyet.Items.AddRange(new object[] {
-            "Erkek\t",
-            "Kız"});
-            this.cmbYolcuCinsiyet.Location = new System.Drawing.Point(503, 200);
-            this.cmbYolcuCinsiyet.Name = "cmbYolcuCinsiyet";
-            this.cmbYolcuCinsiyet.Size = new System.Drawing.Size(200, 36);
-            this.cmbYolcuCinsiyet.TabIndex = 20;
-            // 
             // cmbOdemeTuru
             // 
             this.cmbOdemeTuru.BackColor = System.Drawing.Color.Transparent;
@@ -708,7 +715,7 @@
             this.ClientSize = new System.Drawing.Size(1094, 875);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.guna2HtmlLabel3);
-            this.Controls.Add(this.dtwSeferler);
+            this.Controls.Add(this.dgwSeferler);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.btnBiletEkle);
             this.Controls.Add(this.panel1);
@@ -721,10 +728,9 @@
             this.guna2Panel2.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtwSeferler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwSeferler)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -746,10 +752,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtYolcuEposta;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btnKoltukSec;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
-        private Guna.UI2.WinForms.Guna2TextBox txtSeferId;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel6;
@@ -763,7 +767,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtYolcuSoyadi;
-        private Guna.UI2.WinForms.Guna2DataGridView dtwSeferler;
+        private Guna.UI2.WinForms.Guna2DataGridView dgwSeferler;
         private Guna.UI2.WinForms.Guna2TextBox txtYolcuAdi;
         private Guna.UI2.WinForms.Guna2TextBox txtBiletUcreti;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
@@ -774,10 +778,12 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbYolcuCinsiyet;
         private Guna.UI2.WinForms.Guna2ComboBox cmbOdemeTuru;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
         private Guna.UI2.WinForms.Guna2TextBox txtAracTuru;
+        public Guna.UI2.WinForms.Guna2TextBox txtCinsiyet;
+        public Guna.UI2.WinForms.Guna2TextBox txtKoltukNo;
+        public Guna.UI2.WinForms.Guna2TextBox txtSeferId;
     }
 }

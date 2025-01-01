@@ -12,15 +12,30 @@ namespace Otobus_Otomasyon
 {
     public partial class KoltukSecim : Form
     {
+        public static string Cinsiyet { get; set; }
         public KoltukSecim()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        public KoltukSecim(BiletEkle biletEkle)
         {
+            InitializeComponent();
+        }
 
+        private void btnErkek_Click(object sender, EventArgs e)
+        {
+            Cinsiyet = "Erkek";
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void btnKadin_Click(object sender, EventArgs e)
+        {
+            Cinsiyet = "Kadın";
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }
