@@ -37,5 +37,10 @@ namespace Otobus_Otomasyon
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void btnRezerveEt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

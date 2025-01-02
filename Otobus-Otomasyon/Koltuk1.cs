@@ -59,11 +59,7 @@ namespace Otobus_Otomasyon
                         else if (koltuk.yolcuCinsiyet == "Kadın")
                         {
                             button.FillColor = Color.Pink;
-                        }
-                        else
-                        {
-                            button.FillColor = Color.Gray; // Cinsiyet bilgisi eksikse
-                        }
+                        } 
                     }
                     else
                     {
@@ -114,7 +110,20 @@ namespace Otobus_Otomasyon
             {
                 try
                 {
-                    // BiletEkle formunu kontrol et
+                    string koltukNo = clickedButton.Name.Replace("btnKoltuk", "");
+                    var aracId = db.Seferler.Where(s => s.seferId == seferId).Select(s => s.aracId).FirstOrDefault();
+
+                    var koltukDurum = db.Koltuklar
+                                        .Where(k => k.koltukNo.ToString() == koltukNo && k.aracId == aracId)
+                                        .Select(k => k.koltukDurum)
+                                        .FirstOrDefault();
+
+                    if (koltukDurum == "Dolu")
+                    {
+                        MessageBox.Show("Bu koltuk zaten dolu! Başka bir koltuk seçiniz.");
+                        return;
+                    }
+
                     if (Application.OpenForms["BiletEkle"] is BiletEkle openForm)
                     {
                         biletEkle = openForm;
@@ -125,7 +134,6 @@ namespace Otobus_Otomasyon
                         biletEkle.Show();
                     }
 
-                    // Koltuk seçimi işlemi
                     KoltukSecim koltukSecim = new KoltukSecim(biletEkle);
                     if (koltukSecim.ShowDialog() == DialogResult.OK)
                     {
@@ -142,8 +150,6 @@ namespace Otobus_Otomasyon
                         }
                     }
 
-                    // Koltuk numarasını al ve ata
-                    string koltukNo = System.Text.RegularExpressions.Regex.Match(clickedButton.Name, @"\d+$").Value;
                     if (!string.IsNullOrEmpty(koltukNo))
                     {
                         biletEkle.txtKoltukNo.Text = koltukNo;
@@ -175,11 +181,6 @@ namespace Otobus_Otomasyon
                     AttachButtonClickEvent(control);
                 }
             }
-        }
-
-        private void btnKoltuk1_Click(object sender, EventArgs e)
-        {
-            // Bu event şimdilik boş bırakıldı, gerekirse işlem eklenebilir
         }
     }
 }

@@ -42,7 +42,7 @@
             this.guna2HtmlLabel37 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPnrNumarasi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtYolcuAdi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtBiletId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtBiletNumarasi = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSeciliListele = new Guna.UI2.WinForms.Guna2Button();
             this.txtBiletTarihi = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -51,7 +51,7 @@
             this.chkboxPnrNumarasi = new Guna.UI2.WinForms.Guna2CheckBox();
             this.chkboxBiletTarihi = new Guna.UI2.WinForms.Guna2CheckBox();
             this.chkboxYolcuAdi = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.chkboxBiletId = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.chkboxBiletNumarasi = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btnBiletListele = new Guna.UI2.WinForms.Guna2Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -160,7 +160,7 @@
             this.txtPnrNumarasi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPnrNumarasi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPnrNumarasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPnrNumarasi.Location = new System.Drawing.Point(556, 82);
+            this.txtPnrNumarasi.Location = new System.Drawing.Point(583, 82);
             this.txtPnrNumarasi.Name = "txtPnrNumarasi";
             this.txtPnrNumarasi.PasswordChar = '\0';
             this.txtPnrNumarasi.PlaceholderText = "";
@@ -179,7 +179,7 @@
             this.txtYolcuAdi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtYolcuAdi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtYolcuAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtYolcuAdi.Location = new System.Drawing.Point(142, 147);
+            this.txtYolcuAdi.Location = new System.Drawing.Point(188, 147);
             this.txtYolcuAdi.Name = "txtYolcuAdi";
             this.txtYolcuAdi.PasswordChar = '\0';
             this.txtYolcuAdi.PlaceholderText = "";
@@ -187,25 +187,25 @@
             this.txtYolcuAdi.Size = new System.Drawing.Size(200, 36);
             this.txtYolcuAdi.TabIndex = 20;
             // 
-            // txtBiletId
+            // txtBiletNumarasi
             // 
-            this.txtBiletId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBiletId.DefaultText = "";
-            this.txtBiletId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBiletId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBiletId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBiletId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBiletId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBiletId.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBiletId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBiletId.Location = new System.Drawing.Point(142, 82);
-            this.txtBiletId.MaxLength = 11;
-            this.txtBiletId.Name = "txtBiletId";
-            this.txtBiletId.PasswordChar = '\0';
-            this.txtBiletId.PlaceholderText = "";
-            this.txtBiletId.SelectedText = "";
-            this.txtBiletId.Size = new System.Drawing.Size(200, 36);
-            this.txtBiletId.TabIndex = 18;
+            this.txtBiletNumarasi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBiletNumarasi.DefaultText = "";
+            this.txtBiletNumarasi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBiletNumarasi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBiletNumarasi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBiletNumarasi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBiletNumarasi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBiletNumarasi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBiletNumarasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBiletNumarasi.Location = new System.Drawing.Point(188, 82);
+            this.txtBiletNumarasi.MaxLength = 11;
+            this.txtBiletNumarasi.Name = "txtBiletNumarasi";
+            this.txtBiletNumarasi.PasswordChar = '\0';
+            this.txtBiletNumarasi.PlaceholderText = "";
+            this.txtBiletNumarasi.SelectedText = "";
+            this.txtBiletNumarasi.Size = new System.Drawing.Size(200, 36);
+            this.txtBiletNumarasi.TabIndex = 18;
             // 
             // btnSeciliListele
             // 
@@ -216,9 +216,9 @@
             this.btnSeciliListele.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnSeciliListele.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeciliListele.ForeColor = System.Drawing.Color.White;
-            this.btnSeciliListele.Location = new System.Drawing.Point(384, 199);
+            this.btnSeciliListele.Location = new System.Drawing.Point(411, 198);
             this.btnSeciliListele.Name = "btnSeciliListele";
-            this.btnSeciliListele.Size = new System.Drawing.Size(203, 67);
+            this.btnSeciliListele.Size = new System.Drawing.Size(176, 68);
             this.btnSeciliListele.TabIndex = 17;
             this.btnSeciliListele.Text = "Girilen Değere Göre Listele";
             this.btnSeciliListele.Click += new System.EventHandler(this.btnSeciliListele_Click);
@@ -234,7 +234,7 @@
             this.txtBiletTarihi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBiletTarihi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBiletTarihi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBiletTarihi.Location = new System.Drawing.Point(142, 214);
+            this.txtBiletTarihi.Location = new System.Drawing.Point(188, 214);
             this.txtBiletTarihi.MaxLength = 11;
             this.txtBiletTarihi.Name = "txtBiletTarihi";
             this.txtBiletTarihi.PasswordChar = '\0';
@@ -250,7 +250,7 @@
             this.panel1.Controls.Add(this.chkboxPnrNumarasi);
             this.panel1.Controls.Add(this.chkboxBiletTarihi);
             this.panel1.Controls.Add(this.chkboxYolcuAdi);
-            this.panel1.Controls.Add(this.chkboxBiletId);
+            this.panel1.Controls.Add(this.chkboxBiletNumarasi);
             this.panel1.Controls.Add(this.btnBiletListele);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.btnSeciliListele);
@@ -259,7 +259,7 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.txtBiletTarihi);
-            this.panel1.Controls.Add(this.txtBiletId);
+            this.panel1.Controls.Add(this.txtBiletNumarasi);
             this.panel1.Controls.Add(this.txtYolcuAdi);
             this.panel1.Location = new System.Drawing.Point(148, 598);
             this.panel1.Name = "panel1";
@@ -279,7 +279,7 @@
             this.cmbBiletDurumu.Items.AddRange(new object[] {
             "Aktif\t",
             "İptal Edildi"});
-            this.cmbBiletDurumu.Location = new System.Drawing.Point(556, 140);
+            this.cmbBiletDurumu.Location = new System.Drawing.Point(583, 140);
             this.cmbBiletDurumu.Name = "cmbBiletDurumu";
             this.cmbBiletDurumu.Size = new System.Drawing.Size(200, 36);
             this.cmbBiletDurumu.TabIndex = 34;
@@ -292,7 +292,7 @@
             this.chkboxBiletDurumu.CheckedState.BorderThickness = 0;
             this.chkboxBiletDurumu.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chkboxBiletDurumu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chkboxBiletDurumu.Location = new System.Drawing.Point(384, 147);
+            this.chkboxBiletDurumu.Location = new System.Drawing.Point(411, 147);
             this.chkboxBiletDurumu.Name = "chkboxBiletDurumu";
             this.chkboxBiletDurumu.Size = new System.Drawing.Size(160, 29);
             this.chkboxBiletDurumu.TabIndex = 33;
@@ -310,7 +310,7 @@
             this.chkboxPnrNumarasi.CheckedState.BorderThickness = 0;
             this.chkboxPnrNumarasi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chkboxPnrNumarasi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chkboxPnrNumarasi.Location = new System.Drawing.Point(381, 82);
+            this.chkboxPnrNumarasi.Location = new System.Drawing.Point(408, 82);
             this.chkboxPnrNumarasi.Name = "chkboxPnrNumarasi";
             this.chkboxPnrNumarasi.Size = new System.Drawing.Size(163, 29);
             this.chkboxPnrNumarasi.TabIndex = 32;
@@ -328,7 +328,7 @@
             this.chkboxBiletTarihi.CheckedState.BorderThickness = 0;
             this.chkboxBiletTarihi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chkboxBiletTarihi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chkboxBiletTarihi.Location = new System.Drawing.Point(3, 221);
+            this.chkboxBiletTarihi.Location = new System.Drawing.Point(49, 221);
             this.chkboxBiletTarihi.Name = "chkboxBiletTarihi";
             this.chkboxBiletTarihi.Size = new System.Drawing.Size(133, 29);
             this.chkboxBiletTarihi.TabIndex = 31;
@@ -346,7 +346,7 @@
             this.chkboxYolcuAdi.CheckedState.BorderThickness = 0;
             this.chkboxYolcuAdi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chkboxYolcuAdi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chkboxYolcuAdi.Location = new System.Drawing.Point(12, 150);
+            this.chkboxYolcuAdi.Location = new System.Drawing.Point(58, 150);
             this.chkboxYolcuAdi.Name = "chkboxYolcuAdi";
             this.chkboxYolcuAdi.Size = new System.Drawing.Size(124, 29);
             this.chkboxYolcuAdi.TabIndex = 30;
@@ -356,23 +356,23 @@
             this.chkboxYolcuAdi.UncheckedState.BorderThickness = 0;
             this.chkboxYolcuAdi.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
-            // chkboxBiletId
+            // chkboxBiletNumarasi
             // 
-            this.chkboxBiletId.AutoSize = true;
-            this.chkboxBiletId.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chkboxBiletId.CheckedState.BorderRadius = 0;
-            this.chkboxBiletId.CheckedState.BorderThickness = 0;
-            this.chkboxBiletId.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chkboxBiletId.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chkboxBiletId.Location = new System.Drawing.Point(33, 82);
-            this.chkboxBiletId.Name = "chkboxBiletId";
-            this.chkboxBiletId.Size = new System.Drawing.Size(103, 29);
-            this.chkboxBiletId.TabIndex = 29;
-            this.chkboxBiletId.Text = "Bilet Id :";
-            this.chkboxBiletId.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.chkboxBiletId.UncheckedState.BorderRadius = 0;
-            this.chkboxBiletId.UncheckedState.BorderThickness = 0;
-            this.chkboxBiletId.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chkboxBiletNumarasi.AutoSize = true;
+            this.chkboxBiletNumarasi.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkboxBiletNumarasi.CheckedState.BorderRadius = 0;
+            this.chkboxBiletNumarasi.CheckedState.BorderThickness = 0;
+            this.chkboxBiletNumarasi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkboxBiletNumarasi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chkboxBiletNumarasi.Location = new System.Drawing.Point(12, 82);
+            this.chkboxBiletNumarasi.Name = "chkboxBiletNumarasi";
+            this.chkboxBiletNumarasi.Size = new System.Drawing.Size(170, 29);
+            this.chkboxBiletNumarasi.TabIndex = 29;
+            this.chkboxBiletNumarasi.Text = "Bilet Numarası :";
+            this.chkboxBiletNumarasi.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chkboxBiletNumarasi.UncheckedState.BorderRadius = 0;
+            this.chkboxBiletNumarasi.UncheckedState.BorderThickness = 0;
+            this.chkboxBiletNumarasi.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // btnBiletListele
             // 
@@ -471,7 +471,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel37;
         private Guna.UI2.WinForms.Guna2TextBox txtPnrNumarasi;
         private Guna.UI2.WinForms.Guna2TextBox txtYolcuAdi;
-        private Guna.UI2.WinForms.Guna2TextBox txtBiletId;
+        private Guna.UI2.WinForms.Guna2TextBox txtBiletNumarasi;
         private Guna.UI2.WinForms.Guna2Button btnSeciliListele;
         private Guna.UI2.WinForms.Guna2TextBox txtBiletTarihi;
         private System.Windows.Forms.Panel panel1;
@@ -481,7 +481,7 @@
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2Button btnBiletListele;
-        private Guna.UI2.WinForms.Guna2CheckBox chkboxBiletId;
+        private Guna.UI2.WinForms.Guna2CheckBox chkboxBiletNumarasi;
         private Guna.UI2.WinForms.Guna2CheckBox chkboxYolcuAdi;
         private Guna.UI2.WinForms.Guna2CheckBox chkboxBiletDurumu;
         private Guna.UI2.WinForms.Guna2CheckBox chkboxPnrNumarasi;

@@ -66,17 +66,24 @@ namespace Otobus_Otomasyon
 
         private void btnKoltukSec_Click(object sender, EventArgs e)
         {
-            if (txtAracTuru.Text == "2+2")
+            if(txtSeferId.Text == "")
             {
-                int seferId = int.Parse(txtSeferId.Text);
-                Koltuk1 koltuk1 = new Koltuk1(seferId);
-                koltuk1.Show();
-            }
-            else
+                MessageBox.Show("Lütfen bir sefer seçiniz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            } else
             {
-                int seferId = int.Parse(txtSeferId.Text);
-                Koltuk2 koltuk2 = new Koltuk2();
-                koltuk2.Show();
+                if (txtAracTuru.Text == "2+2")
+                {
+                    int seferId = int.Parse(txtSeferId.Text);
+                    Koltuk1 koltuk1 = new Koltuk1(seferId);
+                    koltuk1.Show();
+                }
+                else
+                {
+                    int seferId = int.Parse(txtSeferId.Text);
+                    Koltuk2 koltuk2 = new Koltuk2(seferId);
+                    koltuk2.Show();
+                }
             }
         }
 
@@ -94,7 +101,7 @@ namespace Otobus_Otomasyon
                 yolcular.yolcuEposta = txtYolcuEposta.Text;
                 if (yolcular.yolcuAdi == "" || yolcular.yolcuSoyadi == "" || yolcular.yolcuCinsiyet == "" || yolcular.yolcuDogumTarihi == null || yolcular.yolcuTelNo == "" || yolcular.yolcuTc == "" || yolcular.yolcuEposta == "")
                 {
-                    MessageBox.Show("Lütfen tüm alanları doldurunuz!");
+                    MessageBox.Show("Lütfen tüm alanları doldurunuz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 else

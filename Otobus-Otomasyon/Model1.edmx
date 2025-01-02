@@ -584,9 +584,9 @@
             <PropertyRef Name="seferId" />
           </Key>
           <Property Name="seferId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="VarisSaati" Type="Time" />
-          <Property Name="KalkisSaati" Type="Time" />
-          <Property Name="seferTarihi" Type="DateTime" />
+          <Property Name="VarisSaati" Type="Time" Precision="7" />
+          <Property Name="KalkisSaati" Type="Time" Precision="7" />
+          <Property Name="seferTarihi" Type="DateTime" Precision="0" />
           <Property Name="Kalkis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Varis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="aracId" Type="Int32" />
@@ -915,13 +915,14 @@
           <Property Type="String" Name="Araç_Plakası" Nullable="true" MaxLength="50" />
           <Property Type="Int32" Name="Koltuk_Numarası" Nullable="true" />
           <Property Type="String" Name="Ad_Soyad" Nullable="false" MaxLength="101" />
-          <Property Type="DateTime" Name="Sefer_Tarihi" Nullable="true" Precision="23" />
-          <Property Type="DateTime" Name="Kalkış_Saati" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Sefer_Tarihi" Nullable="true" />
+          <Property Type="Time" Name="Kalkış_Saati" Nullable="true" />
           <Property Type="String" Name="Kalkış_Şehri" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Varış_Şehri" Nullable="true" MaxLength="50" />
           <Property Type="DateTime" Name="RezerveTarihi" Nullable="true" Precision="23" />
           <Property Type="String" Name="OdemeDurumu" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="PnrNumarasi" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="RezerveDurumu" Nullable="true" MaxLength="50" />
         </ComplexType>
         <Association Name="FK_Rezervasyon_Araclar">
           <End Type="OBSODBModel.Araclar" Role="Araclar" Multiplicity="0..1" />
@@ -1210,6 +1211,7 @@
                 <ScalarProperty Name="RezerveTarihi" ColumnName="RezerveTarihi" />
                 <ScalarProperty Name="OdemeDurumu" ColumnName="OdemeDurumu" />
                 <ScalarProperty Name="PnrNumarasi" ColumnName="PnrNumarasi" />
+                <ScalarProperty Name="RezerveDurumu" ColumnName="RezerveDurumu" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

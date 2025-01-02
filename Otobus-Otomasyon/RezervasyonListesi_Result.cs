@@ -18,11 +18,12 @@ namespace Otobus_Otomasyon
         public Nullable<int> Koltuk_Numarası { get; set; }
         public string Ad_Soyad { get; set; }
         public Nullable<System.DateTime> Sefer_Tarihi { get; set; }
-        public Nullable<System.DateTime> Kalkış_Saati { get; set; }
+        public Nullable<System.TimeSpan> Kalkış_Saati { get; set; }
         public string Kalkış_Şehri { get; set; }
         public string Varış_Şehri { get; set; }
         public Nullable<System.DateTime> RezerveTarihi { get; set; }
         public string OdemeDurumu { get; set; }
         public string PnrNumarasi { get; set; }
+        public string RezerveDurumu { get; set; }
     }
 }

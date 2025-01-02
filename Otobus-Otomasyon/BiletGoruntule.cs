@@ -28,141 +28,78 @@ namespace Otobus_Otomasyon
 
         private void btnSeciliListele_Click(object sender, EventArgs e)
         {
-            if (chkboxBiletId.Checked)
+            var bilet = db.BiletListesi().AsQueryable();
+
+            if (chkboxBiletNumarasi.Checked)
             {
-                int biletId = Convert.ToInt32(txtBiletId.Text);
-                var arananId = db.Biletler.Where(x => x.biletId == biletId).ToList();
-                if (arananId.Any())
+                if (int.TryParse(txtBiletNumarasi.Text, out int biletNumarasi))
                 {
-                    var query = from item in db.Biletler
-                                where item.biletId == biletId
-                                select new
-                                {
-                                    item.biletId,
-                                    AdSoyad = item.Yolcular.yolcuAdi + " " + item.Yolcular.yolcuSoyadi,
-                                    KalkisYeri = item.Seferler.Kalkis,
-                                    VarisYeri = item.Seferler.Varis,
-                                    item.biletTarih,
-                                    item.Koltuklar.koltukNo,
-                                    item.PnrNumarasi,
-                                    item.biletUcreti,
-                                    item.BiletDurumu
-                                };
-                    dgwBiletleriGoruntule.DataSource = query.ToList();
+                    bilet = bilet.Where(x => x.Bilet_Numarası == biletNumarasi);
                 }
                 else
                 {
-                    MessageBox.Show("Bu Id'ye ait bilet bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Geçerli bir bilet numarası giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
+            if (chkboxBiletDurumu.Checked)
+            {
+                bilet = bilet.Where(x => x.BiletDurumu == cmbBiletDurumu.Text);
+            }
+
+            if (chkboxBiletTarihi.Checked)
+            {
+                if (DateTime.TryParse(txtBiletTarihi.Text, out DateTime biletTarihi))
+                {
+                    bilet = bilet.Where(x => x.biletTarih == biletTarihi);
+                }
+                else
+                {
+                    MessageBox.Show("Geçerli bir tarih giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
 
             if (chkboxYolcuAdi.Checked)
             {
-                string yolcuAdi = txtYolcuAdi.Text;
-                var query = from item in db.Biletler
-                            where item.Yolcular.yolcuAdi + " " + item.Yolcular.yolcuSoyadi == yolcuAdi
-                            select new
-                            {
-                                item.biletId,
-                                AdSoyad = item.Yolcular.yolcuAdi + " " + item.Yolcular.yolcuSoyadi,
-                                KalkisYeri = item.Seferler.Kalkis,
-                                VarisYeri = item.Seferler.Varis,
-                                item.biletTarih,
-                                item.Koltuklar.koltukNo,
-                                item.PnrNumarasi,
-                                item.biletUcreti,
-                                item.BiletDurumu
-                            };
-                var result = query.ToList();
-                if (result.Any())
+                string adSoyad = txtYolcuAdi.Text;
+                if(!string.IsNullOrEmpty(adSoyad))
                 {
-                    dgwBiletleriGoruntule.DataSource = result;
-                }
-                else
-                {
-                    MessageBox.Show("Bu yolcu adına ait bilet bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-
-            if (chkboxBiletTarihi.Checked)
-            {
-                var girilenTarih = DateTime.Parse(txtBiletTarihi.Text);
-                var tarih = db.Biletler.Where(x => x.biletTarih == girilenTarih).FirstOrDefault();
-                if (tarih != null)
-                {
-                    var query = from item in db.Biletler
-                                where item.biletTarih == girilenTarih
-                                select new
-                                {
-                                    item.biletId,
-                                    AdSoyad = item.Yolcular.yolcuAdi + " " + item.Yolcular.yolcuSoyadi,
-                                    KalkisYeri = item.Seferler.Kalkis,
-                                    VarisYeri = item.Seferler.Varis,
-                                    item.biletTarih,
-                                    item.Koltuklar.koltukNo,
-                                    item.PnrNumarasi,
-                                    item.biletUcreti,
-                                    item.BiletDurumu
-                                };
-                    dgwBiletleriGoruntule.DataSource = query.ToList();
-                }
-                else
-                {
-                    MessageBox.Show("Bu tarihe ait bilet bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    bilet = bilet.Where(x => x.Ad_Soyad == adSoyad);
                 }
             }
 
             if (chkboxPnrNumarasi.Checked)
             {
                 string pnrNumarasi = txtPnrNumarasi.Text;
-                var value = db.Biletler.Where(x => x.PnrNumarasi == pnrNumarasi).FirstOrDefault().ToString();
-                if (value != null)
+                if (!string.IsNullOrEmpty(pnrNumarasi))
                 {
-                    var query = from item in db.Biletler
-                                where item.PnrNumarasi == pnrNumarasi
-                                select new
-                                {
-                                    item.biletId,
-                                    AdSoyad = item.Yolcular.yolcuAdi + " " + item.Yolcular.yolcuSoyadi,
-                                    KalkisYeri = item.Seferler.Kalkis,
-                                    VarisYeri = item.Seferler.Varis,
-                                    item.biletTarih,
-                                    item.Koltuklar.koltukNo,
-                                    item.PnrNumarasi,
-                                    item.biletUcreti,
-                                    item.BiletDurumu
-                                };
-                    dgwBiletleriGoruntule.DataSource = query.ToList();
+                    bilet = bilet.Where(x => x.PnrNumarasi == pnrNumarasi);
                 }
                 else
                 {
-                    MessageBox.Show("Bu PNR Numarasına ait bilet bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Geçerli bir PNR numarası giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
 
-            if (chkboxBiletDurumu.Checked)
+            var sonuc = bilet.ToList();
+            if (sonuc.Any())
             {
-                var biletDurumu = cmbBiletDurumu.Text.Trim();
-                var durum = db.Biletler.Where(x => x.BiletDurumu.ToLower() == biletDurumu.ToLower()).ToList();
-                if (durum.Any())
-                {
-                    var query = from item in db.Biletler
-                                where item.BiletDurumu == biletDurumu
-                                select new
-                                {
-                                    item.biletId,
-                                    AdSoyad = item.Yolcular.yolcuAdi + " " + item.Yolcular.yolcuSoyadi,
-                                    KalkisYeri = item.Seferler.Kalkis,
-                                    VarisYeri = item.Seferler.Varis,
-                                    item.biletTarih,
-                                    item.Koltuklar.koltukNo,
-                                    item.PnrNumarasi,
-                                    item.biletUcreti,
-                                    item.BiletDurumu
-                                };
-                    dgwBiletleriGoruntule.DataSource = query.ToList();
-                }
+                dgwBiletleriGoruntule.DataSource = sonuc;
             }
+            else
+            {
+                MessageBox.Show("Belirtilen kriterlere uygun bilet bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            txtBiletNumarasi.Clear();
+            txtBiletTarihi.Clear();
+            txtPnrNumarasi.Clear();
+            txtYolcuAdi.Clear();
+            cmbBiletDurumu.SelectedIndex = -1;
+
         }
 
         private void btnBiletListele_Click(object sender, EventArgs e)

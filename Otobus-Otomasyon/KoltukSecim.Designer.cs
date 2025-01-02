@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnKadin = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRezerver = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRezerveEt = new Guna.UI2.WinForms.Guna2Button();
             this.btnErkek = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -52,20 +52,21 @@
             this.btnKadin.Text = "Kadın";
             this.btnKadin.Click += new System.EventHandler(this.btnKadin_Click);
             // 
-            // btnRezerver
+            // btnRezerveEt
             // 
-            this.btnRezerver.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRezerver.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRezerver.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRezerver.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRezerver.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnRezerver.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRezerver.ForeColor = System.Drawing.Color.White;
-            this.btnRezerver.Location = new System.Drawing.Point(169, 229);
-            this.btnRezerver.Name = "btnRezerver";
-            this.btnRezerver.Size = new System.Drawing.Size(180, 60);
-            this.btnRezerver.TabIndex = 1;
-            this.btnRezerver.Text = "Rezerve Et";
+            this.btnRezerveEt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRezerveEt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRezerveEt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRezerveEt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRezerveEt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnRezerveEt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRezerveEt.ForeColor = System.Drawing.Color.White;
+            this.btnRezerveEt.Location = new System.Drawing.Point(169, 229);
+            this.btnRezerveEt.Name = "btnRezerveEt";
+            this.btnRezerveEt.Size = new System.Drawing.Size(180, 60);
+            this.btnRezerveEt.TabIndex = 1;
+            this.btnRezerveEt.Text = "Rezerve Et";
+            this.btnRezerveEt.Click += new System.EventHandler(this.btnRezerveEt_Click);
             // 
             // btnErkek
             // 
@@ -122,7 +123,7 @@
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.btnErkek);
-            this.Controls.Add(this.btnRezerver);
+            this.Controls.Add(this.btnRezerveEt);
             this.Controls.Add(this.btnKadin);
             this.Name = "KoltukSecim";
             this.Text = "KoltukSecim";
@@ -134,7 +135,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Button btnKadin;
-        private Guna.UI2.WinForms.Guna2Button btnRezerver;
+        private Guna.UI2.WinForms.Guna2Button btnRezerveEt;
         private Guna.UI2.WinForms.Guna2Button btnErkek;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
