@@ -28,83 +28,101 @@ namespace Otobus_Otomasyon
 
         private void btnSeciliListele_Click(object sender, EventArgs e)
         {
-            var bilet = db.BiletListesi().AsQueryable();
-
-            if (chkboxBiletNumarasi.Checked)
+            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
+            if (bosalankontrol.AreFieldsValid(this))
             {
-                if (int.TryParse(txtBiletNumarasi.Text, out int biletNumarasi))
+                var bilet = db.BiletListesi().AsQueryable();
+
+                if (chkboxBiletNumarasi.Checked)
                 {
-                    bilet = bilet.Where(x => x.Bilet_Numarası == biletNumarasi);
+                    if (int.TryParse(txtBiletNumarasi.Text, out int biletNumarasi))
+                    {
+                        bilet = bilet.Where(x => x.Bilet_Numarası == biletNumarasi);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Geçerli bir bilet numarası giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                if (chkboxBiletDurumu.Checked)
+                {
+                    bilet = bilet.Where(x => x.BiletDurumu == cmbBiletDurumu.Text);
+                }
+
+                if (chkboxBiletTarihi.Checked)
+                {
+                    if (DateTime.TryParse(txtBiletTarihi.Text, out DateTime biletTarihi))
+                    {
+                        bilet = bilet.Where(x => x.biletTarih == biletTarihi);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Geçerli bir tarih giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                if (chkboxYolcuAdi.Checked)
+                {
+                    string adSoyad = txtYolcuAdi.Text;
+                    if (!string.IsNullOrEmpty(adSoyad))
+                    {
+                        bilet = bilet.Where(x => x.Ad_Soyad == adSoyad);
+                    }
+                }
+
+                if (chkboxPnrNumarasi.Checked)
+                {
+                    string pnrNumarasi = txtPnrNumarasi.Text;
+                    if (!string.IsNullOrEmpty(pnrNumarasi))
+                    {
+                        bilet = bilet.Where(x => x.PnrNumarasi == pnrNumarasi);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Geçerli bir PNR numarası giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                var sonuc = bilet.ToList();
+                if (sonuc.Any())
+                {
+                    dgwBiletleriGoruntule.DataSource = sonuc;
                 }
                 else
                 {
-                    MessageBox.Show("Geçerli bir bilet numarası giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    MessageBox.Show("Belirtilen kriterlere uygun bilet bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
 
-            if (chkboxBiletDurumu.Checked)
-            {
-                bilet = bilet.Where(x => x.BiletDurumu == cmbBiletDurumu.Text);
-            }
-
-            if (chkboxBiletTarihi.Checked)
-            {
-                if (DateTime.TryParse(txtBiletTarihi.Text, out DateTime biletTarihi))
-                {
-                    bilet = bilet.Where(x => x.biletTarih == biletTarihi);
-                }
-                else
-                {
-                    MessageBox.Show("Geçerli bir tarih giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-
-            if (chkboxYolcuAdi.Checked)
-            {
-                string adSoyad = txtYolcuAdi.Text;
-                if(!string.IsNullOrEmpty(adSoyad))
-                {
-                    bilet = bilet.Where(x => x.Ad_Soyad == adSoyad);
-                }
-            }
-
-            if (chkboxPnrNumarasi.Checked)
-            {
-                string pnrNumarasi = txtPnrNumarasi.Text;
-                if (!string.IsNullOrEmpty(pnrNumarasi))
-                {
-                    bilet = bilet.Where(x => x.PnrNumarasi == pnrNumarasi);
-                }
-                else
-                {
-                    MessageBox.Show("Geçerli bir PNR numarası giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-
-            var sonuc = bilet.ToList();
-            if (sonuc.Any())
-            {
-                dgwBiletleriGoruntule.DataSource = sonuc;
+                txtBiletNumarasi.Clear();
+                txtBiletTarihi.Clear();
+                txtPnrNumarasi.Clear();
+                txtYolcuAdi.Clear();
+                cmbBiletDurumu.SelectedIndex = -1;
             }
             else
             {
-                MessageBox.Show("Belirtilen kriterlere uygun bilet bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Alanlar boşsa işlem yapılmaz
             }
-
-            txtBiletNumarasi.Clear();
-            txtBiletTarihi.Clear();
-            txtPnrNumarasi.Clear();
-            txtYolcuAdi.Clear();
-            cmbBiletDurumu.SelectedIndex = -1;
+           
 
         }
 
         private void btnBiletListele_Click(object sender, EventArgs e)
         {
-            dgwBiletleriGoruntule.DataSource = db.BiletListesi().ToList();
+            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
+            if (bosalankontrol.AreFieldsValid(this))
+            {
+                dgwBiletleriGoruntule.DataSource = db.BiletListesi().ToList();
+            }
+            else
+            {
+                // Alanlar boşsa işlem yapılmaz
+            }
+            
         }
     }
 }
