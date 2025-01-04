@@ -39,18 +39,12 @@ namespace Otobus_Otomasyon
             guna2TextBox2.AutoCompleteSource = AutoCompleteSource.CustomSource; // Kendi kaynağımızı kullanıyoruz
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void DegistirButton_Click(object sender, EventArgs e)
         {
-            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
-            if (bosalankontrol.AreFieldsValid(this))
-            {
-                // Alanlar doluysa işlemlere devam et
-               // MessageBox.Show("Bilet sorgulandı!", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                // Alanlar boşsa işlem yapılmaz
-            }
+            // Guna2TextBox1 ve Guna2TextBox2'yi yer değiştir
+            string temp = guna2TextBox1.Text;  // Guna2TextBox1'in içeriğini geçici bir değişkene al
+            guna2TextBox1.Text = guna2TextBox2.Text;  // Guna2TextBox1'in içeriğini Guna2TextBox2'ye aktar
+            guna2TextBox2.Text = temp;  // Guna2TextBox2'nin içeriğini geçici değişkene aktar
         }
     }
 }

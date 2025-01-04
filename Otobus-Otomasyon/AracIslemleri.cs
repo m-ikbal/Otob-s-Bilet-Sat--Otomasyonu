@@ -182,19 +182,5 @@ namespace Otobus_Otomasyon
                 // Alanlar boşsa işlem yapılmaz
             }
         }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
-            if (bosalankontrol.AreFieldsValid(this))
-            {
-                // Alanlar doluysa işlemlere devam et
-                // MessageBox.Show("Bilet sorgulandı!", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                // Alanlar boşsa işlem yapılmaz
-            }
-        }
     }
 }
