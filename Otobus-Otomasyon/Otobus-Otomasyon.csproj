@@ -136,6 +136,7 @@
     <Compile Include="BiletListesi_Result2.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="BosalanKontrol.cs" />
     <Compile Include="Islemler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +285,12 @@
     <Compile Include="SeferIptalEt.Designer.cs">
       <DependentUpon>SeferIptalEt.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeferSorgula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeferSorgula.Designer.cs">
+      <DependentUpon>SeferSorgula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sehirler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -376,6 +383,9 @@
     <EmbeddedResource Include="SeferIptalEt.resx">
       <DependentUpon>SeferIptalEt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SeferSorgula.resx">
+      <DependentUpon>SeferSorgula.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -455,6 +465,14 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="otobus %282%29.ico" />
+    <None Include="Resources\icons8-search-64.png" />
+    <None Include="Resources\icons8-change-64.png" />
+    <None Include="Resources\icons8-date-50.png" />
+    <None Include="Resources\icons8-date-1001.png" />
+    <None Include="Resources\icons8-date-100.png" />
+    <None Include="Resources\icons8-location-100.png" />
+    <None Include="Resources\icons8-my-location-1001.png" />
+    <None Include="Resources\icons8-my-location-100.png" />
     <None Include="Resources\front-of-bus.png" />
     <None Include="Resources\4047339-bus-model-modern-school-transport-transportation-trip_113493.png" />
     <None Include="Resources\enter.png" />

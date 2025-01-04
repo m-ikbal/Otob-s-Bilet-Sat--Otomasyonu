@@ -359,6 +359,7 @@
             this.btnKoltuk3.TabIndex = 19;
             this.btnKoltuk3.Text = "3";
             this.btnKoltuk3.TextOffset = new System.Drawing.Point(-3, 0);
+            this.btnKoltuk3.Click += new System.EventHandler(this.btnKoltuk3_Click);
             // 
             // pictureBox3
             // 

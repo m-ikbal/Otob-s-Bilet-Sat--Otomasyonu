@@ -182,5 +182,10 @@ namespace Otobus_Otomasyon
                 }
             }
         }
+
+        private void btnKoltuk3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
