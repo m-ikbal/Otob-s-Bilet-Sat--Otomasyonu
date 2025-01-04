@@ -39,55 +39,65 @@ namespace Otobus_Otomasyon
 
         private void btnRezervasyonAra_Click(object sender, EventArgs e)
         {
-            var rezerve = db.RezervasyonListesi().AsQueryable();
-            if (chkBoxRezerveNumarasi.Checked)
+            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
+            if (bosalankontrol.AreFieldsValid(this))
             {
-                if (int.TryParse(txtRezerveNumarasi.Text, out int rezerveNumarasi))
+                var rezerve = db.RezervasyonListesi().AsQueryable();
+                if (chkBoxRezerveNumarasi.Checked)
                 {
-                    rezerve = rezerve.Where(x => x.Rezerve_Numarası == rezerveNumarasi);
-                }
-                else
-                {
-                    MessageBox.Show("Geçerli bir rezerve numarası giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                if (chkBoxYolcuAdi.Checked)
-                {
-                    rezerve = rezerve.Where(x => x.Ad_Soyad == txtYolcuAdi.Text);
-                }
-
-                if (chkBoxRezerveTarihi.Checked)
-                {
-                    if (DateTime.TryParse(txtRezerveTarihi.Text, out DateTime rezerveTarihi))
+                    if (int.TryParse(txtRezerveNumarasi.Text, out int rezerveNumarasi))
                     {
-                        rezerve = rezerve.Where(x => x.RezerveTarihi == rezerveTarihi);
+                        rezerve = rezerve.Where(x => x.Rezerve_Numarası == rezerveNumarasi);
                     }
                     else
                     {
-                        MessageBox.Show("Geçerli bir tarih giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Geçerli bir rezerve numarası giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                }
 
-                if (chkBoxRezerveDurumu.Checked)
-                {
-                    rezerve = rezerve.Where(x => x.RezerveDurumu == cmbRezerveDurumu.Text);
-                }
+                    if (chkBoxYolcuAdi.Checked)
+                    {
+                        rezerve = rezerve.Where(x => x.Ad_Soyad == txtYolcuAdi.Text);
+                    }
 
-                var sonuc = rezerve.ToList();
-                if (sonuc.Any())
-                {
-                    dgwRezervasyonGörüntüle.DataSource = sonuc;
-                } else
-                {
-                    MessageBox.Show("Belirtilen kriterlere uygun rezervasyon bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (chkBoxRezerveTarihi.Checked)
+                    {
+                        if (DateTime.TryParse(txtRezerveTarihi.Text, out DateTime rezerveTarihi))
+                        {
+                            rezerve = rezerve.Where(x => x.RezerveTarihi == rezerveTarihi);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Geçerli bir tarih giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+
+                    if (chkBoxRezerveDurumu.Checked)
+                    {
+                        rezerve = rezerve.Where(x => x.RezerveDurumu == cmbRezerveDurumu.Text);
+                    }
+
+                    var sonuc = rezerve.ToList();
+                    if (sonuc.Any())
+                    {
+                        dgwRezervasyonGörüntüle.DataSource = sonuc;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Belirtilen kriterlere uygun rezervasyon bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    txtRezerveNumarasi.Clear();
+                    txtYolcuAdi.Clear();
+                    txtRezerveTarihi.Clear();
+                    cmbRezerveDurumu.SelectedIndex = -1;
                 }
-                txtRezerveNumarasi.Clear();
-                txtYolcuAdi.Clear();
-                txtRezerveTarihi.Clear();
-                cmbRezerveDurumu.SelectedIndex = -1;
             }
+            else
+            {
+                // Alanlar boşsa işlem yapılmaz
+            }
+            
         }
     }
 }
