@@ -37,62 +37,71 @@ namespace Otobus_Otomasyon
 
         private void GirisButton_Click(object sender, EventArgs e)
         {
-            string kullaniciAdi = txtKullaniciAdi.Text;
-            string sifre = txtSifre.Text;
-            
-
-            // Boş alan kontrolü
-            if (string.IsNullOrEmpty(kullaniciAdi))
+            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
+            if (bosalankontrol.AreFieldsValid(this))
             {
-                MessageBox.Show("Kullanıcı Adı kısmı boş bırakılamaz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (string.IsNullOrEmpty(sifre))
-            {
-                MessageBox.Show("Şifre kısmı boş bırakılamaz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Kullanıcı veya admin sorgusu
-            var kullanici = db.Kullanicilar.FirstOrDefault(x => x.kullaniciAdi == kullaniciAdi && x.kullaniciSifre == sifre);
-
-            if (kullanici == null)
-            {
-                MessageBox.Show("Kullanıcı Adı veya şifre hatalı", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            kullanici.sonGirisTarihi = DateTime.Now;
-            db.SaveChanges();
+                string kullaniciAdi = txtKullaniciAdi.Text;
+                string sifre = txtSifre.Text;
 
 
-            // Kullanıcı rolüne göre işlem yap
-            Session.KullaniciId = kullanici.kullaniciId;
-            Session.KullaniciAdi = kullanici.kullaniciAdi;
+                // Boş alan kontrolü
+                if (string.IsNullOrEmpty(kullaniciAdi))
+                {
+                    MessageBox.Show("Kullanıcı Adı kısmı boş bırakılamaz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (string.IsNullOrEmpty(sifre))
+                {
+                    MessageBox.Show("Şifre kısmı boş bırakılamaz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-            string rolMesaji = kullanici.kullaniciRol == "admin" ? "admin" : "operatör";
-            MessageBox.Show($"Başarılı Giriş Yaptınız İşlemler Menüsüne Yönlendiriliyorsunuz...\nKullanıcı Rol: {rolMesaji}", "Başarılı Giriş", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Kullanıcı veya admin sorgusu
+                var kullanici = db.Kullanicilar.FirstOrDefault(x => x.kullaniciAdi == kullaniciAdi && x.kullaniciSifre == sifre);
 
-            // Ana formu aç
-            Islemler form1 = new Islemler();
-            form1.Show();
-            form1.KullaniciContainer.Visible = kullanici.kullaniciRol == "admin";
-            this.Hide();
+                if (kullanici == null)
+                {
+                    MessageBox.Show("Kullanıcı Adı veya şifre hatalı", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-            // "Beni Hatırla" ayarlarını kaydet
-            if (chcBoxBeniHatirla.Checked)
-            {
-                Properties.Settings.Default.KullaniciAdi = kullaniciAdi;
-                Properties.Settings.Default.Sifre = sifre;
-                Properties.Settings.Default.BeniHatirla = true;
+                kullanici.sonGirisTarihi = DateTime.Now;
+                db.SaveChanges();
+
+
+                // Kullanıcı rolüne göre işlem yap
+                Session.KullaniciId = kullanici.kullaniciId;
+                Session.KullaniciAdi = kullanici.kullaniciAdi;
+
+                string rolMesaji = kullanici.kullaniciRol == "admin" ? "admin" : "operatör";
+                MessageBox.Show($"Başarılı Giriş Yaptınız İşlemler Menüsüne Yönlendiriliyorsunuz...\nKullanıcı Rol: {rolMesaji}", "Başarılı Giriş", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Ana formu aç
+                Islemler form1 = new Islemler();
+                form1.Show();
+                form1.KullaniciContainer.Visible = kullanici.kullaniciRol == "admin";
+                this.Hide();
+
+                // "Beni Hatırla" ayarlarını kaydet
+                if (chcBoxBeniHatirla.Checked)
+                {
+                    Properties.Settings.Default.KullaniciAdi = kullaniciAdi;
+                    Properties.Settings.Default.Sifre = sifre;
+                    Properties.Settings.Default.BeniHatirla = true;
+                }
+                else
+                {
+                    Properties.Settings.Default.KullaniciAdi = "";
+                    Properties.Settings.Default.Sifre = "";
+                    Properties.Settings.Default.BeniHatirla = false;
+                }
+                Properties.Settings.Default.Save();
             }
             else
             {
-                Properties.Settings.Default.KullaniciAdi = "";
-                Properties.Settings.Default.Sifre = "";
-                Properties.Settings.Default.BeniHatirla = false;
+                // Alanlar boşsa işlem yapılmaz
             }
-            Properties.Settings.Default.Save();
+            
         }
     }
 }
