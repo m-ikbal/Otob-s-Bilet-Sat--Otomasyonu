@@ -36,53 +36,62 @@ namespace Otobus_Otomasyon
 
         private void btnSeferListesi_Click(object sender, EventArgs e)
         {
-            var seferler = db.SeferListesi().AsQueryable();
-
-            if (chkBoxSeferDurumu.Checked)
+            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
+            if (bosalankontrol.AreFieldsValid(this))
             {
-                seferler = seferler.Where(x => x.Sefer_Durumu == cmbSeferDurumu.Text);
-            }
+                var seferler = db.SeferListesi().AsQueryable();
 
-            if (chkBoxSeferSaati.Checked)
-            {
-                if (DateTime.TryParse(txtSeferTarihi.Text, out DateTime seferTarihi))
+                if (chkBoxSeferDurumu.Checked)
                 {
-                    seferler = seferler.Where(x => x.Sefer_Tarihi == seferTarihi);
+                    seferler = seferler.Where(x => x.Sefer_Durumu == cmbSeferDurumu.Text);
+                }
+
+                if (chkBoxSeferSaati.Checked)
+                {
+                    if (DateTime.TryParse(txtSeferTarihi.Text, out DateTime seferTarihi))
+                    {
+                        seferler = seferler.Where(x => x.Sefer_Tarihi == seferTarihi);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Geçerli bir tarih giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                if (chkBoxSeferNumarasi.Checked)
+                {
+                    if (int.TryParse(txtSeferNumarasi.Text, out int seferNumarasi))
+                    {
+                        seferler = seferler.Where(x => x.Sefer_Numarası == seferNumarasi);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Geçerli bir numara giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                var sonuc = seferler.ToList();
+
+                if (sonuc.Any())
+                {
+                    dgwSeferler.DataSource = sonuc;
                 }
                 else
                 {
-                    MessageBox.Show("Geçerli bir tarih giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    MessageBox.Show("Belirtilen kriterlere uygun sefer bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
 
-            if (chkBoxSeferNumarasi.Checked)
-            {
-                if (int.TryParse(txtSeferNumarasi.Text, out int seferNumarasi))
-                {
-                    seferler = seferler.Where(x => x.Sefer_Numarası == seferNumarasi);
-                }
-                else
-                {
-                    MessageBox.Show("Geçerli bir numara giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-
-            var sonuc = seferler.ToList();
-
-            if (sonuc.Any())
-            {
-                dgwSeferler.DataSource = sonuc;
+                txtSeferNumarasi.Clear();
+                txtSeferTarihi.Clear();
+                cmbSeferDurumu.SelectedIndex = -1;
             }
             else
             {
-                MessageBox.Show("Belirtilen kriterlere uygun sefer bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Alanlar boşsa işlem yapılmaz
             }
-
-            txtSeferNumarasi.Clear();
-            txtSeferTarihi.Clear();
-            cmbSeferDurumu.SelectedIndex = -1;
+            
         }
 
     }
