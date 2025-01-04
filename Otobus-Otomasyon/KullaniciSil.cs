@@ -42,20 +42,29 @@ namespace Otobus_Otomasyon
 
         private void btnKullaniciSil_Click(object sender, EventArgs e)
         {
-            try
+            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
+            if (bosalankontrol.AreFieldsValid(this))
             {
-                int id = int.Parse(txtKullaniciId.Text);
-                var kullanici = db.Kullanicilar.Find(id);
-                db.Kullanicilar.Remove(kullanici);
-                db.SaveChanges();
-                MessageBox.Show("Kullanıcı Silindi");
-                KullaniciListele();
-            }
-            catch (Exception ex)
-            {
+                try
+                {
+                    int id = int.Parse(txtKullaniciId.Text);
+                    var kullanici = db.Kullanicilar.Find(id);
+                    db.Kullanicilar.Remove(kullanici);
+                    db.SaveChanges();
+                    MessageBox.Show("Kullanıcı Silindi");
+                    KullaniciListele();
+                }
+                catch (Exception ex)
+                {
 
-                MessageBox.Show("Hata", ex.Message);
+                    MessageBox.Show("Hata", ex.Message);
+                }
             }
+            else
+            {
+                // Alanlar boşsa işlem yapılmaz
+            }
+            
 
         }
     }
