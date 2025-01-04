@@ -21,19 +21,28 @@ namespace Otobus_Otomasyon
 
         private void btnRezervasyonIptalEt_Click(object sender, EventArgs e)
         {
-            int rezervasyonNo = int.Parse(txtRezervasyonNumarasi.Text);
-            var rezervasyon = db.Rezervasyon.FirstOrDefault(x => x.RezerveId == rezervasyonNo);
-
-            if (rezervasyon != null)
+            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
+            if (bosalankontrol.AreFieldsValid(this))
             {
-                rezervasyon.RezerveDurumu = "İptal Edildi";
-                db.SaveChanges();
-                MessageBox.Show("Rezervasyon iptal edildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                int rezervasyonNo = int.Parse(txtRezervasyonNumarasi.Text);
+                var rezervasyon = db.Rezervasyon.FirstOrDefault(x => x.RezerveId == rezervasyonNo);
+
+                if (rezervasyon != null)
+                {
+                    rezervasyon.RezerveDurumu = "İptal Edildi";
+                    db.SaveChanges();
+                    MessageBox.Show("Rezervasyon iptal edildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Belirtilen rezervasyon numarasına ait bir bilet bulunamadı.");
+                }
             }
             else
             {
-                MessageBox.Show("Belirtilen rezervasyon numarasına ait bir bilet bulunamadı.");
+                // Alanlar boşsa işlem yapılmaz
             }
+            
         }
 
         private void RezervasyonIptalEt_Load(object sender, EventArgs e)
