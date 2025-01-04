@@ -216,6 +216,7 @@
             this.guna2Button8.Size = new System.Drawing.Size(175, 75);
             this.guna2Button8.TabIndex = 17;
             this.guna2Button8.Text = "Yenile";
+            this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
             // 
             // panel1
             // 

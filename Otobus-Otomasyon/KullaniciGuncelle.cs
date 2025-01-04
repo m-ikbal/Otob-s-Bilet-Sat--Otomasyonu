@@ -63,24 +63,33 @@ namespace Otobus_Otomasyon
 
         private void btnKullaniciGuncelle_Click(object sender, EventArgs e)
         {
-            try
+            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
+            if (bosalankontrol.AreFieldsValid(this))
             {
-                int id = Convert.ToInt32(dgwKullanicilar.SelectedRows[0].Cells[0].Value);
-                var kullanici = db.Kullanicilar.Find(id);
-                kullanici.kullaniciAd = txtKullaniciIsim.Text;
-                kullanici.kullaniciSoyad = txtKullaniciSoyisim.Text;
-                kullanici.kullaniciAdi = txtKullaniciAdi.Text;
-                kullanici.kullaniciSifre = txtKullaniciSifre.Text;
-                kullanici.kullaniciEposta = txtKullanciEposta.Text;
-                kullanici.kullaniciRol = cmbKullaniciRol.Text;
-                db.SaveChanges();
-                MessageBox.Show("Kullanıcı Güncellendi");
-                KullaniciListele();
+                try
+                {
+                    int id = Convert.ToInt32(dgwKullanicilar.SelectedRows[0].Cells[0].Value);
+                    var kullanici = db.Kullanicilar.Find(id);
+                    kullanici.kullaniciAd = txtKullaniciIsim.Text;
+                    kullanici.kullaniciSoyad = txtKullaniciSoyisim.Text;
+                    kullanici.kullaniciAdi = txtKullaniciAdi.Text;
+                    kullanici.kullaniciSifre = txtKullaniciSifre.Text;
+                    kullanici.kullaniciEposta = txtKullanciEposta.Text;
+                    kullanici.kullaniciRol = cmbKullaniciRol.Text;
+                    db.SaveChanges();
+                    MessageBox.Show("Kullanıcı Güncellendi");
+                    KullaniciListele();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Hata: " + ex.Message);
+                // Alanlar boşsa işlem yapılmaz
             }
+           
         }
     }
 }
