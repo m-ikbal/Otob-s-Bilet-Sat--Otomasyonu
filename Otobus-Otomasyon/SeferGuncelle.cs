@@ -62,25 +62,34 @@ namespace Otobus_Otomasyon
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            try
+            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
+            if (bosalankontrol.AreFieldsValid(this))
             {
-                int seferId = Convert.ToInt32(dgwSeferler.CurrentRow.Cells[0].Value);
-                Seferler sefer = db.Seferler.Where(x => x.seferId == seferId).FirstOrDefault();
-                sefer.KalkisSaati = TimeSpan.Parse(mskKalkisSaati.Text);
-                sefer.VarisSaati = TimeSpan.Parse(mskVarisSaati.Text);
-                sefer.seferTarihi = dtpTarih.Value;
-                sefer.Kalkis = cmbNereden.Text;
-                sefer.Varis = cmbNereye.Text;
-                sefer.seferDurum = cmbSeferDurumu.Text;
-                sefer.aracId = Convert.ToInt32(cmbAracId.SelectedValue);
-                db.SaveChanges();
-                MessageBox.Show("Sefer Güncellendi");
-                dgwSeferler.DataSource = db.SeferListesi().ToList();
+                try
+                {
+                    int seferId = Convert.ToInt32(dgwSeferler.CurrentRow.Cells[0].Value);
+                    Seferler sefer = db.Seferler.Where(x => x.seferId == seferId).FirstOrDefault();
+                    sefer.KalkisSaati = TimeSpan.Parse(mskKalkisSaati.Text);
+                    sefer.VarisSaati = TimeSpan.Parse(mskVarisSaati.Text);
+                    sefer.seferTarihi = dtpTarih.Value;
+                    sefer.Kalkis = cmbNereden.Text;
+                    sefer.Varis = cmbNereye.Text;
+                    sefer.seferDurum = cmbSeferDurumu.Text;
+                    sefer.aracId = Convert.ToInt32(cmbAracId.SelectedValue);
+                    db.SaveChanges();
+                    MessageBox.Show("Sefer Güncellendi");
+                    dgwSeferler.DataSource = db.SeferListesi().ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Hata: " + ex.Message);
+                // Alanlar boşsa işlem yapılmaz
             }
+            
 
         }
     }
