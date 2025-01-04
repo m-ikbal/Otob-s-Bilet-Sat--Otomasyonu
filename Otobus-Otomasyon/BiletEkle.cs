@@ -89,67 +89,76 @@ namespace Otobus_Otomasyon
 
         private void btnBiletEkle_Click(object sender, EventArgs e)
         {
-            try
+            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
+            if (bosalankontrol.AreFieldsValid(this))
             {
-                Yolcular yolcular = new Yolcular();
-                yolcular.yolcuAdi = txtYolcuAdi.Text;
-                yolcular.yolcuSoyadi = txtYolcuSoyadi.Text;
-                yolcular.yolcuCinsiyet = txtCinsiyet.Text;
-                yolcular.yolcuDogumTarihi = DateTime.Parse(mskDogumTarih.Text);
-                yolcular.yolcuTelNo = mskYolcuTelNo.Text;
-                yolcular.yolcuTc = txtYolcuTc.Text;
-                yolcular.yolcuEposta = txtYolcuEposta.Text;
-                if (yolcular.yolcuAdi == "" || yolcular.yolcuSoyadi == "" || yolcular.yolcuCinsiyet == "" || yolcular.yolcuDogumTarihi == null || yolcular.yolcuTelNo == "" || yolcular.yolcuTc == "" || yolcular.yolcuEposta == "")
+                try
                 {
-                    MessageBox.Show("Lütfen tüm alanları doldurunuz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                else
-                {
-                    db.Yolcular.Add(yolcular);
-                    db.SaveChanges();
-                }
+                    Yolcular yolcular = new Yolcular();
+                    yolcular.yolcuAdi = txtYolcuAdi.Text;
+                    yolcular.yolcuSoyadi = txtYolcuSoyadi.Text;
+                    yolcular.yolcuCinsiyet = txtCinsiyet.Text;
+                    yolcular.yolcuDogumTarihi = DateTime.Parse(mskDogumTarih.Text);
+                    yolcular.yolcuTelNo = mskYolcuTelNo.Text;
+                    yolcular.yolcuTc = txtYolcuTc.Text;
+                    yolcular.yolcuEposta = txtYolcuEposta.Text;
+                    if (yolcular.yolcuAdi == "" || yolcular.yolcuSoyadi == "" || yolcular.yolcuCinsiyet == "" || yolcular.yolcuDogumTarihi == null || yolcular.yolcuTelNo == "" || yolcular.yolcuTc == "" || yolcular.yolcuEposta == "")
+                    {
+                        MessageBox.Show("Lütfen tüm alanları doldurunuz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        db.Yolcular.Add(yolcular);
+                        db.SaveChanges();
+                    }
 
-                var yolcuAdi = txtYolcuAdi.Text;
-                var yolcu = db.Yolcular
-                           .Where(y => y.yolcuAdi == yolcuAdi)
-                           .Select(y => new { y.yolcuId, y.yolcuAdi })
-                           .FirstOrDefault();
-
-                int seferId = int.Parse(txtSeferId.Text);
-                var aracId = db.Seferler.Where(s => s.seferId == seferId)
-                            .Select(s => s.aracId)
-                            .FirstOrDefault();
-
-                int koltukNo = int.Parse(txtKoltukNo.Text);
-                var koltukId = db.Koltuklar
-                               .Where(k => k.aracId == aracId && k.koltukNo == koltukNo)
-                               .Select(k => k.koltukId)
+                    var yolcuAdi = txtYolcuAdi.Text;
+                    var yolcu = db.Yolcular
+                               .Where(y => y.yolcuAdi == yolcuAdi)
+                               .Select(y => new { y.yolcuId, y.yolcuAdi })
                                .FirstOrDefault();
 
-                Biletler biletler = new Biletler()
+                    int seferId = int.Parse(txtSeferId.Text);
+                    var aracId = db.Seferler.Where(s => s.seferId == seferId)
+                                .Select(s => s.aracId)
+                                .FirstOrDefault();
+
+                    int koltukNo = int.Parse(txtKoltukNo.Text);
+                    var koltukId = db.Koltuklar
+                                   .Where(k => k.aracId == aracId && k.koltukNo == koltukNo)
+                                   .Select(k => k.koltukId)
+                                   .FirstOrDefault();
+
+                    Biletler biletler = new Biletler()
+                    {
+                        biletTarih = DateTime.Now,
+                        kullaniciId = Session.KullaniciId,
+                        yolcuId = yolcu.yolcuId,
+                        aracId = aracId,
+                        seferId = seferId,
+                        koltukId = koltukId,
+                        PnrNumarasi = GenerateRandomCode(8),
+                        biletUcreti = 1000,
+                        odemeYontemi = cmbOdemeTuru.Text,
+                        BiletDurumu = "Aktif"
+                    };
+                    db.Biletler.Add(biletler);
+                    KoltukDurumuGuncelle(aracId, koltukNo);
+                    db.SaveChanges();
+                    MessageBox.Show("Bilet başarıyla eklendi!");
+                }
+                catch (DbUpdateException ex)
                 {
-                    biletTarih = DateTime.Now,
-                    kullaniciId = Session.KullaniciId,
-                    yolcuId = yolcu.yolcuId,
-                    aracId = aracId,
-                    seferId = seferId,
-                    koltukId = koltukId,
-                    PnrNumarasi = GenerateRandomCode(8),
-                    biletUcreti = 1000,
-                    odemeYontemi = cmbOdemeTuru.Text,
-                    BiletDurumu = "Aktif"
-                };
-                db.Biletler.Add(biletler);
-                KoltukDurumuGuncelle(aracId, koltukNo);
-                db.SaveChanges();
-                MessageBox.Show("Bilet başarıyla eklendi!");
+                    Console.WriteLine(ex.InnerException?.Message);
+                    throw;
+                }
             }
-            catch (DbUpdateException ex)
+            else
             {
-                Console.WriteLine(ex.InnerException?.Message);
-                throw;
+                // Alanlar boşsa işlem yapılmaz
             }
+            
         }
     }
 }
