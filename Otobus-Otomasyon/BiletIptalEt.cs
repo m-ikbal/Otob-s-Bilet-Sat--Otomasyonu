@@ -26,46 +26,64 @@ namespace Otobus_Otomasyon
 
         private void btnBiletAra_Click(object sender, EventArgs e)
         {
-            string yolcuAdi = txtYolcuAdi.Text;
-            var query = from item in db.Biletler
-                        where item.Yolcular.yolcuAdi + " " + item.Yolcular.yolcuSoyadi == yolcuAdi
-                        select new
-                        {
-                            item.biletId,
-                            AdSoyad = item.Yolcular.yolcuAdi + " " + item.Yolcular.yolcuSoyadi,
-                            KalkisYeri = item.Seferler.Kalkis,
-                            VarisYeri = item.Seferler.Varis,
-                            item.biletTarih,
-                            item.Koltuklar.koltukNo,
-                            item.PnrNumarasi,
-                            item.biletUcreti,
-                            item.BiletDurumu
-                        };
-            var result = query.ToList();
-            if (result.Any())
+            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
+            if (bosalankontrol.AreFieldsValid(this))
             {
-                dgwBiletIptalEt.DataSource = result;
+                string yolcuAdi = txtYolcuAdi.Text;
+                var query = from item in db.Biletler
+                            where item.Yolcular.yolcuAdi + " " + item.Yolcular.yolcuSoyadi == yolcuAdi
+                            select new
+                            {
+                                item.biletId,
+                                AdSoyad = item.Yolcular.yolcuAdi + " " + item.Yolcular.yolcuSoyadi,
+                                KalkisYeri = item.Seferler.Kalkis,
+                                VarisYeri = item.Seferler.Varis,
+                                item.biletTarih,
+                                item.Koltuklar.koltukNo,
+                                item.PnrNumarasi,
+                                item.biletUcreti,
+                                item.BiletDurumu
+                            };
+                var result = query.ToList();
+                if (result.Any())
+                {
+                    dgwBiletIptalEt.DataSource = result;
+                }
+                else
+                {
+                    MessageBox.Show("Bu yolcu adına ait bilet bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
-                MessageBox.Show("Bu yolcu adına ait bilet bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Alanlar boşsa işlem yapılmaz
             }
+            
         }
 
         private void btnIptalEt_Click(object sender, EventArgs e)
         {
-            string pnrNumarasi = txtPnrNumarasi.Text;
-            var bilet = db.Biletler.FirstOrDefault(x => x.PnrNumarasi == pnrNumarasi);
-            if (bilet != null)
+            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
+            if (bosalankontrol.AreFieldsValid(this))
             {
-                bilet.BiletDurumu = "İptal Edildi";
-                db.SaveChanges();
-                MessageBox.Show("Bilet başarıyla iptal edildi.");
+                string pnrNumarasi = txtPnrNumarasi.Text;
+                var bilet = db.Biletler.FirstOrDefault(x => x.PnrNumarasi == pnrNumarasi);
+                if (bilet != null)
+                {
+                    bilet.BiletDurumu = "İptal Edildi";
+                    db.SaveChanges();
+                    MessageBox.Show("Bilet başarıyla iptal edildi.");
+                }
+                else
+                {
+                    MessageBox.Show("Belirtilen PNR numarasına ait bir bilet bulunamadı.");
+                }
             }
             else
             {
-                MessageBox.Show("Belirtilen PNR numarasına ait bir bilet bulunamadı.");
+                // Alanlar boşsa işlem yapılmaz
             }
+            
 
         }
     }

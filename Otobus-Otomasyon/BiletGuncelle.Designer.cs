@@ -130,6 +130,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(242, 62);
             this.guna2Button2.TabIndex = 24;
             this.guna2Button2.Text = "Bilet Güncelle";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 

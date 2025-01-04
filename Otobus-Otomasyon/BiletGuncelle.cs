@@ -24,5 +24,10 @@ namespace Otobus_Otomasyon
                 e.Handled = true;
             }
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
