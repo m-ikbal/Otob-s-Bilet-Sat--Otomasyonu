@@ -41,28 +41,36 @@ namespace Otobus_Otomasyon
 
         private void btnSeferEkle_Click(object sender, EventArgs e)
         {
-
-            try
+            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
+            if (bosalankontrol.AreFieldsValid(this))
             {
-                Seferler seferler = new Seferler()
+                try
                 {
-                    Kalkis = cmbSeferNereden.Text,
-                    Varis = cmbSeferNereye.Text,
-                    seferTarihi = dtpTarih.Value,
-                    KalkisSaati = TimeSpan.Parse(mskKalkisSaati.Text),
-                    VarisSaati = TimeSpan.Parse(mskVarisSaati.Text),
-                    seferDurum = cmbSeferDurumu.Text,
-                    aracId = Convert.ToInt32(cmbOtobusTipi.SelectedValue)
-                };
-                db.Seferler.Add(seferler);
-                db.SaveChanges();
-                MessageBox.Show("Sefer Eklendi");
-            }
-            catch (Exception ex)
-            {
+                    Seferler seferler = new Seferler()
+                    {
+                        Kalkis = cmbSeferNereden.Text,
+                        Varis = cmbSeferNereye.Text,
+                        seferTarihi = dtpTarih.Value,
+                        KalkisSaati = TimeSpan.Parse(mskKalkisSaati.Text),
+                        VarisSaati = TimeSpan.Parse(mskVarisSaati.Text),
+                        seferDurum = cmbSeferDurumu.Text,
+                        aracId = Convert.ToInt32(cmbOtobusTipi.SelectedValue)
+                    };
+                    db.Seferler.Add(seferler);
+                    db.SaveChanges();
+                    MessageBox.Show("Sefer Eklendi");
+                }
+                catch (Exception ex)
+                {
 
-                MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message);
+                }
             }
+            else
+            {
+                // Alanlar boşsa işlem yapılmaz
+            }
+            
         }
     }
 }
