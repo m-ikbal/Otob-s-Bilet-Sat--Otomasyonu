@@ -19,6 +19,9 @@ Model1.edmx
 Model1.edmx.diagram
 Model1.tt
 
+#AppConfig
+.appconfig
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
