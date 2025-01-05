@@ -153,12 +153,7 @@ namespace Otobus_Otomasyon
                     Console.WriteLine(ex.InnerException?.Message);
                     throw;
                 }
-            }
-            else
-            {
-                // Alanlar boşsa işlem yapılmaz
-            }
-            
+            }        
         }
     }
 }

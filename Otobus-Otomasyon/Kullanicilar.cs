@@ -22,13 +22,14 @@ namespace Otobus_Otomasyon
         }
     
         public int kullaniciId { get; set; }
-        public string kullaniciAd { get; set; }
-        public string kullaniciSoyad { get; set; }
         public string kullaniciAdi { get; set; }
         public string kullaniciSifre { get; set; }
         public string kullaniciEposta { get; set; }
         public string kullaniciRol { get; set; }
         public Nullable<System.DateTime> sonGirisTarihi { get; set; }
+        public string kullaniciIsim { get; set; }
+        public string kullaniciSoyisim { get; set; }
+        public string kullaniciDurumu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Biletler> Biletler { get; set; }

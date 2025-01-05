@@ -18,54 +18,56 @@ namespace Otobus_Otomasyon
         }
 
         OBSODBEntities db = new OBSODBEntities();
+        private void KullaniciSil_Load(object sender, EventArgs e)
+        {
+            KullaniciListele();
+        }
+
         private void KullaniciListele()
         {
             var query = from item in db.Kullanicilar
                         select new
                         {
                             KullanıcıId = item.kullaniciId,
-                            Ad = item.kullaniciAd,
-                            Soyad = item.kullaniciSoyad,
+                            Ad = item.kullaniciIsim,
+                            Soyad = item.kullaniciSoyisim,
                             KullanıcıAdı = item.kullaniciAdi,
                             Şifre = item.kullaniciSifre,
                             Eposta = item.kullaniciEposta,
                             Rol = item.kullaniciRol,
-                            SonGiris = item.sonGirisTarihi
+                            SonGiris = item.sonGirisTarihi,
+                            Durum = item.kullaniciDurumu
                         };
             dgwKullanicilar.DataSource = query.ToList();
         }
 
-        private void dgwKullanicilar_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            KullaniciListele();
-        }
-
         private void btnKullaniciSil_Click(object sender, EventArgs e)
         {
-            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
             if (bosalankontrol.AreFieldsValid(this))
             {
                 try
                 {
                     int id = int.Parse(txtKullaniciId.Text);
-                    var kullanici = db.Kullanicilar.Find(id);
-                    db.Kullanicilar.Remove(kullanici);
-                    db.SaveChanges();
-                    MessageBox.Show("Kullanıcı Silindi");
-                    KullaniciListele();
+                    var kullanici = db.Kullanicilar.FirstOrDefault(x => x.kullaniciId == id);
+                    if (kullanici != null)
+                    {
+                        kullanici.kullaniciDurumu = "Pasif";
+                        MessageBox.Show("Kullanıcı başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        db.SaveChanges();
+                        KullaniciListele();
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Belirtilen kullanıcı numarasına ait bir kullanıcı bulunamadı.");
+                    }
+
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-
-                    MessageBox.Show("Hata", ex.Message);
+                    throw;
                 }
             }
-            else
-            {
-                // Alanlar boşsa işlem yapılmaz
-            }
-            
-
         }
     }
 }

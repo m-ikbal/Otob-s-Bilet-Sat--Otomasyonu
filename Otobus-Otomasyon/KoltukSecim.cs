@@ -19,7 +19,7 @@ namespace Otobus_Otomasyon
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        public KoltukSecim(BiletEkle biletEkle)
+        public KoltukSecim(BiletEkle biletEkle, BiletGuncelle biletGuncelle)
         {
             InitializeComponent();
         }

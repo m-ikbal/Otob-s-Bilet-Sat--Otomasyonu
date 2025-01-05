@@ -28,8 +28,8 @@ namespace Otobus_Otomasyon
                 {
                     Kullanicilar kullanicilar = new Kullanicilar()
                     {
-                        kullaniciAd = txtKullaniciIsim.Text,
-                        kullaniciSoyad = txtKullaniciSoyisim.Text,
+                        kullaniciIsim = txtKullaniciIsim.Text,
+                        kullaniciSoyisim = txtKullaniciSoyisim.Text,
                         kullaniciAdi = txtKullaniciAdi.Text,
                         kullaniciSifre = txtKullaniciSifre.Text,
                         kullaniciEposta = txtKullaniciEposta.Text,

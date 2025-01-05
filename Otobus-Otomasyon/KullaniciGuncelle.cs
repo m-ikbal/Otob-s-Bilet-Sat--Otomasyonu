@@ -25,8 +25,8 @@ namespace Otobus_Otomasyon
                         select new
                         {
                             KullanıcıId = item.kullaniciId,
-                            Ad = item.kullaniciAd,
-                            Soyad = item.kullaniciSoyad,
+                            Ad = item.kullaniciIsim,
+                            Soyad = item.kullaniciSoyisim,
                             KullanıcıAdı = item.kullaniciAdi,
                             Şifre = item.kullaniciSifre,
                             Eposta = item.kullaniciEposta,
@@ -70,8 +70,8 @@ namespace Otobus_Otomasyon
                 {
                     int id = Convert.ToInt32(dgwKullanicilar.SelectedRows[0].Cells[0].Value);
                     var kullanici = db.Kullanicilar.Find(id);
-                    kullanici.kullaniciAd = txtKullaniciIsim.Text;
-                    kullanici.kullaniciSoyad = txtKullaniciSoyisim.Text;
+                    kullanici.kullaniciIsim = txtKullaniciIsim.Text;
+                    kullanici.kullaniciSoyisim = txtKullaniciSoyisim.Text;
                     kullanici.kullaniciAdi = txtKullaniciAdi.Text;
                     kullanici.kullaniciSifre = txtKullaniciSifre.Text;
                     kullanici.kullaniciEposta = txtKullanciEposta.Text;
@@ -87,7 +87,6 @@ namespace Otobus_Otomasyon
             }
             else
             {
-                // Alanlar boşsa işlem yapılmaz
             }
            
         }

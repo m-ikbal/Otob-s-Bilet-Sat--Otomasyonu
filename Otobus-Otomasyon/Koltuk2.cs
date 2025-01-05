@@ -23,6 +23,7 @@ namespace Otobus_Otomasyon
 
         OBSODBEntities db = new OBSODBEntities();
         BiletEkle biletEkle = new BiletEkle();
+        BiletGuncelle biletGuncelle = new BiletGuncelle();
 
         private void KoltukGuncelle(int aracId)
         {
@@ -98,9 +99,10 @@ namespace Otobus_Otomasyon
                         return;
                     }
 
-                    if (Application.OpenForms["BiletEkle"] is BiletEkle openForm)
+                    if (Application.OpenForms["BiletGuncelle"] != null)
                     {
-                        biletEkle = openForm;
+                        biletGuncelle = (BiletGuncelle)Application.OpenForms["BiletGuncelle"];
+                        biletGuncelle.Show();
                     }
                     else
                     {
@@ -108,11 +110,12 @@ namespace Otobus_Otomasyon
                         biletEkle.Show();
                     }
 
-                    KoltukSecim koltukSecim = new KoltukSecim(biletEkle);
+                    KoltukSecim koltukSecim = new KoltukSecim(biletEkle, biletGuncelle);
                     if (koltukSecim.ShowDialog() == DialogResult.OK)
                     {
                         string cinsiyet = KoltukSecim.Cinsiyet;
                         biletEkle.txtCinsiyet.Text = cinsiyet;
+                        biletGuncelle.txtCinsiyet.Text = cinsiyet;
 
                         if (cinsiyet == "Erkek")
                         {
@@ -127,6 +130,7 @@ namespace Otobus_Otomasyon
                     if (!string.IsNullOrEmpty(koltukNo))
                     {
                         biletEkle.txtKoltukNo.Text = koltukNo;
+                        biletGuncelle.txtKoltukNo.Text = koltukNo;
                     }
                     else
                     {
