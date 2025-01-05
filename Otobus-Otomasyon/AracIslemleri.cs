@@ -46,7 +46,11 @@ namespace Otobus_Otomasyon
                     aracTipi = aracTipi,
                     aracKapasitesi = kapasite
                 };
-
+                if (db.Araclar.Any(x => x.aracPlakasi == plaka))
+                {
+                    MessageBox.Show("Araç plakası zaten mevcut!");
+                    return;
+                }
                 db.Araclar.Add(araclar);
                 db.SaveChanges();
 
@@ -181,6 +185,138 @@ namespace Otobus_Otomasyon
             {
                 // Alanlar boşsa işlem yapılmaz
             }
+        }
+
+        private void Temizle()
+        {
+            txtAracId.Clear();
+            txtAraAracPlakasi.Clear();
+            txtAracPlakasi.Clear();
+            txtAracKapasitesi.Clear();
+            cmbAracAdi.SelectedIndex = -1;
+            cmbAracTipi.SelectedIndex = -1;
+        }
+        private void Araclar()
+        {
+            var query = from arac in db.Araclar
+                        select new
+                        {
+                            arac.aracId,
+                            arac.aracAdi,
+                            arac.aracPlakasi,
+                            arac.aracTipi,
+                            arac.aracKapasitesi,
+                            arac.aracDurumu
+                        };
+            var sonuc = query.Where(x => x.aracDurumu.ToLower() == "Aktif".ToLower()).ToList();
+            dgwAraclar.DataSource = sonuc.ToList();
+            Temizle();
+        }
+
+        private void AracIslemleri_Load(object sender, EventArgs e)
+        {
+            Araclar();
+        }
+
+
+        private void btnAracAra_Click(object sender, EventArgs e)
+        {
+            var query = from arac in db.Araclar
+                        select new
+                        {
+                            arac.aracId,
+                            arac.aracAdi,
+                            arac.aracPlakasi,
+                            arac.aracTipi,
+                            arac.aracKapasitesi,
+                            arac.aracDurumu
+                        };
+            var sonuc = query.Where(x => x.aracPlakasi.ToLower() == txtAraAracPlakasi.Text.ToLower()).ToList();
+            dgwAraclar.DataSource = sonuc;
+            Temizle();
+        }
+
+        private void btnAracGuncelle_Click(object sender, EventArgs e)
+        {
+
+            int id = int.Parse(txtAracId.Text);
+            var araclar = db.Araclar.Find(id);
+            araclar.aracAdi = cmbAracAdi.Text;
+            araclar.aracPlakasi = txtAracPlakasi.Text;
+            araclar.aracTipi = cmbAracTipi.Text;
+            if (cmbAracTipi.Text == "2+2")
+            {
+                txtAracKapasitesi.Text = "30";
+            }
+            else
+            {
+                txtAracKapasitesi.Text = "22";
+            }
+            araclar.aracKapasitesi = int.Parse(txtAracKapasitesi.Text);
+            db.SaveChanges();
+            MessageBox.Show("Araç bilgileri güncellendi!");
+            Araclar();
+            Temizle();
+        }
+
+        private void dgwAraclar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string aracId = dgwAraclar.CurrentRow.Cells[0].Value.ToString();
+            string aracAdi = dgwAraclar.CurrentRow.Cells[1].Value.ToString();
+            string aracTipi = dgwAraclar.CurrentRow.Cells[3].Value.ToString();
+            string aracPlakasi = dgwAraclar.CurrentRow.Cells[2].Value.ToString();
+            string aracKapasitesi = dgwAraclar.CurrentRow.Cells[4].Value.ToString();
+
+            txtAracId.Text = aracId;
+            if (!string.IsNullOrEmpty(aracAdi))
+            {
+                // ComboBox'a ekleme (eğer listede yoksa)
+                if (!cmbAracAdi.Items.Contains(aracAdi))
+                {
+                    cmbAracAdi.Items.Add(aracAdi);
+                }
+
+                // ComboBox'ta seçili hale getirme
+                cmbAracAdi.SelectedItem = aracAdi;
+            }
+            txtAracPlakasi.Text = aracPlakasi;
+            if (!string.IsNullOrEmpty(aracTipi))
+            {
+                // ComboBox'a ekleme (eğer listede yoksa)
+                if (!cmbAracTipi.Items.Contains(aracTipi))
+                {
+                    cmbAracTipi.Items.Add(aracTipi);
+                }
+
+                // ComboBox'ta seçili hale getirme
+                cmbAracTipi.SelectedItem = aracTipi;
+            }
+            txtAracKapasitesi.Text = aracKapasitesi;
+        }
+
+        private void btnAracIptalEt_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtAracId.Text);
+            var arac = db.Araclar.FirstOrDefault(x => x.aracId == id);
+            if (arac != null)
+            {
+                arac.aracDurumu = "Pasif";
+                db.SaveChanges();
+                MessageBox.Show("Araç başarıyla silindi!");
+                Araclar();
+                Temizle();
+            }
+            else
+            {
+                MessageBox.Show("Belirtilen araç numarasına ait bir araç bulunamadı.");
+                Temizle();
+            }
+        }
+
+        private void btnYenile_Click(object sender, EventArgs e)
+        {
+            Araclar();
+            Temizle();
         }
     }
 }

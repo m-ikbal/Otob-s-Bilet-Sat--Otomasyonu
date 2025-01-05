@@ -29,6 +29,7 @@ namespace Otobus_Otomasyon
         public string aracTipi { get; set; }
         public string aracPlakasi { get; set; }
         public Nullable<int> aracKapasitesi { get; set; }
+        public string aracDurumu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BakimKayitlari> BakimKayitlari { get; set; }

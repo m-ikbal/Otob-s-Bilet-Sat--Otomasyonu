@@ -14,6 +14,7 @@
           <Property Name="aracTipi" Type="varchar" MaxLength="50" />
           <Property Name="aracPlakasi" Type="nvarchar" MaxLength="50" />
           <Property Name="aracKapasitesi" Type="int" />
+          <Property Name="aracDurumu" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="BakimKayitlari">
           <Key>
@@ -467,6 +468,7 @@
           <NavigationProperty Name="Seferler" Relationship="Self.FK_Seferler_Araclar" FromRole="Araclar" ToRole="Seferler" />
           <NavigationProperty Name="Koltuklar" Relationship="OBSODBModel.FK_Koltuklar_Araclar" FromRole="Araclar" ToRole="Koltuklar" />
           <NavigationProperty Name="Rezervasyon" Relationship="OBSODBModel.FK_Rezervasyon_Araclar" FromRole="Araclar" ToRole="Rezervasyon" />
+          <Property Name="aracDurumu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="BakimKayitlari">
           <Key>
@@ -1007,6 +1009,7 @@
           <EntitySetMapping Name="Araclar">
             <EntityTypeMapping TypeName="OBSODBModel.Araclar">
               <MappingFragment StoreEntitySet="Araclar">
+                <ScalarProperty Name="aracDurumu" ColumnName="aracDurumu" />
                 <ScalarProperty Name="aracId" ColumnName="aracId" />
                 <ScalarProperty Name="aracAdi" ColumnName="aracAdi" />
                 <ScalarProperty Name="aracTipi" ColumnName="aracTipi" />
