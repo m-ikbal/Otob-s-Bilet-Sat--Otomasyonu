@@ -318,5 +318,21 @@ namespace Otobus_Otomasyon
             Araclar();
             Temizle();
         }
+
+        private void btnTumAraclariListele_Click(object sender, EventArgs e)
+        {
+            var query = from arac in db.Araclar
+                        select new
+                        {
+                            arac.aracId,
+                            arac.aracAdi,
+                            arac.aracPlakasi,
+                            arac.aracTipi,
+                            arac.aracKapasitesi,
+                            arac.aracDurumu
+                        };
+            dgwAraclar.DataSource = query.ToList();
+            Temizle();
+        }
     }
 }

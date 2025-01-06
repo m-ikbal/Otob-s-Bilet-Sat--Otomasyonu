@@ -61,6 +61,7 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbAracDurumu = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnTumAraclariListele = new Guna.UI2.WinForms.Guna2Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwAraclar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -317,7 +318,7 @@
             this.btnAracIptalEt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnAracIptalEt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAracIptalEt.ForeColor = System.Drawing.Color.White;
-            this.btnAracIptalEt.Location = new System.Drawing.Point(527, 804);
+            this.btnAracIptalEt.Location = new System.Drawing.Point(445, 804);
             this.btnAracIptalEt.Name = "btnAracIptalEt";
             this.btnAracIptalEt.Size = new System.Drawing.Size(185, 62);
             this.btnAracIptalEt.TabIndex = 36;
@@ -333,7 +334,7 @@
             this.btnYenile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnYenile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnYenile.ForeColor = System.Drawing.Color.White;
-            this.btnYenile.Location = new System.Drawing.Point(730, 804);
+            this.btnYenile.Location = new System.Drawing.Point(648, 804);
             this.btnYenile.Name = "btnYenile";
             this.btnYenile.Size = new System.Drawing.Size(193, 62);
             this.btnYenile.TabIndex = 35;
@@ -393,7 +394,7 @@
             this.btnAracGuncelle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnAracGuncelle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAracGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnAracGuncelle.Location = new System.Drawing.Point(324, 804);
+            this.btnAracGuncelle.Location = new System.Drawing.Point(242, 804);
             this.btnAracGuncelle.Name = "btnAracGuncelle";
             this.btnAracGuncelle.Size = new System.Drawing.Size(185, 62);
             this.btnAracGuncelle.TabIndex = 37;
@@ -409,7 +410,7 @@
             this.btnAracEkle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnAracEkle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAracEkle.ForeColor = System.Drawing.Color.White;
-            this.btnAracEkle.Location = new System.Drawing.Point(121, 804);
+            this.btnAracEkle.Location = new System.Drawing.Point(39, 804);
             this.btnAracEkle.Name = "btnAracEkle";
             this.btnAracEkle.Size = new System.Drawing.Size(185, 62);
             this.btnAracEkle.TabIndex = 38;
@@ -523,11 +524,28 @@
             this.cmbAracDurumu.Size = new System.Drawing.Size(198, 36);
             this.cmbAracDurumu.TabIndex = 31;
             // 
+            // btnTumAraclariListele
+            // 
+            this.btnTumAraclariListele.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTumAraclariListele.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTumAraclariListele.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTumAraclariListele.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTumAraclariListele.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnTumAraclariListele.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTumAraclariListele.ForeColor = System.Drawing.Color.White;
+            this.btnTumAraclariListele.Location = new System.Drawing.Point(854, 804);
+            this.btnTumAraclariListele.Name = "btnTumAraclariListele";
+            this.btnTumAraclariListele.Size = new System.Drawing.Size(193, 62);
+            this.btnTumAraclariListele.TabIndex = 40;
+            this.btnTumAraclariListele.Text = "Tüm Araçları Listele";
+            this.btnTumAraclariListele.Click += new System.EventHandler(this.btnTumAraclariListele_Click);
+            // 
             // AracIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 875);
+            this.Controls.Add(this.btnTumAraclariListele);
             this.Controls.Add(this.panel43);
             this.Controls.Add(this.btnAracEkle);
             this.Controls.Add(this.btnAracGuncelle);
@@ -584,5 +602,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtAracId;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2ComboBox cmbAracDurumu;
+        private Guna.UI2.WinForms.Guna2Button btnTumAraclariListele;
     }
 }
