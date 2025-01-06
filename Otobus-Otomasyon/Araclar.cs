@@ -17,11 +17,9 @@ namespace Otobus_Otomasyon
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Araclar()
         {
-            this.BakimKayitlari = new HashSet<BakimKayitlari>();
             this.Biletler = new HashSet<Biletler>();
             this.Seferler = new HashSet<Seferler>();
             this.Koltuklar = new HashSet<Koltuklar>();
-            this.Rezervasyon = new HashSet<Rezervasyon>();
         }
     
         public int aracId { get; set; }
@@ -32,14 +30,10 @@ namespace Otobus_Otomasyon
         public string aracDurumu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BakimKayitlari> BakimKayitlari { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Biletler> Biletler { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Seferler> Seferler { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Koltuklar> Koltuklar { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Rezervasyon> Rezervasyon { get; set; }
     }
 }

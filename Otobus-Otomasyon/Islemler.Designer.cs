@@ -577,7 +577,6 @@
             this.RezervasyonEkleButton.TabIndex = 2;
             this.RezervasyonEkleButton.Text = "    Rezervasyon Ekle";
             this.RezervasyonEkleButton.TextOffset = new System.Drawing.Point(-37, 0);
-            this.RezervasyonEkleButton.Click += new System.EventHandler(this.RezervasyonEkleButton_Click_1);
             // 
             // panel13
             // 
@@ -607,7 +606,6 @@
             this.RezervasyonGoruntuleButton.TabIndex = 2;
             this.RezervasyonGoruntuleButton.Text = "    Rezervasyon Görüntüle";
             this.RezervasyonGoruntuleButton.TextOffset = new System.Drawing.Point(-19, 0);
-            this.RezervasyonGoruntuleButton.Click += new System.EventHandler(this.RezervasyonGoruntuleButton_Click);
             // 
             // panel14
             // 
@@ -637,7 +635,6 @@
             this.RezervasyonGuncelleButton.TabIndex = 2;
             this.RezervasyonGuncelleButton.Text = "    Rezervasyon Güncelle";
             this.RezervasyonGuncelleButton.TextOffset = new System.Drawing.Point(-22, 0);
-            this.RezervasyonGuncelleButton.Click += new System.EventHandler(this.RezervasyonGuncelleButton_Click);
             // 
             // panel15
             // 
@@ -667,7 +664,6 @@
             this.RezervasyonSilButton.TabIndex = 2;
             this.RezervasyonSilButton.Text = "       Rezervasyon İptal";
             this.RezervasyonSilButton.TextOffset = new System.Drawing.Point(-40, 0);
-            this.RezervasyonSilButton.Click += new System.EventHandler(this.RezervasyonSilButton_Click);
             // 
             // panel16
             // 
@@ -956,7 +952,6 @@
             this.RezervasyonButton.TabIndex = 2;
             this.RezervasyonButton.Text = "                Rezervasyon İşlemleri";
             this.RezervasyonButton.TextOffset = new System.Drawing.Point(-50, 0);
-            this.RezervasyonButton.Click += new System.EventHandler(this.RezervasyonButton_Click);
             // 
             // Islemler
             // 

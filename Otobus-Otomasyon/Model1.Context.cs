@@ -28,13 +28,11 @@ namespace Otobus_Otomasyon
         }
     
         public virtual DbSet<Araclar> Araclar { get; set; }
-        public virtual DbSet<BakimKayitlari> BakimKayitlari { get; set; }
         public virtual DbSet<Biletler> Biletler { get; set; }
         public virtual DbSet<Koltuklar> Koltuklar { get; set; }
         public virtual DbSet<Kullanicilar> Kullanicilar { get; set; }
         public virtual DbSet<Mesafeler> Mesafeler { get; set; }
         public virtual DbSet<OdemeKayitlari> OdemeKayitlari { get; set; }
-        public virtual DbSet<Rezervasyon> Rezervasyon { get; set; }
         public virtual DbSet<Seferler> Seferler { get; set; }
         public virtual DbSet<Sehirler> Sehirler { get; set; }
         public virtual DbSet<SifreSifirlamaTokeni> SifreSifirlamaTokeni { get; set; }

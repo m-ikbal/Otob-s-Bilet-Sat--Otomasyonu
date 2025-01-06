@@ -38,7 +38,7 @@ namespace Otobus_Otomasyon
             this.Close();
         }
 
-        private void btnRezerveEt_Click(object sender, EventArgs e)
+        private void KoltukSecim_Load(object sender, EventArgs e)
         {
 
         }

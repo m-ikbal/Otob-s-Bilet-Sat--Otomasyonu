@@ -94,9 +94,6 @@
     <Compile Include="Araclar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="BakimKayitlari.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="BiletEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,33 +222,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Rezervasyon.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="RezervasyonEkle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RezervasyonEkle.Designer.cs">
-      <DependentUpon>RezervasyonEkle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RezervasyonGoruntule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RezervasyonGoruntule.Designer.cs">
-      <DependentUpon>RezervasyonGoruntule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RezervasyonGuncelle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RezervasyonGuncelle.Designer.cs">
-      <DependentUpon>RezervasyonGuncelle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RezervasyonIptalEt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RezervasyonIptalEt.Designer.cs">
-      <DependentUpon>RezervasyonIptalEt.cs</DependentUpon>
-    </Compile>
     <Compile Include="RezervasyonListesi_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -358,18 +328,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RezervasyonEkle.resx">
-      <DependentUpon>RezervasyonEkle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RezervasyonGoruntule.resx">
-      <DependentUpon>RezervasyonGoruntule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RezervasyonGuncelle.resx">
-      <DependentUpon>RezervasyonGuncelle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RezervasyonIptalEt.resx">
-      <DependentUpon>RezervasyonIptalEt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeferEkle.resx">
       <DependentUpon>SeferEkle.cs</DependentUpon>

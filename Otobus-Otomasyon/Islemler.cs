@@ -138,35 +138,6 @@ namespace Otobus_Otomasyon
             FormGoster(SeferGoruntuleForn);
         }
 
-        private void RezervasyonButton_Click(object sender, EventArgs e)
-        {
-            RezervasyonTimer.Start();
-        }
-
-        private void RezervasyonEkleButton_Click_1(object sender, EventArgs e)
-        {
-            RezervasyonEkle RezervasyonEkleForn = new RezervasyonEkle();
-            FormGoster(RezervasyonEkleForn);
-        }
-
-        private void RezervasyonSilButton_Click(object sender, EventArgs e)
-        {
-            RezervasyonIptalEt RezervasyonSilForn = new RezervasyonIptalEt();
-            FormGoster(RezervasyonSilForn);
-        }
-
-        private void RezervasyonGuncelleButton_Click(object sender, EventArgs e)
-        {
-            RezervasyonGuncelle RezervasyonGuncelleForn = new RezervasyonGuncelle();
-            FormGoster(RezervasyonGuncelleForn);
-        }
-
-        private void RezervasyonGoruntuleButton_Click(object sender, EventArgs e)
-        {
-            RezervasyonGoruntule RezervasyonGoruntuleForn = new RezervasyonGoruntule();
-            FormGoster(RezervasyonGoruntuleForn);
-        }
-
         private void KullaniciButton_Click(object sender, EventArgs e)
         {
             KullaniciTimer.Start();

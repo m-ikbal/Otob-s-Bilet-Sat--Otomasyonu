@@ -14,12 +14,6 @@ namespace Otobus_Otomasyon
     
     public partial class Biletler
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Biletler()
-        {
-            this.Rezervasyon = new HashSet<Rezervasyon>();
-        }
-    
         public int biletId { get; set; }
         public Nullable<System.DateTime> biletTarih { get; set; }
         public Nullable<int> koltukId { get; set; }
@@ -37,7 +31,5 @@ namespace Otobus_Otomasyon
         public virtual Kullanicilar Kullanicilar { get; set; }
         public virtual Yolcular Yolcular { get; set; }
         public virtual Seferler Seferler { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Rezervasyon> Rezervasyon { get; set; }
     }
 }

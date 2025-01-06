@@ -66,11 +66,12 @@ namespace Otobus_Otomasyon
 
         private void btnKoltukSec_Click(object sender, EventArgs e)
         {
-            if(txtSeferId.Text == "")
+            if (txtSeferId.Text == "")
             {
                 MessageBox.Show("Lütfen bir sefer seçiniz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            } else
+            }
+            else
             {
                 if (txtAracTuru.Text == "2+2")
                 {
@@ -146,6 +147,16 @@ namespace Otobus_Otomasyon
                     db.Biletler.Add(biletler);
                     KoltukDurumuGuncelle(aracId, koltukNo);
                     db.SaveChanges();
+
+                    OdemeKayitlari odemeKayitlari = new OdemeKayitlari()
+                    {
+                        BiletId = biletler.biletId,
+                        OdemeTarihi = DateTime.Now,
+                        OdemeMiktari = biletler.biletUcreti,
+                        OdemeYontemi = cmbOdemeTuru.Text
+                    };
+                    db.OdemeKayitlari.Add(odemeKayitlari);
+                    db.SaveChanges();
                     MessageBox.Show("Bilet başarıyla eklendi!");
                 }
                 catch (DbUpdateException ex)
@@ -153,7 +164,7 @@ namespace Otobus_Otomasyon
                     Console.WriteLine(ex.InnerException?.Message);
                     throw;
                 }
-            }        
+            }
         }
     }
 }

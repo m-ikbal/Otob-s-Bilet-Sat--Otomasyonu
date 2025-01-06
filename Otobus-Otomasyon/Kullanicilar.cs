@@ -18,7 +18,6 @@ namespace Otobus_Otomasyon
         public Kullanicilar()
         {
             this.Biletler = new HashSet<Biletler>();
-            this.Rezervasyon = new HashSet<Rezervasyon>();
         }
     
         public int kullaniciId { get; set; }
@@ -33,7 +32,5 @@ namespace Otobus_Otomasyon
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Biletler> Biletler { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Rezervasyon> Rezervasyon { get; set; }
     }
 }

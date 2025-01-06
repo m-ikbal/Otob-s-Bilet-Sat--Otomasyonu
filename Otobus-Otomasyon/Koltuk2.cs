@@ -104,8 +104,14 @@ namespace Otobus_Otomasyon
                         biletGuncelle = (BiletGuncelle)Application.OpenForms["BiletGuncelle"];
                         biletGuncelle.Show();
                     }
+                    else if (Application.OpenForms["BiletEkle"] != null)
+                    {
+                        biletEkle = (BiletEkle)Application.OpenForms["BiletEkle"];
+                        biletEkle.Show();
+                    }
                     else
                     {
+                        // Eğer her iki form da kapalıysa yeni bir form oluşturabilirsiniz.
                         biletEkle = new BiletEkle();
                         biletEkle.Show();
                     }
