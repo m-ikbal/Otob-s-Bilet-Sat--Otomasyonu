@@ -44,16 +44,15 @@ namespace Otobus_Otomasyon
         {
             string kalkis = cmbNereden.Text;
             string varis = cmbNereye.Text;
-            DateTime tarih = dtpSeferTarihi.Value.Date;
+            string tarih = dtpSeferTarihi.Value.ToString("yyyy-MM-dd").Trim();
 
-            var secilenSefer = db.Seferler
-    .Where(s =>
-        s.Kalkis == kalkis &&
-        s.Varis == varis &&
-        s.seferTarihi == tarih && 
-        s.seferDurum.ToLower() == "aktif")
-    .FirstOrDefault(); 
-            MessageBox.Show($"Kalkış: {kalkis}, Varış: {varis}, Tarih: {tarih}");
+            var secilenSefer = db.Seferler.Where(s =>
+                                s.Kalkis.ToLower() == kalkis.ToLower() &&
+                                s.Varis.ToLower() == varis.ToLower() &&
+                                s.SeferKalkisTarihi.Trim() == tarih.Trim() &&
+                                s.seferDurum.Replace("\u00A0", "").Trim().ToLower() == "aktif")
+                                .FirstOrDefault();
+
 
             if (secilenSefer == null)
             {
@@ -67,17 +66,19 @@ namespace Otobus_Otomasyon
                                select new
                                {
                                    KoltukNo = koltuk.koltukNo,
-                                   Konum = koltuk.koltukKonum
+                                   Konum = koltuk.koltukKonum,
+                                   SeferKalkışSaati = secilenSefer.KalkisSaati,
+
                                };
 
             if (bosKoltuklar.Any())
             {
                 dgwSeferler.DataSource = bosKoltuklar.ToList();
-                MessageBox.Show("Seferde boş koltuklar mevcut. Koltuk seçimi yapabilirsiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Sefer bilgileri listelendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Seçtiğiniz sefere ait boş koltuk bulunmamaktadır.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Sefer bulunamadı!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

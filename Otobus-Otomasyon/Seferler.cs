@@ -24,11 +24,12 @@ namespace Otobus_Otomasyon
         public int seferId { get; set; }
         public Nullable<System.TimeSpan> VarisSaati { get; set; }
         public Nullable<System.TimeSpan> KalkisSaati { get; set; }
-        public Nullable<System.DateTime> seferTarihi { get; set; }
         public string Kalkis { get; set; }
         public string Varis { get; set; }
         public Nullable<int> aracId { get; set; }
         public string seferDurum { get; set; }
+        public string SeferVarisTarihi { get; set; }
+        public string SeferKalkisTarihi { get; set; }
     
         public virtual Araclar Araclar { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

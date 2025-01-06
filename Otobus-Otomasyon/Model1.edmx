@@ -114,7 +114,8 @@
           <Property Name="seferId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="VarisSaati" Type="time" Precision="7" />
           <Property Name="KalkisSaati" Type="time" Precision="7" />
-          <Property Name="seferTarihi" Type="date" />
+          <Property Name="SeferVarisTarihi" Type="nvarchar" MaxLength="50" />
+          <Property Name="SeferKalkisTarihi" Type="nvarchar" MaxLength="50" />
           <Property Name="Kalkis" Type="nvarchar" MaxLength="50" />
           <Property Name="Varis" Type="nvarchar" MaxLength="50" />
           <Property Name="aracId" Type="int" />
@@ -590,7 +591,6 @@
           <Property Name="seferId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="VarisSaati" Type="Time" Precision="7" />
           <Property Name="KalkisSaati" Type="Time" Precision="7" />
-          <Property Name="seferTarihi" Type="DateTime" Precision="0" />
           <Property Name="Kalkis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Varis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="aracId" Type="Int32" />
@@ -598,6 +598,8 @@
           <NavigationProperty Name="Araclar" Relationship="Self.FK_Seferler_Araclar" FromRole="Seferler" ToRole="Araclar" />
           <NavigationProperty Name="Biletler" Relationship="Self.FK_Biletler_Seferler" FromRole="Seferler" ToRole="Biletler" />
           <NavigationProperty Name="Rezervasyon" Relationship="OBSODBModel.FK_Rezervasyon_Seferler" FromRole="Seferler" ToRole="Rezervasyon" />
+          <Property Name="SeferVarisTarihi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SeferKalkisTarihi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Sehirler">
           <Key>
@@ -1119,10 +1121,11 @@
           <EntitySetMapping Name="Seferler">
             <EntityTypeMapping TypeName="OBSODBModel.Seferler">
               <MappingFragment StoreEntitySet="Seferler">
+                <ScalarProperty Name="SeferKalkisTarihi" ColumnName="SeferKalkisTarihi" />
+                <ScalarProperty Name="SeferVarisTarihi" ColumnName="SeferVarisTarihi" />
                 <ScalarProperty Name="seferId" ColumnName="seferId" />
                 <ScalarProperty Name="VarisSaati" ColumnName="VarisSaati" />
                 <ScalarProperty Name="KalkisSaati" ColumnName="KalkisSaati" />
-                <ScalarProperty Name="seferTarihi" ColumnName="seferTarihi" />
                 <ScalarProperty Name="Kalkis" ColumnName="Kalkis" />
                 <ScalarProperty Name="Varis" ColumnName="Varis" />
                 <ScalarProperty Name="aracId" ColumnName="aracId" />

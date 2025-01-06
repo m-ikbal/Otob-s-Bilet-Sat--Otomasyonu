@@ -44,16 +44,20 @@ namespace Otobus_Otomasyon
             // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
             if (bosalankontrol.AreFieldsValid(this))
             {
-                try
+                try 
                 {
+                    string kalkisTarih = dtpKalkisTarihi.Value.ToString("yyyy-MM-dd"); 
+                    string varisTarih = dtpVarisTarihi.Value.ToString("yyyy-MM-dd");
                     Seferler seferler = new Seferler()
                     {
+                        
                         Kalkis = cmbSeferNereden.Text,
                         Varis = cmbSeferNereye.Text,
-                        seferTarihi = dtpTarih.Value,
+                        SeferKalkisTarihi = kalkisTarih,
+                        SeferVarisTarihi = varisTarih,
                         KalkisSaati = TimeSpan.Parse(mskKalkisSaati.Text),
                         VarisSaati = TimeSpan.Parse(mskVarisSaati.Text),
-                        seferDurum = cmbSeferDurumu.Text,
+                        seferDurum = cmbSeferDurumu.Text.Trim(),
                         aracId = Convert.ToInt32(cmbOtobusTipi.SelectedValue)
                     };
                     db.Seferler.Add(seferler);
@@ -68,7 +72,6 @@ namespace Otobus_Otomasyon
             }
             else
             {
-                // Alanlar boşsa işlem yapılmaz
             }
             
         }

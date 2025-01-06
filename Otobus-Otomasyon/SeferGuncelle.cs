@@ -53,7 +53,7 @@ namespace Otobus_Otomasyon
 
                 mskVarisSaati.Text = varisSaati;
                 mskKalkisSaati.Text = kalkisSaati;
-                dtpTarih.Value = DateTime.Parse(seferTarihi);
+                dtpKalkisTarihi.Value = DateTime.Parse(seferTarihi);
                 cmbNereden.Text = kalkisSehri;
                 cmbNereye.Text = varisSehri;
                 cmbSeferDurumu.Text = seferDurum;
@@ -67,11 +67,16 @@ namespace Otobus_Otomasyon
             {
                 try
                 {
+                    DateTime tarih = dtpKalkisTarihi.Value;
+                    DateTime tarih2 = dtpVarisTarihi.Value;
+                    string sadeceTarih = tarih.ToString("yyyy-MM-dd");
+                    string sadeceTarih2 = tarih2.ToString("yyyy-MM-dd");
                     int seferId = Convert.ToInt32(dgwSeferler.CurrentRow.Cells[0].Value);
                     Seferler sefer = db.Seferler.Where(x => x.seferId == seferId).FirstOrDefault();
                     sefer.KalkisSaati = TimeSpan.Parse(mskKalkisSaati.Text);
                     sefer.VarisSaati = TimeSpan.Parse(mskVarisSaati.Text);
-                    sefer.seferTarihi = dtpTarih.Value;
+                    sefer.SeferKalkisTarihi = sadeceTarih;
+                    sefer.SeferVarisTarihi = sadeceTarih2;
                     sefer.Kalkis = cmbNereden.Text;
                     sefer.Varis = cmbNereye.Text;
                     sefer.seferDurum = cmbSeferDurumu.Text;

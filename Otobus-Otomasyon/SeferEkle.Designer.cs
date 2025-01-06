@@ -44,9 +44,8 @@
             this.mskVarisSaati = new System.Windows.Forms.MaskedTextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.mskKalkisSaati = new System.Windows.Forms.MaskedTextBox();
-            this.btnSeferAra = new Guna.UI2.WinForms.Guna2Button();
             this.btnSeferEkle = new Guna.UI2.WinForms.Guna2Button();
-            this.dtpTarih = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpKalkisTarihi = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -63,6 +62,8 @@
             this.panel34 = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.dtpVarisTarihi = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgwSeferler)).BeginInit();
             this.panel27.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -148,11 +149,12 @@
             // panel27
             // 
             this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel27.Controls.Add(this.dtpVarisTarihi);
+            this.panel27.Controls.Add(this.guna2HtmlLabel1);
             this.panel27.Controls.Add(this.guna2Panel1);
             this.panel27.Controls.Add(this.guna2Panel2);
-            this.panel27.Controls.Add(this.btnSeferAra);
             this.panel27.Controls.Add(this.btnSeferEkle);
-            this.panel27.Controls.Add(this.dtpTarih);
+            this.panel27.Controls.Add(this.dtpKalkisTarihi);
             this.panel27.Controls.Add(this.guna2HtmlLabel24);
             this.panel27.Controls.Add(this.guna2HtmlLabel23);
             this.panel27.Controls.Add(this.guna2HtmlLabel22);
@@ -219,21 +221,6 @@
             this.mskKalkisSaati.TabIndex = 21;
             this.mskKalkisSaati.ValidatingType = typeof(System.DateTime);
             // 
-            // btnSeferAra
-            // 
-            this.btnSeferAra.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSeferAra.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSeferAra.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSeferAra.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSeferAra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnSeferAra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeferAra.ForeColor = System.Drawing.Color.White;
-            this.btnSeferAra.Location = new System.Drawing.Point(42, 521);
-            this.btnSeferAra.Name = "btnSeferAra";
-            this.btnSeferAra.Size = new System.Drawing.Size(180, 45);
-            this.btnSeferAra.TabIndex = 22;
-            this.btnSeferAra.Text = "Ara";
-            // 
             // btnSeferEkle
             // 
             this.btnSeferEkle.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -243,37 +230,37 @@
             this.btnSeferEkle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnSeferEkle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeferEkle.ForeColor = System.Drawing.Color.White;
-            this.btnSeferEkle.Location = new System.Drawing.Point(296, 521);
+            this.btnSeferEkle.Location = new System.Drawing.Point(296, 557);
             this.btnSeferEkle.Name = "btnSeferEkle";
             this.btnSeferEkle.Size = new System.Drawing.Size(180, 45);
             this.btnSeferEkle.TabIndex = 21;
             this.btnSeferEkle.Text = "Ekle";
             this.btnSeferEkle.Click += new System.EventHandler(this.btnSeferEkle_Click);
             // 
-            // dtpTarih
+            // dtpKalkisTarihi
             // 
-            this.dtpTarih.Checked = true;
-            this.dtpTarih.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtpTarih.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.dtpTarih.ForeColor = System.Drawing.Color.Black;
-            this.dtpTarih.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpTarih.Location = new System.Drawing.Point(242, 439);
-            this.dtpTarih.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpTarih.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpTarih.Name = "dtpTarih";
-            this.dtpTarih.Size = new System.Drawing.Size(234, 36);
-            this.dtpTarih.TabIndex = 20;
-            this.dtpTarih.Value = new System.DateTime(2024, 12, 20, 21, 25, 36, 257);
+            this.dtpKalkisTarihi.Checked = true;
+            this.dtpKalkisTarihi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtpKalkisTarihi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.dtpKalkisTarihi.ForeColor = System.Drawing.Color.Black;
+            this.dtpKalkisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpKalkisTarihi.Location = new System.Drawing.Point(242, 439);
+            this.dtpKalkisTarihi.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpKalkisTarihi.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpKalkisTarihi.Name = "dtpKalkisTarihi";
+            this.dtpKalkisTarihi.Size = new System.Drawing.Size(234, 36);
+            this.dtpKalkisTarihi.TabIndex = 20;
+            this.dtpKalkisTarihi.Value = new System.DateTime(2024, 12, 20, 21, 25, 36, 257);
             // 
             // guna2HtmlLabel24
             // 
             this.guna2HtmlLabel24.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel24.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel24.Location = new System.Drawing.Point(170, 439);
+            this.guna2HtmlLabel24.Location = new System.Drawing.Point(33, 442);
             this.guna2HtmlLabel24.Name = "guna2HtmlLabel24";
-            this.guna2HtmlLabel24.Size = new System.Drawing.Size(70, 33);
+            this.guna2HtmlLabel24.Size = new System.Drawing.Size(208, 33);
             this.guna2HtmlLabel24.TabIndex = 19;
-            this.guna2HtmlLabel24.Text = "Tarih :";
+            this.guna2HtmlLabel24.Text = "Sefer Kalkış Tarihi :";
             // 
             // guna2HtmlLabel23
             // 
@@ -444,6 +431,31 @@
             this.guna2HtmlLabel16.TabIndex = 3;
             this.guna2HtmlLabel16.Text = "Sefer Ekle";
             // 
+            // dtpVarisTarihi
+            // 
+            this.dtpVarisTarihi.Checked = true;
+            this.dtpVarisTarihi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtpVarisTarihi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.dtpVarisTarihi.ForeColor = System.Drawing.Color.Black;
+            this.dtpVarisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpVarisTarihi.Location = new System.Drawing.Point(242, 485);
+            this.dtpVarisTarihi.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpVarisTarihi.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpVarisTarihi.Name = "dtpVarisTarihi";
+            this.dtpVarisTarihi.Size = new System.Drawing.Size(234, 36);
+            this.dtpVarisTarihi.TabIndex = 32;
+            this.dtpVarisTarihi.Value = new System.DateTime(2024, 12, 20, 21, 25, 36, 257);
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(44, 488);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(197, 33);
+            this.guna2HtmlLabel1.TabIndex = 31;
+            this.guna2HtmlLabel1.Text = "Sefer Varış Tarihi :";
+            // 
             // SeferEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -476,9 +488,8 @@
         private System.Windows.Forms.Timer BiletTimer;
         private Guna.UI2.WinForms.Guna2DataGridView dgwSeferler;
         private System.Windows.Forms.Panel panel27;
-        private Guna.UI2.WinForms.Guna2Button btnSeferAra;
         private Guna.UI2.WinForms.Guna2Button btnSeferEkle;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpTarih;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpKalkisTarihi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel24;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
@@ -499,5 +510,7 @@
         private System.Windows.Forms.MaskedTextBox mskVarisSaati;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.MaskedTextBox mskKalkisSaati;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpVarisTarihi;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }
