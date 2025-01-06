@@ -28,6 +28,7 @@ namespace Otobus_Otomasyon
                 string aracAdi = cmbAracAdi.SelectedItem.ToString();
                 string plaka = txtAracPlakasi.Text;
                 string aracTipi = cmbAracTipi.SelectedItem.ToString();
+                string aracDurumu = cmbAracDurumu.SelectedItem.ToString();
 
                 if (aracTipi == "2+2")
                 {
@@ -44,7 +45,8 @@ namespace Otobus_Otomasyon
                     aracAdi = aracAdi,
                     aracPlakasi = plaka,
                     aracTipi = aracTipi,
-                    aracKapasitesi = kapasite
+                    aracKapasitesi = kapasite,
+                    aracDurumu = aracDurumu
                 };
                 if (db.Araclar.Any(x => x.aracPlakasi == plaka))
                 {
@@ -174,8 +176,6 @@ namespace Otobus_Otomasyon
                         }
                     }
                 }
-
-
                 db.Koltuklar.AddRange(koltuklar);
                 db.SaveChanges();
 
