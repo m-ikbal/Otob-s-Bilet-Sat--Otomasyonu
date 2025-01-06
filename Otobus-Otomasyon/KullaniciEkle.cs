@@ -33,7 +33,7 @@ namespace Otobus_Otomasyon
                         kullaniciAdi = txtKullaniciAdi.Text,
                         kullaniciSifre = txtKullaniciSifre.Text,
                         kullaniciEposta = txtKullaniciEposta.Text,
-                        kullaniciRol = cmbKullaniciRol.Text
+                        kullaniciRol = cmbKullaniciRol.Text.Trim()
                     };
                     db.Kullanicilar.Add(kullanicilar);
                     db.SaveChanges();

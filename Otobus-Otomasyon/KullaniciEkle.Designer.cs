@@ -200,6 +200,9 @@
             this.cmbKullaniciRol.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbKullaniciRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbKullaniciRol.ItemHeight = 30;
+            this.cmbKullaniciRol.Items.AddRange(new object[] {
+            "Aktif\t",
+            "Pasif"});
             this.cmbKullaniciRol.Location = new System.Drawing.Point(206, 340);
             this.cmbKullaniciRol.Name = "cmbKullaniciRol";
             this.cmbKullaniciRol.Size = new System.Drawing.Size(238, 36);
