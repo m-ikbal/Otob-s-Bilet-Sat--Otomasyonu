@@ -122,16 +122,25 @@ namespace Otobus_Otomasyon
 
         private void btnKoltukSec_Click(object sender, EventArgs e)
         {
-            int seferId = Convert.ToInt32(txtSeferId.Text);
-            if (txtAracTuru.Text == "2+2")
+            if (txtSeferId.Text == "")
             {
-                Koltuk1 koltuk1 = new Koltuk1(seferId);
-                koltuk1.Show();
+                MessageBox.Show("Lütfen bir sefer seçiniz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             else
             {
-                Koltuk2 koltuk2 = new Koltuk2(seferId);
-                koltuk2.Show();
+                if (txtAracTuru.Text == "2+2")
+                {
+                    int seferId = int.Parse(txtSeferId.Text);
+                    Koltuk1 koltuk1 = new Koltuk1(seferId);
+                    koltuk1.Show();
+                }
+                else
+                {
+                    int seferId = int.Parse(txtSeferId.Text);
+                    Koltuk2 koltuk2 = new Koltuk2(seferId);
+                    koltuk2.Show();
+                }
             }
         }
 

@@ -56,8 +56,8 @@ namespace Otobus_Otomasyon
         {
             if (e.RowIndex >= 0)
             {
-                string seferId = dgwSeferler.Rows[e.RowIndex].Cells[7].Value.ToString();
-                string aracTuru = dgwSeferler.Rows[e.RowIndex].Cells[6].Value.ToString();
+                string seferId = dgwSeferler.Rows[e.RowIndex].Cells[6].Value.ToString();
+                string aracTuru = dgwSeferler.Rows[e.RowIndex].Cells[5].Value.ToString();
 
                 txtSeferId.Text = seferId;
                 txtAracTuru.Text = aracTuru;

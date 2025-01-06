@@ -68,7 +68,6 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.RezervasyonSilButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.RezervasyonButton = new Guna.UI2.WinForms.Guna2Button();
             this.KullaniciContainer = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.KullaniciGoruntuleButton = new Guna.UI2.WinForms.Guna2Button();
@@ -90,6 +89,7 @@
             this.RezervasyonTimer = new System.Windows.Forms.Timer(this.components);
             this.KullaniciTimer = new System.Windows.Forms.Timer(this.components);
             this.PanelContainer = new System.Windows.Forms.Panel();
+            this.RezervasyonButton = new Guna.UI2.WinForms.Guna2Button();
             this.Sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.AnasayfaContainer.SuspendLayout();
@@ -679,26 +679,6 @@
             this.panel16.Size = new System.Drawing.Size(292, 54);
             this.panel16.TabIndex = 5;
             // 
-            // RezervasyonButton
-            // 
-            this.RezervasyonButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.RezervasyonButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.RezervasyonButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.RezervasyonButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.RezervasyonButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.RezervasyonButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RezervasyonButton.ForeColor = System.Drawing.Color.Black;
-            this.RezervasyonButton.Image = global::Otobus_Otomasyon.Properties.Resources.booking;
-            this.RezervasyonButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.RezervasyonButton.ImageOffset = new System.Drawing.Point(30, 0);
-            this.RezervasyonButton.Location = new System.Drawing.Point(-20, -9);
-            this.RezervasyonButton.Name = "RezervasyonButton";
-            this.RezervasyonButton.Size = new System.Drawing.Size(323, 71);
-            this.RezervasyonButton.TabIndex = 2;
-            this.RezervasyonButton.Text = "                Rezervasyon İşlemleri";
-            this.RezervasyonButton.TextOffset = new System.Drawing.Point(-50, 0);
-            this.RezervasyonButton.Click += new System.EventHandler(this.RezervasyonButton_Click);
-            // 
             // KullaniciContainer
             // 
             this.KullaniciContainer.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -958,6 +938,26 @@
             this.PanelContainer.Size = new System.Drawing.Size(1110, 914);
             this.PanelContainer.TabIndex = 1;
             // 
+            // RezervasyonButton
+            // 
+            this.RezervasyonButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.RezervasyonButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.RezervasyonButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.RezervasyonButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.RezervasyonButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.RezervasyonButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RezervasyonButton.ForeColor = System.Drawing.Color.Black;
+            this.RezervasyonButton.Image = global::Otobus_Otomasyon.Properties.Resources.booking;
+            this.RezervasyonButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.RezervasyonButton.ImageOffset = new System.Drawing.Point(30, 0);
+            this.RezervasyonButton.Location = new System.Drawing.Point(-20, -9);
+            this.RezervasyonButton.Name = "RezervasyonButton";
+            this.RezervasyonButton.Size = new System.Drawing.Size(323, 71);
+            this.RezervasyonButton.TabIndex = 2;
+            this.RezervasyonButton.Text = "                Rezervasyon İşlemleri";
+            this.RezervasyonButton.TextOffset = new System.Drawing.Point(-50, 0);
+            this.RezervasyonButton.Click += new System.EventHandler(this.RezervasyonButton_Click);
+            // 
             // Islemler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1042,7 +1042,6 @@
         private System.Windows.Forms.Panel panel15;
         private Guna.UI2.WinForms.Guna2Button RezervasyonSilButton;
         private System.Windows.Forms.Panel panel16;
-        private Guna.UI2.WinForms.Guna2Button RezervasyonButton;
         private System.Windows.Forms.Panel panel18;
         private Guna.UI2.WinForms.Guna2Button KullaniciGoruntuleButton;
         private System.Windows.Forms.Panel panel19;
@@ -1068,6 +1067,7 @@
         public System.Windows.Forms.Panel KullaniciContainer;
         private System.Windows.Forms.Panel AracContainer;
         private Guna.UI2.WinForms.Guna2Button AracButton;
+        private Guna.UI2.WinForms.Guna2Button RezervasyonButton;
     }
 }
 

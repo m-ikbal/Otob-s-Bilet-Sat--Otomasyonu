@@ -832,12 +832,13 @@
         <ComplexType Name="SeferListesi_Result">
           <Property Type="Time" Name="Varış_Saati" Nullable="true" />
           <Property Type="Time" Name="Kalkış_Saati" Nullable="true" />
-          <Property Type="DateTime" Name="Sefer_Tarihi" Nullable="true" />
           <Property Type="String" Name="Kalkış_Yeri" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Varış_Yeri" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Sefer_Durumu" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Araç_Türü" Nullable="true" MaxLength="50" />
           <Property Type="Int32" Name="Sefer_Numarası" Nullable="false" />
+          <Property Type="String" Name="Sefer_Kalkış_Tarihi" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Sefer_Varış_Tarihi" Nullable="true" MaxLength="50" />
         </ComplexType>
         <ComplexType Name="BiletListesi_Result">
           <Property Type="DateTime" Name="biletTarih" Nullable="true" Precision="23" />
@@ -1171,12 +1172,13 @@
               <ComplexTypeMapping TypeName="OBSODBModel.SeferListesi_Result">
                 <ScalarProperty Name="Varış_Saati" ColumnName="Varış Saati" />
                 <ScalarProperty Name="Kalkış_Saati" ColumnName="Kalkış Saati" />
-                <ScalarProperty Name="Sefer_Tarihi" ColumnName="Sefer Tarihi" />
                 <ScalarProperty Name="Kalkış_Yeri" ColumnName="Kalkış Yeri" />
                 <ScalarProperty Name="Varış_Yeri" ColumnName="Varış Yeri" />
                 <ScalarProperty Name="Sefer_Durumu" ColumnName="Sefer Durumu" />
                 <ScalarProperty Name="Araç_Türü" ColumnName="Araç Türü" />
                 <ScalarProperty Name="Sefer_Numarası" ColumnName="Sefer Numarası" />
+                <ScalarProperty Name="Sefer_Kalkış_Tarihi" ColumnName="Sefer Kalkış Tarihi" />
+                <ScalarProperty Name="Sefer_Varış_Tarihi" ColumnName="Sefer Varış Tarihi" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

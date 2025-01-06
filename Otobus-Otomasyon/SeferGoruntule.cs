@@ -48,9 +48,10 @@ namespace Otobus_Otomasyon
 
                 if (chkBoxSeferSaati.Checked)
                 {
-                    if (DateTime.TryParse(txtSeferTarihi.Text, out DateTime seferTarihi))
+                    if (!string.IsNullOrWhiteSpace(txtSeferTarihi.Text))
                     {
-                        seferler = seferler.Where(x => x.Sefer_Tarihi == seferTarihi);
+                        string seferTarihi = txtSeferTarihi.Text.Trim();
+                        seferler = seferler.Where(x => x.Sefer_Kalkış_Tarihi.ToString().Contains(seferTarihi));
                     }
                     else
                     {
