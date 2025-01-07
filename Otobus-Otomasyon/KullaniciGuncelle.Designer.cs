@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel37 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgwKullanicilar = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel27 = new System.Windows.Forms.Panel();
@@ -52,6 +52,8 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtKullaniciSoyisim = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtKullaniciAdi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cmbKullaniciDurumu = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwKullanicilar)).BeginInit();
             this.panel27.SuspendLayout();
             this.panel33.SuspendLayout();
@@ -69,27 +71,27 @@
             // 
             // dgwKullanicilar
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgwKullanicilar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgwKullanicilar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwKullanicilar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwKullanicilar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwKullanicilar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgwKullanicilar.ColumnHeadersHeight = 25;
             this.dgwKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgwKullanicilar.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwKullanicilar.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgwKullanicilar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgwKullanicilar.Location = new System.Drawing.Point(12, 50);
             this.dgwKullanicilar.Name = "dgwKullanicilar";
@@ -122,6 +124,8 @@
             // panel27
             // 
             this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel27.Controls.Add(this.guna2HtmlLabel2);
+            this.panel27.Controls.Add(this.cmbKullaniciDurumu);
             this.panel27.Controls.Add(this.btnKullaniciGuncelle);
             this.panel27.Controls.Add(this.guna2HtmlLabel22);
             this.panel27.Controls.Add(this.guna2HtmlLabel21);
@@ -139,9 +143,9 @@
             this.panel27.Controls.Add(this.panel33);
             this.panel27.Controls.Add(this.txtKullaniciSoyisim);
             this.panel27.Controls.Add(this.txtKullaniciAdi);
-            this.panel27.Location = new System.Drawing.Point(289, 414);
+            this.panel27.Location = new System.Drawing.Point(291, 395);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(536, 449);
+            this.panel27.Size = new System.Drawing.Size(536, 484);
             this.panel27.TabIndex = 9;
             // 
             // btnKullaniciGuncelle
@@ -153,7 +157,7 @@
             this.btnKullaniciGuncelle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnKullaniciGuncelle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKullaniciGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnKullaniciGuncelle.Location = new System.Drawing.Point(261, 379);
+            this.btnKullaniciGuncelle.Location = new System.Drawing.Point(261, 420);
             this.btnKullaniciGuncelle.Name = "btnKullaniciGuncelle";
             this.btnKullaniciGuncelle.Size = new System.Drawing.Size(192, 57);
             this.btnKullaniciGuncelle.TabIndex = 22;
@@ -299,7 +303,7 @@
             // 
             this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel36.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel36.Location = new System.Drawing.Point(1, 448);
+            this.panel36.Location = new System.Drawing.Point(1, 483);
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(534, 1);
             this.panel36.TabIndex = 3;
@@ -310,7 +314,7 @@
             this.panel35.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel35.Location = new System.Drawing.Point(535, 55);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(1, 394);
+            this.panel35.Size = new System.Drawing.Size(1, 429);
             this.panel35.TabIndex = 2;
             // 
             // panel34
@@ -319,7 +323,7 @@
             this.panel34.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel34.Location = new System.Drawing.Point(0, 55);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(1, 394);
+            this.panel34.Size = new System.Drawing.Size(1, 429);
             this.panel34.TabIndex = 1;
             // 
             // panel33
@@ -381,11 +385,39 @@
             this.txtKullaniciAdi.Size = new System.Drawing.Size(238, 36);
             this.txtKullaniciAdi.TabIndex = 24;
             // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(10, 373);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(204, 33);
+            this.guna2HtmlLabel2.TabIndex = 26;
+            this.guna2HtmlLabel2.Text = "Kullanıcı Durumu :";
+            // 
+            // cmbKullaniciDurumu
+            // 
+            this.cmbKullaniciDurumu.BackColor = System.Drawing.Color.Transparent;
+            this.cmbKullaniciDurumu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbKullaniciDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKullaniciDurumu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbKullaniciDurumu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbKullaniciDurumu.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbKullaniciDurumu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbKullaniciDurumu.ItemHeight = 30;
+            this.cmbKullaniciDurumu.Items.AddRange(new object[] {
+            "Aktif ",
+            "Pasif"});
+            this.cmbKullaniciDurumu.Location = new System.Drawing.Point(215, 373);
+            this.cmbKullaniciDurumu.Name = "cmbKullaniciDurumu";
+            this.cmbKullaniciDurumu.Size = new System.Drawing.Size(238, 36);
+            this.cmbKullaniciDurumu.TabIndex = 25;
+            // 
             // KullaniciGuncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 875);
+            this.ClientSize = new System.Drawing.Size(1094, 886);
             this.Controls.Add(this.panel27);
             this.Controls.Add(this.dgwKullanicilar);
             this.Controls.Add(this.guna2HtmlLabel37);
@@ -425,5 +457,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtKullaniciSoyisim;
         private Guna.UI2.WinForms.Guna2TextBox txtKullaniciAdi;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbKullaniciDurumu;
     }
 }

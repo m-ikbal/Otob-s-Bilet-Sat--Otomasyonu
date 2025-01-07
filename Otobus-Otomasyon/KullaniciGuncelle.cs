@@ -75,6 +75,7 @@ namespace Otobus_Otomasyon
                     kullanici.kullaniciSifre = txtKullaniciSifre.Text;
                     kullanici.kullaniciEposta = txtKullanciEposta.Text;
                     kullanici.kullaniciRol = cmbKullaniciRol.Text.Trim();
+                    kullanici.kullaniciDurumu = cmbKullaniciDurumu.Text.Trim();
                     db.SaveChanges();
                     MessageBox.Show("Kullanıcı Güncellendi");
                     KullaniciListele();

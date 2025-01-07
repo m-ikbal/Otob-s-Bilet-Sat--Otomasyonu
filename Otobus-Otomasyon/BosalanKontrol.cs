@@ -55,6 +55,15 @@ namespace Otobus_Otomasyon
                         return false; // Eğer bir alan boşsa false döner
                     }
                 }
+
+                if(control is MaskedTextBox maskedTextBox)
+                {
+                    if (string.IsNullOrWhiteSpace(maskedTextBox.Text))
+                    {
+                        MessageBox.Show("Lütfen gerekli tüm alanları doldurun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false; // Eğer bir alan boşsa false döner
+                    }
+                }
             }
 
             // Eğer tüm alanlar doldurulmuşsa

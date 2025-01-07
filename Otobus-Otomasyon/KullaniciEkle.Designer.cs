@@ -47,6 +47,8 @@
             this.panel34 = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cmbKullaniciDurum = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel27.SuspendLayout();
             this.panel33.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +56,8 @@
             // panel27
             // 
             this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel27.Controls.Add(this.guna2HtmlLabel2);
+            this.panel27.Controls.Add(this.cmbKullaniciDurum);
             this.panel27.Controls.Add(this.txtKullaniciSoyisim);
             this.panel27.Controls.Add(this.txtKullaniciAdi);
             this.panel27.Controls.Add(this.btnKullaniciEkle);
@@ -73,7 +77,7 @@
             this.panel27.Controls.Add(this.panel33);
             this.panel27.Location = new System.Drawing.Point(293, 123);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(509, 520);
+            this.panel27.Size = new System.Drawing.Size(509, 556);
             this.panel27.TabIndex = 5;
             // 
             // txtKullaniciSoyisim
@@ -123,7 +127,7 @@
             this.btnKullaniciEkle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnKullaniciEkle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKullaniciEkle.ForeColor = System.Drawing.Color.White;
-            this.btnKullaniciEkle.Location = new System.Drawing.Point(252, 396);
+            this.btnKullaniciEkle.Location = new System.Drawing.Point(252, 445);
             this.btnKullaniciEkle.Name = "btnKullaniciEkle";
             this.btnKullaniciEkle.Size = new System.Drawing.Size(192, 57);
             this.btnKullaniciEkle.TabIndex = 22;
@@ -269,7 +273,7 @@
             // 
             this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel36.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel36.Location = new System.Drawing.Point(1, 519);
+            this.panel36.Location = new System.Drawing.Point(1, 555);
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(507, 1);
             this.panel36.TabIndex = 3;
@@ -280,7 +284,7 @@
             this.panel35.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel35.Location = new System.Drawing.Point(508, 55);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(1, 465);
+            this.panel35.Size = new System.Drawing.Size(1, 501);
             this.panel35.TabIndex = 2;
             // 
             // panel34
@@ -289,7 +293,7 @@
             this.panel34.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel34.Location = new System.Drawing.Point(0, 55);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(1, 465);
+            this.panel34.Size = new System.Drawing.Size(1, 501);
             this.panel34.TabIndex = 1;
             // 
             // panel33
@@ -312,6 +316,34 @@
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(147, 33);
             this.guna2HtmlLabel1.TabIndex = 12;
             this.guna2HtmlLabel1.Text = "Kullanıcı Ekle";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(1, 389);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(204, 33);
+            this.guna2HtmlLabel2.TabIndex = 28;
+            this.guna2HtmlLabel2.Text = "Kullanıcı Durumu : ";
+            // 
+            // cmbKullaniciDurum
+            // 
+            this.cmbKullaniciDurum.BackColor = System.Drawing.Color.Transparent;
+            this.cmbKullaniciDurum.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbKullaniciDurum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKullaniciDurum.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbKullaniciDurum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbKullaniciDurum.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbKullaniciDurum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbKullaniciDurum.ItemHeight = 30;
+            this.cmbKullaniciDurum.Items.AddRange(new object[] {
+            "Aktif\t",
+            "Pasif"});
+            this.cmbKullaniciDurum.Location = new System.Drawing.Point(206, 386);
+            this.cmbKullaniciDurum.Name = "cmbKullaniciDurum";
+            this.cmbKullaniciDurum.Size = new System.Drawing.Size(238, 36);
+            this.cmbKullaniciDurum.TabIndex = 27;
             // 
             // KullaniciEkle
             // 
@@ -350,5 +382,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtKullaniciSoyisim;
         private Guna.UI2.WinForms.Guna2TextBox txtKullaniciAdi;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbKullaniciDurum;
     }
 }
