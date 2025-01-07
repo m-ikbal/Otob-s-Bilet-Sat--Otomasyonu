@@ -46,10 +46,11 @@
             this.cmbAracAdi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmbAracTipi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.dgwAraclar = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnAracIptalEt = new Guna.UI2.WinForms.Guna2Button();
             this.btnYenile = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cmbAracDurumu = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtAracId = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAracGuncelle = new Guna.UI2.WinForms.Guna2Button();
             this.btnAracEkle = new Guna.UI2.WinForms.Guna2Button();
@@ -59,14 +60,13 @@
             this.guna2HtmlLabel36 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel44 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cmbAracDurumu = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnTumAraclariListele = new Guna.UI2.WinForms.Guna2Button();
+            this.dgwAraclar = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwAraclar)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel43.SuspendLayout();
             this.panel44.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwAraclar)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel7
@@ -257,58 +257,6 @@
             this.guna2HtmlLabel3.TabIndex = 34;
             this.guna2HtmlLabel3.Text = "Araç İşlemleri";
             // 
-            // dgwAraclar
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgwAraclar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgwAraclar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwAraclar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgwAraclar.ColumnHeadersHeight = 25;
-            this.dgwAraclar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgwAraclar.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgwAraclar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgwAraclar.Location = new System.Drawing.Point(12, 47);
-            this.dgwAraclar.Name = "dgwAraclar";
-            this.dgwAraclar.RowHeadersVisible = false;
-            this.dgwAraclar.Size = new System.Drawing.Size(1070, 346);
-            this.dgwAraclar.TabIndex = 32;
-            this.dgwAraclar.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgwAraclar.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgwAraclar.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgwAraclar.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgwAraclar.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgwAraclar.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.dgwAraclar.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgwAraclar.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgwAraclar.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgwAraclar.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgwAraclar.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgwAraclar.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgwAraclar.ThemeStyle.HeaderStyle.Height = 25;
-            this.dgwAraclar.ThemeStyle.ReadOnly = false;
-            this.dgwAraclar.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgwAraclar.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgwAraclar.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgwAraclar.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgwAraclar.ThemeStyle.RowsStyle.Height = 22;
-            this.dgwAraclar.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgwAraclar.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgwAraclar.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwAraclar_CellDoubleClick);
-            // 
             // btnAracIptalEt
             // 
             this.btnAracIptalEt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -364,6 +312,35 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(799, 267);
             this.panel1.TabIndex = 33;
+            // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(431, 204);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(133, 27);
+            this.guna2HtmlLabel9.TabIndex = 30;
+            this.guna2HtmlLabel9.Text = "Araç Durumu :";
+            // 
+            // cmbAracDurumu
+            // 
+            this.cmbAracDurumu.BackColor = System.Drawing.Color.Transparent;
+            this.cmbAracDurumu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbAracDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAracDurumu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbAracDurumu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbAracDurumu.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbAracDurumu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbAracDurumu.ItemHeight = 30;
+            this.cmbAracDurumu.Items.AddRange(new object[] {
+            "Aktif\t",
+            "Pasif"});
+            this.cmbAracDurumu.Location = new System.Drawing.Point(566, 195);
+            this.cmbAracDurumu.Name = "cmbAracDurumu";
+            this.cmbAracDurumu.Size = new System.Drawing.Size(198, 36);
+            this.cmbAracDurumu.TabIndex = 31;
             // 
             // txtAracId
             // 
@@ -495,35 +472,6 @@
             this.guna2HtmlLabel2.TabIndex = 1;
             this.guna2HtmlLabel2.Text = "Ara";
             // 
-            // guna2HtmlLabel9
-            // 
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(431, 204);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(133, 27);
-            this.guna2HtmlLabel9.TabIndex = 30;
-            this.guna2HtmlLabel9.Text = "Araç Durumu :";
-            // 
-            // cmbAracDurumu
-            // 
-            this.cmbAracDurumu.BackColor = System.Drawing.Color.Transparent;
-            this.cmbAracDurumu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbAracDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAracDurumu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbAracDurumu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbAracDurumu.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbAracDurumu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbAracDurumu.ItemHeight = 30;
-            this.cmbAracDurumu.Items.AddRange(new object[] {
-            "Aktif\t",
-            "Pasif"});
-            this.cmbAracDurumu.Location = new System.Drawing.Point(566, 195);
-            this.cmbAracDurumu.Name = "cmbAracDurumu";
-            this.cmbAracDurumu.Size = new System.Drawing.Size(198, 36);
-            this.cmbAracDurumu.TabIndex = 31;
-            // 
             // btnTumAraclariListele
             // 
             this.btnTumAraclariListele.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -540,6 +488,59 @@
             this.btnTumAraclariListele.Text = "Tüm Araçları Listele";
             this.btnTumAraclariListele.Click += new System.EventHandler(this.btnTumAraclariListele_Click);
             // 
+            // dgwAraclar
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgwAraclar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgwAraclar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwAraclar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgwAraclar.ColumnHeadersHeight = 35;
+            this.dgwAraclar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwAraclar.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgwAraclar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgwAraclar.Location = new System.Drawing.Point(12, 47);
+            this.dgwAraclar.Name = "dgwAraclar";
+            this.dgwAraclar.RowHeadersVisible = false;
+            this.dgwAraclar.RowTemplate.Height = 30;
+            this.dgwAraclar.Size = new System.Drawing.Size(1070, 346);
+            this.dgwAraclar.TabIndex = 41;
+            this.dgwAraclar.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgwAraclar.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgwAraclar.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgwAraclar.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgwAraclar.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgwAraclar.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.dgwAraclar.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgwAraclar.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgwAraclar.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgwAraclar.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgwAraclar.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgwAraclar.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgwAraclar.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgwAraclar.ThemeStyle.ReadOnly = false;
+            this.dgwAraclar.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgwAraclar.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgwAraclar.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgwAraclar.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgwAraclar.ThemeStyle.RowsStyle.Height = 30;
+            this.dgwAraclar.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgwAraclar.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgwAraclar.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwAraclar_CellDoubleClick_1);
+            // 
             // AracIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,22 +551,22 @@
             this.Controls.Add(this.btnAracEkle);
             this.Controls.Add(this.btnAracGuncelle);
             this.Controls.Add(this.guna2HtmlLabel3);
-            this.Controls.Add(this.dgwAraclar);
             this.Controls.Add(this.btnAracIptalEt);
             this.Controls.Add(this.btnYenile);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dgwAraclar);
             this.Name = "AracIslemleri";
             this.Text = "AracIslemleri";
             this.Load += new System.EventHandler(this.AracIslemleri_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwAraclar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
             this.panel44.ResumeLayout(false);
             this.panel44.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwAraclar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -587,7 +588,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbAracAdi;
         private Guna.UI2.WinForms.Guna2ComboBox cmbAracTipi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2DataGridView dgwAraclar;
         private Guna.UI2.WinForms.Guna2Button btnAracIptalEt;
         private Guna.UI2.WinForms.Guna2Button btnYenile;
         private System.Windows.Forms.Panel panel1;
@@ -603,5 +603,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2ComboBox cmbAracDurumu;
         private Guna.UI2.WinForms.Guna2Button btnTumAraclariListele;
+        private Guna.UI2.WinForms.Guna2DataGridView dgwAraclar;
     }
 }

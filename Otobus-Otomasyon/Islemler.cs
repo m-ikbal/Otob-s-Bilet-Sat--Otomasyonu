@@ -15,7 +15,6 @@ namespace Otobus_Otomasyon
         bool siderbarExpand;
         bool biletcollapsed;
         bool sefercollapsed;
-        bool rezervasyoncollapsed;
         bool kullanicicollapsed;
         public Islemler()
         {

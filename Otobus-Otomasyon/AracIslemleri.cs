@@ -259,41 +259,6 @@ namespace Otobus_Otomasyon
             Temizle();
         }
 
-        private void dgwAraclar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string aracId = dgwAraclar.CurrentRow.Cells[0].Value.ToString();
-            string aracAdi = dgwAraclar.CurrentRow.Cells[1].Value.ToString();
-            string aracTipi = dgwAraclar.CurrentRow.Cells[3].Value.ToString();
-            string aracPlakasi = dgwAraclar.CurrentRow.Cells[2].Value.ToString();
-            string aracKapasitesi = dgwAraclar.CurrentRow.Cells[4].Value.ToString();
-
-            txtAracId.Text = aracId;
-            if (!string.IsNullOrEmpty(aracAdi))
-            {
-                // ComboBox'a ekleme (eğer listede yoksa)
-                if (!cmbAracAdi.Items.Contains(aracAdi))
-                {
-                    cmbAracAdi.Items.Add(aracAdi);
-                }
-
-                // ComboBox'ta seçili hale getirme
-                cmbAracAdi.SelectedItem = aracAdi;
-            }
-            txtAracPlakasi.Text = aracPlakasi;
-            if (!string.IsNullOrEmpty(aracTipi))
-            {
-                // ComboBox'a ekleme (eğer listede yoksa)
-                if (!cmbAracTipi.Items.Contains(aracTipi))
-                {
-                    cmbAracTipi.Items.Add(aracTipi);
-                }
-
-                // ComboBox'ta seçili hale getirme
-                cmbAracTipi.SelectedItem = aracTipi;
-            }
-            txtAracKapasitesi.Text = aracKapasitesi;
-        }
-
         private void btnAracIptalEt_Click(object sender, EventArgs e)
         {
             int id = int.Parse(txtAracId.Text);
@@ -333,6 +298,41 @@ namespace Otobus_Otomasyon
                         };
             dgwAraclar.DataSource = query.ToList();
             Temizle();
+        }
+
+        private void dgwAraclar_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            string aracId = dgwAraclar.CurrentRow.Cells[0].Value.ToString();
+            string aracAdi = dgwAraclar.CurrentRow.Cells[1].Value.ToString();
+            string aracTipi = dgwAraclar.CurrentRow.Cells[3].Value.ToString();
+            string aracPlakasi = dgwAraclar.CurrentRow.Cells[2].Value.ToString();
+            string aracKapasitesi = dgwAraclar.CurrentRow.Cells[4].Value.ToString();
+
+            txtAracId.Text = aracId;
+            if (!string.IsNullOrEmpty(aracAdi))
+            {
+                // ComboBox'a ekleme (eğer listede yoksa)
+                if (!cmbAracAdi.Items.Contains(aracAdi))
+                {
+                    cmbAracAdi.Items.Add(aracAdi);
+                }
+
+                // ComboBox'ta seçili hale getirme
+                cmbAracAdi.SelectedItem = aracAdi;
+            }
+            txtAracPlakasi.Text = aracPlakasi;
+            if (!string.IsNullOrEmpty(aracTipi))
+            {
+                // ComboBox'a ekleme (eğer listede yoksa)
+                if (!cmbAracTipi.Items.Contains(aracTipi))
+                {
+                    cmbAracTipi.Items.Add(aracTipi);
+                }
+
+                // ComboBox'ta seçili hale getirme
+                cmbAracTipi.SelectedItem = aracTipi;
+            }
+            txtAracKapasitesi.Text = aracKapasitesi;
         }
     }
 }

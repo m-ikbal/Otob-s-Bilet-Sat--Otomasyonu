@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ZamanTimer = new System.Windows.Forms.Timer(this.components);
             this.RezervasyonTimer = new System.Windows.Forms.Timer(this.components);
             this.KullaniciTimer = new System.Windows.Forms.Timer(this.components);
@@ -43,6 +43,7 @@
             this.txtSeferNumarasi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSeferTarihi = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSeferSifirla = new Guna.UI2.WinForms.Guna2Button();
             this.cmbSeferDurumu = new Guna.UI2.WinForms.Guna2ComboBox();
             this.chkBoxSeferDurumu = new Guna.UI2.WinForms.Guna2CheckBox();
             this.chkBoxSeferSaati = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -53,7 +54,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnSeferSifirla = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwSeferler)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -86,31 +86,32 @@
             // 
             // dgwSeferler
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgwSeferler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgwSeferler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwSeferler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwSeferler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgwSeferler.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwSeferler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgwSeferler.ColumnHeadersHeight = 35;
             this.dgwSeferler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgwSeferler.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwSeferler.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgwSeferler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgwSeferler.Location = new System.Drawing.Point(12, 48);
             this.dgwSeferler.Name = "dgwSeferler";
             this.dgwSeferler.RowHeadersVisible = false;
+            this.dgwSeferler.RowTemplate.Height = 30;
             this.dgwSeferler.Size = new System.Drawing.Size(1070, 599);
             this.dgwSeferler.TabIndex = 4;
             this.dgwSeferler.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -125,13 +126,13 @@
             this.dgwSeferler.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgwSeferler.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgwSeferler.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgwSeferler.ThemeStyle.HeaderStyle.Height = 25;
+            this.dgwSeferler.ThemeStyle.HeaderStyle.Height = 35;
             this.dgwSeferler.ThemeStyle.ReadOnly = false;
             this.dgwSeferler.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgwSeferler.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgwSeferler.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgwSeferler.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgwSeferler.ThemeStyle.RowsStyle.Height = 22;
+            this.dgwSeferler.ThemeStyle.RowsStyle.Height = 30;
             this.dgwSeferler.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgwSeferler.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
@@ -202,6 +203,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(799, 221);
             this.panel1.TabIndex = 30;
+            // 
+            // btnSeferSifirla
+            // 
+            this.btnSeferSifirla.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSeferSifirla.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSeferSifirla.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSeferSifirla.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSeferSifirla.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnSeferSifirla.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeferSifirla.ForeColor = System.Drawing.Color.White;
+            this.btnSeferSifirla.Location = new System.Drawing.Point(625, 126);
+            this.btnSeferSifirla.Name = "btnSeferSifirla";
+            this.btnSeferSifirla.Size = new System.Drawing.Size(167, 67);
+            this.btnSeferSifirla.TabIndex = 22;
+            this.btnSeferSifirla.Text = "Sıfırla";
+            this.btnSeferSifirla.Click += new System.EventHandler(this.btnSeferSifirla_Click);
             // 
             // cmbSeferDurumu
             // 
@@ -338,22 +355,6 @@
             this.guna2HtmlLabel12.Size = new System.Drawing.Size(121, 27);
             this.guna2HtmlLabel12.TabIndex = 0;
             this.guna2HtmlLabel12.Text = "Sefer Bilgileri";
-            // 
-            // btnSeferSifirla
-            // 
-            this.btnSeferSifirla.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSeferSifirla.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSeferSifirla.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSeferSifirla.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSeferSifirla.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnSeferSifirla.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeferSifirla.ForeColor = System.Drawing.Color.White;
-            this.btnSeferSifirla.Location = new System.Drawing.Point(625, 126);
-            this.btnSeferSifirla.Name = "btnSeferSifirla";
-            this.btnSeferSifirla.Size = new System.Drawing.Size(167, 67);
-            this.btnSeferSifirla.TabIndex = 22;
-            this.btnSeferSifirla.Text = "Sıfırla";
-            this.btnSeferSifirla.Click += new System.EventHandler(this.btnSeferSifirla_Click);
             // 
             // SeferGoruntule
             // 

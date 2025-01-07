@@ -40,6 +40,8 @@
             this.BiletTimer = new System.Windows.Forms.Timer(this.components);
             this.dgwSeferler = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel27 = new System.Windows.Forms.Panel();
+            this.dtpVarisTarihi = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.mskVarisSaati = new System.Windows.Forms.MaskedTextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -62,8 +64,6 @@
             this.panel34 = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.dtpVarisTarihi = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgwSeferler)).BeginInit();
             this.panel27.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -101,20 +101,20 @@
             this.dgwSeferler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwSeferler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgwSeferler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgwSeferler.ColumnHeadersHeight = 25;
+            this.dgwSeferler.ColumnHeadersHeight = 35;
             this.dgwSeferler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgwSeferler.DefaultCellStyle = dataGridViewCellStyle3;
@@ -122,6 +122,7 @@
             this.dgwSeferler.Location = new System.Drawing.Point(559, 60);
             this.dgwSeferler.Name = "dgwSeferler";
             this.dgwSeferler.RowHeadersVisible = false;
+            this.dgwSeferler.RowTemplate.Height = 30;
             this.dgwSeferler.Size = new System.Drawing.Size(515, 672);
             this.dgwSeferler.TabIndex = 5;
             this.dgwSeferler.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -136,13 +137,13 @@
             this.dgwSeferler.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgwSeferler.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgwSeferler.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgwSeferler.ThemeStyle.HeaderStyle.Height = 25;
+            this.dgwSeferler.ThemeStyle.HeaderStyle.Height = 35;
             this.dgwSeferler.ThemeStyle.ReadOnly = false;
             this.dgwSeferler.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgwSeferler.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgwSeferler.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgwSeferler.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgwSeferler.ThemeStyle.RowsStyle.Height = 22;
+            this.dgwSeferler.ThemeStyle.RowsStyle.Height = 30;
             this.dgwSeferler.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgwSeferler.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
@@ -174,6 +175,31 @@
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(509, 672);
             this.panel27.TabIndex = 4;
+            // 
+            // dtpVarisTarihi
+            // 
+            this.dtpVarisTarihi.Checked = true;
+            this.dtpVarisTarihi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtpVarisTarihi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.dtpVarisTarihi.ForeColor = System.Drawing.Color.Black;
+            this.dtpVarisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpVarisTarihi.Location = new System.Drawing.Point(242, 485);
+            this.dtpVarisTarihi.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpVarisTarihi.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpVarisTarihi.Name = "dtpVarisTarihi";
+            this.dtpVarisTarihi.Size = new System.Drawing.Size(234, 36);
+            this.dtpVarisTarihi.TabIndex = 32;
+            this.dtpVarisTarihi.Value = new System.DateTime(2024, 12, 20, 21, 25, 36, 257);
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(44, 488);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(197, 33);
+            this.guna2HtmlLabel1.TabIndex = 31;
+            this.guna2HtmlLabel1.Text = "Sefer Varış Tarihi :";
             // 
             // guna2Panel1
             // 
@@ -430,31 +456,6 @@
             this.guna2HtmlLabel16.Size = new System.Drawing.Size(128, 39);
             this.guna2HtmlLabel16.TabIndex = 3;
             this.guna2HtmlLabel16.Text = "Sefer Ekle";
-            // 
-            // dtpVarisTarihi
-            // 
-            this.dtpVarisTarihi.Checked = true;
-            this.dtpVarisTarihi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtpVarisTarihi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.dtpVarisTarihi.ForeColor = System.Drawing.Color.Black;
-            this.dtpVarisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpVarisTarihi.Location = new System.Drawing.Point(242, 485);
-            this.dtpVarisTarihi.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpVarisTarihi.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpVarisTarihi.Name = "dtpVarisTarihi";
-            this.dtpVarisTarihi.Size = new System.Drawing.Size(234, 36);
-            this.dtpVarisTarihi.TabIndex = 32;
-            this.dtpVarisTarihi.Value = new System.DateTime(2024, 12, 20, 21, 25, 36, 257);
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(44, 488);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(197, 33);
-            this.guna2HtmlLabel1.TabIndex = 31;
-            this.guna2HtmlLabel1.Text = "Sefer Varış Tarihi :";
             // 
             // SeferEkle
             // 

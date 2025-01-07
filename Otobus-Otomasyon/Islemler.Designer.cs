@@ -69,10 +69,10 @@
             this.KullaniciButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel22 = new System.Windows.Forms.Panel();
             this.KullaniciEkleButton = new Guna.UI2.WinForms.Guna2Button();
-            this.AracContainer = new System.Windows.Forms.Panel();
-            this.AracButton = new Guna.UI2.WinForms.Guna2Button();
             this.CikisContainer = new System.Windows.Forms.Panel();
             this.CikisYapButton = new Guna.UI2.WinForms.Guna2Button();
+            this.AracContainer = new System.Windows.Forms.Panel();
+            this.AracButton = new Guna.UI2.WinForms.Guna2Button();
             this.SidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.BiletTimer = new System.Windows.Forms.Timer(this.components);
             this.SeferTimer = new System.Windows.Forms.Timer(this.components);
@@ -99,8 +99,8 @@
             this.panel20.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
-            this.AracContainer.SuspendLayout();
             this.CikisContainer.SuspendLayout();
+            this.AracContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // Sidebar
@@ -111,8 +111,8 @@
             this.Sidebar.Controls.Add(this.BiletContainer);
             this.Sidebar.Controls.Add(this.SeferContainer);
             this.Sidebar.Controls.Add(this.KullaniciContainer);
-            this.Sidebar.Controls.Add(this.CikisContainer);
             this.Sidebar.Controls.Add(this.AracContainer);
+            this.Sidebar.Controls.Add(this.CikisContainer);
             this.Sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.Sidebar.Location = new System.Drawing.Point(0, 0);
             this.Sidebar.MaximumSize = new System.Drawing.Size(277, 1280);
@@ -680,38 +680,10 @@
             this.KullaniciEkleButton.TextOffset = new System.Drawing.Point(-45, 0);
             this.KullaniciEkleButton.Click += new System.EventHandler(this.KullaniciEkleButton_Click);
             // 
-            // AracContainer
-            // 
-            this.AracContainer.Controls.Add(this.AracButton);
-            this.AracContainer.Location = new System.Drawing.Point(3, 427);
-            this.AracContainer.Name = "AracContainer";
-            this.AracContainer.Size = new System.Drawing.Size(291, 54);
-            this.AracContainer.TabIndex = 3;
-            // 
-            // AracButton
-            // 
-            this.AracButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.AracButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.AracButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.AracButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AracButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AracButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.AracButton.ForeColor = System.Drawing.Color.Black;
-            this.AracButton.Image = global::Otobus_Otomasyon.Properties.Resources.front_of_bus;
-            this.AracButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.AracButton.ImageOffset = new System.Drawing.Point(32, 0);
-            this.AracButton.Location = new System.Drawing.Point(-22, -8);
-            this.AracButton.Name = "AracButton";
-            this.AracButton.Size = new System.Drawing.Size(323, 71);
-            this.AracButton.TabIndex = 2;
-            this.AracButton.Text = "Araç İşlemleri";
-            this.AracButton.TextOffset = new System.Drawing.Point(-40, 0);
-            this.AracButton.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // CikisContainer
             // 
             this.CikisContainer.Controls.Add(this.CikisYapButton);
-            this.CikisContainer.Location = new System.Drawing.Point(3, 367);
+            this.CikisContainer.Location = new System.Drawing.Point(3, 427);
             this.CikisContainer.Name = "CikisContainer";
             this.CikisContainer.Size = new System.Drawing.Size(291, 54);
             this.CikisContainer.TabIndex = 2;
@@ -735,6 +707,34 @@
             this.CikisYapButton.Text = "Çıkış Yap";
             this.CikisYapButton.TextOffset = new System.Drawing.Point(-55, 0);
             this.CikisYapButton.Click += new System.EventHandler(this.CikisYapButton_Click);
+            // 
+            // AracContainer
+            // 
+            this.AracContainer.Controls.Add(this.AracButton);
+            this.AracContainer.Location = new System.Drawing.Point(3, 367);
+            this.AracContainer.Name = "AracContainer";
+            this.AracContainer.Size = new System.Drawing.Size(291, 54);
+            this.AracContainer.TabIndex = 3;
+            // 
+            // AracButton
+            // 
+            this.AracButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AracButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AracButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AracButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AracButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AracButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.AracButton.ForeColor = System.Drawing.Color.Black;
+            this.AracButton.Image = global::Otobus_Otomasyon.Properties.Resources.front_of_bus;
+            this.AracButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.AracButton.ImageOffset = new System.Drawing.Point(32, 0);
+            this.AracButton.Location = new System.Drawing.Point(-22, -8);
+            this.AracButton.Name = "AracButton";
+            this.AracButton.Size = new System.Drawing.Size(323, 71);
+            this.AracButton.TabIndex = 2;
+            this.AracButton.Text = "Araç İşlemleri";
+            this.AracButton.TextOffset = new System.Drawing.Point(-40, 0);
+            this.AracButton.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // SidebarTimer
             // 
@@ -804,8 +804,8 @@
             this.panel20.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
-            this.AracContainer.ResumeLayout(false);
             this.CikisContainer.ResumeLayout(false);
+            this.AracContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -38,7 +38,6 @@
             this.SeferTimer = new System.Windows.Forms.Timer(this.components);
             this.SidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.BiletTimer = new System.Windows.Forms.Timer(this.components);
-            this.dgwBiletleriGoruntule = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2HtmlLabel37 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPnrNumarasi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtYolcuAdi = new Guna.UI2.WinForms.Guna2TextBox();
@@ -58,9 +57,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwBiletleriGoruntule)).BeginInit();
+            this.dgwBiletleriGoruntule = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwBiletleriGoruntule)).BeginInit();
             this.SuspendLayout();
             // 
             // RezervasyonTimer
@@ -87,57 +87,6 @@
             // 
             this.BiletTimer.Enabled = true;
             this.BiletTimer.Interval = 10;
-            // 
-            // dgwBiletleriGoruntule
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgwBiletleriGoruntule.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgwBiletleriGoruntule.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwBiletleriGoruntule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgwBiletleriGoruntule.ColumnHeadersHeight = 25;
-            this.dgwBiletleriGoruntule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgwBiletleriGoruntule.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgwBiletleriGoruntule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgwBiletleriGoruntule.Location = new System.Drawing.Point(8, 54);
-            this.dgwBiletleriGoruntule.Name = "dgwBiletleriGoruntule";
-            this.dgwBiletleriGoruntule.RowHeadersVisible = false;
-            this.dgwBiletleriGoruntule.Size = new System.Drawing.Size(1070, 538);
-            this.dgwBiletleriGoruntule.TabIndex = 10;
-            this.dgwBiletleriGoruntule.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgwBiletleriGoruntule.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgwBiletleriGoruntule.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgwBiletleriGoruntule.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgwBiletleriGoruntule.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgwBiletleriGoruntule.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.dgwBiletleriGoruntule.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.Height = 25;
-            this.dgwBiletleriGoruntule.ThemeStyle.ReadOnly = false;
-            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.Height = 22;
-            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // guna2HtmlLabel37
             // 
@@ -438,22 +387,74 @@
             this.guna2HtmlLabel12.TabIndex = 0;
             this.guna2HtmlLabel12.Text = "Bilet Bilgileri";
             // 
+            // dgwBiletleriGoruntule
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgwBiletleriGoruntule.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgwBiletleriGoruntule.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwBiletleriGoruntule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgwBiletleriGoruntule.ColumnHeadersHeight = 35;
+            this.dgwBiletleriGoruntule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwBiletleriGoruntule.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgwBiletleriGoruntule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgwBiletleriGoruntule.Location = new System.Drawing.Point(8, 54);
+            this.dgwBiletleriGoruntule.Name = "dgwBiletleriGoruntule";
+            this.dgwBiletleriGoruntule.RowHeadersVisible = false;
+            this.dgwBiletleriGoruntule.RowTemplate.Height = 30;
+            this.dgwBiletleriGoruntule.Size = new System.Drawing.Size(1070, 538);
+            this.dgwBiletleriGoruntule.TabIndex = 29;
+            this.dgwBiletleriGoruntule.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgwBiletleriGoruntule.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgwBiletleriGoruntule.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgwBiletleriGoruntule.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgwBiletleriGoruntule.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgwBiletleriGoruntule.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.dgwBiletleriGoruntule.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgwBiletleriGoruntule.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgwBiletleriGoruntule.ThemeStyle.ReadOnly = false;
+            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.Height = 30;
+            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgwBiletleriGoruntule.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // BiletGoruntule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 875);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgwBiletleriGoruntule);
             this.Controls.Add(this.guna2HtmlLabel37);
+            this.Controls.Add(this.dgwBiletleriGoruntule);
             this.Name = "BiletGoruntule";
             this.Text = "BiletGoruntule";
             this.Load += new System.EventHandler(this.BiletGoruntule_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgwBiletleriGoruntule)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwBiletleriGoruntule)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,7 +468,6 @@
         private System.Windows.Forms.Timer SeferTimer;
         private System.Windows.Forms.Timer SidebarTimer;
         private System.Windows.Forms.Timer BiletTimer;
-        private Guna.UI2.WinForms.Guna2DataGridView dgwBiletleriGoruntule;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel37;
         private Guna.UI2.WinForms.Guna2TextBox txtPnrNumarasi;
         private Guna.UI2.WinForms.Guna2TextBox txtYolcuAdi;
@@ -487,5 +487,6 @@
         private Guna.UI2.WinForms.Guna2CheckBox chkboxPnrNumarasi;
         private Guna.UI2.WinForms.Guna2CheckBox chkboxBiletTarihi;
         private Guna.UI2.WinForms.Guna2ComboBox cmbBiletDurumu;
+        private Guna.UI2.WinForms.Guna2DataGridView dgwBiletleriGoruntule;
     }
 }
