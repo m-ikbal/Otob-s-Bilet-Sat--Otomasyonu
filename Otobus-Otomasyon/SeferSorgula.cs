@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,23 +15,30 @@ namespace Otobus_Otomasyon
 {
     public partial class SeferSorgula : Form
     {
+       
         OBSODBEntities db = new OBSODBEntities();
-
         public SeferSorgula()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            cmbNereden.AutoCompleteCustomSource.AddRange(
+                db.Sehirler.AsEnumerable().Select(s => s.sehirAdi.ToLower(new CultureInfo("tr-TR"))).ToArray()
+            );
+            cmbNereden.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbNereden.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+            cmbNereye.AutoCompleteCustomSource.AddRange(
+                db.Sehirler.AsEnumerable().Select(s => s.sehirAdi.ToLower(new CultureInfo("tr-TR"))).ToArray()
+            );
+            cmbNereye.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbNereye.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
         }
         private void SeferSorgula_Load(object sender, EventArgs e)
         {
             var values = db.Sehirler.ToList();
             var values2 = db.Sehirler.ToList();
-            cmbNereden.DataSource = values;
-            cmbNereden.DisplayMember = "sehirAdi";
-            cmbNereden.ValueMember = "sehirId";
-
-            cmbNereye.DataSource = values2;
-            cmbNereye.DisplayMember = "sehirAdi";
-            cmbNereye.ValueMember = "sehirId";
+            
         }
 
         private void DegistirButton_Click(object sender, EventArgs e)

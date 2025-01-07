@@ -238,34 +238,12 @@ namespace Otobus_Otomasyon
             }
         }
 
-        private void RezervasyonTimer_Tick(object sender, EventArgs e)
-        {
-            if (rezervasyoncollapsed)
-            {
-                RezervasyonContainer.Height += 10;
-                if (RezervasyonContainer.Height == RezervasyonContainer.MaximumSize.Height)
-                {
-                    rezervasyoncollapsed = false;
-                    RezervasyonTimer.Stop();
-                }
-            }
-            else
-            {
-                RezervasyonContainer.Height -= 10;
-                if (RezervasyonContainer.Height == RezervasyonContainer.MinimumSize.Height)
-                {
-                    rezervasyoncollapsed = true;
-                    RezervasyonTimer.Stop();
-                }
-            }
-        }
-
         private void KullaniciTimer_Tick(object sender, EventArgs e)
         {
             if (kullanicicollapsed)
             {
                 KullaniciContainer.Height += 10;
-                if (KullaniciContainer.Height == RezervasyonContainer.MaximumSize.Height)
+                if (KullaniciContainer.Height == KullaniciContainer.MaximumSize.Height)
                 {
                     kullanicicollapsed = false;
                     KullaniciTimer.Stop();
