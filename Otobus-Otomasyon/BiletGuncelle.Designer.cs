@@ -44,10 +44,6 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCinsiyet = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.mskTelefon = new System.Windows.Forms.MaskedTextBox();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.mskDogumTarih = new System.Windows.Forms.MaskedTextBox();
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtEposta = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSoyad = new Guna.UI2.WinForms.Guna2TextBox();
@@ -78,9 +74,9 @@
             this.dgwSeferler = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnGuncelle = new Guna.UI2.WinForms.Guna2Button();
+            this.mskTelefon = new Guna.UI2.WinForms.Guna2TextBox();
+            this.mskDogumTarih = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwYolcular)).BeginInit();
             this.panel2.SuspendLayout();
@@ -187,9 +183,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.mskDogumTarih);
+            this.panel1.Controls.Add(this.mskTelefon);
             this.panel1.Controls.Add(this.txtCinsiyet);
-            this.panel1.Controls.Add(this.guna2Panel1);
-            this.panel1.Controls.Add(this.guna2Panel2);
             this.panel1.Controls.Add(this.guna2HtmlLabel14);
             this.panel1.Controls.Add(this.txtEposta);
             this.panel1.Controls.Add(this.guna2HtmlLabel9);
@@ -220,60 +216,17 @@
             this.txtCinsiyet.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCinsiyet.Enabled = false;
             this.txtCinsiyet.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCinsiyet.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCinsiyet.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCinsiyet.ForeColor = System.Drawing.Color.Black;
             this.txtCinsiyet.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCinsiyet.Location = new System.Drawing.Point(503, 200);
+            this.txtCinsiyet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCinsiyet.Name = "txtCinsiyet";
             this.txtCinsiyet.PasswordChar = '\0';
             this.txtCinsiyet.PlaceholderText = "";
             this.txtCinsiyet.SelectedText = "";
             this.txtCinsiyet.Size = new System.Drawing.Size(200, 36);
             this.txtCinsiyet.TabIndex = 30;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.mskTelefon);
-            this.guna2Panel1.Location = new System.Drawing.Point(503, 145);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(200, 37);
-            this.guna2Panel1.TabIndex = 29;
-            // 
-            // mskTelefon
-            // 
-            this.mskTelefon.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mskTelefon.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mskTelefon.ForeColor = System.Drawing.Color.Black;
-            this.mskTelefon.Location = new System.Drawing.Point(0, 1);
-            this.mskTelefon.Mask = "(999) 000-0000";
-            this.mskTelefon.Name = "mskTelefon";
-            this.mskTelefon.Size = new System.Drawing.Size(200, 32);
-            this.mskTelefon.TabIndex = 21;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.White;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.mskDogumTarih);
-            this.guna2Panel2.Location = new System.Drawing.Point(503, 89);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(200, 37);
-            this.guna2Panel2.TabIndex = 28;
-            // 
-            // mskDogumTarih
-            // 
-            this.mskDogumTarih.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mskDogumTarih.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mskDogumTarih.ForeColor = System.Drawing.Color.Black;
-            this.mskDogumTarih.Location = new System.Drawing.Point(0, 1);
-            this.mskDogumTarih.Mask = "00/00/0000";
-            this.mskDogumTarih.Name = "mskDogumTarih";
-            this.mskDogumTarih.Size = new System.Drawing.Size(200, 32);
-            this.mskDogumTarih.TabIndex = 21;
-            this.mskDogumTarih.ValidatingType = typeof(System.DateTime);
             // 
             // guna2HtmlLabel14
             // 
@@ -295,9 +248,11 @@
             this.txtEposta.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEposta.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEposta.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEposta.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEposta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEposta.ForeColor = System.Drawing.Color.Black;
             this.txtEposta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEposta.Location = new System.Drawing.Point(148, 255);
+            this.txtEposta.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtEposta.Name = "txtEposta";
             this.txtEposta.PasswordChar = '\0';
             this.txtEposta.PlaceholderText = "";
@@ -314,9 +269,11 @@
             this.txtSoyad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSoyad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSoyad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoyad.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSoyad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoyad.ForeColor = System.Drawing.Color.Black;
             this.txtSoyad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoyad.Location = new System.Drawing.Point(148, 200);
+            this.txtSoyad.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.PasswordChar = '\0';
             this.txtSoyad.PlaceholderText = "";
@@ -333,9 +290,11 @@
             this.txtAd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAd.ForeColor = System.Drawing.Color.Black;
             this.txtAd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAd.Location = new System.Drawing.Point(148, 145);
+            this.txtAd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtAd.Name = "txtAd";
             this.txtAd.PasswordChar = '\0';
             this.txtAd.PlaceholderText = "";
@@ -352,9 +311,11 @@
             this.txtTcNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTcNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTcNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTcNo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTcNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTcNo.ForeColor = System.Drawing.Color.Black;
             this.txtTcNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTcNo.Location = new System.Drawing.Point(148, 89);
+            this.txtTcNo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtTcNo.MaxLength = 11;
             this.txtTcNo.Name = "txtTcNo";
             this.txtTcNo.PasswordChar = '\0';
@@ -506,9 +467,11 @@
             this.txtKoltukNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKoltukNo.Enabled = false;
             this.txtKoltukNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKoltukNo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKoltukNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKoltukNo.ForeColor = System.Drawing.Color.Black;
             this.txtKoltukNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKoltukNo.Location = new System.Drawing.Point(124, 150);
+            this.txtKoltukNo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtKoltukNo.Name = "txtKoltukNo";
             this.txtKoltukNo.PasswordChar = '\0';
             this.txtKoltukNo.PlaceholderText = "";
@@ -537,9 +500,11 @@
             this.txtAracTuru.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAracTuru.Enabled = false;
             this.txtAracTuru.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAracTuru.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAracTuru.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAracTuru.ForeColor = System.Drawing.Color.Black;
             this.txtAracTuru.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAracTuru.Location = new System.Drawing.Point(124, 105);
+            this.txtAracTuru.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtAracTuru.Name = "txtAracTuru";
             this.txtAracTuru.PasswordChar = '\0';
             this.txtAracTuru.PlaceholderText = "";
@@ -584,9 +549,11 @@
             this.txtBiletUcreti.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBiletUcreti.Enabled = false;
             this.txtBiletUcreti.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBiletUcreti.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBiletUcreti.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBiletUcreti.ForeColor = System.Drawing.Color.Black;
             this.txtBiletUcreti.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBiletUcreti.Location = new System.Drawing.Point(134, 268);
+            this.txtBiletUcreti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBiletUcreti.Name = "txtBiletUcreti";
             this.txtBiletUcreti.PasswordChar = '\0';
             this.txtBiletUcreti.PlaceholderText = "";
@@ -615,9 +582,11 @@
             this.txtSeferId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSeferId.Enabled = false;
             this.txtSeferId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSeferId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSeferId.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSeferId.ForeColor = System.Drawing.Color.Black;
             this.txtSeferId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSeferId.Location = new System.Drawing.Point(124, 63);
+            this.txtSeferId.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtSeferId.Name = "txtSeferId";
             this.txtSeferId.PasswordChar = '\0';
             this.txtSeferId.PlaceholderText = "";
@@ -764,6 +733,50 @@
             this.btnGuncelle.Text = "Bilgileri Güncelle";
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
+            // mskTelefon
+            // 
+            this.mskTelefon.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.mskTelefon.DefaultText = "";
+            this.mskTelefon.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.mskTelefon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.mskTelefon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.mskTelefon.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.mskTelefon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.mskTelefon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskTelefon.ForeColor = System.Drawing.Color.Black;
+            this.mskTelefon.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.mskTelefon.Location = new System.Drawing.Point(503, 145);
+            this.mskTelefon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mskTelefon.Name = "mskTelefon";
+            this.mskTelefon.PasswordChar = '\0';
+            this.mskTelefon.PlaceholderText = "";
+            this.mskTelefon.SelectedText = "";
+            this.mskTelefon.Size = new System.Drawing.Size(200, 36);
+            this.mskTelefon.TabIndex = 31;
+            this.mskTelefon.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            // 
+            // mskDogumTarih
+            // 
+            this.mskDogumTarih.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.mskDogumTarih.DefaultText = "";
+            this.mskDogumTarih.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.mskDogumTarih.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.mskDogumTarih.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.mskDogumTarih.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.mskDogumTarih.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.mskDogumTarih.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskDogumTarih.ForeColor = System.Drawing.Color.Black;
+            this.mskDogumTarih.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.mskDogumTarih.Location = new System.Drawing.Point(503, 89);
+            this.mskDogumTarih.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mskDogumTarih.Name = "mskDogumTarih";
+            this.mskDogumTarih.PasswordChar = '\0';
+            this.mskDogumTarih.PlaceholderText = "";
+            this.mskDogumTarih.SelectedText = "";
+            this.mskDogumTarih.Size = new System.Drawing.Size(200, 36);
+            this.mskDogumTarih.TabIndex = 32;
+            this.mskDogumTarih.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged_1);
+            // 
             // BiletGuncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -783,10 +796,6 @@
             this.Load += new System.EventHandler(this.BiletGuncelle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwYolcular)).EndInit();
@@ -822,10 +831,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblYolcular;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
         private Guna.UI2.WinForms.Guna2TextBox txtEposta;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.MaskedTextBox mskDogumTarih;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.MaskedTextBox mskTelefon;
         private System.Windows.Forms.Panel panel2;
         public Guna.UI2.WinForms.Guna2TextBox txtKoltukNo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
@@ -845,5 +850,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private Guna.UI2.WinForms.Guna2Button btnGuncelle;
         public Guna.UI2.WinForms.Guna2TextBox txtCinsiyet;
+        public Guna.UI2.WinForms.Guna2TextBox mskTelefon;
+        public Guna.UI2.WinForms.Guna2TextBox mskDogumTarih;
     }
 }

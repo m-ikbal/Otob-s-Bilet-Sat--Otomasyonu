@@ -166,8 +166,8 @@
             this.cmbKullaniciDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKullaniciDurumu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbKullaniciDurumu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbKullaniciDurumu.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbKullaniciDurumu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbKullaniciDurumu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbKullaniciDurumu.ForeColor = System.Drawing.Color.Black;
             this.cmbKullaniciDurumu.ItemHeight = 30;
             this.cmbKullaniciDurumu.Items.AddRange(new object[] {
             "Aktif ",
@@ -260,8 +260,8 @@
             this.cmbKullaniciRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKullaniciRol.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbKullaniciRol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbKullaniciRol.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbKullaniciRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbKullaniciRol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbKullaniciRol.ForeColor = System.Drawing.Color.Black;
             this.cmbKullaniciRol.ItemHeight = 30;
             this.cmbKullaniciRol.Items.AddRange(new object[] {
             "Admin",
@@ -280,7 +280,8 @@
             this.txtKullanciEposta.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullanciEposta.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullanciEposta.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullanciEposta.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKullanciEposta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKullanciEposta.ForeColor = System.Drawing.Color.Black;
             this.txtKullanciEposta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullanciEposta.Location = new System.Drawing.Point(215, 276);
             this.txtKullanciEposta.Name = "txtKullanciEposta";
@@ -299,7 +300,8 @@
             this.txtKullaniciSifre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciSifre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciSifre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciSifre.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKullaniciSifre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKullaniciSifre.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciSifre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciSifre.Location = new System.Drawing.Point(215, 226);
             this.txtKullaniciSifre.Name = "txtKullaniciSifre";
@@ -318,7 +320,8 @@
             this.txtKullaniciIsim.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciIsim.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciIsim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciIsim.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKullaniciIsim.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKullaniciIsim.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciIsim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciIsim.Location = new System.Drawing.Point(215, 76);
             this.txtKullaniciIsim.Name = "txtKullaniciIsim";
@@ -385,7 +388,8 @@
             this.txtKullaniciSoyisim.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciSoyisim.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciSoyisim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciSoyisim.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKullaniciSoyisim.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKullaniciSoyisim.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciSoyisim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciSoyisim.Location = new System.Drawing.Point(215, 126);
             this.txtKullaniciSoyisim.Name = "txtKullaniciSoyisim";
@@ -404,7 +408,8 @@
             this.txtKullaniciAdi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciAdi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciAdi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciAdi.Location = new System.Drawing.Point(215, 176);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";

@@ -182,5 +182,66 @@ namespace Otobus_Otomasyon
                 throw;
             }
         }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            // Kullanıcıdan alınan girdi
+            string input = mskTelefon.Text;
+
+            // Sadece sayıları al
+            input = new string(input.Where(char.IsDigit).ToArray());
+
+            // Maksimum 10 rakam sınırını uygula
+            if (input.Length > 10)
+            {
+                input = input.Substring(0, 10);
+            }
+
+            // Formatlama
+            if (input.Length > 0)
+            {
+                if (input.Length > 3)
+                {
+                    input = $"({input.Substring(0, 3)}) {input.Substring(3)}";
+                }
+                if (input.Length > 9)
+                {
+                    input = $"{input.Substring(0, 9)}-{input.Substring(9)}";
+                }
+            }
+
+            // İmleç kaymasını önlemek için mevcut metni güncelle
+            mskTelefon.Text = input;
+            mskTelefon.SelectionStart = mskTelefon.Text.Length;
+        }
+
+        private void guna2TextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            // Kullanıcıdan alınan girdi
+            string input = mskDogumTarih.Text;
+
+            // Sadece sayıları al
+            input = new string(input.Where(char.IsDigit).ToArray());
+
+            // Maksimum 8 rakam sınırını uygula
+            if (input.Length > 8)
+            {
+                input = input.Substring(0, 8);
+            }
+
+            // Formatlama
+            if (input.Length > 2)
+            {
+                input = $"{input.Substring(0, 2)}/{input.Substring(2)}";
+            }
+            if (input.Length > 5)
+            {
+                input = $"{input.Substring(0, 5)}/{input.Substring(5)}";
+            }
+
+            // İmleç kaymasını önlemek için mevcut metni güncelle
+            mskDogumTarih.Text = input;
+            mskDogumTarih.SelectionStart = mskDogumTarih.Text.Length;
+        }
     }
 }

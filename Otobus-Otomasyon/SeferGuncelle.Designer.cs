@@ -261,8 +261,8 @@
             this.cmbAracId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAracId.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbAracId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbAracId.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbAracId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbAracId.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAracId.ForeColor = System.Drawing.Color.Black;
             this.cmbAracId.ItemHeight = 30;
             this.cmbAracId.Items.AddRange(new object[] {
             "Aktif\t",
@@ -380,8 +380,8 @@
             this.cmbSeferDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSeferDurumu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbSeferDurumu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSeferDurumu.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbSeferDurumu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbSeferDurumu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSeferDurumu.ForeColor = System.Drawing.Color.Black;
             this.cmbSeferDurumu.ItemHeight = 30;
             this.cmbSeferDurumu.Items.AddRange(new object[] {
             "Aktif\t",
@@ -398,8 +398,8 @@
             this.cmbNereye.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNereye.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbNereye.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbNereye.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbNereye.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbNereye.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNereye.ForeColor = System.Drawing.Color.Black;
             this.cmbNereye.ItemHeight = 30;
             this.cmbNereye.Location = new System.Drawing.Point(227, 177);
             this.cmbNereye.Name = "cmbNereye";
@@ -413,8 +413,8 @@
             this.cmbNereden.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNereden.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbNereden.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbNereden.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbNereden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbNereden.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNereden.ForeColor = System.Drawing.Color.Black;
             this.cmbNereden.ItemHeight = 30;
             this.cmbNereden.Location = new System.Drawing.Point(227, 127);
             this.cmbNereden.Name = "cmbNereden";

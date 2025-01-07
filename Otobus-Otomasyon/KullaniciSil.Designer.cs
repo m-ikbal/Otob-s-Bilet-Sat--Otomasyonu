@@ -143,11 +143,13 @@
             this.txtKullaniciId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKullaniciId.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKullaniciId.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciId.Location = new System.Drawing.Point(236, 96);
             this.txtKullaniciId.Name = "txtKullaniciId";
             this.txtKullaniciId.PasswordChar = '\0';
+            this.txtKullaniciId.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtKullaniciId.PlaceholderText = "";
             this.txtKullaniciId.SelectedText = "";
             this.txtKullaniciId.Size = new System.Drawing.Size(367, 36);

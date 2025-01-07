@@ -355,8 +355,8 @@
             this.cmbSeferDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSeferDurumu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbSeferDurumu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSeferDurumu.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbSeferDurumu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbSeferDurumu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSeferDurumu.ForeColor = System.Drawing.Color.Black;
             this.cmbSeferDurumu.ItemHeight = 30;
             this.cmbSeferDurumu.Items.AddRange(new object[] {
             "Aktif\t",
@@ -373,8 +373,8 @@
             this.cmbOtobusTipi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOtobusTipi.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbOtobusTipi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbOtobusTipi.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbOtobusTipi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbOtobusTipi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbOtobusTipi.ForeColor = System.Drawing.Color.Black;
             this.cmbOtobusTipi.ItemHeight = 30;
             this.cmbOtobusTipi.Location = new System.Drawing.Point(242, 339);
             this.cmbOtobusTipi.Name = "cmbOtobusTipi";
@@ -388,8 +388,8 @@
             this.cmbSeferNereye.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSeferNereye.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbSeferNereye.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSeferNereye.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbSeferNereye.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbSeferNereye.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSeferNereye.ForeColor = System.Drawing.Color.Black;
             this.cmbSeferNereye.ItemHeight = 30;
             this.cmbSeferNereye.Location = new System.Drawing.Point(242, 189);
             this.cmbSeferNereye.Name = "cmbSeferNereye";
@@ -403,8 +403,8 @@
             this.cmbSeferNereden.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSeferNereden.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbSeferNereden.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSeferNereden.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbSeferNereden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbSeferNereden.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSeferNereden.ForeColor = System.Drawing.Color.Black;
             this.cmbSeferNereden.ItemHeight = 30;
             this.cmbSeferNereden.Location = new System.Drawing.Point(242, 139);
             this.cmbSeferNereden.Name = "cmbSeferNereden";

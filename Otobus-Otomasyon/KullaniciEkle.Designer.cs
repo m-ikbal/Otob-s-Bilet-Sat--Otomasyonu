@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel27 = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cmbKullaniciDurum = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtKullaniciSoyisim = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtKullaniciAdi = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnKullaniciEkle = new Guna.UI2.WinForms.Guna2Button();
@@ -47,8 +49,6 @@
             this.panel34 = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cmbKullaniciDurum = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel27.SuspendLayout();
             this.panel33.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,34 @@
             this.panel27.Size = new System.Drawing.Size(509, 556);
             this.panel27.TabIndex = 5;
             // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(1, 389);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(204, 33);
+            this.guna2HtmlLabel2.TabIndex = 28;
+            this.guna2HtmlLabel2.Text = "Kullanıcı Durumu : ";
+            // 
+            // cmbKullaniciDurum
+            // 
+            this.cmbKullaniciDurum.BackColor = System.Drawing.Color.Transparent;
+            this.cmbKullaniciDurum.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbKullaniciDurum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKullaniciDurum.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbKullaniciDurum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbKullaniciDurum.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbKullaniciDurum.ForeColor = System.Drawing.Color.Black;
+            this.cmbKullaniciDurum.ItemHeight = 30;
+            this.cmbKullaniciDurum.Items.AddRange(new object[] {
+            "Aktif\t",
+            "Pasif"});
+            this.cmbKullaniciDurum.Location = new System.Drawing.Point(206, 386);
+            this.cmbKullaniciDurum.Name = "cmbKullaniciDurum";
+            this.cmbKullaniciDurum.Size = new System.Drawing.Size(238, 36);
+            this.cmbKullaniciDurum.TabIndex = 27;
+            // 
             // txtKullaniciSoyisim
             // 
             this.txtKullaniciSoyisim.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -89,7 +117,8 @@
             this.txtKullaniciSoyisim.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciSoyisim.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciSoyisim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciSoyisim.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKullaniciSoyisim.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKullaniciSoyisim.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciSoyisim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciSoyisim.Location = new System.Drawing.Point(206, 140);
             this.txtKullaniciSoyisim.Name = "txtKullaniciSoyisim";
@@ -108,7 +137,8 @@
             this.txtKullaniciAdi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciAdi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciAdi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciAdi.Location = new System.Drawing.Point(206, 190);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
@@ -201,8 +231,8 @@
             this.cmbKullaniciRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKullaniciRol.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbKullaniciRol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbKullaniciRol.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbKullaniciRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbKullaniciRol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbKullaniciRol.ForeColor = System.Drawing.Color.Black;
             this.cmbKullaniciRol.ItemHeight = 30;
             this.cmbKullaniciRol.Items.AddRange(new object[] {
             "Aktif\t",
@@ -221,7 +251,8 @@
             this.txtKullaniciEposta.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciEposta.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciEposta.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciEposta.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKullaniciEposta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKullaniciEposta.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciEposta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciEposta.Location = new System.Drawing.Point(206, 290);
             this.txtKullaniciEposta.Name = "txtKullaniciEposta";
@@ -240,7 +271,8 @@
             this.txtKullaniciSifre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciSifre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciSifre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciSifre.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKullaniciSifre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKullaniciSifre.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciSifre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciSifre.Location = new System.Drawing.Point(206, 240);
             this.txtKullaniciSifre.Name = "txtKullaniciSifre";
@@ -259,7 +291,8 @@
             this.txtKullaniciIsim.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciIsim.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciIsim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciIsim.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKullaniciIsim.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKullaniciIsim.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciIsim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciIsim.Location = new System.Drawing.Point(206, 90);
             this.txtKullaniciIsim.Name = "txtKullaniciIsim";
@@ -316,34 +349,6 @@
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(147, 33);
             this.guna2HtmlLabel1.TabIndex = 12;
             this.guna2HtmlLabel1.Text = "Kullanıcı Ekle";
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(1, 389);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(204, 33);
-            this.guna2HtmlLabel2.TabIndex = 28;
-            this.guna2HtmlLabel2.Text = "Kullanıcı Durumu : ";
-            // 
-            // cmbKullaniciDurum
-            // 
-            this.cmbKullaniciDurum.BackColor = System.Drawing.Color.Transparent;
-            this.cmbKullaniciDurum.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbKullaniciDurum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKullaniciDurum.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbKullaniciDurum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbKullaniciDurum.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbKullaniciDurum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbKullaniciDurum.ItemHeight = 30;
-            this.cmbKullaniciDurum.Items.AddRange(new object[] {
-            "Aktif\t",
-            "Pasif"});
-            this.cmbKullaniciDurum.Location = new System.Drawing.Point(206, 386);
-            this.cmbKullaniciDurum.Name = "cmbKullaniciDurum";
-            this.cmbKullaniciDurum.Size = new System.Drawing.Size(238, 36);
-            this.cmbKullaniciDurum.TabIndex = 27;
             // 
             // KullaniciEkle
             // 
