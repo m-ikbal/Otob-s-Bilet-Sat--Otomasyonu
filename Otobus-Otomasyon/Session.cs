@@ -10,5 +10,7 @@ namespace Otobus_Otomasyon
     {
         public static int KullaniciId { get; set; }
         public static string KullaniciAdi { get; set; }
+
+        public static string KullaniciIsim { get; set; } // Kullanıcı Adı (İsim)
     }
 }

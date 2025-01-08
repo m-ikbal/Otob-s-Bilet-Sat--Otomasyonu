@@ -323,6 +323,16 @@ namespace Otobus_Otomasyon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap video1 {
+            get {
+                object obj = ResourceManager.GetObject("video1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Yznc_Yl_Turizm_Logo___Original___5000x5000 {
             get {
                 object obj = ResourceManager.GetObject("Yznc Yl Turizm Logo - Original - 5000x5000", resourceCulture);

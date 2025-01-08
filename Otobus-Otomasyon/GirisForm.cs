@@ -74,6 +74,7 @@ namespace Otobus_Otomasyon
             // Kullanıcı rolüne göre işlem yap
             Session.KullaniciId = kullanici.kullaniciId;
             Session.KullaniciAdi = kullanici.kullaniciAdi;
+            Session.KullaniciIsim = kullanici.kullaniciIsim;
 
             string rolMesaji = kullanici.kullaniciRol == "admin" ? "admin" : "operatör";
             MessageBox.Show($"Başarılı Giriş Yaptınız İşlemler Menüsüne Yönlendiriliyorsunuz...\nKullanıcı Rol: {rolMesaji}", "Başarılı Giriş", MessageBoxButtons.OK, MessageBoxIcon.Information);

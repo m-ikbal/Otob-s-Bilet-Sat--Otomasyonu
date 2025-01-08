@@ -423,6 +423,7 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="otobus %282%29.ico" />
+    <None Include="Resources\video1.gif" />
     <None Include="Resources\icons8-search-64.png" />
     <None Include="Resources\icons8-change-64.png" />
     <None Include="Resources\icons8-date-50.png" />

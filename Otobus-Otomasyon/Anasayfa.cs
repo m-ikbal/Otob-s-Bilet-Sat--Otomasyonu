@@ -12,6 +12,7 @@ namespace Otobus_Otomasyon
 {
     public partial class Anasayfa : Form
     {
+        OBSODBEntities db = new OBSODBEntities();
         public Anasayfa()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace Otobus_Otomasyon
         private void Anasayfa_Load(object sender, EventArgs e)
         {
             ZamanTimer.Start();
+            lblKullaniciAdi.Text = $"Hoş geldin {Session.KullaniciIsim}, Otobüs Bilet Otomasyonu'na";
         }
 
         private void ZamanTimer_Tick_1(object sender, EventArgs e)
