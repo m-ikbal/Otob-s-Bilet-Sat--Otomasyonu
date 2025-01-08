@@ -94,7 +94,7 @@
             this.txtAracKapasitesi.ForeColor = System.Drawing.Color.Black;
             this.txtAracKapasitesi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAracKapasitesi.Location = new System.Drawing.Point(566, 145);
-            this.txtAracKapasitesi.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAracKapasitesi.Margin = new System.Windows.Forms.Padding(6);
             this.txtAracKapasitesi.Name = "txtAracKapasitesi";
             this.txtAracKapasitesi.PasswordChar = '\0';
             this.txtAracKapasitesi.PlaceholderText = "";
@@ -126,7 +126,7 @@
             this.txtAracPlakasi.ForeColor = System.Drawing.Color.Black;
             this.txtAracPlakasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAracPlakasi.Location = new System.Drawing.Point(566, 90);
-            this.txtAracPlakasi.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAracPlakasi.Margin = new System.Windows.Forms.Padding(6);
             this.txtAracPlakasi.Name = "txtAracPlakasi";
             this.txtAracPlakasi.PasswordChar = '\0';
             this.txtAracPlakasi.PlaceholderText = "";
@@ -360,7 +360,7 @@
             this.txtAracId.ForeColor = System.Drawing.Color.Black;
             this.txtAracId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAracId.Location = new System.Drawing.Point(148, 90);
-            this.txtAracId.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAracId.Margin = new System.Windows.Forms.Padding(6);
             this.txtAracId.Name = "txtAracId";
             this.txtAracId.PasswordChar = '\0';
             this.txtAracId.PlaceholderText = "";
@@ -441,7 +441,7 @@
             this.txtAraAracPlakasi.ForeColor = System.Drawing.Color.Black;
             this.txtAraAracPlakasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAraAracPlakasi.Location = new System.Drawing.Point(245, 49);
-            this.txtAraAracPlakasi.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAraAracPlakasi.Margin = new System.Windows.Forms.Padding(6);
             this.txtAraAracPlakasi.Name = "txtAraAracPlakasi";
             this.txtAraAracPlakasi.PasswordChar = '\0';
             this.txtAraAracPlakasi.PlaceholderText = "";

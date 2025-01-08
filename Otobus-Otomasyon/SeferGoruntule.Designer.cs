@@ -108,7 +108,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgwSeferler.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgwSeferler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgwSeferler.Location = new System.Drawing.Point(12, 48);
+            this.dgwSeferler.Location = new System.Drawing.Point(12, 54);
             this.dgwSeferler.Name = "dgwSeferler";
             this.dgwSeferler.RowHeadersVisible = false;
             this.dgwSeferler.RowTemplate.Height = 30;
@@ -140,7 +140,7 @@
             // 
             this.guna2HtmlLabel37.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel37.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel37.Location = new System.Drawing.Point(444, 3);
+            this.guna2HtmlLabel37.Location = new System.Drawing.Point(444, 10);
             this.guna2HtmlLabel37.Name = "guna2HtmlLabel37";
             this.guna2HtmlLabel37.Size = new System.Drawing.Size(211, 39);
             this.guna2HtmlLabel37.TabIndex = 3;
@@ -159,6 +159,7 @@
             this.txtSeferNumarasi.ForeColor = System.Drawing.Color.Black;
             this.txtSeferNumarasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSeferNumarasi.Location = new System.Drawing.Point(193, 72);
+            this.txtSeferNumarasi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeferNumarasi.MaxLength = 11;
             this.txtSeferNumarasi.Name = "txtSeferNumarasi";
             this.txtSeferNumarasi.PasswordChar = '\0';
@@ -180,6 +181,7 @@
             this.txtSeferTarihi.ForeColor = System.Drawing.Color.Black;
             this.txtSeferTarihi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSeferTarihi.Location = new System.Drawing.Point(193, 137);
+            this.txtSeferTarihi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeferTarihi.Name = "txtSeferTarihi";
             this.txtSeferTarihi.PasswordChar = '\0';
             this.txtSeferTarihi.PlaceholderText = "";
@@ -201,7 +203,7 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.txtSeferNumarasi);
-            this.panel1.Location = new System.Drawing.Point(146, 653);
+            this.panel1.Location = new System.Drawing.Point(146, 666);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(799, 221);
             this.panel1.TabIndex = 30;
@@ -362,7 +364,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 875);
+            this.ClientSize = new System.Drawing.Size(1110, 914);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgwSeferler);
             this.Controls.Add(this.guna2HtmlLabel37);

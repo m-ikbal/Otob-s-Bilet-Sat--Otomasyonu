@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel37 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgwKullanicilar = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel27 = new System.Windows.Forms.Panel();
@@ -63,7 +63,7 @@
             // 
             this.guna2HtmlLabel37.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel37.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel37.Location = new System.Drawing.Point(474, 5);
+            this.guna2HtmlLabel37.Location = new System.Drawing.Point(474, 30);
             this.guna2HtmlLabel37.Name = "guna2HtmlLabel37";
             this.guna2HtmlLabel37.Size = new System.Drawing.Size(147, 39);
             this.guna2HtmlLabel37.TabIndex = 7;
@@ -71,33 +71,33 @@
             // 
             // dgwKullanicilar
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgwKullanicilar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgwKullanicilar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgwKullanicilar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwKullanicilar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwKullanicilar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgwKullanicilar.ColumnHeadersHeight = 35;
             this.dgwKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgwKullanicilar.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwKullanicilar.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgwKullanicilar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgwKullanicilar.Location = new System.Drawing.Point(12, 50);
+            this.dgwKullanicilar.Location = new System.Drawing.Point(12, 73);
             this.dgwKullanicilar.Name = "dgwKullanicilar";
             this.dgwKullanicilar.RowHeadersVisible = false;
             this.dgwKullanicilar.RowTemplate.Height = 30;
-            this.dgwKullanicilar.Size = new System.Drawing.Size(1070, 339);
+            this.dgwKullanicilar.Size = new System.Drawing.Size(1070, 372);
             this.dgwKullanicilar.TabIndex = 8;
             this.dgwKullanicilar.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgwKullanicilar.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -144,16 +144,16 @@
             this.panel27.Controls.Add(this.panel33);
             this.panel27.Controls.Add(this.txtKullaniciSoyisim);
             this.panel27.Controls.Add(this.txtKullaniciAdi);
-            this.panel27.Location = new System.Drawing.Point(291, 395);
+            this.panel27.Location = new System.Drawing.Point(53, 465);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(536, 484);
+            this.panel27.Size = new System.Drawing.Size(989, 325);
             this.panel27.TabIndex = 9;
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(10, 373);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(510, 173);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(204, 33);
             this.guna2HtmlLabel2.TabIndex = 26;
@@ -172,7 +172,7 @@
             this.cmbKullaniciDurumu.Items.AddRange(new object[] {
             "Aktif ",
             "Pasif"});
-            this.cmbKullaniciDurumu.Location = new System.Drawing.Point(215, 373);
+            this.cmbKullaniciDurumu.Location = new System.Drawing.Point(715, 173);
             this.cmbKullaniciDurumu.Name = "cmbKullaniciDurumu";
             this.cmbKullaniciDurumu.Size = new System.Drawing.Size(238, 36);
             this.cmbKullaniciDurumu.TabIndex = 25;
@@ -184,11 +184,11 @@
             this.btnKullaniciGuncelle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnKullaniciGuncelle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnKullaniciGuncelle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnKullaniciGuncelle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKullaniciGuncelle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKullaniciGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnKullaniciGuncelle.Location = new System.Drawing.Point(261, 420);
+            this.btnKullaniciGuncelle.Location = new System.Drawing.Point(747, 226);
             this.btnKullaniciGuncelle.Name = "btnKullaniciGuncelle";
-            this.btnKullaniciGuncelle.Size = new System.Drawing.Size(192, 57);
+            this.btnKullaniciGuncelle.Size = new System.Drawing.Size(206, 68);
             this.btnKullaniciGuncelle.TabIndex = 22;
             this.btnKullaniciGuncelle.Text = "Güncelle";
             this.btnKullaniciGuncelle.Click += new System.EventHandler(this.btnKullaniciGuncelle_Click);
@@ -197,7 +197,7 @@
             // 
             this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel22.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(163, 326);
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(663, 126);
             this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
             this.guna2HtmlLabel22.Size = new System.Drawing.Size(51, 33);
             this.guna2HtmlLabel22.TabIndex = 16;
@@ -207,7 +207,7 @@
             // 
             this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel21.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(119, 276);
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(619, 76);
             this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
             this.guna2HtmlLabel21.Size = new System.Drawing.Size(95, 33);
             this.guna2HtmlLabel21.TabIndex = 15;
@@ -217,7 +217,7 @@
             // 
             this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel20.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel20.Location = new System.Drawing.Point(149, 226);
+            this.guna2HtmlLabel20.Location = new System.Drawing.Point(123, 226);
             this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
             this.guna2HtmlLabel20.Size = new System.Drawing.Size(65, 33);
             this.guna2HtmlLabel20.TabIndex = 14;
@@ -227,7 +227,7 @@
             // 
             this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel19.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel19.Location = new System.Drawing.Point(62, 176);
+            this.guna2HtmlLabel19.Location = new System.Drawing.Point(36, 176);
             this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
             this.guna2HtmlLabel19.Size = new System.Drawing.Size(152, 33);
             this.guna2HtmlLabel19.TabIndex = 13;
@@ -237,7 +237,7 @@
             // 
             this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel18.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel18.Location = new System.Drawing.Point(127, 126);
+            this.guna2HtmlLabel18.Location = new System.Drawing.Point(101, 126);
             this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
             this.guna2HtmlLabel18.Size = new System.Drawing.Size(87, 33);
             this.guna2HtmlLabel18.TabIndex = 12;
@@ -247,7 +247,7 @@
             // 
             this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel17.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(162, 76);
+            this.guna2HtmlLabel17.Location = new System.Drawing.Point(136, 76);
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
             this.guna2HtmlLabel17.Size = new System.Drawing.Size(52, 33);
             this.guna2HtmlLabel17.TabIndex = 11;
@@ -266,7 +266,7 @@
             this.cmbKullaniciRol.Items.AddRange(new object[] {
             "Admin",
             "Operatör"});
-            this.cmbKullaniciRol.Location = new System.Drawing.Point(215, 326);
+            this.cmbKullaniciRol.Location = new System.Drawing.Point(715, 126);
             this.cmbKullaniciRol.Name = "cmbKullaniciRol";
             this.cmbKullaniciRol.Size = new System.Drawing.Size(238, 36);
             this.cmbKullaniciRol.TabIndex = 9;
@@ -283,7 +283,8 @@
             this.txtKullanciEposta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullanciEposta.ForeColor = System.Drawing.Color.Black;
             this.txtKullanciEposta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullanciEposta.Location = new System.Drawing.Point(215, 276);
+            this.txtKullanciEposta.Location = new System.Drawing.Point(715, 76);
+            this.txtKullanciEposta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullanciEposta.Name = "txtKullanciEposta";
             this.txtKullanciEposta.PasswordChar = '\0';
             this.txtKullanciEposta.PlaceholderText = "";
@@ -303,7 +304,8 @@
             this.txtKullaniciSifre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciSifre.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciSifre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciSifre.Location = new System.Drawing.Point(215, 226);
+            this.txtKullaniciSifre.Location = new System.Drawing.Point(189, 226);
+            this.txtKullaniciSifre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciSifre.Name = "txtKullaniciSifre";
             this.txtKullaniciSifre.PasswordChar = '\0';
             this.txtKullaniciSifre.PlaceholderText = "";
@@ -323,7 +325,8 @@
             this.txtKullaniciIsim.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciIsim.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciIsim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciIsim.Location = new System.Drawing.Point(215, 76);
+            this.txtKullaniciIsim.Location = new System.Drawing.Point(189, 76);
+            this.txtKullaniciIsim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciIsim.Name = "txtKullaniciIsim";
             this.txtKullaniciIsim.PasswordChar = '\0';
             this.txtKullaniciIsim.PlaceholderText = "";
@@ -335,18 +338,18 @@
             // 
             this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel36.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel36.Location = new System.Drawing.Point(1, 483);
+            this.panel36.Location = new System.Drawing.Point(1, 324);
             this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(534, 1);
+            this.panel36.Size = new System.Drawing.Size(987, 1);
             this.panel36.TabIndex = 3;
             // 
             // panel35
             // 
             this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel35.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel35.Location = new System.Drawing.Point(535, 55);
+            this.panel35.Location = new System.Drawing.Point(988, 55);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(1, 429);
+            this.panel35.Size = new System.Drawing.Size(1, 270);
             this.panel35.TabIndex = 2;
             // 
             // panel34
@@ -355,7 +358,7 @@
             this.panel34.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel34.Location = new System.Drawing.Point(0, 55);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(1, 429);
+            this.panel34.Size = new System.Drawing.Size(1, 270);
             this.panel34.TabIndex = 1;
             // 
             // panel33
@@ -365,7 +368,7 @@
             this.panel33.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel33.Location = new System.Drawing.Point(0, 0);
             this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(536, 55);
+            this.panel33.Size = new System.Drawing.Size(989, 55);
             this.panel33.TabIndex = 0;
             // 
             // guna2HtmlLabel1
@@ -373,7 +376,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(181, 11);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(396, 11);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(196, 33);
             this.guna2HtmlLabel1.TabIndex = 12;
@@ -391,7 +394,8 @@
             this.txtKullaniciSoyisim.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciSoyisim.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciSoyisim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciSoyisim.Location = new System.Drawing.Point(215, 126);
+            this.txtKullaniciSoyisim.Location = new System.Drawing.Point(189, 126);
+            this.txtKullaniciSoyisim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciSoyisim.Name = "txtKullaniciSoyisim";
             this.txtKullaniciSoyisim.PasswordChar = '\0';
             this.txtKullaniciSoyisim.PlaceholderText = "";
@@ -411,7 +415,8 @@
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(215, 176);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(189, 176);
+            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.PasswordChar = '\0';
             this.txtKullaniciAdi.PlaceholderText = "";
@@ -423,7 +428,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 886);
+            this.ClientSize = new System.Drawing.Size(1094, 875);
             this.Controls.Add(this.panel27);
             this.Controls.Add(this.dgwKullanicilar);
             this.Controls.Add(this.guna2HtmlLabel37);

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ZamanTimer = new System.Windows.Forms.Timer(this.components);
             this.RezervasyonTimer = new System.Windows.Forms.Timer(this.components);
             this.KullaniciTimer = new System.Windows.Forms.Timer(this.components);
@@ -40,6 +40,8 @@
             this.BiletTimer = new System.Windows.Forms.Timer(this.components);
             this.dgwSeferler = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel37 = new System.Windows.Forms.Panel();
+            this.mskVarisSaati = new Guna.UI2.WinForms.Guna2TextBox();
+            this.mskKalkisSaati = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtpVarisTarihi = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbAracId = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -66,8 +68,6 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.LabelZaman = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.mskVarisSaati = new Guna.UI2.WinForms.Guna2TextBox();
-            this.mskKalkisSaati = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwSeferler)).BeginInit();
             this.panel37.SuspendLayout();
             this.SuspendLayout();
@@ -99,33 +99,33 @@
             // 
             // dgwSeferler
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgwSeferler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.dgwSeferler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgwSeferler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwSeferler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwSeferler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgwSeferler.ColumnHeadersHeight = 35;
             this.dgwSeferler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgwSeferler.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwSeferler.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgwSeferler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgwSeferler.Location = new System.Drawing.Point(557, 64);
+            this.dgwSeferler.Location = new System.Drawing.Point(17, 74);
             this.dgwSeferler.Name = "dgwSeferler";
             this.dgwSeferler.RowHeadersVisible = false;
             this.dgwSeferler.RowTemplate.Height = 30;
-            this.dgwSeferler.Size = new System.Drawing.Size(515, 672);
+            this.dgwSeferler.Size = new System.Drawing.Size(1060, 336);
             this.dgwSeferler.TabIndex = 11;
             this.dgwSeferler.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgwSeferler.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -174,10 +174,56 @@
             this.panel37.Controls.Add(this.panel39);
             this.panel37.Controls.Add(this.panel40);
             this.panel37.Controls.Add(this.panel41);
-            this.panel37.Location = new System.Drawing.Point(19, 64);
+            this.panel37.Location = new System.Drawing.Point(68, 431);
             this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(509, 672);
+            this.panel37.Size = new System.Drawing.Size(932, 372);
             this.panel37.TabIndex = 10;
+            // 
+            // mskVarisSaati
+            // 
+            this.mskVarisSaati.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.mskVarisSaati.DefaultText = "";
+            this.mskVarisSaati.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.mskVarisSaati.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.mskVarisSaati.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.mskVarisSaati.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.mskVarisSaati.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.mskVarisSaati.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskVarisSaati.ForeColor = System.Drawing.Color.Black;
+            this.mskVarisSaati.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.mskVarisSaati.Location = new System.Drawing.Point(154, 242);
+            this.mskVarisSaati.Margin = new System.Windows.Forms.Padding(6);
+            this.mskVarisSaati.MaxLength = 11;
+            this.mskVarisSaati.Name = "mskVarisSaati";
+            this.mskVarisSaati.PasswordChar = '\0';
+            this.mskVarisSaati.PlaceholderText = "";
+            this.mskVarisSaati.SelectedText = "";
+            this.mskVarisSaati.Size = new System.Drawing.Size(238, 36);
+            this.mskVarisSaati.TabIndex = 36;
+            this.mskVarisSaati.TextChanged += new System.EventHandler(this.mskVarisSaati_TextChanged);
+            // 
+            // mskKalkisSaati
+            // 
+            this.mskKalkisSaati.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.mskKalkisSaati.DefaultText = "";
+            this.mskKalkisSaati.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.mskKalkisSaati.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.mskKalkisSaati.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.mskKalkisSaati.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.mskKalkisSaati.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.mskKalkisSaati.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskKalkisSaati.ForeColor = System.Drawing.Color.Black;
+            this.mskKalkisSaati.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.mskKalkisSaati.Location = new System.Drawing.Point(154, 192);
+            this.mskKalkisSaati.Margin = new System.Windows.Forms.Padding(6);
+            this.mskKalkisSaati.MaxLength = 11;
+            this.mskKalkisSaati.Name = "mskKalkisSaati";
+            this.mskKalkisSaati.PasswordChar = '\0';
+            this.mskKalkisSaati.PlaceholderText = "";
+            this.mskKalkisSaati.SelectedText = "";
+            this.mskKalkisSaati.Size = new System.Drawing.Size(238, 36);
+            this.mskKalkisSaati.TabIndex = 35;
+            this.mskKalkisSaati.TextChanged += new System.EventHandler(this.mskKalkisSaati_TextChanged);
             // 
             // dtpVarisTarihi
             // 
@@ -186,7 +232,7 @@
             this.dtpVarisTarihi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpVarisTarihi.ForeColor = System.Drawing.Color.Black;
             this.dtpVarisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpVarisTarihi.Location = new System.Drawing.Point(227, 475);
+            this.dtpVarisTarihi.Location = new System.Drawing.Point(671, 242);
             this.dtpVarisTarihi.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpVarisTarihi.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpVarisTarihi.Name = "dtpVarisTarihi";
@@ -198,7 +244,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(28, 478);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(472, 242);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(197, 33);
             this.guna2HtmlLabel1.TabIndex = 31;
@@ -217,7 +263,7 @@
             this.cmbAracId.Items.AddRange(new object[] {
             "Aktif\t",
             "İptal Edildi"});
-            this.cmbAracId.Location = new System.Drawing.Point(227, 377);
+            this.cmbAracId.Location = new System.Drawing.Point(671, 142);
             this.cmbAracId.Name = "cmbAracId";
             this.cmbAracId.Size = new System.Drawing.Size(238, 36);
             this.cmbAracId.TabIndex = 25;
@@ -226,7 +272,7 @@
             // 
             this.guna2HtmlLabel27.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel27.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel27.Location = new System.Drawing.Point(135, 380);
+            this.guna2HtmlLabel27.Location = new System.Drawing.Point(579, 142);
             this.guna2HtmlLabel27.Name = "guna2HtmlLabel27";
             this.guna2HtmlLabel27.Size = new System.Drawing.Size(90, 33);
             this.guna2HtmlLabel27.TabIndex = 24;
@@ -241,9 +287,9 @@
             this.btnGuncelle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnGuncelle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnGuncelle.Location = new System.Drawing.Point(281, 524);
+            this.btnGuncelle.Location = new System.Drawing.Point(683, 290);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(180, 45);
+            this.btnGuncelle.Size = new System.Drawing.Size(222, 64);
             this.btnGuncelle.TabIndex = 21;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
@@ -255,7 +301,7 @@
             this.dtpKalkisTarihi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpKalkisTarihi.ForeColor = System.Drawing.Color.Black;
             this.dtpKalkisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpKalkisTarihi.Location = new System.Drawing.Point(227, 427);
+            this.dtpKalkisTarihi.Location = new System.Drawing.Point(671, 192);
             this.dtpKalkisTarihi.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpKalkisTarihi.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpKalkisTarihi.Name = "dtpKalkisTarihi";
@@ -267,7 +313,7 @@
             // 
             this.guna2HtmlLabel25.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel25.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel25.Location = new System.Drawing.Point(17, 427);
+            this.guna2HtmlLabel25.Location = new System.Drawing.Point(461, 192);
             this.guna2HtmlLabel25.Name = "guna2HtmlLabel25";
             this.guna2HtmlLabel25.Size = new System.Drawing.Size(208, 33);
             this.guna2HtmlLabel25.TabIndex = 19;
@@ -277,7 +323,7 @@
             // 
             this.guna2HtmlLabel26.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel26.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel26.Location = new System.Drawing.Point(61, 331);
+            this.guna2HtmlLabel26.Location = new System.Drawing.Point(505, 92);
             this.guna2HtmlLabel26.Name = "guna2HtmlLabel26";
             this.guna2HtmlLabel26.Size = new System.Drawing.Size(165, 33);
             this.guna2HtmlLabel26.TabIndex = 17;
@@ -287,7 +333,7 @@
             // 
             this.guna2HtmlLabel28.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel28.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel28.Location = new System.Drawing.Point(99, 277);
+            this.guna2HtmlLabel28.Location = new System.Drawing.Point(26, 242);
             this.guna2HtmlLabel28.Name = "guna2HtmlLabel28";
             this.guna2HtmlLabel28.Size = new System.Drawing.Size(127, 33);
             this.guna2HtmlLabel28.TabIndex = 15;
@@ -297,7 +343,7 @@
             // 
             this.guna2HtmlLabel29.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel29.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel29.Location = new System.Drawing.Point(88, 227);
+            this.guna2HtmlLabel29.Location = new System.Drawing.Point(15, 192);
             this.guna2HtmlLabel29.Name = "guna2HtmlLabel29";
             this.guna2HtmlLabel29.Size = new System.Drawing.Size(138, 33);
             this.guna2HtmlLabel29.TabIndex = 14;
@@ -307,7 +353,7 @@
             // 
             this.guna2HtmlLabel30.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel30.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel30.Location = new System.Drawing.Point(136, 177);
+            this.guna2HtmlLabel30.Location = new System.Drawing.Point(63, 142);
             this.guna2HtmlLabel30.Name = "guna2HtmlLabel30";
             this.guna2HtmlLabel30.Size = new System.Drawing.Size(90, 33);
             this.guna2HtmlLabel30.TabIndex = 13;
@@ -317,7 +363,7 @@
             // 
             this.guna2HtmlLabel31.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel31.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel31.Location = new System.Drawing.Point(120, 127);
+            this.guna2HtmlLabel31.Location = new System.Drawing.Point(47, 92);
             this.guna2HtmlLabel31.Name = "guna2HtmlLabel31";
             this.guna2HtmlLabel31.Size = new System.Drawing.Size(106, 33);
             this.guna2HtmlLabel31.TabIndex = 12;
@@ -336,7 +382,7 @@
             this.cmbSeferDurumu.Items.AddRange(new object[] {
             "Aktif\t",
             "İptal Edildi"});
-            this.cmbSeferDurumu.Location = new System.Drawing.Point(227, 328);
+            this.cmbSeferDurumu.Location = new System.Drawing.Point(671, 92);
             this.cmbSeferDurumu.Name = "cmbSeferDurumu";
             this.cmbSeferDurumu.Size = new System.Drawing.Size(238, 36);
             this.cmbSeferDurumu.TabIndex = 10;
@@ -351,7 +397,7 @@
             this.cmbNereye.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNereye.ForeColor = System.Drawing.Color.Black;
             this.cmbNereye.ItemHeight = 30;
-            this.cmbNereye.Location = new System.Drawing.Point(227, 177);
+            this.cmbNereye.Location = new System.Drawing.Point(154, 142);
             this.cmbNereye.Name = "cmbNereye";
             this.cmbNereye.Size = new System.Drawing.Size(238, 36);
             this.cmbNereye.TabIndex = 6;
@@ -366,7 +412,7 @@
             this.cmbNereden.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNereden.ForeColor = System.Drawing.Color.Black;
             this.cmbNereden.ItemHeight = 30;
-            this.cmbNereden.Location = new System.Drawing.Point(227, 127);
+            this.cmbNereden.Location = new System.Drawing.Point(154, 92);
             this.cmbNereden.Name = "cmbNereden";
             this.cmbNereden.Size = new System.Drawing.Size(238, 36);
             this.cmbNereden.TabIndex = 5;
@@ -375,18 +421,18 @@
             // 
             this.panel38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel38.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel38.Location = new System.Drawing.Point(1, 671);
+            this.panel38.Location = new System.Drawing.Point(1, 371);
             this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(507, 1);
+            this.panel38.Size = new System.Drawing.Size(930, 1);
             this.panel38.TabIndex = 3;
             // 
             // panel39
             // 
             this.panel39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel39.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel39.Location = new System.Drawing.Point(508, 55);
+            this.panel39.Location = new System.Drawing.Point(931, 55);
             this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(1, 617);
+            this.panel39.Size = new System.Drawing.Size(1, 317);
             this.panel39.TabIndex = 2;
             // 
             // panel40
@@ -395,7 +441,7 @@
             this.panel40.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel40.Location = new System.Drawing.Point(0, 55);
             this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(1, 617);
+            this.panel40.Size = new System.Drawing.Size(1, 317);
             this.panel40.TabIndex = 1;
             // 
             // panel41
@@ -404,14 +450,14 @@
             this.panel41.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel41.Location = new System.Drawing.Point(0, 0);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(509, 55);
+            this.panel41.Size = new System.Drawing.Size(932, 55);
             this.panel41.TabIndex = 0;
             // 
             // guna2HtmlLabel33
             // 
             this.guna2HtmlLabel33.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel33.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel33.Location = new System.Drawing.Point(461, 5);
+            this.guna2HtmlLabel33.Location = new System.Drawing.Point(453, 30);
             this.guna2HtmlLabel33.Name = "guna2HtmlLabel33";
             this.guna2HtmlLabel33.Size = new System.Drawing.Size(186, 39);
             this.guna2HtmlLabel33.TabIndex = 9;
@@ -477,52 +523,6 @@
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(100, 39);
             this.guna2HtmlLabel5.TabIndex = 0;
             this.guna2HtmlLabel5.Text = "Bilet Sil";
-            // 
-            // mskVarisSaati
-            // 
-            this.mskVarisSaati.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.mskVarisSaati.DefaultText = "";
-            this.mskVarisSaati.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.mskVarisSaati.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.mskVarisSaati.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.mskVarisSaati.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.mskVarisSaati.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.mskVarisSaati.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskVarisSaati.ForeColor = System.Drawing.Color.Black;
-            this.mskVarisSaati.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.mskVarisSaati.Location = new System.Drawing.Point(227, 277);
-            this.mskVarisSaati.Margin = new System.Windows.Forms.Padding(6);
-            this.mskVarisSaati.MaxLength = 11;
-            this.mskVarisSaati.Name = "mskVarisSaati";
-            this.mskVarisSaati.PasswordChar = '\0';
-            this.mskVarisSaati.PlaceholderText = "";
-            this.mskVarisSaati.SelectedText = "";
-            this.mskVarisSaati.Size = new System.Drawing.Size(238, 36);
-            this.mskVarisSaati.TabIndex = 36;
-            this.mskVarisSaati.TextChanged += new System.EventHandler(this.mskVarisSaati_TextChanged);
-            // 
-            // mskKalkisSaati
-            // 
-            this.mskKalkisSaati.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.mskKalkisSaati.DefaultText = "";
-            this.mskKalkisSaati.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.mskKalkisSaati.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.mskKalkisSaati.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.mskKalkisSaati.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.mskKalkisSaati.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.mskKalkisSaati.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskKalkisSaati.ForeColor = System.Drawing.Color.Black;
-            this.mskKalkisSaati.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.mskKalkisSaati.Location = new System.Drawing.Point(227, 227);
-            this.mskKalkisSaati.Margin = new System.Windows.Forms.Padding(6);
-            this.mskKalkisSaati.MaxLength = 11;
-            this.mskKalkisSaati.Name = "mskKalkisSaati";
-            this.mskKalkisSaati.PasswordChar = '\0';
-            this.mskKalkisSaati.PlaceholderText = "";
-            this.mskKalkisSaati.SelectedText = "";
-            this.mskKalkisSaati.Size = new System.Drawing.Size(238, 36);
-            this.mskKalkisSaati.TabIndex = 35;
-            this.mskKalkisSaati.TextChanged += new System.EventHandler(this.mskKalkisSaati_TextChanged);
             // 
             // SeferGuncelle
             // 

@@ -104,11 +104,11 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgwKullanicilar.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgwKullanicilar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgwKullanicilar.Location = new System.Drawing.Point(12, 54);
+            this.dgwKullanicilar.Location = new System.Drawing.Point(12, 73);
             this.dgwKullanicilar.Name = "dgwKullanicilar";
             this.dgwKullanicilar.RowHeadersVisible = false;
             this.dgwKullanicilar.RowTemplate.Height = 30;
-            this.dgwKullanicilar.Size = new System.Drawing.Size(1070, 435);
+            this.dgwKullanicilar.Size = new System.Drawing.Size(1070, 520);
             this.dgwKullanicilar.TabIndex = 7;
             this.dgwKullanicilar.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgwKullanicilar.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -136,7 +136,7 @@
             // 
             this.guna2HtmlLabel37.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel37.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel37.Location = new System.Drawing.Point(447, 9);
+            this.guna2HtmlLabel37.Location = new System.Drawing.Point(447, 30);
             this.guna2HtmlLabel37.Name = "guna2HtmlLabel37";
             this.guna2HtmlLabel37.Size = new System.Drawing.Size(200, 39);
             this.guna2HtmlLabel37.TabIndex = 6;
@@ -166,6 +166,7 @@
             this.txtAdSoyad.ForeColor = System.Drawing.Color.Black;
             this.txtAdSoyad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAdSoyad.Location = new System.Drawing.Point(212, 79);
+            this.txtAdSoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAdSoyad.Name = "txtAdSoyad";
             this.txtAdSoyad.PasswordChar = '\0';
             this.txtAdSoyad.PlaceholderText = "";
@@ -180,7 +181,7 @@
             this.btnKullaniciAra.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnKullaniciAra.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnKullaniciAra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnKullaniciAra.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKullaniciAra.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKullaniciAra.ForeColor = System.Drawing.Color.White;
             this.btnKullaniciAra.Location = new System.Drawing.Point(439, 59);
             this.btnKullaniciAra.Name = "btnKullaniciAra";
@@ -199,7 +200,7 @@
             this.panel1.Controls.Add(this.txtAdSoyad);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(244, 495);
+            this.panel1.Location = new System.Drawing.Point(244, 613);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(665, 141);
             this.panel1.TabIndex = 29;
@@ -211,7 +212,7 @@
             this.btnSifirla.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSifirla.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSifirla.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnSifirla.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSifirla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSifirla.ForeColor = System.Drawing.Color.White;
             this.btnSifirla.Location = new System.Drawing.Point(551, 59);
             this.btnSifirla.Name = "btnSifirla";
@@ -272,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 649);
+            this.ClientSize = new System.Drawing.Size(1094, 875);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgwKullanicilar);
             this.Controls.Add(this.guna2HtmlLabel37);

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.SeferTimer = new System.Windows.Forms.Timer(this.components);
             this.ZamanTimer = new System.Windows.Forms.Timer(this.components);
             this.KullaniciTimer = new System.Windows.Forms.Timer(this.components);
@@ -95,7 +95,7 @@
             this.panel28.Controls.Add(this.panel30);
             this.panel28.Controls.Add(this.panel31);
             this.panel28.Controls.Add(this.panel32);
-            this.panel28.Location = new System.Drawing.Point(289, 425);
+            this.panel28.Location = new System.Drawing.Point(292, 518);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(510, 291);
             this.panel28.TabIndex = 8;
@@ -104,7 +104,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(52, 150);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(103, 150);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(98, 27);
             this.guna2HtmlLabel1.TabIndex = 34;
@@ -122,12 +122,13 @@
             this.txtYolcuAdi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYolcuAdi.ForeColor = System.Drawing.Color.Black;
             this.txtYolcuAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtYolcuAdi.Location = new System.Drawing.Point(164, 150);
+            this.txtYolcuAdi.Location = new System.Drawing.Point(215, 150);
+            this.txtYolcuAdi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtYolcuAdi.Name = "txtYolcuAdi";
             this.txtYolcuAdi.PasswordChar = '\0';
             this.txtYolcuAdi.PlaceholderText = "";
             this.txtYolcuAdi.SelectedText = "";
-            this.txtYolcuAdi.Size = new System.Drawing.Size(237, 36);
+            this.txtYolcuAdi.Size = new System.Drawing.Size(255, 36);
             this.txtYolcuAdi.TabIndex = 33;
             // 
             // label1
@@ -148,11 +149,11 @@
             this.btnBiletAra.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBiletAra.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBiletAra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnBiletAra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBiletAra.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBiletAra.ForeColor = System.Drawing.Color.White;
-            this.btnBiletAra.Location = new System.Drawing.Point(42, 202);
+            this.btnBiletAra.Location = new System.Drawing.Point(42, 209);
             this.btnBiletAra.Name = "btnBiletAra";
-            this.btnBiletAra.Size = new System.Drawing.Size(180, 45);
+            this.btnBiletAra.Size = new System.Drawing.Size(185, 62);
             this.btnBiletAra.TabIndex = 31;
             this.btnBiletAra.Text = "Ara";
             this.btnBiletAra.Click += new System.EventHandler(this.btnBiletAra_Click);
@@ -164,11 +165,11 @@
             this.btnIptalEt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnIptalEt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnIptalEt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnIptalEt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIptalEt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIptalEt.ForeColor = System.Drawing.Color.White;
-            this.btnIptalEt.Location = new System.Drawing.Point(290, 202);
+            this.btnIptalEt.Location = new System.Drawing.Point(290, 209);
             this.btnIptalEt.Name = "btnIptalEt";
-            this.btnIptalEt.Size = new System.Drawing.Size(180, 45);
+            this.btnIptalEt.Size = new System.Drawing.Size(185, 62);
             this.btnIptalEt.TabIndex = 30;
             this.btnIptalEt.Text = "İptal Et";
             this.btnIptalEt.Click += new System.EventHandler(this.btnIptalEt_Click);
@@ -177,7 +178,7 @@
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(8, 99);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(59, 99);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(142, 27);
             this.guna2HtmlLabel6.TabIndex = 14;
@@ -195,12 +196,13 @@
             this.txtPnrNumarasi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPnrNumarasi.ForeColor = System.Drawing.Color.Black;
             this.txtPnrNumarasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPnrNumarasi.Location = new System.Drawing.Point(164, 99);
+            this.txtPnrNumarasi.Location = new System.Drawing.Point(215, 99);
+            this.txtPnrNumarasi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPnrNumarasi.Name = "txtPnrNumarasi";
             this.txtPnrNumarasi.PasswordChar = '\0';
             this.txtPnrNumarasi.PlaceholderText = "";
             this.txtPnrNumarasi.SelectedText = "";
-            this.txtPnrNumarasi.Size = new System.Drawing.Size(237, 36);
+            this.txtPnrNumarasi.Size = new System.Drawing.Size(255, 36);
             this.txtPnrNumarasi.TabIndex = 4;
             // 
             // panel29
@@ -241,33 +243,33 @@
             // 
             // dgwBiletIptalEt
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgwBiletIptalEt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgwBiletIptalEt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgwBiletIptalEt.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwBiletIptalEt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwBiletIptalEt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgwBiletIptalEt.ColumnHeadersHeight = 35;
             this.dgwBiletIptalEt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgwBiletIptalEt.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwBiletIptalEt.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgwBiletIptalEt.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgwBiletIptalEt.Location = new System.Drawing.Point(12, 33);
+            this.dgwBiletIptalEt.Location = new System.Drawing.Point(12, 83);
             this.dgwBiletIptalEt.Name = "dgwBiletIptalEt";
             this.dgwBiletIptalEt.RowHeadersVisible = false;
             this.dgwBiletIptalEt.RowTemplate.Height = 30;
-            this.dgwBiletIptalEt.Size = new System.Drawing.Size(1067, 368);
+            this.dgwBiletIptalEt.Size = new System.Drawing.Size(1067, 412);
             this.dgwBiletIptalEt.TabIndex = 7;
             this.dgwBiletIptalEt.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgwBiletIptalEt.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -295,7 +297,7 @@
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(494, -6);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(467, 30);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(161, 39);
             this.guna2HtmlLabel5.TabIndex = 6;
@@ -305,7 +307,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 728);
+            this.ClientSize = new System.Drawing.Size(1094, 875);
             this.Controls.Add(this.panel28);
             this.Controls.Add(this.dgwBiletIptalEt);
             this.Controls.Add(this.guna2HtmlLabel5);
