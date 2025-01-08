@@ -31,6 +31,8 @@ namespace Otobus_Otomasyon
         private void Yolcular()
         {
             var query = from yolcu in db.Yolcular
+                        join Biletler in db.Biletler on yolcu.yolcuId equals Biletler.yolcuId
+                        where Biletler.BiletDurumu.ToLower() == "aktif"
                         select new
                         {
                             Yolcu_Numarası = yolcu.yolcuId,

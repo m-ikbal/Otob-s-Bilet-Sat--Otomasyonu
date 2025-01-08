@@ -46,14 +46,17 @@ namespace Otobus_Otomasyon
             {
                 string varisSaati = dgwSeferler.Rows[e.RowIndex].Cells[0].Value.ToString();
                 string kalkisSaati = dgwSeferler.Rows[e.RowIndex].Cells[1].Value.ToString();
-                string seferTarihi = dgwSeferler.Rows[e.RowIndex].Cells[2].Value.ToString();
-                string kalkisSehri = dgwSeferler.Rows[e.RowIndex].Cells[3].Value.ToString();
-                string varisSehri = dgwSeferler.Rows[e.RowIndex].Cells[4].Value.ToString();
-                string seferDurum = dgwSeferler.Rows[e.RowIndex].Cells[5].Value.ToString();
+                string kalkisSehri = dgwSeferler.Rows[e.RowIndex].Cells[2].Value.ToString();
+                string varisSehri = dgwSeferler.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string seferDurum = dgwSeferler.Rows[e.RowIndex].Cells[4].Value.ToString();
+                string seferKalkisTarihi = dgwSeferler.Rows[e.RowIndex].Cells[7].Value.ToString();
+                string seferVarisTarihi = dgwSeferler.Rows[e.RowIndex].Cells[8].Value.ToString();
+
 
                 mskVarisSaati.Text = varisSaati;
                 mskKalkisSaati.Text = kalkisSaati;
-                dtpKalkisTarihi.Value = DateTime.Parse(seferTarihi);
+                dtpKalkisTarihi.Value = DateTime.Parse(seferKalkisTarihi);
+                dtpVarisTarihi.Value = DateTime.Parse(seferVarisTarihi);
                 cmbNereden.Text = kalkisSehri;
                 cmbNereye.Text = varisSehri;
                 cmbSeferDurumu.Text = seferDurum;
@@ -62,7 +65,6 @@ namespace Otobus_Otomasyon
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
             if (bosalankontrol.AreFieldsValid(this))
             {
                 try
@@ -92,7 +94,6 @@ namespace Otobus_Otomasyon
             }
             else
             {
-                // Alanlar boşsa işlem yapılmaz
             }
             
 

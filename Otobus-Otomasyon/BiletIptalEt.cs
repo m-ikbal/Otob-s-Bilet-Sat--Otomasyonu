@@ -26,7 +26,6 @@ namespace Otobus_Otomasyon
 
         private void btnBiletAra_Click(object sender, EventArgs e)
         {
-            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
             if (bosalankontrol.AreFieldsValid(this))
             {
                 string yolcuAdi = txtYolcuAdi.Text;
@@ -56,14 +55,12 @@ namespace Otobus_Otomasyon
             }
             else
             {
-                // Alanlar boşsa işlem yapılmaz
             }
             
         }
 
         private void btnIptalEt_Click(object sender, EventArgs e)
         {
-            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
             if (bosalankontrol.AreFieldsValid(this))
             {
                 string pnrNumarasi = txtPnrNumarasi.Text;
