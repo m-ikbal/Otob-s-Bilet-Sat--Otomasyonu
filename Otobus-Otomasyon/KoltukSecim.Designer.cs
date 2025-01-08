@@ -108,6 +108,7 @@
             this.Controls.Add(this.btnErkek);
             this.Controls.Add(this.btnKadin);
             this.Name = "KoltukSecim";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KoltukSecim";
             this.Load += new System.EventHandler(this.KoltukSecim_Load);
             this.ResumeLayout(false);
