@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace Otobus_Otomasyon
 {
@@ -90,45 +91,65 @@ namespace Otobus_Otomasyon
 
         private void btnBiletEkle_Click(object sender, EventArgs e)
         {
-
             if (bosalankontrol.AreFieldsValid(this))
             {
                 try
                 {
-                    Yolcular yolcular = new Yolcular();
-                    yolcular.yolcuAdi = txtYolcuAdi.Text;
-                    yolcular.yolcuSoyadi = txtYolcuSoyadi.Text;
-                    yolcular.yolcuCinsiyet = txtCinsiyet.Text;
-                    yolcular.yolcuDogumTarihi = DateTime.Parse(mskDogumTarih.Text);
-                    yolcular.yolcuTelNo = mskTelefon.Text;
-                    yolcular.yolcuTc = txtYolcuTc.Text;
-                    yolcular.yolcuEposta = txtYolcuEposta.Text;
+                    // Yolcu bilgilerini oluştur
+                    Yolcular yolcular = new Yolcular
+                    {
+                        yolcuAdi = txtYolcuAdi.Text,
+                        yolcuSoyadi = txtYolcuSoyadi.Text,
+                        yolcuCinsiyet = txtCinsiyet.Text,
+                        yolcuTelNo = mskTelefon.Text,
+                        yolcuTc = txtYolcuTc.Text,
+                        yolcuEposta = txtYolcuEposta.Text
+                    };
 
+                    // Doğum tarihi kontrolü
+                    string inputDate = mskDogumTarih.Text;
+                    if (DateTime.TryParseExact(inputDate, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime parsedDate))
+                    {
+                        yolcular.yolcuDogumTarihi = parsedDate;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lütfen doğum tarihi formatını doğru girin (dd/MM/yyyy).");
+                        return;
+                    }
+
+                    // Yolcuyu veritabanına ekle
                     db.Yolcular.Add(yolcular);
                     db.SaveChanges();
 
-                    var yolcuAdi = txtYolcuAdi.Text;
-                    var yolcu = db.Yolcular
-                               .Where(y => y.yolcuAdi == yolcuAdi)
-                               .Select(y => new { y.yolcuId, y.yolcuAdi })
-                               .FirstOrDefault();
-
+                    // Sefer ve koltuk bilgilerini al
                     int seferId = int.Parse(txtSeferId.Text);
-                    var aracId = db.Seferler.Where(s => s.seferId == seferId)
-                                .Select(s => s.aracId)
-                                .FirstOrDefault();
+                    int? aracId = db.Seferler
+                    .Where(s => s.seferId == seferId)
+                     .Select(s => s.aracId)
+                    .FirstOrDefault();
+
+                    if (!aracId.HasValue)
+                    {
+                        MessageBox.Show("Sefer bilgisi bulunamadı veya araç ID boş.");
+                        return;
+                    }
+
+                    // Nullable olmayan int değerine erişim
+                    int validAracId = aracId.Value;
 
                     int koltukNo = int.Parse(txtKoltukNo.Text);
-                    var koltukId = db.Koltuklar
-                                   .Where(k => k.aracId == aracId && k.koltukNo == koltukNo)
-                                   .Select(k => k.koltukId)
-                                   .FirstOrDefault();
+                    int koltukId = db.Koltuklar
+                                     .Where(k => k.aracId == aracId && k.koltukNo == koltukNo)
+                                     .Select(k => k.koltukId)
+                                     .FirstOrDefault();
 
-                    Biletler biletler = new Biletler()
+                    // Yeni bilet oluştur
+                    Biletler biletler = new Biletler
                     {
                         biletTarih = DateTime.Now,
                         kullaniciId = Session.KullaniciId,
-                        yolcuId = yolcu.yolcuId,
+                        yolcuId = yolcular.yolcuId,
                         aracId = aracId,
                         seferId = seferId,
                         koltukId = koltukId,
@@ -139,9 +160,9 @@ namespace Otobus_Otomasyon
                     };
                     db.Biletler.Add(biletler);
                     KoltukDurumuGuncelle(aracId, koltukNo);
-                    db.SaveChanges();
 
-                    OdemeKayitlari odemeKayitlari = new OdemeKayitlari()
+                    // Ödeme kaydı oluştur
+                    OdemeKayitlari odemeKayitlari = new OdemeKayitlari
                     {
                         BiletId = biletler.biletId,
                         OdemeTarihi = DateTime.Now,
@@ -149,16 +170,23 @@ namespace Otobus_Otomasyon
                         OdemeYontemi = cmbOdemeTuru.Text
                     };
                     db.OdemeKayitlari.Add(odemeKayitlari);
+
+                    // Tüm işlemleri kaydet
                     db.SaveChanges();
+
                     MessageBox.Show("Bilet başarıyla eklendi!");
                 }
                 catch (DbUpdateException ex)
                 {
-                    Console.WriteLine(ex.InnerException?.Message);
-                    throw;
+                    MessageBox.Show("Bir hata oluştu: " + ex.InnerException?.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Beklenmeyen bir hata oluştu: " + ex.Message);
                 }
             }
         }
+
 
         private void mskTelefon_TextChanged(object sender, EventArgs e)
         {
