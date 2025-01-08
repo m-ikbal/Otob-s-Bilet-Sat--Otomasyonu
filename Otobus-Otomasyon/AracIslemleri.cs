@@ -180,6 +180,7 @@ namespace Otobus_Otomasyon
                 db.SaveChanges();
 
                 MessageBox.Show("Araç ve koltuklar başarıyla eklendi!");
+                Temizle();
             }
             else
             {

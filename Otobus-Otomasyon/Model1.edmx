@@ -240,7 +240,6 @@
           </ReferentialConstraint>
         </Association>
         <Function Name="BiletListesi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="RezervasyonListesi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SeferListesi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="OBSODBModelStoreContainer">
           <EntitySet Name="Araclar" EntityType="Self.Araclar" Schema="dbo" store:Type="Tables" />
@@ -637,7 +636,7 @@
           <Property Type="String" Name="Ad_Soyad" Nullable="false" MaxLength="101" />
           <Property Type="String" Name="Kalkış_Yeri" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Varış_Yeri" Nullable="true" MaxLength="50" />
-          <Property Type="DateTime" Name="biletTarih" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="biletTarih" Nullable="true" />
           <Property Type="Int32" Name="koltukNo" Nullable="true" />
           <Property Type="String" Name="PnrNumarasi" Nullable="true" MaxLength="50" />
           <Property Type="Decimal" Name="biletUcreti" Nullable="true" Precision="10" Scale="2" />
@@ -840,24 +839,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="RezervasyonListesi" FunctionName="OBSODBModel.Store.RezervasyonListesi">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="OBSODBModel.RezervasyonListesi_Result">
-                <ScalarProperty Name="Rezerve_Numarası" ColumnName="Rezerve Numarası" />
-                <ScalarProperty Name="Araç_Plakası" ColumnName="Araç Plakası" />
-                <ScalarProperty Name="Koltuk_Numarası" ColumnName="Koltuk Numarası" />
-                <ScalarProperty Name="Ad_Soyad" ColumnName="Ad Soyad" />
-                <ScalarProperty Name="Sefer_Tarihi" ColumnName="Sefer Tarihi" />
-                <ScalarProperty Name="Kalkış_Saati" ColumnName="Kalkış Saati" />
-                <ScalarProperty Name="Kalkış_Şehri" ColumnName="Kalkış Şehri" />
-                <ScalarProperty Name="Varış_Şehri" ColumnName="Varış Şehri" />
-                <ScalarProperty Name="RezerveTarihi" ColumnName="RezerveTarihi" />
-                <ScalarProperty Name="OdemeDurumu" ColumnName="OdemeDurumu" />
-                <ScalarProperty Name="PnrNumarasi" ColumnName="PnrNumarasi" />
-                <ScalarProperty Name="RezerveDurumu" ColumnName="RezerveDurumu" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

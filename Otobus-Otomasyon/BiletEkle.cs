@@ -34,6 +34,21 @@ namespace Otobus_Otomasyon
             return new string(code);
         }
 
+        private void Temizle()
+        {
+            txtYolcuAdi.Clear();
+            txtYolcuSoyadi.Clear();
+            txtCinsiyet.Clear();
+            mskTelefon.Clear();
+            txtYolcuTc.Clear();
+            txtYolcuEposta.Clear();
+            mskDogumTarih.Clear();
+            txtSeferId.Clear();
+            txtAracTuru.Clear();
+            txtKoltukNo.Clear();
+            cmbOdemeTuru.SelectedIndex = -1;
+        }
+
         private void KoltukDurumuGuncelle(int? aracId, int koltukNo)
         {
             var koltuk = db.Koltuklar.FirstOrDefault(x => x.aracId == aracId && x.koltukNo == koltukNo);
@@ -175,14 +190,12 @@ namespace Otobus_Otomasyon
                     db.SaveChanges();
 
                     MessageBox.Show("Bilet başarıyla eklendi!");
+                    Temizle();
+
                 }
                 catch (DbUpdateException ex)
                 {
                     MessageBox.Show("Bir hata oluştu: " + ex.InnerException?.Message);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Beklenmeyen bir hata oluştu: " + ex.Message);
                 }
             }
         }

@@ -71,6 +71,7 @@ namespace Otobus_Otomasyon
                 if (bilet != null)
                 {
                     bilet.BiletDurumu = "İptal Edildi";
+                    bilet.Koltuklar.koltukDurum = "Boş";
                     db.SaveChanges();
                     MessageBox.Show("Bilet başarıyla iptal edildi.");
                 }
@@ -81,7 +82,6 @@ namespace Otobus_Otomasyon
             }
             else
             {
-                // Alanlar boşsa işlem yapılmaz
             }
             
 
