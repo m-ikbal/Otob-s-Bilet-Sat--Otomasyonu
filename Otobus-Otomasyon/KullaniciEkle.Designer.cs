@@ -97,7 +97,7 @@
             this.cmbKullaniciDurum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKullaniciDurum.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbKullaniciDurum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbKullaniciDurum.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbKullaniciDurum.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbKullaniciDurum.ForeColor = System.Drawing.Color.Black;
             this.cmbKullaniciDurum.ItemHeight = 30;
             this.cmbKullaniciDurum.Items.AddRange(new object[] {
@@ -121,6 +121,7 @@
             this.txtKullaniciSoyisim.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciSoyisim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciSoyisim.Location = new System.Drawing.Point(206, 140);
+            this.txtKullaniciSoyisim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciSoyisim.Name = "txtKullaniciSoyisim";
             this.txtKullaniciSoyisim.PasswordChar = '\0';
             this.txtKullaniciSoyisim.PlaceholderText = "";
@@ -141,6 +142,7 @@
             this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciAdi.Location = new System.Drawing.Point(206, 190);
+            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.PasswordChar = '\0';
             this.txtKullaniciAdi.PlaceholderText = "";
@@ -231,12 +233,12 @@
             this.cmbKullaniciRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKullaniciRol.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbKullaniciRol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbKullaniciRol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbKullaniciRol.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbKullaniciRol.ForeColor = System.Drawing.Color.Black;
             this.cmbKullaniciRol.ItemHeight = 30;
             this.cmbKullaniciRol.Items.AddRange(new object[] {
-            "Aktif\t",
-            "Pasif"});
+            "admin",
+            "operator"});
             this.cmbKullaniciRol.Location = new System.Drawing.Point(206, 340);
             this.cmbKullaniciRol.Name = "cmbKullaniciRol";
             this.cmbKullaniciRol.Size = new System.Drawing.Size(238, 36);
@@ -255,6 +257,7 @@
             this.txtKullaniciEposta.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciEposta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciEposta.Location = new System.Drawing.Point(206, 290);
+            this.txtKullaniciEposta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciEposta.Name = "txtKullaniciEposta";
             this.txtKullaniciEposta.PasswordChar = '\0';
             this.txtKullaniciEposta.PlaceholderText = "";
@@ -275,6 +278,7 @@
             this.txtKullaniciSifre.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciSifre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciSifre.Location = new System.Drawing.Point(206, 240);
+            this.txtKullaniciSifre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciSifre.Name = "txtKullaniciSifre";
             this.txtKullaniciSifre.PasswordChar = '\0';
             this.txtKullaniciSifre.PlaceholderText = "";
@@ -295,6 +299,7 @@
             this.txtKullaniciIsim.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciIsim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciIsim.Location = new System.Drawing.Point(206, 90);
+            this.txtKullaniciIsim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciIsim.Name = "txtKullaniciIsim";
             this.txtKullaniciIsim.PasswordChar = '\0';
             this.txtKullaniciIsim.PlaceholderText = "";
