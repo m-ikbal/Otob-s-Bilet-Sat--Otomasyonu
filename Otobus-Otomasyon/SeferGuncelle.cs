@@ -97,5 +97,57 @@ namespace Otobus_Otomasyon
             
 
         }
+
+        private void mskKalkisSaati_TextChanged(object sender, EventArgs e)
+        {
+            string text = mskKalkisSaati.Text;
+
+            // Eğer saat metni 2 karakterden küçükse, kullanıcıya daha fazla karakter girmesi için izin ver
+            if (text.Length == 2 && !text.Contains(":"))
+            {
+                mskKalkisSaati.Text = text.Insert(2, ":");  // 2. karakterden sonra ':' ekle
+                mskKalkisSaati.SelectionStart = mskKalkisSaati.Text.Length;  // Kursoru sona getir
+            }
+
+            // Saat formatının 5 karakter olmasını kontrol et (örneğin: __:__)
+            if (text.Length > 5)
+            {
+                mskKalkisSaati.Text = text.Substring(0, 5);  // 5 karakterden fazla girişi engelle
+                mskKalkisSaati.SelectionStart = mskKalkisSaati.Text.Length;  // Kursoru sona getir
+            }
+
+            // Eğer kullanıcı silme işlemi yaparsa (boşluğu kaldırmak için), ":"'yi de silmek için kontrol et
+            if (text.Length == 4 && text.EndsWith(":"))
+            {
+                mskKalkisSaati.Text = text.Substring(0, 4);  // ":" karakterini sil
+                mskKalkisSaati.SelectionStart = mskKalkisSaati.Text.Length;  // Kursoru sona getir
+            }
+        }
+
+        private void mskVarisSaati_TextChanged(object sender, EventArgs e)
+        {
+string text = mskVarisSaati.Text;
+
+            // Eğer saat metni 2 karakterden küçükse, kullanıcıya daha fazla karakter girmesi için izin ver
+            if (text.Length == 2 && !text.Contains(":"))
+            {
+                mskVarisSaati.Text = text.Insert(2, ":");  // 2. karakterden sonra ':' ekle
+                mskVarisSaati.SelectionStart = mskVarisSaati.Text.Length;  // Kursoru sona getir
+            }
+
+            // Saat formatının 5 karakter olmasını kontrol et (örneğin: __:__)
+            if (text.Length > 5)
+            {
+                mskVarisSaati.Text = text.Substring(0, 5);  // 5 karakterden fazla girişi engelle
+                mskVarisSaati.SelectionStart = mskVarisSaati.Text.Length;  // Kursoru sona getir
+            }
+
+            // Eğer kullanıcı silme işlemi yaparsa (boşluğu kaldırmak için), ":"'yi de silmek için kontrol et
+            if (text.Length == 4 && text.EndsWith(":"))
+            {
+                mskVarisSaati.Text = text.Substring(0, 4);  // ":" karakterini sil
+                mskVarisSaati.SelectionStart = mskVarisSaati.Text.Length;  // Kursoru sona getir
+            }
+        }
     }
 }

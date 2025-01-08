@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.SidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.SeferTimer = new System.Windows.Forms.Timer(this.components);
             this.RezervasyonTimer = new System.Windows.Forms.Timer(this.components);
@@ -42,10 +42,6 @@
             this.panel27 = new System.Windows.Forms.Panel();
             this.dtpVarisTarihi = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.mskVarisSaati = new System.Windows.Forms.MaskedTextBox();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.mskKalkisSaati = new System.Windows.Forms.MaskedTextBox();
             this.btnSeferEkle = new Guna.UI2.WinForms.Guna2Button();
             this.dtpKalkisTarihi = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -64,10 +60,10 @@
             this.panel34 = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.mskKalkisSaati = new Guna.UI2.WinForms.Guna2TextBox();
+            this.mskVarisSaati = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwSeferler)).BeginInit();
             this.panel27.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidebarTimer
@@ -97,27 +93,27 @@
             // 
             // dgwSeferler
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgwSeferler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgwSeferler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgwSeferler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwSeferler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwSeferler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgwSeferler.ColumnHeadersHeight = 35;
             this.dgwSeferler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgwSeferler.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwSeferler.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgwSeferler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgwSeferler.Location = new System.Drawing.Point(559, 60);
             this.dgwSeferler.Name = "dgwSeferler";
@@ -150,10 +146,10 @@
             // panel27
             // 
             this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel27.Controls.Add(this.mskVarisSaati);
+            this.panel27.Controls.Add(this.mskKalkisSaati);
             this.panel27.Controls.Add(this.dtpVarisTarihi);
             this.panel27.Controls.Add(this.guna2HtmlLabel1);
-            this.panel27.Controls.Add(this.guna2Panel1);
-            this.panel27.Controls.Add(this.guna2Panel2);
             this.panel27.Controls.Add(this.btnSeferEkle);
             this.panel27.Controls.Add(this.dtpKalkisTarihi);
             this.panel27.Controls.Add(this.guna2HtmlLabel24);
@@ -200,52 +196,6 @@
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(197, 33);
             this.guna2HtmlLabel1.TabIndex = 31;
             this.guna2HtmlLabel1.Text = "Sefer Varış Tarihi :";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.mskVarisSaati);
-            this.guna2Panel1.Location = new System.Drawing.Point(242, 289);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(238, 37);
-            this.guna2Panel1.TabIndex = 30;
-            // 
-            // mskVarisSaati
-            // 
-            this.mskVarisSaati.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mskVarisSaati.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mskVarisSaati.ForeColor = System.Drawing.Color.Black;
-            this.mskVarisSaati.Location = new System.Drawing.Point(0, 1);
-            this.mskVarisSaati.Mask = "00:00";
-            this.mskVarisSaati.Name = "mskVarisSaati";
-            this.mskVarisSaati.Size = new System.Drawing.Size(200, 32);
-            this.mskVarisSaati.TabIndex = 21;
-            this.mskVarisSaati.ValidatingType = typeof(System.DateTime);
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.White;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.mskKalkisSaati);
-            this.guna2Panel2.Location = new System.Drawing.Point(242, 239);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(238, 37);
-            this.guna2Panel2.TabIndex = 29;
-            // 
-            // mskKalkisSaati
-            // 
-            this.mskKalkisSaati.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mskKalkisSaati.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mskKalkisSaati.ForeColor = System.Drawing.Color.Black;
-            this.mskKalkisSaati.Location = new System.Drawing.Point(0, 1);
-            this.mskKalkisSaati.Mask = "00:00";
-            this.mskKalkisSaati.Name = "mskKalkisSaati";
-            this.mskKalkisSaati.Size = new System.Drawing.Size(234, 32);
-            this.mskKalkisSaati.TabIndex = 21;
-            this.mskKalkisSaati.ValidatingType = typeof(System.DateTime);
             // 
             // btnSeferEkle
             // 
@@ -457,6 +407,52 @@
             this.guna2HtmlLabel16.TabIndex = 3;
             this.guna2HtmlLabel16.Text = "Sefer Ekle";
             // 
+            // mskKalkisSaati
+            // 
+            this.mskKalkisSaati.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.mskKalkisSaati.DefaultText = "";
+            this.mskKalkisSaati.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.mskKalkisSaati.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.mskKalkisSaati.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.mskKalkisSaati.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.mskKalkisSaati.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.mskKalkisSaati.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskKalkisSaati.ForeColor = System.Drawing.Color.Black;
+            this.mskKalkisSaati.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.mskKalkisSaati.Location = new System.Drawing.Point(242, 239);
+            this.mskKalkisSaati.Margin = new System.Windows.Forms.Padding(6);
+            this.mskKalkisSaati.MaxLength = 11;
+            this.mskKalkisSaati.Name = "mskKalkisSaati";
+            this.mskKalkisSaati.PasswordChar = '\0';
+            this.mskKalkisSaati.PlaceholderText = "";
+            this.mskKalkisSaati.SelectedText = "";
+            this.mskKalkisSaati.Size = new System.Drawing.Size(238, 36);
+            this.mskKalkisSaati.TabIndex = 33;
+            this.mskKalkisSaati.TextChanged += new System.EventHandler(this.txtSaat_TextChanged);
+            // 
+            // mskVarisSaati
+            // 
+            this.mskVarisSaati.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.mskVarisSaati.DefaultText = "";
+            this.mskVarisSaati.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.mskVarisSaati.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.mskVarisSaati.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.mskVarisSaati.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.mskVarisSaati.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.mskVarisSaati.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskVarisSaati.ForeColor = System.Drawing.Color.Black;
+            this.mskVarisSaati.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.mskVarisSaati.Location = new System.Drawing.Point(242, 289);
+            this.mskVarisSaati.Margin = new System.Windows.Forms.Padding(6);
+            this.mskVarisSaati.MaxLength = 11;
+            this.mskVarisSaati.Name = "mskVarisSaati";
+            this.mskVarisSaati.PasswordChar = '\0';
+            this.mskVarisSaati.PlaceholderText = "";
+            this.mskVarisSaati.SelectedText = "";
+            this.mskVarisSaati.Size = new System.Drawing.Size(238, 36);
+            this.mskVarisSaati.TabIndex = 34;
+            this.mskVarisSaati.TextChanged += new System.EventHandler(this.txtSaat_TextChanged_1);
+            // 
             // SeferEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -471,10 +467,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgwSeferler)).EndInit();
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,11 +499,9 @@
         private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.Panel panel33;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.MaskedTextBox mskVarisSaati;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.MaskedTextBox mskKalkisSaati;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpVarisTarihi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2TextBox mskKalkisSaati;
+        private Guna.UI2.WinForms.Guna2TextBox mskVarisSaati;
     }
 }
