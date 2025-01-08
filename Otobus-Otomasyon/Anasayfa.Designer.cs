@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.LabelZaman = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.lblKullaniciAdi = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ZamanTimer = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblKullaniciAdi = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel7.SuspendLayout();
-            this.panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel23.SuspendLayout();
             this.SuspendLayout();
             // 
             // LabelZaman
@@ -67,6 +67,26 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1072, 837);
             this.panel7.TabIndex = 4;
+            // 
+            // lblKullaniciAdi
+            // 
+            this.lblKullaniciAdi.BackColor = System.Drawing.Color.Transparent;
+            this.lblKullaniciAdi.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(380, 77);
+            this.lblKullaniciAdi.Name = "lblKullaniciAdi";
+            this.lblKullaniciAdi.Size = new System.Drawing.Size(3, 2);
+            this.lblKullaniciAdi.TabIndex = 5;
+            this.lblKullaniciAdi.Text = null;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Otobus_Otomasyon.Properties.Resources.video1;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 116);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1034, 698);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // panel26
             // 
@@ -120,30 +140,11 @@
             // 
             this.ZamanTimer.Tick += new System.EventHandler(this.ZamanTimer_Tick_1);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Otobus_Otomasyon.Properties.Resources.video1;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 116);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1034, 698);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblKullaniciAdi
-            // 
-            this.lblKullaniciAdi.BackColor = System.Drawing.Color.Transparent;
-            this.lblKullaniciAdi.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(380, 77);
-            this.lblKullaniciAdi.Name = "lblKullaniciAdi";
-            this.lblKullaniciAdi.Size = new System.Drawing.Size(3, 2);
-            this.lblKullaniciAdi.TabIndex = 5;
-            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 930);
+            this.ClientSize = new System.Drawing.Size(1094, 875);
             this.Controls.Add(this.LabelZaman);
             this.Controls.Add(this.panel7);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,9 +153,9 @@
             this.Load += new System.EventHandler(this.Anasayfa_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
