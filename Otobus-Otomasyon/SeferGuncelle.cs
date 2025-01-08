@@ -17,16 +17,19 @@ namespace Otobus_Otomasyon
             InitializeComponent();
         }
 
+        // Veritabanı bağlantısı
         OBSODBEntities db = new OBSODBEntities();
 
         private void SeferGuncelle_Load(object sender, EventArgs e)
         {
-
+            // Sefer listesini doldur
             dgwSeferler.DataSource = db.SeferListesi().ToList();
 
+            // Şehir ve araç listelerini doldur
             var values = db.Sehirler.ToList();
             var values2 = db.Sehirler.ToList();
             var values3 = db.Araclar.ToList();
+
             cmbNereden.DataSource = values;
             cmbNereden.DisplayMember = "sehirAdi";
             cmbNereden.ValueMember = "sehirId";
@@ -36,7 +39,7 @@ namespace Otobus_Otomasyon
             cmbNereye.ValueMember = "sehirId";
 
             cmbAracId.DataSource = values3;
-            cmbAracId.DisplayMember = "aracId";
+            cmbAracId.DisplayMember = "aracPlaka";
             cmbAracId.ValueMember = "aracId";
         }
 
@@ -44,22 +47,36 @@ namespace Otobus_Otomasyon
         {
             if (e.RowIndex >= 0)
             {
-                string varisSaati = dgwSeferler.Rows[e.RowIndex].Cells[0].Value.ToString();
-                string kalkisSaati = dgwSeferler.Rows[e.RowIndex].Cells[1].Value.ToString();
-                string kalkisSehri = dgwSeferler.Rows[e.RowIndex].Cells[2].Value.ToString();
-                string varisSehri = dgwSeferler.Rows[e.RowIndex].Cells[3].Value.ToString();
-                string seferDurum = dgwSeferler.Rows[e.RowIndex].Cells[4].Value.ToString();
-                string seferKalkisTarihi = dgwSeferler.Rows[e.RowIndex].Cells[7].Value.ToString();
-                string seferVarisTarihi = dgwSeferler.Rows[e.RowIndex].Cells[8].Value.ToString();
+                // Hücre değerlerini al ve kontrol et
+                var seferKalkisSaati = dgwSeferler.Rows[e.RowIndex].Cells["Kalkış_Saati"].Value;
+                var seferVarisSaati = dgwSeferler.Rows[e.RowIndex].Cells["Varış_Saati"].Value;
 
+                // Kalkış saati
+                if (seferKalkisSaati is TimeSpan kalkisSaati)
+                {
+                    mskKalkisSaati.Text = kalkisSaati.ToString(@"hh\:mm");
+                }
+                else
+                {
+                    mskKalkisSaati.Text = seferKalkisSaati?.ToString();
+                }
 
-                mskVarisSaati.Text = varisSaati;
-                mskKalkisSaati.Text = kalkisSaati;
-                dtpKalkisTarihi.Value = DateTime.Parse(seferKalkisTarihi);
-                dtpVarisTarihi.Value = DateTime.Parse(seferVarisTarihi);
-                cmbNereden.Text = kalkisSehri;
-                cmbNereye.Text = varisSehri;
-                cmbSeferDurumu.Text = seferDurum;
+                // Varış saati
+                if (seferVarisSaati is TimeSpan varisSaati)
+                {
+                    mskVarisSaati.Text = varisSaati.ToString(@"hh\:mm");
+                }
+                else
+                {
+                    mskVarisSaati.Text = seferVarisSaati?.ToString();
+                }
+
+                // Diğer alanlar
+                dtpKalkisTarihi.Value = DateTime.Parse(dgwSeferler.Rows[e.RowIndex].Cells["Sefer_Kalkış_Tarihi"].Value.ToString());
+                dtpVarisTarihi.Value = DateTime.Parse(dgwSeferler.Rows[e.RowIndex].Cells["Sefer_Varış_Tarihi"].Value.ToString());
+                cmbNereden.Text = dgwSeferler.Rows[e.RowIndex].Cells["Kalkış_Yeri"].Value.ToString();
+                cmbNereye.Text = dgwSeferler.Rows[e.RowIndex].Cells["Varış_Yeri"].Value.ToString();
+                cmbSeferDurumu.Text = dgwSeferler.Rows[e.RowIndex].Cells["Sefer_Durumu"].Value.ToString();
             }
         }
 
@@ -69,85 +86,111 @@ namespace Otobus_Otomasyon
             {
                 try
                 {
+                    // Tarihleri al
                     DateTime tarih = dtpKalkisTarihi.Value;
                     DateTime tarih2 = dtpVarisTarihi.Value;
-                    string sadeceTarih = tarih.ToString("yyyy-MM-dd");
-                    string sadeceTarih2 = tarih2.ToString("yyyy-MM-dd");
-                    int seferId = Convert.ToInt32(dgwSeferler.CurrentRow.Cells[0].Value);
-                    Seferler sefer = db.Seferler.Where(x => x.seferId == seferId).FirstOrDefault();
-                    sefer.KalkisSaati = TimeSpan.Parse(mskKalkisSaati.Text);
-                    sefer.VarisSaati = TimeSpan.Parse(mskVarisSaati.Text);
-                    sefer.SeferKalkisTarihi = sadeceTarih;
-                    sefer.SeferVarisTarihi = sadeceTarih2;
+
+                    // Sefer ID
+                    int seferId = Convert.ToInt32(dgwSeferler.CurrentRow.Cells["Sefer_Numarası"].Value);
+                    Seferler sefer = db.Seferler.FirstOrDefault(x => x.seferId == seferId);
+
+                    // Kalkış saati
+                    if (TimeSpan.TryParse(mskKalkisSaati.Text, out TimeSpan kalkisSaati))
+                    {
+                        sefer.KalkisSaati = kalkisSaati;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kalkış saati geçerli bir formatta değil!");
+                        return;
+                    }
+
+                    // Varış saati
+                    if (TimeSpan.TryParse(mskVarisSaati.Text, out TimeSpan varisSaati))
+                    {
+                        sefer.VarisSaati = varisSaati;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Varış saati geçerli bir formatta değil!");
+                        return;
+                    }
+
+                    // Diğer alanları güncelle
+                    sefer.SeferKalkisTarihi = tarih.ToString("yyyy-MM-dd");
+                    sefer.SeferVarisTarihi = tarih2.ToString("yyyy-MM-dd");
                     sefer.Kalkis = cmbNereden.Text;
                     sefer.Varis = cmbNereye.Text;
                     sefer.seferDurum = cmbSeferDurumu.Text;
                     sefer.aracId = Convert.ToInt32(cmbAracId.SelectedValue);
+
+                    // Değişiklikleri kaydet
                     db.SaveChanges();
                     MessageBox.Show("Sefer Güncellendi");
+
+                    // Listeyi yenile
                     dgwSeferler.DataSource = db.SeferListesi().ToList();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Hata: " + ex.Message);
+                    MessageBox.Show($"Hata: {ex.Message}\n{ex.StackTrace}");
                 }
             }
-            else
-            {
-            }
-            
-
         }
+
 
         private void mskKalkisSaati_TextChanged(object sender, EventArgs e)
         {
+            // Kalkış saati formatını kontrol et
             string text = mskKalkisSaati.Text;
 
             // Eğer saat metni 2 karakterden küçükse, kullanıcıya daha fazla karakter girmesi için izin ver
             if (text.Length == 2 && !text.Contains(":"))
             {
-                mskKalkisSaati.Text = text.Insert(2, ":");  // 2. karakterden sonra ':' ekle
+                mskKalkisSaati.Text = text.Insert(2, ":"); // 2. karakterden sonra ':' ekle
                 mskKalkisSaati.SelectionStart = mskKalkisSaati.Text.Length;  // Kursoru sona getir
             }
 
             // Saat formatının 5 karakter olmasını kontrol et (örneğin: __:__)
             if (text.Length > 5)
             {
-                mskKalkisSaati.Text = text.Substring(0, 5);  // 5 karakterden fazla girişi engelle
-                mskKalkisSaati.SelectionStart = mskKalkisSaati.Text.Length;  // Kursoru sona getir
+                mskKalkisSaati.Text = text.Substring(0, 5); // 5 karakterden fazla girişi engelle
+                mskKalkisSaati.SelectionStart = mskKalkisSaati.Text.Length; // Kursoru sona getir
             }
 
             // Eğer kullanıcı silme işlemi yaparsa (boşluğu kaldırmak için), ":"'yi de silmek için kontrol et
             if (text.Length == 4 && text.EndsWith(":"))
             {
-                mskKalkisSaati.Text = text.Substring(0, 4);  // ":" karakterini sil
-                mskKalkisSaati.SelectionStart = mskKalkisSaati.Text.Length;  // Kursoru sona getir
+                mskKalkisSaati.Text = text.Substring(0, 4); // ":" karakterini sil
+                mskKalkisSaati.SelectionStart = mskKalkisSaati.Text.Length; // Kursoru sona getir
             }
         }
 
         private void mskVarisSaati_TextChanged(object sender, EventArgs e)
         {
-string text = mskVarisSaati.Text;
+            // Varış saati formatını kontrol et
+            string text = mskVarisSaati.Text;
 
-            // Eğer saat metni 2 karakterden küçükse, kullanıcıya daha fazla karakter girmesi için izin ver
             if (text.Length == 2 && !text.Contains(":"))
             {
-                mskVarisSaati.Text = text.Insert(2, ":");  // 2. karakterden sonra ':' ekle
-                mskVarisSaati.SelectionStart = mskVarisSaati.Text.Length;  // Kursoru sona getir
+                mskVarisSaati.Text = text.Insert(2, ":"); // 5 karakterden fazla girişi engelle
+                mskVarisSaati.SelectionStart = mskVarisSaati.Text.Length; // Kursoru sona getir
             }
 
             // Saat formatının 5 karakter olmasını kontrol et (örneğin: __:__)
+
             if (text.Length > 5)
             {
-                mskVarisSaati.Text = text.Substring(0, 5);  // 5 karakterden fazla girişi engelle
-                mskVarisSaati.SelectionStart = mskVarisSaati.Text.Length;  // Kursoru sona getir
+                mskVarisSaati.Text = text.Substring(0, 5);
+                mskVarisSaati.SelectionStart = mskVarisSaati.Text.Length;
             }
 
             // Eğer kullanıcı silme işlemi yaparsa (boşluğu kaldırmak için), ":"'yi de silmek için kontrol et
+
             if (text.Length == 4 && text.EndsWith(":"))
             {
-                mskVarisSaati.Text = text.Substring(0, 4);  // ":" karakterini sil
-                mskVarisSaati.SelectionStart = mskVarisSaati.Text.Length;  // Kursoru sona getir
+                mskVarisSaati.Text = text.Substring(0, 4); // ":" karakterini sil
+                mskVarisSaati.SelectionStart = mskVarisSaati.Text.Length; // Kursoru sona getir
             }
         }
     }
