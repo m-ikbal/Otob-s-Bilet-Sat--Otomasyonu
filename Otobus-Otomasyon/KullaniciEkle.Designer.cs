@@ -137,6 +137,7 @@
             this.txtKullaniciAdi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtKullaniciAdi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciAdi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKullaniciAdi.Enabled = false;
             this.txtKullaniciAdi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
@@ -149,6 +150,7 @@
             this.txtKullaniciAdi.SelectedText = "";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(238, 36);
             this.txtKullaniciAdi.TabIndex = 26;
+            this.txtKullaniciAdi.TextChanged += new System.EventHandler(this.txtKullaniciAdi_TextChanged);
             // 
             // btnKullaniciEkle
             // 
@@ -252,6 +254,7 @@
             this.txtKullaniciEposta.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtKullaniciEposta.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciEposta.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKullaniciEposta.Enabled = false;
             this.txtKullaniciEposta.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciEposta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciEposta.ForeColor = System.Drawing.Color.Black;
@@ -306,6 +309,7 @@
             this.txtKullaniciIsim.SelectedText = "";
             this.txtKullaniciIsim.Size = new System.Drawing.Size(238, 36);
             this.txtKullaniciIsim.TabIndex = 4;
+            this.txtKullaniciIsim.TextChanged += new System.EventHandler(this.txtKullaniciIsim_TextChanged);
             // 
             // panel36
             // 
