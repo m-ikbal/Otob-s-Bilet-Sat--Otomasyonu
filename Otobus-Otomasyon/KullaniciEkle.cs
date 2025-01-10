@@ -76,6 +76,12 @@ namespace Otobus_Otomasyon
         private void txtKullaniciAdi_TextChanged(object sender, EventArgs e)
         {
             txtKullaniciEposta.Text = txtKullaniciAdi.Text + "@yyuturizm.com";
+            txtKullaniciSifre.Text = txtKullaniciAdi.Text;
+        }
+
+        private void txtKullaniciSifre_TextChanged(object sender, EventArgs e)
+        {
+            txtKullaniciSifre.UseSystemPasswordChar = true;
         }
     }
 }

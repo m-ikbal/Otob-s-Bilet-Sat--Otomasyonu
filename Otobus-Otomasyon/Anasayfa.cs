@@ -22,7 +22,7 @@ namespace Otobus_Otomasyon
         private void Anasayfa_Load(object sender, EventArgs e)
         {
             ZamanTimer.Start();
-            lblKullaniciAdi.Text = $"Hoş geldin {Session.KullaniciIsim}, Otobüs Bilet Otomasyonu'na";
+            lblKullaniciAdi.Text = $"User : {Session.KullaniciIsim}";
         }
 
         private void ZamanTimer_Tick_1(object sender, EventArgs e)

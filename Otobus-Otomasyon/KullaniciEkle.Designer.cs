@@ -276,6 +276,7 @@
             this.txtKullaniciSifre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtKullaniciSifre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtKullaniciSifre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKullaniciSifre.Enabled = false;
             this.txtKullaniciSifre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciSifre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciSifre.ForeColor = System.Drawing.Color.Black;
@@ -288,6 +289,7 @@
             this.txtKullaniciSifre.SelectedText = "";
             this.txtKullaniciSifre.Size = new System.Drawing.Size(238, 36);
             this.txtKullaniciSifre.TabIndex = 7;
+            this.txtKullaniciSifre.TextChanged += new System.EventHandler(this.txtKullaniciSifre_TextChanged);
             // 
             // txtKullaniciIsim
             // 
