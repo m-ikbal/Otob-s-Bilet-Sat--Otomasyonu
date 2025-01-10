@@ -67,6 +67,12 @@ namespace Otobus_Otomasyon
                 MessageBox.Show("Sisteme giriş yetkiniz yok. Kullanıcı durumu: Pasif", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (kullanici.kullaniciAdi == kullanici.kullaniciSifre)
+            {
+                MessageBox.Show("Lütfen şifremi unuttum kısmından şifrenizi değiştiriniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
             kullanici.sonGirisTarihi = DateTime.Now;
             db.SaveChanges();
@@ -99,6 +105,12 @@ namespace Otobus_Otomasyon
                 Properties.Settings.Default.BeniHatirla = false;
             }
             Properties.Settings.Default.Save();
+        }
+
+        private void lblSifremiUnuttum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MailDogrulama mailDogrulama = new MailDogrulama();
+            mailDogrulama.Show();
         }
     }
 }

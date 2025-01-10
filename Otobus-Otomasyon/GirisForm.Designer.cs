@@ -36,7 +36,7 @@
             this.txtSifre = new Guna.UI2.WinForms.Guna2TextBox();
             this.GirisButton = new Guna.UI2.WinForms.Guna2Button();
             this.chcBoxBeniHatirla = new System.Windows.Forms.CheckBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblSifremiUnuttum = new System.Windows.Forms.LinkLabel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -147,19 +147,20 @@
             this.chcBoxBeniHatirla.Text = "Beni Hatırla";
             this.chcBoxBeniHatirla.UseVisualStyleBackColor = true;
             // 
-            // linkLabel1
+            // lblSifremiUnuttum
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Silver;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(626, 287);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(102, 15);
-            this.linkLabel1.TabIndex = 9;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Şifremi Unuttum";
+            this.lblSifremiUnuttum.ActiveLinkColor = System.Drawing.Color.Silver;
+            this.lblSifremiUnuttum.AutoSize = true;
+            this.lblSifremiUnuttum.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSifremiUnuttum.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblSifremiUnuttum.LinkColor = System.Drawing.Color.Black;
+            this.lblSifremiUnuttum.Location = new System.Drawing.Point(626, 287);
+            this.lblSifremiUnuttum.Name = "lblSifremiUnuttum";
+            this.lblSifremiUnuttum.Size = new System.Drawing.Size(102, 15);
+            this.lblSifremiUnuttum.TabIndex = 9;
+            this.lblSifremiUnuttum.TabStop = true;
+            this.lblSifremiUnuttum.Text = "Şifremi Unuttum";
+            this.lblSifremiUnuttum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblSifremiUnuttum_LinkClicked);
             // 
             // pictureBox4
             // 
@@ -197,7 +198,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.lblSifremiUnuttum);
             this.Controls.Add(this.chcBoxBeniHatirla);
             this.Controls.Add(this.GirisButton);
             this.Controls.Add(this.txtSifre);
@@ -233,6 +234,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSifre;
         private Guna.UI2.WinForms.Guna2Button GirisButton;
         private System.Windows.Forms.CheckBox chcBoxBeniHatirla;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lblSifremiUnuttum;
     }
 }
