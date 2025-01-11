@@ -79,7 +79,8 @@
             this.btnDegistir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDegistir.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDegistir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDegistir.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDegistir.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnDegistir.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDegistir.ForeColor = System.Drawing.Color.White;
             this.btnDegistir.Location = new System.Drawing.Point(263, 188);
             this.btnDegistir.Name = "btnDegistir";

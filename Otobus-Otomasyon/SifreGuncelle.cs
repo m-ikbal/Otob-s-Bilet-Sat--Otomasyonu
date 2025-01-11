@@ -16,6 +16,7 @@ namespace Otobus_Otomasyon
         public SifreGuncelle()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         OBSODBEntities db = new OBSODBEntities();
