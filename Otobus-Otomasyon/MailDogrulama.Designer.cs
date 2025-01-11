@@ -45,7 +45,6 @@
             this.txtKullaniciMail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtKullaniciMail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciMail.Location = new System.Drawing.Point(153, 96);
-            this.txtKullaniciMail.Modified = true;
             this.txtKullaniciMail.Name = "txtKullaniciMail";
             this.txtKullaniciMail.PasswordChar = '\0';
             this.txtKullaniciMail.PlaceholderText = "";
@@ -59,7 +58,8 @@
             this.btnKontrolEt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKontrolEt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnKontrolEt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKontrolEt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKontrolEt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnKontrolEt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKontrolEt.ForeColor = System.Drawing.Color.White;
             this.btnKontrolEt.Location = new System.Drawing.Point(153, 151);
             this.btnKontrolEt.Name = "btnKontrolEt";

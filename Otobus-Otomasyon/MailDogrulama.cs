@@ -16,6 +16,7 @@ namespace Otobus_Otomasyon
         public MailDogrulama()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         public static string Email { get; set; }
