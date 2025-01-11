@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GirisForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtKullaniciAdi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSifre = new Guna.UI2.WinForms.Guna2TextBox();
@@ -39,12 +40,11 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,6 +56,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(349, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Otobus_Otomasyon.Properties.Resources.Yznc_Yl_Turizm_Logo___Original___5000x5000;
+            this.pictureBox1.Location = new System.Drawing.Point(-30, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(401, 450);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -69,6 +79,8 @@
             // 
             // txtKullaniciAdi
             // 
+            this.txtKullaniciAdi.BorderRadius = 15;
+            this.txtKullaniciAdi.BorderThickness = 2;
             this.txtKullaniciAdi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKullaniciAdi.DefaultText = "Kullanıcı Adı";
             this.txtKullaniciAdi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -80,16 +92,18 @@
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(423, 189);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(423, 188);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.PasswordChar = '\0';
             this.txtKullaniciAdi.PlaceholderText = "";
             this.txtKullaniciAdi.SelectedText = "";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(299, 36);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(299, 40);
             this.txtKullaniciAdi.TabIndex = 5;
             // 
             // txtSifre
             // 
+            this.txtSifre.BorderRadius = 15;
+            this.txtSifre.BorderThickness = 2;
             this.txtSifre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSifre.DefaultText = "Şifre";
             this.txtSifre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -101,17 +115,18 @@
             this.txtSifre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSifre.ForeColor = System.Drawing.Color.Black;
             this.txtSifre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSifre.Location = new System.Drawing.Point(423, 245);
+            this.txtSifre.Location = new System.Drawing.Point(423, 243);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '\0';
             this.txtSifre.PlaceholderText = "";
             this.txtSifre.SelectedText = "";
-            this.txtSifre.Size = new System.Drawing.Size(299, 36);
+            this.txtSifre.Size = new System.Drawing.Size(299, 40);
             this.txtSifre.TabIndex = 6;
             this.txtSifre.TextChanged += new System.EventHandler(this.TxtSifre_TextChanged);
             // 
             // GirisButton
             // 
+            this.GirisButton.BorderRadius = 15;
             this.GirisButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.GirisButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.GirisButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -119,7 +134,7 @@
             this.GirisButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.GirisButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GirisButton.ForeColor = System.Drawing.Color.Black;
-            this.GirisButton.Location = new System.Drawing.Point(485, 340);
+            this.GirisButton.Location = new System.Drawing.Point(485, 324);
             this.GirisButton.Name = "GirisButton";
             this.GirisButton.Size = new System.Drawing.Size(184, 47);
             this.GirisButton.TabIndex = 7;
@@ -182,16 +197,6 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Otobus_Otomasyon.Properties.Resources.Yznc_Yl_Turizm_Logo___Original___5000x5000;
-            this.pictureBox1.Location = new System.Drawing.Point(-30, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(401, 450);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // GirisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,10 +218,10 @@
             this.Text = "GirisForm";
             this.Load += new System.EventHandler(this.GirisForm_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
