@@ -62,6 +62,8 @@
             // cmbKullaniciDurum
             // 
             this.cmbKullaniciDurum.BackColor = System.Drawing.Color.Transparent;
+            this.cmbKullaniciDurum.BorderRadius = 15;
+            this.cmbKullaniciDurum.BorderThickness = 2;
             this.cmbKullaniciDurum.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbKullaniciDurum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKullaniciDurum.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -79,6 +81,9 @@
             // 
             // txtKullaniciSoyisim
             // 
+            this.txtKullaniciSoyisim.BackColor = System.Drawing.Color.Transparent;
+            this.txtKullaniciSoyisim.BorderRadius = 15;
+            this.txtKullaniciSoyisim.BorderThickness = 2;
             this.txtKullaniciSoyisim.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKullaniciSoyisim.DefaultText = "";
             this.txtKullaniciSoyisim.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -100,6 +105,9 @@
             // 
             // txtKullaniciAdi
             // 
+            this.txtKullaniciAdi.BackColor = System.Drawing.Color.Transparent;
+            this.txtKullaniciAdi.BorderRadius = 15;
+            this.txtKullaniciAdi.BorderThickness = 2;
             this.txtKullaniciAdi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKullaniciAdi.DefaultText = "";
             this.txtKullaniciAdi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -123,6 +131,9 @@
             // 
             // btnKullaniciEkle
             // 
+            this.btnKullaniciEkle.BackColor = System.Drawing.Color.Transparent;
+            this.btnKullaniciEkle.BorderRadius = 15;
+            this.btnKullaniciEkle.BorderThickness = 2;
             this.btnKullaniciEkle.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKullaniciEkle.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKullaniciEkle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -206,6 +217,8 @@
             // cmbKullaniciRol
             // 
             this.cmbKullaniciRol.BackColor = System.Drawing.Color.Transparent;
+            this.cmbKullaniciRol.BorderRadius = 15;
+            this.cmbKullaniciRol.BorderThickness = 2;
             this.cmbKullaniciRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbKullaniciRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKullaniciRol.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -223,6 +236,9 @@
             // 
             // txtKullaniciEposta
             // 
+            this.txtKullaniciEposta.BackColor = System.Drawing.Color.Transparent;
+            this.txtKullaniciEposta.BorderRadius = 15;
+            this.txtKullaniciEposta.BorderThickness = 2;
             this.txtKullaniciEposta.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKullaniciEposta.DefaultText = "";
             this.txtKullaniciEposta.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -245,6 +261,9 @@
             // 
             // txtKullaniciSifre
             // 
+            this.txtKullaniciSifre.BackColor = System.Drawing.Color.Transparent;
+            this.txtKullaniciSifre.BorderRadius = 15;
+            this.txtKullaniciSifre.BorderThickness = 2;
             this.txtKullaniciSifre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKullaniciSifre.DefaultText = "";
             this.txtKullaniciSifre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -268,6 +287,9 @@
             // 
             // txtKullaniciIsim
             // 
+            this.txtKullaniciIsim.BackColor = System.Drawing.Color.Transparent;
+            this.txtKullaniciIsim.BorderRadius = 15;
+            this.txtKullaniciIsim.BorderThickness = 2;
             this.txtKullaniciIsim.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKullaniciIsim.DefaultText = "";
             this.txtKullaniciIsim.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -314,7 +336,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Otobus_Otomasyon.Properties.Resources.düzenleme1jpg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1094, 875);
