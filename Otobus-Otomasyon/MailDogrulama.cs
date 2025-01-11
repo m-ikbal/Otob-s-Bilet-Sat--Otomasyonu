@@ -17,6 +17,8 @@ namespace Otobus_Otomasyon
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
+            this.UpdateStyles();
         }
 
         public static string Email { get; set; }

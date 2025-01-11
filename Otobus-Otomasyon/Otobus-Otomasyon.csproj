@@ -441,6 +441,8 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="otobus %282%29.ico" />
+    <None Include="Resources\düzenleme1jpg %282%29.jpg" />
+    <None Include="Resources\düzenleme1jpg %281%29.jpg" />
     <None Include="Resources\icons8-add-user-64.png" />
     <None Include="Resources\düzenleme1jpg.jpg" />
     <None Include="Resources\icons8-user-64.png" />

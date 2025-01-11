@@ -37,6 +37,10 @@
             // 
             // txtSifre1
             // 
+            this.txtSifre1.BackColor = System.Drawing.Color.Transparent;
+            this.txtSifre1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.txtSifre1.BorderRadius = 15;
+            this.txtSifre1.BorderThickness = 2;
             this.txtSifre1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSifre1.DefaultText = "";
             this.txtSifre1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -46,7 +50,7 @@
             this.txtSifre1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSifre1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSifre1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSifre1.Location = new System.Drawing.Point(263, 81);
+            this.txtSifre1.Location = new System.Drawing.Point(317, 117);
             this.txtSifre1.Name = "txtSifre1";
             this.txtSifre1.PasswordChar = '\0';
             this.txtSifre1.PlaceholderText = "";
@@ -56,6 +60,9 @@
             // 
             // txtSifre2
             // 
+            this.txtSifre2.BackColor = System.Drawing.Color.Transparent;
+            this.txtSifre2.BorderRadius = 15;
+            this.txtSifre2.BorderThickness = 2;
             this.txtSifre2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSifre2.DefaultText = "";
             this.txtSifre2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -65,7 +72,7 @@
             this.txtSifre2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSifre2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSifre2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSifre2.Location = new System.Drawing.Point(263, 134);
+            this.txtSifre2.Location = new System.Drawing.Point(317, 170);
             this.txtSifre2.Name = "txtSifre2";
             this.txtSifre2.PasswordChar = '\0';
             this.txtSifre2.PlaceholderText = "";
@@ -75,6 +82,8 @@
             // 
             // btnDegistir
             // 
+            this.btnDegistir.BackColor = System.Drawing.Color.Transparent;
+            this.btnDegistir.BorderRadius = 15;
             this.btnDegistir.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDegistir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDegistir.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -82,7 +91,7 @@
             this.btnDegistir.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnDegistir.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDegistir.ForeColor = System.Drawing.Color.White;
-            this.btnDegistir.Location = new System.Drawing.Point(263, 188);
+            this.btnDegistir.Location = new System.Drawing.Point(317, 224);
             this.btnDegistir.Name = "btnDegistir";
             this.btnDegistir.Size = new System.Drawing.Size(200, 45);
             this.btnDegistir.TabIndex = 2;
@@ -93,7 +102,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(159, 81);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(215, 120);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(98, 27);
             this.guna2HtmlLabel1.TabIndex = 3;
@@ -103,7 +112,7 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(96, 134);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(154, 174);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(161, 27);
             this.guna2HtmlLabel2.TabIndex = 4;
@@ -113,6 +122,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Otobus_Otomasyon.Properties.Resources.düzenleme1jpg__1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(657, 344);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);

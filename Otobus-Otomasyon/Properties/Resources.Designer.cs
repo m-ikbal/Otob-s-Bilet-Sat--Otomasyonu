@@ -123,6 +123,26 @@ namespace Otobus_Otomasyon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap düzenleme1jpg__1_ {
+            get {
+                object obj = ResourceManager.GetObject("düzenleme1jpg (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap düzenleme1jpg__2_ {
+            get {
+                object obj = ResourceManager.GetObject("düzenleme1jpg (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap düzenlenecek {
             get {
                 object obj = ResourceManager.GetObject("düzenlenecek", resourceCulture);
