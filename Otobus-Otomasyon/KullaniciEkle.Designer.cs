@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel27 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbKullaniciDurum = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtKullaniciSoyisim = new Guna.UI2.WinForms.Guna2TextBox();
@@ -44,47 +43,17 @@
             this.txtKullaniciEposta = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtKullaniciSifre = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtKullaniciIsim = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.panel33 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panel27.SuspendLayout();
-            this.panel33.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel27
-            // 
-            this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel27.Controls.Add(this.guna2HtmlLabel2);
-            this.panel27.Controls.Add(this.cmbKullaniciDurum);
-            this.panel27.Controls.Add(this.txtKullaniciSoyisim);
-            this.panel27.Controls.Add(this.txtKullaniciAdi);
-            this.panel27.Controls.Add(this.btnKullaniciEkle);
-            this.panel27.Controls.Add(this.guna2HtmlLabel22);
-            this.panel27.Controls.Add(this.guna2HtmlLabel21);
-            this.panel27.Controls.Add(this.guna2HtmlLabel20);
-            this.panel27.Controls.Add(this.guna2HtmlLabel19);
-            this.panel27.Controls.Add(this.guna2HtmlLabel18);
-            this.panel27.Controls.Add(this.guna2HtmlLabel17);
-            this.panel27.Controls.Add(this.cmbKullaniciRol);
-            this.panel27.Controls.Add(this.txtKullaniciEposta);
-            this.panel27.Controls.Add(this.txtKullaniciSifre);
-            this.panel27.Controls.Add(this.txtKullaniciIsim);
-            this.panel27.Controls.Add(this.panel36);
-            this.panel27.Controls.Add(this.panel35);
-            this.panel27.Controls.Add(this.panel34);
-            this.panel27.Controls.Add(this.panel33);
-            this.panel27.Location = new System.Drawing.Point(293, 123);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(509, 556);
-            this.panel27.TabIndex = 5;
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(1, 389);
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(289, 428);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(204, 33);
             this.guna2HtmlLabel2.TabIndex = 28;
@@ -103,7 +72,7 @@
             this.cmbKullaniciDurum.Items.AddRange(new object[] {
             "Aktif\t",
             "Pasif"});
-            this.cmbKullaniciDurum.Location = new System.Drawing.Point(206, 386);
+            this.cmbKullaniciDurum.Location = new System.Drawing.Point(494, 428);
             this.cmbKullaniciDurum.Name = "cmbKullaniciDurum";
             this.cmbKullaniciDurum.Size = new System.Drawing.Size(238, 36);
             this.cmbKullaniciDurum.TabIndex = 27;
@@ -120,7 +89,7 @@
             this.txtKullaniciSoyisim.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciSoyisim.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciSoyisim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciSoyisim.Location = new System.Drawing.Point(206, 140);
+            this.txtKullaniciSoyisim.Location = new System.Drawing.Point(494, 328);
             this.txtKullaniciSoyisim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciSoyisim.Name = "txtKullaniciSoyisim";
             this.txtKullaniciSoyisim.PasswordChar = '\0';
@@ -142,7 +111,7 @@
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(206, 190);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(494, 478);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.PasswordChar = '\0';
@@ -161,9 +130,9 @@
             this.btnKullaniciEkle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnKullaniciEkle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKullaniciEkle.ForeColor = System.Drawing.Color.White;
-            this.btnKullaniciEkle.Location = new System.Drawing.Point(252, 445);
+            this.btnKullaniciEkle.Location = new System.Drawing.Point(550, 629);
             this.btnKullaniciEkle.Name = "btnKullaniciEkle";
-            this.btnKullaniciEkle.Size = new System.Drawing.Size(192, 57);
+            this.btnKullaniciEkle.Size = new System.Drawing.Size(182, 51);
             this.btnKullaniciEkle.TabIndex = 22;
             this.btnKullaniciEkle.Text = "Ekle";
             this.btnKullaniciEkle.Click += new System.EventHandler(this.btnKullaniciEkle_Click);
@@ -172,7 +141,8 @@
             // 
             this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel22.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(154, 340);
+            this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(442, 378);
             this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
             this.guna2HtmlLabel22.Size = new System.Drawing.Size(51, 33);
             this.guna2HtmlLabel22.TabIndex = 16;
@@ -182,7 +152,8 @@
             // 
             this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel21.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(110, 290);
+            this.guna2HtmlLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(398, 578);
             this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
             this.guna2HtmlLabel21.Size = new System.Drawing.Size(95, 33);
             this.guna2HtmlLabel21.TabIndex = 15;
@@ -192,7 +163,8 @@
             // 
             this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel20.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel20.Location = new System.Drawing.Point(140, 240);
+            this.guna2HtmlLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.guna2HtmlLabel20.Location = new System.Drawing.Point(428, 528);
             this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
             this.guna2HtmlLabel20.Size = new System.Drawing.Size(65, 33);
             this.guna2HtmlLabel20.TabIndex = 14;
@@ -202,7 +174,8 @@
             // 
             this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel19.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel19.Location = new System.Drawing.Point(53, 190);
+            this.guna2HtmlLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.guna2HtmlLabel19.Location = new System.Drawing.Point(341, 478);
             this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
             this.guna2HtmlLabel19.Size = new System.Drawing.Size(152, 33);
             this.guna2HtmlLabel19.TabIndex = 13;
@@ -212,7 +185,8 @@
             // 
             this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel18.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel18.Location = new System.Drawing.Point(118, 140);
+            this.guna2HtmlLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.guna2HtmlLabel18.Location = new System.Drawing.Point(406, 328);
             this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
             this.guna2HtmlLabel18.Size = new System.Drawing.Size(87, 33);
             this.guna2HtmlLabel18.TabIndex = 12;
@@ -222,7 +196,8 @@
             // 
             this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel17.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(153, 90);
+            this.guna2HtmlLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.guna2HtmlLabel17.Location = new System.Drawing.Point(441, 278);
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
             this.guna2HtmlLabel17.Size = new System.Drawing.Size(52, 33);
             this.guna2HtmlLabel17.TabIndex = 11;
@@ -241,7 +216,7 @@
             this.cmbKullaniciRol.Items.AddRange(new object[] {
             "admin",
             "operator"});
-            this.cmbKullaniciRol.Location = new System.Drawing.Point(206, 340);
+            this.cmbKullaniciRol.Location = new System.Drawing.Point(494, 378);
             this.cmbKullaniciRol.Name = "cmbKullaniciRol";
             this.cmbKullaniciRol.Size = new System.Drawing.Size(238, 36);
             this.cmbKullaniciRol.TabIndex = 9;
@@ -259,7 +234,7 @@
             this.txtKullaniciEposta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciEposta.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciEposta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciEposta.Location = new System.Drawing.Point(206, 290);
+            this.txtKullaniciEposta.Location = new System.Drawing.Point(494, 578);
             this.txtKullaniciEposta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciEposta.Name = "txtKullaniciEposta";
             this.txtKullaniciEposta.PasswordChar = '\0';
@@ -281,7 +256,7 @@
             this.txtKullaniciSifre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciSifre.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciSifre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciSifre.Location = new System.Drawing.Point(206, 240);
+            this.txtKullaniciSifre.Location = new System.Drawing.Point(494, 528);
             this.txtKullaniciSifre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciSifre.Name = "txtKullaniciSifre";
             this.txtKullaniciSifre.PasswordChar = '\0';
@@ -303,7 +278,7 @@
             this.txtKullaniciIsim.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciIsim.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciIsim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKullaniciIsim.Location = new System.Drawing.Point(206, 90);
+            this.txtKullaniciIsim.Location = new System.Drawing.Point(494, 278);
             this.txtKullaniciIsim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciIsim.Name = "txtKullaniciIsim";
             this.txtKullaniciIsim.PasswordChar = '\0';
@@ -313,49 +288,23 @@
             this.txtKullaniciIsim.TabIndex = 4;
             this.txtKullaniciIsim.TextChanged += new System.EventHandler(this.txtKullaniciIsim_TextChanged);
             // 
-            // panel36
+            // pictureBox1
             // 
-            this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel36.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel36.Location = new System.Drawing.Point(1, 555);
-            this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(507, 1);
-            this.panel36.TabIndex = 3;
-            // 
-            // panel35
-            // 
-            this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel35.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel35.Location = new System.Drawing.Point(508, 55);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(1, 501);
-            this.panel35.TabIndex = 2;
-            // 
-            // panel34
-            // 
-            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel34.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel34.Location = new System.Drawing.Point(0, 55);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(1, 501);
-            this.panel34.TabIndex = 1;
-            // 
-            // panel33
-            // 
-            this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel33.Controls.Add(this.guna2HtmlLabel1);
-            this.panel33.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel33.Location = new System.Drawing.Point(0, 0);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(509, 55);
-            this.panel33.TabIndex = 0;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Otobus_Otomasyon.Properties.Resources.icons8_add_user_64;
+            this.pictureBox1.Location = new System.Drawing.Point(458, 226);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(181, 11);
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(499, 226);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(147, 33);
             this.guna2HtmlLabel1.TabIndex = 12;
@@ -365,21 +314,36 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::Otobus_Otomasyon.Properties.Resources.düzenleme1jpg;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1094, 875);
-            this.Controls.Add(this.panel27);
+            this.Controls.Add(this.guna2HtmlLabel2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.cmbKullaniciDurum);
+            this.Controls.Add(this.txtKullaniciSoyisim);
+            this.Controls.Add(this.guna2HtmlLabel1);
+            this.Controls.Add(this.txtKullaniciAdi);
+            this.Controls.Add(this.btnKullaniciEkle);
+            this.Controls.Add(this.txtKullaniciIsim);
+            this.Controls.Add(this.guna2HtmlLabel22);
+            this.Controls.Add(this.txtKullaniciSifre);
+            this.Controls.Add(this.guna2HtmlLabel21);
+            this.Controls.Add(this.txtKullaniciEposta);
+            this.Controls.Add(this.guna2HtmlLabel20);
+            this.Controls.Add(this.cmbKullaniciRol);
+            this.Controls.Add(this.guna2HtmlLabel19);
+            this.Controls.Add(this.guna2HtmlLabel17);
+            this.Controls.Add(this.guna2HtmlLabel18);
             this.Name = "KullaniciEkle";
             this.Text = "KullaniciEkle";
-            this.panel27.ResumeLayout(false);
-            this.panel27.PerformLayout();
-            this.panel33.ResumeLayout(false);
-            this.panel33.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel27;
         private Guna.UI2.WinForms.Guna2Button btnKullaniciEkle;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
@@ -391,14 +355,11 @@
         private Guna.UI2.WinForms.Guna2TextBox txtKullaniciEposta;
         private Guna.UI2.WinForms.Guna2TextBox txtKullaniciSifre;
         private Guna.UI2.WinForms.Guna2TextBox txtKullaniciIsim;
-        private System.Windows.Forms.Panel panel36;
-        private System.Windows.Forms.Panel panel35;
-        private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.Panel panel33;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtKullaniciSoyisim;
         private Guna.UI2.WinForms.Guna2TextBox txtKullaniciAdi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2ComboBox cmbKullaniciDurum;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

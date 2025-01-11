@@ -15,6 +15,8 @@ namespace Otobus_Otomasyon
         public KullaniciEkle()
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
+            this.UpdateStyles();
         }
 
         OBSODBEntities db = new OBSODBEntities();
