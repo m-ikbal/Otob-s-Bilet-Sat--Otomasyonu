@@ -126,10 +126,12 @@ namespace Otobus_Otomasyon
                         if (cinsiyet == "Erkek")
                         {
                             clickedButton.FillColor = Color.Blue;
+                            biletEkle.txtBiletUcreti.Text = "1000";
                         }
                         else if (cinsiyet == "Kadın")
                         {
                             clickedButton.FillColor = Color.Pink;
+                            biletEkle.txtBiletUcreti.Text = "950";
                         }
                     }
 
