@@ -306,5 +306,10 @@ namespace Otobus_Otomasyon
                 e.Handled = true; // Eğer geçersiz bir karakter girildiyse, yazılmasını engelle
             }
         }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            Temizle();
+        }
     }
 }

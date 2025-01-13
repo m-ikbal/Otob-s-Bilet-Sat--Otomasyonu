@@ -27,7 +27,19 @@ namespace Otobus_Otomasyon
                 e.Handled = true;
             }
         }
-
+        private void Temizle()
+        {
+            txtAd.Clear();
+            txtSoyad.Clear();
+            txtCinsiyet.Clear();
+            mskTelefon.Clear();
+            txtTcNo.Clear();
+            txtEposta.Clear();
+            mskDogumTarih.Clear();
+            txtSeferId.Clear();
+            txtAracTuru.Clear();
+            txtKoltukNo.Clear();
+        }
         private void Yolcular()
         {
             var query = from yolcu in db.Yolcular
@@ -244,6 +256,11 @@ namespace Otobus_Otomasyon
             // İmleç kaymasını önlemek için mevcut metni güncelle
             mskDogumTarih.Text = input;
             mskDogumTarih.SelectionStart = mskDogumTarih.Text.Length;
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            Temizle();
         }
     }
 }
