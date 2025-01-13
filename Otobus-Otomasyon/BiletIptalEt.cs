@@ -26,6 +26,12 @@ namespace Otobus_Otomasyon
 
         private void btnBiletAra_Click(object sender, EventArgs e)
         {
+            // Alanların doluluğunu kontrol et
+            if (string.IsNullOrWhiteSpace(txtPnrNumarasi.Text) || string.IsNullOrWhiteSpace(txtYolcuAdi.Text))
+            {
+                MessageBox.Show("Lütfen gerekli alanları doldurunuz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Eğer alanlar boşsa işlemi sonlandır
+            }
             if (bosalankontrol.AreFieldsValid(this))
             {
                 string yolcuAdi = txtYolcuAdi.Text;
@@ -61,27 +67,30 @@ namespace Otobus_Otomasyon
 
         private void btnIptalEt_Click(object sender, EventArgs e)
         {
-            if (bosalankontrol.AreFieldsValid(this))
+            // Alanların doluluğunu kontrol et
+            if (string.IsNullOrWhiteSpace(txtPnrNumarasi.Text) || string.IsNullOrWhiteSpace(txtYolcuAdi.Text))
             {
-                string pnrNumarasi = txtPnrNumarasi.Text;
-                var bilet = db.Biletler.FirstOrDefault(x => x.PnrNumarasi == pnrNumarasi);
-                if (bilet != null)
-                {
-                    bilet.BiletDurumu = "İptal Edildi";
-                    bilet.Koltuklar.koltukDurum = "Boş";
-                    db.SaveChanges();
-                    MessageBox.Show("Bilet başarıyla iptal edildi.");
-                }
-                else
-                {
-                    MessageBox.Show("Belirtilen PNR numarasına ait bir bilet bulunamadı.");
-                }
+                MessageBox.Show("Lütfen gerekli alanları doldurunuz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Eğer alanlar boşsa işlemi sonlandır
+            }
+
+            // PNR numarasını al
+            string pnrNumarasi = txtPnrNumarasi.Text;
+
+            // Veritabanından PNR numarasına ait bileti bul
+            var bilet = db.Biletler.FirstOrDefault(x => x.PnrNumarasi == pnrNumarasi);
+            if (bilet != null)
+            {
+                // Bilet durumunu güncelle
+                bilet.BiletDurumu = "İptal Edildi";
+                bilet.Koltuklar.koltukDurum = "Boş";
+                db.SaveChanges();
+                MessageBox.Show("Bilet başarıyla iptal edildi.");
             }
             else
             {
+                MessageBox.Show("Belirtilen PNR numarasına ait bir bilet bulunamadı.");
             }
-            
-
         }
     }
 }
