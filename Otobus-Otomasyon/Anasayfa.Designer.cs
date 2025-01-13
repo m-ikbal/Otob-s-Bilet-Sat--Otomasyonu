@@ -31,7 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.LabelZaman = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.PanelSorgu = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblKullaniciAdi = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel26 = new System.Windows.Forms.Panel();
@@ -39,13 +40,12 @@
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.PanelSorgu = new System.Windows.Forms.Panel();
             this.ZamanTimer = new System.Windows.Forms.Timer(this.components);
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel7.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel23.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LabelZaman
@@ -69,23 +69,36 @@
             this.panel7.Controls.Add(this.panel24);
             this.panel7.Controls.Add(this.panel23);
             this.panel7.Controls.Add(this.PanelSorgu);
-            this.panel7.Location = new System.Drawing.Point(1, 30);
+            this.panel7.Location = new System.Drawing.Point(12, 30);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1082, 872);
+            this.panel7.Size = new System.Drawing.Size(1071, 872);
             this.panel7.TabIndex = 4;
             // 
-            // PanelSorgu
+            // panel1
             // 
-            this.PanelSorgu.Location = new System.Drawing.Point(28, 416);
-            this.PanelSorgu.Name = "PanelSorgu";
-            this.PanelSorgu.Size = new System.Drawing.Size(1032, 472);
-            this.PanelSorgu.TabIndex = 6;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel1.Controls.Add(this.guna2HtmlLabel3);
+            this.panel1.Location = new System.Drawing.Point(21, 327);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1032, 49);
+            this.panel1.TabIndex = 33;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(417, 4);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(175, 39);
+            this.guna2HtmlLabel3.TabIndex = 32;
+            this.guna2HtmlLabel3.Text = "Sefer Sorgula";
             // 
             // lblKullaniciAdi
             // 
             this.lblKullaniciAdi.BackColor = System.Drawing.Color.Transparent;
             this.lblKullaniciAdi.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(380, 77);
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(360, 77);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
             this.lblKullaniciAdi.Size = new System.Drawing.Size(3, 2);
             this.lblKullaniciAdi.TabIndex = 5;
@@ -107,14 +120,14 @@
             this.panel26.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel26.Location = new System.Drawing.Point(1, 871);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(1080, 1);
+            this.panel26.Size = new System.Drawing.Size(1069, 1);
             this.panel26.TabIndex = 3;
             // 
             // panel25
             // 
             this.panel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel25.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel25.Location = new System.Drawing.Point(1081, 62);
+            this.panel25.Location = new System.Drawing.Point(1070, 62);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(1, 810);
             this.panel25.TabIndex = 2;
@@ -135,7 +148,7 @@
             this.panel23.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel23.Location = new System.Drawing.Point(0, 0);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(1082, 62);
+            this.panel23.Size = new System.Drawing.Size(1071, 62);
             this.panel23.TabIndex = 0;
             // 
             // guna2HtmlLabel2
@@ -149,29 +162,16 @@
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Anasayfa";
             // 
+            // PanelSorgu
+            // 
+            this.PanelSorgu.Location = new System.Drawing.Point(28, 416);
+            this.PanelSorgu.Name = "PanelSorgu";
+            this.PanelSorgu.Size = new System.Drawing.Size(1032, 472);
+            this.PanelSorgu.TabIndex = 6;
+            // 
             // ZamanTimer
             // 
             this.ZamanTimer.Tick += new System.EventHandler(this.ZamanTimer_Tick_1);
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(417, 4);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(175, 39);
-            this.guna2HtmlLabel3.TabIndex = 32;
-            this.guna2HtmlLabel3.Text = "Sefer Sorgula";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel1.Controls.Add(this.guna2HtmlLabel3);
-            this.panel1.Location = new System.Drawing.Point(21, 327);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1032, 49);
-            this.panel1.TabIndex = 33;
             // 
             // Anasayfa
             // 
@@ -186,11 +186,11 @@
             this.Load += new System.EventHandler(this.Anasayfa_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
