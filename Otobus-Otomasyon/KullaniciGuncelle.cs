@@ -101,5 +101,22 @@ namespace Otobus_Otomasyon
             }
         }
 
+        private void txtKullaniciIsim_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Eğer girilen karakter bir harf değilse, engelle
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Harf olmayan karakterlerin girişini engelle
+            }
+        }
+
+        private void txtKullaniciSoyisim_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Eğer girilen karakter bir harf değilse, engelle
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Harf olmayan karakterlerin girişini engelle
+            }
+        }
     }
 }

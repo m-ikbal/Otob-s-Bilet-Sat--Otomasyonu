@@ -134,5 +134,22 @@ namespace Otobus_Otomasyon
             }
         }
 
+        private void mskKalkisSaati_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Sadece rakamlara (0-9) ve Backspace tuşuna izin ver
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Eğer geçersiz bir karakter girildiyse, yazılmasını engelle
+            }
+        }
+
+        private void mskVarisSaati_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Sadece rakamlara (0-9) ve Backspace tuşuna izin ver
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Eğer geçersiz bir karakter girildiyse, yazılmasını engelle
+            }
+        }
     }
 }

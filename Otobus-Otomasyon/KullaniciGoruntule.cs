@@ -55,5 +55,13 @@ namespace Otobus_Otomasyon
             MessageBox.Show("Kullanıcı listesi Yenilendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void txtAdSoyad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Eğer girilen karakter bir harf değilse, engelle
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Harf olmayan karakterlerin girişini engelle
+            }
+        }
     }
 }

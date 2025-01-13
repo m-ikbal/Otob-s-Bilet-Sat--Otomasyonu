@@ -173,6 +173,7 @@
             this.txtAdSoyad.SelectedText = "";
             this.txtAdSoyad.Size = new System.Drawing.Size(200, 36);
             this.txtAdSoyad.TabIndex = 18;
+            this.txtAdSoyad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdSoyad_KeyPress);
             // 
             // btnKullaniciAra
             // 

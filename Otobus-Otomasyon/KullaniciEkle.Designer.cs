@@ -102,6 +102,7 @@
             this.txtKullaniciSoyisim.SelectedText = "";
             this.txtKullaniciSoyisim.Size = new System.Drawing.Size(238, 36);
             this.txtKullaniciSoyisim.TabIndex = 25;
+            this.txtKullaniciSoyisim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKullaniciSoyisim_KeyPress);
             // 
             // txtKullaniciAdi
             // 
@@ -309,6 +310,7 @@
             this.txtKullaniciIsim.Size = new System.Drawing.Size(238, 36);
             this.txtKullaniciIsim.TabIndex = 4;
             this.txtKullaniciIsim.TextChanged += new System.EventHandler(this.txtKullaniciIsim_TextChanged);
+            this.txtKullaniciIsim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKullaniciIsim_KeyPress);
             // 
             // pictureBox1
             // 
