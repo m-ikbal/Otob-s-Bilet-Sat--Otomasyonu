@@ -266,6 +266,7 @@ namespace Otobus_Otomasyon
                 txtAracKapasitesi.Text = "22";
             }
             araclar.aracKapasitesi = int.Parse(txtAracKapasitesi.Text);
+            araclar.aracDurumu = cmbAracDurumu.Text;
             db.SaveChanges();
             MessageBox.Show("Araç bilgileri güncellendi!");
             Araclar();
