@@ -41,39 +41,45 @@ namespace Otobus_Otomasyon
 
         private void btnSeferEkle_Click(object sender, EventArgs e)
         {
-            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
-            if (bosalankontrol.AreFieldsValid(this))
+            try
             {
-                try 
+                // Boş alan kontrolü
+                if (string.IsNullOrWhiteSpace(cmbSeferNereden.Text) ||
+                    string.IsNullOrWhiteSpace(cmbSeferNereye.Text) ||
+                    string.IsNullOrWhiteSpace(mskKalkisSaati.Text) ||
+                    string.IsNullOrWhiteSpace(mskVarisSaati.Text) ||
+                    string.IsNullOrWhiteSpace(cmbSeferDurumu.Text) ||
+                    cmbOtobusTipi.SelectedValue == null)
                 {
-                    string kalkisTarih = dtpKalkisTarihi.Value.ToString("yyyy-MM-dd"); 
-                    string varisTarih = dtpVarisTarihi.Value.ToString("yyyy-MM-dd");
-                    Seferler seferler = new Seferler()
-                    {
-                        
-                        Kalkis = cmbSeferNereden.Text,
-                        Varis = cmbSeferNereye.Text,
-                        SeferKalkisTarihi = kalkisTarih,
-                        SeferVarisTarihi = varisTarih,
-                        KalkisSaati = TimeSpan.Parse(mskKalkisSaati.Text),
-                        VarisSaati = TimeSpan.Parse(mskVarisSaati.Text),
-                        seferDurum = cmbSeferDurumu.Text.Trim(),
-                        aracId = Convert.ToInt32(cmbOtobusTipi.SelectedValue)
-                    };
-                    db.Seferler.Add(seferler);
-                    db.SaveChanges();
-                    MessageBox.Show("Sefer Eklendi");
+                    MessageBox.Show("Lütfen tüm alanları doldurunuz.");
+                    return;
                 }
-                catch (Exception ex)
-                {
 
-                    MessageBox.Show(ex.Message);
-                }
+                // Tarihlerin kontrolü
+                string kalkisTarih = dtpKalkisTarihi.Value.ToString("yyyy-MM-dd");
+                string varisTarih = dtpVarisTarihi.Value.ToString("yyyy-MM-dd");
+
+                // Sefer oluşturma ve kaydetme
+                Seferler seferler = new Seferler()
+                {
+                    Kalkis = cmbSeferNereden.Text.Trim(),
+                    Varis = cmbSeferNereye.Text.Trim(),
+                    SeferKalkisTarihi = kalkisTarih,
+                    SeferVarisTarihi = varisTarih,
+                    KalkisSaati = TimeSpan.Parse(mskKalkisSaati.Text),
+                    VarisSaati = TimeSpan.Parse(mskVarisSaati.Text),
+                    seferDurum = cmbSeferDurumu.Text.Trim(),
+                    aracId = Convert.ToInt32(cmbOtobusTipi.SelectedValue)
+                };
+
+                db.Seferler.Add(seferler);
+                db.SaveChanges();
+                MessageBox.Show("Sefer Eklendi");
             }
-            else
+            catch (Exception ex)
             {
+                MessageBox.Show("Hata: " + ex.Message);
             }
-            
         }
 
         private void txtSaat_TextChanged(object sender, EventArgs e)

@@ -106,99 +106,110 @@ namespace Otobus_Otomasyon
 
         private void btnBiletEkle_Click(object sender, EventArgs e)
         {
-            if (bosalankontrol.AreFieldsValid(this))
+            try
             {
-                try
+                // Boş alan kontrolü
+                if (string.IsNullOrWhiteSpace(txtYolcuAdi.Text) ||
+                    string.IsNullOrWhiteSpace(txtYolcuSoyadi.Text) ||
+                    string.IsNullOrWhiteSpace(txtCinsiyet.Text) ||
+                    string.IsNullOrWhiteSpace(mskTelefon.Text) ||
+                    string.IsNullOrWhiteSpace(txtYolcuTc.Text) ||
+                    string.IsNullOrWhiteSpace(txtYolcuEposta.Text) ||
+                    string.IsNullOrWhiteSpace(mskDogumTarih.Text) ||
+                    string.IsNullOrWhiteSpace(txtSeferId.Text) ||
+                    string.IsNullOrWhiteSpace(txtKoltukNo.Text) ||
+                    string.IsNullOrWhiteSpace(txtBiletUcreti.Text) ||
+                    string.IsNullOrWhiteSpace(cmbOdemeTuru.Text))
                 {
-                    // Yolcu bilgilerini oluştur
-                    Yolcular yolcular = new Yolcular
-                    {
-                        yolcuAdi = txtYolcuAdi.Text,
-                        yolcuSoyadi = txtYolcuSoyadi.Text,
-                        yolcuCinsiyet = txtCinsiyet.Text,
-                        yolcuTelNo = mskTelefon.Text,
-                        yolcuTc = txtYolcuTc.Text,
-                        yolcuEposta = txtYolcuEposta.Text
-                    };
+                    MessageBox.Show("Lütfen gerekli alanları doldurunuz.");
+                    return;
+                }
 
-                    // Doğum tarihi kontrolü
-                    string inputDate = mskDogumTarih.Text;
-                    if (DateTime.TryParseExact(inputDate, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime parsedDate))
-                    {
-                        yolcular.yolcuDogumTarihi = parsedDate;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Lütfen doğum tarihi formatını doğru girin (dd/MM/yyyy).");
-                        return;
-                    }
+                // Doğum tarihi kontrolü
+                string inputDate = mskDogumTarih.Text;
+                if (!DateTime.TryParseExact(inputDate, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime parsedDate))
+                {
+                    MessageBox.Show("Lütfen doğum tarihi formatını doğru girin (dd/MM/yyyy).");
+                    return;
+                }
 
-                    // Yolcuyu veritabanına ekle
-                    db.Yolcular.Add(yolcular);
-                    db.SaveChanges();
+                // Yolcu bilgilerini oluştur
+                Yolcular yolcular = new Yolcular
+                {
+                    yolcuAdi = txtYolcuAdi.Text,
+                    yolcuSoyadi = txtYolcuSoyadi.Text,
+                    yolcuCinsiyet = txtCinsiyet.Text,
+                    yolcuTelNo = mskTelefon.Text,
+                    yolcuTc = txtYolcuTc.Text,
+                    yolcuEposta = txtYolcuEposta.Text,
+                    yolcuDogumTarihi = parsedDate
+                };
 
-                    // Sefer ve koltuk bilgilerini al
-                    int seferId = int.Parse(txtSeferId.Text);
-                    int? aracId = db.Seferler
+                // Yolcuyu veritabanına ekle
+                db.Yolcular.Add(yolcular);
+                db.SaveChanges();
+
+                // Sefer ve koltuk bilgilerini al
+                int seferId = int.Parse(txtSeferId.Text);
+                int? aracId = db.Seferler
                     .Where(s => s.seferId == seferId)
-                     .Select(s => s.aracId)
+                    .Select(s => s.aracId)
                     .FirstOrDefault();
 
-                    if (!aracId.HasValue)
-                    {
-                        MessageBox.Show("Sefer bilgisi bulunamadı veya araç ID boş.");
-                        return;
-                    }
-
-                    // Nullable olmayan int değerine erişim
-                    int validAracId = aracId.Value;
-
-                    int koltukNo = int.Parse(txtKoltukNo.Text);
-                    int koltukId = db.Koltuklar
-                                     .Where(k => k.aracId == aracId && k.koltukNo == koltukNo)
-                                     .Select(k => k.koltukId)
-                                     .FirstOrDefault();
-
-                    // Yeni bilet oluştur
-                    Biletler biletler = new Biletler
-                    {
-                        biletTarih = DateTime.Now,
-                        kullaniciId = Session.KullaniciId,
-                        yolcuId = yolcular.yolcuId,
-                        aracId = aracId,
-                        seferId = seferId,
-                        koltukId = koltukId,
-                        PnrNumarasi = GenerateRandomCode(8),
-                        biletUcreti = Decimal.Parse(txtBiletUcreti.Text),
-                        odemeYontemi = cmbOdemeTuru.Text,
-                        BiletDurumu = "Aktif"
-                    };
-                    db.Biletler.Add(biletler);
-                    KoltukDurumuGuncelle(aracId, koltukNo);
-
-                    // Ödeme kaydı oluştur
-                    OdemeKayitlari odemeKayitlari = new OdemeKayitlari
-                    {
-                        BiletId = biletler.biletId,
-                        OdemeTarihi = DateTime.Now,
-                        OdemeMiktari = biletler.biletUcreti,
-                        OdemeYontemi = cmbOdemeTuru.Text
-                    };
-                    db.OdemeKayitlari.Add(odemeKayitlari);
-
-                    // Tüm işlemleri kaydet
-                    db.SaveChanges();
-
-                    MessageBox.Show("Bilet başarıyla eklendi!");
-                    Temizle();
-
-                }
-                catch (DbUpdateException ex)
+                if (!aracId.HasValue)
                 {
-                    MessageBox.Show("Bir hata oluştu: " + ex.InnerException?.Message);
+                    MessageBox.Show("Sefer bilgisi bulunamadı veya araç ID boş.");
+                    return;
                 }
+
+                int validAracId = aracId.Value;
+                int koltukNo = int.Parse(txtKoltukNo.Text);
+                int koltukId = db.Koltuklar
+                                 .Where(k => k.aracId == aracId && k.koltukNo == koltukNo)
+                                 .Select(k => k.koltukId)
+                                 .FirstOrDefault();
+
+                // Yeni bilet oluştur
+                Biletler biletler = new Biletler
+                {
+                    biletTarih = DateTime.Now,
+                    kullaniciId = Session.KullaniciId,
+                    yolcuId = yolcular.yolcuId,
+                    aracId = aracId,
+                    seferId = seferId,
+                    koltukId = koltukId,
+                    PnrNumarasi = GenerateRandomCode(8),
+                    biletUcreti = Decimal.Parse(txtBiletUcreti.Text),
+                    odemeYontemi = cmbOdemeTuru.Text,
+                    BiletDurumu = "Aktif"
+                };
+
+                db.Biletler.Add(biletler);
+                KoltukDurumuGuncelle(aracId, koltukNo);
+
+                // Ödeme kaydı oluştur
+                OdemeKayitlari odemeKayitlari = new OdemeKayitlari
+                {
+                    BiletId = biletler.biletId,
+                    OdemeTarihi = DateTime.Now,
+                    OdemeMiktari = biletler.biletUcreti,
+                    OdemeYontemi = cmbOdemeTuru.Text
+                };
+
+                db.OdemeKayitlari.Add(odemeKayitlari);
+
+                // Tüm işlemleri kaydet
+                db.SaveChanges();
+
+                MessageBox.Show("Bilet başarıyla eklendi!");
+                Temizle();
+            }
+            catch (DbUpdateException ex)
+            {
+                MessageBox.Show("Bir hata oluştu: " + ex.InnerException?.Message);
             }
         }
+
 
 
         private void mskTelefon_TextChanged(object sender, EventArgs e)
