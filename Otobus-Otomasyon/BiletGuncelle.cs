@@ -166,36 +166,84 @@ namespace Otobus_Otomasyon
         {
             try
             {
+                // Boş alan kontrolü
+                if (string.IsNullOrWhiteSpace(txtSeferId.Text) ||
+                    string.IsNullOrWhiteSpace(txtKoltukNo.Text) ||
+                    string.IsNullOrWhiteSpace(txtTcNo.Text) ||
+                    string.IsNullOrWhiteSpace(txtAd.Text) ||
+                    string.IsNullOrWhiteSpace(txtSoyad.Text) ||
+                    string.IsNullOrWhiteSpace(mskTelefon.Text) ||
+                    string.IsNullOrWhiteSpace(txtEposta.Text) ||
+                    string.IsNullOrWhiteSpace(txtCinsiyet.Text) ||
+                    string.IsNullOrWhiteSpace(mskDogumTarih.Text) ||
+                    string.IsNullOrWhiteSpace(txtBiletUcreti.Text))
+                {
+                    MessageBox.Show("Lütfen gerekli alanları doldurunuz.");
+                    return;
+                }
 
-                int seferId = int.Parse(txtSeferId.Text);
+                // Sefer ID ve Koltuk No dönüşüm kontrolü
+                if (!int.TryParse(txtSeferId.Text, out int seferId) || !int.TryParse(txtKoltukNo.Text, out int koltukNo))
+                {
+                    MessageBox.Show("Sefer ID ve Koltuk No sayısal bir değer olmalıdır.");
+                    return;
+                }
+
+                // Doğum tarihi formatı kontrolü
+                if (!DateTime.TryParseExact(mskDogumTarih.Text, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime dogumTarihi))
+                {
+                    MessageBox.Show("Lütfen doğum tarihi formatını doğru girin (dd/MM/yyyy).");
+                    return;
+                }
+
+                // Bilet ücreti format kontrolü
+                if (!decimal.TryParse(txtBiletUcreti.Text, out decimal biletUcreti))
+                {
+                    MessageBox.Show("Bilet ücreti geçerli bir sayı olmalıdır.");
+                    return;
+                }
+
+                // Güncelleme işlemleri
                 var aracId = db.Seferler.Where(s => s.seferId == seferId)
                             .Select(s => s.aracId)
                             .FirstOrDefault();
-                int koltukNo = Convert.ToInt32(txtKoltukNo.Text);
+
                 int yolcuId = db.Yolcular.Where(x => x.yolcuTc == txtTcNo.Text).Select(x => x.yolcuId).FirstOrDefault();
-                decimal biletUcreti = Convert.ToDecimal(txtBiletUcreti.Text);
                 Biletler bilet = db.Biletler.Where(x => x.yolcuId == yolcuId).FirstOrDefault();
+
+                if (bilet == null)
+                {
+                    MessageBox.Show("Güncellenecek bilet bulunamadı.");
+                    return;
+                }
+
                 bilet.yolcuId = yolcuId;
                 bilet.biletUcreti = biletUcreti;
                 bilet.seferId = seferId;
                 bilet.koltukId = db.Koltuklar.Where(x => x.koltukNo == koltukNo).Select(x => x.koltukId).FirstOrDefault();
+
                 Yolcular yolcular = db.Yolcular.Where(x => x.yolcuTc == txtTcNo.Text).FirstOrDefault();
-                yolcular.yolcuTc = txtTcNo.Text;
-                yolcular.yolcuAdi = txtAd.Text;
-                yolcular.yolcuSoyadi = txtSoyad.Text;
-                yolcular.yolcuTelNo = mskTelefon.Text;
-                yolcular.yolcuEposta = txtEposta.Text;
-                yolcular.yolcuCinsiyet = txtCinsiyet.Text;
-                yolcular.yolcuDogumTarihi = DateTime.Parse(mskDogumTarih.Text);
+                if (yolcular != null)
+                {
+                    yolcular.yolcuTc = txtTcNo.Text;
+                    yolcular.yolcuAdi = txtAd.Text;
+                    yolcular.yolcuSoyadi = txtSoyad.Text;
+                    yolcular.yolcuTelNo = mskTelefon.Text;
+                    yolcular.yolcuEposta = txtEposta.Text;
+                    yolcular.yolcuCinsiyet = txtCinsiyet.Text;
+                    yolcular.yolcuDogumTarihi = dogumTarihi;
+                }
+
                 KoltukDurumuGuncelle(aracId, koltukNo);
                 db.SaveChanges();
                 MessageBox.Show("Bilet güncellendi.");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show("Bir hata oluştu: " + ex.Message);
             }
         }
+
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {

@@ -31,29 +31,41 @@ namespace Otobus_Otomasyon
 
         private void btnSeferIptalEt_Click(object sender, EventArgs e)
         {
-            // bosalankontrol sınıfındaki fonksiyonu çağırıyoruz
-            if (bosalankontrol.AreFieldsValid(this))
+            try
             {
-                int id = int.Parse(txtSeferId.Text);
+                // Boş alan kontrolü
+                if (string.IsNullOrWhiteSpace(txtSeferId.Text))
+                {
+                    MessageBox.Show("Lütfen Sefer ID'sini giriniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Sefer ID'sini alma ve işlem yapma
+                int id;
+                if (!int.TryParse(txtSeferId.Text, out id))
+                {
+                    MessageBox.Show("Geçerli bir Sefer ID'si giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 var sefer = db.Seferler.FirstOrDefault(x => x.seferId == id);
                 if (sefer != null)
                 {
                     sefer.seferDurum = "İptal Edildi";
                     db.SaveChanges();
+
                     MessageBox.Show("Sefer iptal edildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     SeferListele();
                 }
                 else
                 {
-                    MessageBox.Show("Belirtilen sefer numarasına ait bir sefer bulunamadı.");
-
+                    MessageBox.Show("Belirtilen Sefer ID'sine ait bir sefer bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                // Alanlar boşsa işlem yapılmaz
+                MessageBox.Show("Hata: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
     }
 }
