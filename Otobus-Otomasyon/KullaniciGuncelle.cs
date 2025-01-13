@@ -31,7 +31,8 @@ namespace Otobus_Otomasyon
                             Şifre = item.kullaniciSifre,
                             Eposta = item.kullaniciEposta,
                             Rol = item.kullaniciRol,
-                            SonGiris = item.sonGirisTarihi
+                            SonGiris = item.sonGirisTarihi,
+                            KullanıcıDurumu = item.kullaniciDurumu
                         };
             dgwKullanicilar.DataSource = query.ToList();
         }
@@ -51,6 +52,7 @@ namespace Otobus_Otomasyon
                 string kullaniciSifre = dgwKullanicilar.Rows[e.RowIndex].Cells[4].Value.ToString();
                 string email = dgwKullanicilar.Rows[e.RowIndex].Cells[5].Value.ToString();
                 string rol = dgwKullanicilar.Rows[e.RowIndex].Cells[6].Value.ToString();
+                string durum = dgwKullanicilar.Rows[e.RowIndex].Cells[8].Value.ToString();
 
                 txtKullaniciIsim.Text = ad;
                 txtKullaniciSoyisim.Text = soyad;
@@ -58,6 +60,7 @@ namespace Otobus_Otomasyon
                 txtKullaniciSifre.Text = kullaniciSifre;
                 txtKullanciEposta.Text = email;
                 cmbKullaniciRol.Text = rol;
+                cmbKullaniciDurumu.Text = durum;
             }
         }
 

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ZamanTimer = new System.Windows.Forms.Timer(this.components);
             this.RezervasyonTimer = new System.Windows.Forms.Timer(this.components);
             this.KullaniciTimer = new System.Windows.Forms.Timer(this.components);
@@ -99,31 +99,32 @@
             // 
             // dgwSeferler
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgwSeferler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgwSeferler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwSeferler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwSeferler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwSeferler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgwSeferler.ColumnHeadersHeight = 35;
             this.dgwSeferler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgwSeferler.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwSeferler.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgwSeferler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgwSeferler.Location = new System.Drawing.Point(17, 74);
             this.dgwSeferler.Name = "dgwSeferler";
             this.dgwSeferler.RowHeadersVisible = false;
+            this.dgwSeferler.RowHeadersWidth = 51;
             this.dgwSeferler.RowTemplate.Height = 30;
             this.dgwSeferler.Size = new System.Drawing.Size(1060, 336);
             this.dgwSeferler.TabIndex = 11;
@@ -248,7 +249,7 @@
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(472, 242);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(197, 33);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(252, 42);
             this.guna2HtmlLabel1.TabIndex = 31;
             this.guna2HtmlLabel1.Text = "Sefer Varış Tarihi :";
             // 
@@ -276,7 +277,7 @@
             this.guna2HtmlLabel27.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel27.Location = new System.Drawing.Point(579, 142);
             this.guna2HtmlLabel27.Name = "guna2HtmlLabel27";
-            this.guna2HtmlLabel27.Size = new System.Drawing.Size(90, 33);
+            this.guna2HtmlLabel27.Size = new System.Drawing.Size(116, 42);
             this.guna2HtmlLabel27.TabIndex = 24;
             this.guna2HtmlLabel27.Text = "Araç Id : ";
             // 
@@ -317,7 +318,7 @@
             this.guna2HtmlLabel25.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel25.Location = new System.Drawing.Point(461, 192);
             this.guna2HtmlLabel25.Name = "guna2HtmlLabel25";
-            this.guna2HtmlLabel25.Size = new System.Drawing.Size(208, 33);
+            this.guna2HtmlLabel25.Size = new System.Drawing.Size(264, 42);
             this.guna2HtmlLabel25.TabIndex = 19;
             this.guna2HtmlLabel25.Text = "Sefer Kalkış Tarihi :";
             // 
@@ -327,7 +328,7 @@
             this.guna2HtmlLabel26.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel26.Location = new System.Drawing.Point(505, 92);
             this.guna2HtmlLabel26.Name = "guna2HtmlLabel26";
-            this.guna2HtmlLabel26.Size = new System.Drawing.Size(165, 33);
+            this.guna2HtmlLabel26.Size = new System.Drawing.Size(212, 42);
             this.guna2HtmlLabel26.TabIndex = 17;
             this.guna2HtmlLabel26.Text = "Sefer Durumu :";
             // 
@@ -337,7 +338,7 @@
             this.guna2HtmlLabel28.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel28.Location = new System.Drawing.Point(26, 242);
             this.guna2HtmlLabel28.Name = "guna2HtmlLabel28";
-            this.guna2HtmlLabel28.Size = new System.Drawing.Size(127, 33);
+            this.guna2HtmlLabel28.Size = new System.Drawing.Size(162, 42);
             this.guna2HtmlLabel28.TabIndex = 15;
             this.guna2HtmlLabel28.Text = "Varış Saati :";
             // 
@@ -347,7 +348,7 @@
             this.guna2HtmlLabel29.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel29.Location = new System.Drawing.Point(15, 192);
             this.guna2HtmlLabel29.Name = "guna2HtmlLabel29";
-            this.guna2HtmlLabel29.Size = new System.Drawing.Size(138, 33);
+            this.guna2HtmlLabel29.Size = new System.Drawing.Size(174, 42);
             this.guna2HtmlLabel29.TabIndex = 14;
             this.guna2HtmlLabel29.Text = "Kalkış Saati :";
             // 
@@ -357,7 +358,7 @@
             this.guna2HtmlLabel30.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel30.Location = new System.Drawing.Point(63, 142);
             this.guna2HtmlLabel30.Name = "guna2HtmlLabel30";
-            this.guna2HtmlLabel30.Size = new System.Drawing.Size(90, 33);
+            this.guna2HtmlLabel30.Size = new System.Drawing.Size(118, 42);
             this.guna2HtmlLabel30.TabIndex = 13;
             this.guna2HtmlLabel30.Text = "Nereye :";
             // 
@@ -367,7 +368,7 @@
             this.guna2HtmlLabel31.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel31.Location = new System.Drawing.Point(47, 92);
             this.guna2HtmlLabel31.Name = "guna2HtmlLabel31";
-            this.guna2HtmlLabel31.Size = new System.Drawing.Size(106, 33);
+            this.guna2HtmlLabel31.Size = new System.Drawing.Size(138, 42);
             this.guna2HtmlLabel31.TabIndex = 12;
             this.guna2HtmlLabel31.Text = "Nereden :";
             // 
@@ -378,12 +379,12 @@
             this.cmbSeferDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSeferDurumu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbSeferDurumu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSeferDurumu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSeferDurumu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.cmbSeferDurumu.ForeColor = System.Drawing.Color.Black;
             this.cmbSeferDurumu.ItemHeight = 30;
             this.cmbSeferDurumu.Items.AddRange(new object[] {
-            "Aktif\t",
-            "İptal Edildi"});
+            "aktif",
+            "iptal edildi"});
             this.cmbSeferDurumu.Location = new System.Drawing.Point(671, 92);
             this.cmbSeferDurumu.Name = "cmbSeferDurumu";
             this.cmbSeferDurumu.Size = new System.Drawing.Size(238, 36);
@@ -461,7 +462,7 @@
             this.guna2HtmlLabel33.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel33.Location = new System.Drawing.Point(453, 30);
             this.guna2HtmlLabel33.Name = "guna2HtmlLabel33";
-            this.guna2HtmlLabel33.Size = new System.Drawing.Size(186, 39);
+            this.guna2HtmlLabel33.Size = new System.Drawing.Size(232, 48);
             this.guna2HtmlLabel33.TabIndex = 9;
             this.guna2HtmlLabel33.Text = "Sefer Güncelle";
             // 
@@ -471,7 +472,7 @@
             this.guna2HtmlLabel37.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel37.Location = new System.Drawing.Point(450, 9);
             this.guna2HtmlLabel37.Name = "guna2HtmlLabel37";
-            this.guna2HtmlLabel37.Size = new System.Drawing.Size(211, 39);
+            this.guna2HtmlLabel37.Size = new System.Drawing.Size(262, 48);
             this.guna2HtmlLabel37.TabIndex = 0;
             this.guna2HtmlLabel37.Text = "Seferler Tablosu";
             // 
@@ -481,7 +482,7 @@
             this.guna2HtmlLabel34.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel34.Location = new System.Drawing.Point(320, 3);
             this.guna2HtmlLabel34.Name = "guna2HtmlLabel34";
-            this.guna2HtmlLabel34.Size = new System.Drawing.Size(440, 39);
+            this.guna2HtmlLabel34.Size = new System.Drawing.Size(547, 48);
             this.guna2HtmlLabel34.TabIndex = 0;
             this.guna2HtmlLabel34.Text = "Lütfen İptal Edilecek Seferi Seçiniz";
             // 
@@ -491,7 +492,7 @@
             this.guna2HtmlLabel16.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel16.Location = new System.Drawing.Point(490, 61);
             this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
-            this.guna2HtmlLabel16.Size = new System.Drawing.Size(128, 39);
+            this.guna2HtmlLabel16.Size = new System.Drawing.Size(159, 48);
             this.guna2HtmlLabel16.TabIndex = 0;
             this.guna2HtmlLabel16.Text = "Sefer Ekle";
             // 
@@ -502,7 +503,7 @@
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(444, 496);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(222, 39);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(276, 48);
             this.guna2HtmlLabel4.TabIndex = 1;
             this.guna2HtmlLabel4.Text = "Yaklaşan Seferler";
             // 
@@ -522,7 +523,7 @@
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(505, 3);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(100, 39);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(124, 48);
             this.guna2HtmlLabel5.TabIndex = 0;
             this.guna2HtmlLabel5.Text = "Bilet Sil";
             // 

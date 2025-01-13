@@ -76,7 +76,7 @@ namespace Otobus_Otomasyon
                 dtpVarisTarihi.Value = DateTime.Parse(dgwSeferler.Rows[e.RowIndex].Cells["Sefer_Varış_Tarihi"].Value.ToString());
                 cmbNereden.Text = dgwSeferler.Rows[e.RowIndex].Cells["Kalkış_Yeri"].Value.ToString();
                 cmbNereye.Text = dgwSeferler.Rows[e.RowIndex].Cells["Varış_Yeri"].Value.ToString();
-                cmbSeferDurumu.Text = dgwSeferler.Rows[e.RowIndex].Cells["Sefer_Durumu"].Value.ToString();
+                cmbSeferDurumu.Text = dgwSeferler.Rows[e.RowIndex].Cells["Sefer_Durumu"].Value.ToString().ToLower().Trim();
             }
         }
 

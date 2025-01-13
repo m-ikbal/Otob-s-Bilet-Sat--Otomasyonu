@@ -18,9 +18,14 @@ namespace Otobus_Otomasyon
         }
 
         OBSODBEntities db = new OBSODBEntities();
-        private void SeferEkle_Load(object sender, EventArgs e)
+
+        private void SeferListele()
         {
             dgwSeferler.DataSource = db.SeferListesi().ToList();
+        }
+        private void SeferEkle_Load(object sender, EventArgs e)
+        {
+            SeferListele();
 
             var values = db.Sehirler.ToList();
             var values2 = db.Sehirler.ToList();
@@ -75,6 +80,7 @@ namespace Otobus_Otomasyon
                 db.Seferler.Add(seferler);
                 db.SaveChanges();
                 MessageBox.Show("Sefer Eklendi");
+                SeferListele();
             }
             catch (Exception ex)
             {
