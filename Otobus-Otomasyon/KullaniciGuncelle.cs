@@ -63,32 +63,43 @@ namespace Otobus_Otomasyon
 
         private void btnKullaniciGuncelle_Click(object sender, EventArgs e)
         {
-            if (bosalankontrol.AreFieldsValid(this))
+            // Boş alanları kontrol et
+            if (string.IsNullOrWhiteSpace(txtKullaniciIsim.Text) ||
+                string.IsNullOrWhiteSpace(txtKullaniciSoyisim.Text) ||
+                string.IsNullOrWhiteSpace(txtKullaniciAdi.Text) ||
+                string.IsNullOrWhiteSpace(txtKullaniciSifre.Text) ||
+                string.IsNullOrWhiteSpace(txtKullanciEposta.Text) ||
+                string.IsNullOrWhiteSpace(cmbKullaniciRol.Text) ||
+                string.IsNullOrWhiteSpace(cmbKullaniciDurumu.Text))
             {
-                try
-                {
-                    int id = Convert.ToInt32(dgwKullanicilar.SelectedRows[0].Cells[0].Value);
-                    var kullanici = db.Kullanicilar.Find(id);
-                    kullanici.kullaniciIsim = txtKullaniciIsim.Text;
-                    kullanici.kullaniciSoyisim = txtKullaniciSoyisim.Text;
-                    kullanici.kullaniciAdi = txtKullaniciAdi.Text;
-                    kullanici.kullaniciSifre = txtKullaniciSifre.Text;
-                    kullanici.kullaniciEposta = txtKullanciEposta.Text;
-                    kullanici.kullaniciRol = cmbKullaniciRol.Text.Trim();
-                    kullanici.kullaniciDurumu = cmbKullaniciDurumu.Text.Trim();
-                    db.SaveChanges();
-                    MessageBox.Show("Kullanıcı Güncellendi");
-                    KullaniciListele();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Hata: " + ex.Message);
-                }
+                MessageBox.Show("Lütfen gerekli alanları doldurun.", "Eksik Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            try
             {
+                int id = Convert.ToInt32(dgwKullanicilar.SelectedRows[0].Cells[0].Value);
+                var kullanici = db.Kullanicilar.Find(id);
+
+                // Alanları güncelle
+                kullanici.kullaniciIsim = txtKullaniciIsim.Text;
+                kullanici.kullaniciSoyisim = txtKullaniciSoyisim.Text;
+                kullanici.kullaniciAdi = txtKullaniciAdi.Text;
+                kullanici.kullaniciSifre = txtKullaniciSifre.Text;
+                kullanici.kullaniciEposta = txtKullanciEposta.Text;
+                kullanici.kullaniciRol = cmbKullaniciRol.Text.Trim();
+                kullanici.kullaniciDurumu = cmbKullaniciDurumu.Text.Trim();
+
+                // Değişiklikleri kaydet
+                db.SaveChanges();
+                MessageBox.Show("Kullanıcı Güncellendi");
+                KullaniciListele(); // Kullanıcı listesini yenile
             }
-           
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata: " + ex.Message);
+            }
         }
+
     }
 }

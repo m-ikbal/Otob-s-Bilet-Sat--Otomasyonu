@@ -38,31 +38,39 @@ namespace Otobus_Otomasyon
 
         private void btnKullaniciEkle_Click(object sender, EventArgs e)
         {
-            if (bosalankontrol.AreFieldsValid(this))
+            // Boş alan kontrolü
+            if (string.IsNullOrWhiteSpace(txtKullaniciIsim.Text) ||
+                string.IsNullOrWhiteSpace(txtKullaniciSoyisim.Text) ||
+                string.IsNullOrWhiteSpace(cmbKullaniciRol.Text) ||
+                string.IsNullOrWhiteSpace(cmbKullaniciDurum.Text))
             {
-                try
-                {
-                    txtKullaniciIsim.TextChanged += txtKullaniciIsim_TextChanged;
-                    txtKullaniciEposta.TextChanged += txtKullaniciAdi_TextChanged;
-                    Kullanicilar kullanicilar = new Kullanicilar();
-                    kullanicilar.kullaniciIsim = txtKullaniciIsim.Text;
-                    kullanicilar.kullaniciSoyisim = txtKullaniciSoyisim.Text;
-                    kullanicilar.kullaniciAdi = txtKullaniciAdi.Text;
-                    kullanicilar.kullaniciSifre = txtKullaniciSifre.Text;
-                    kullanicilar.kullaniciEposta = txtKullaniciEposta.Text;
-                    kullanicilar.kullaniciRol = cmbKullaniciRol.Text.Trim();
-                    kullanicilar.kullaniciDurumu = cmbKullaniciDurum.Text.Trim();
+                MessageBox.Show("Lütfen gerekli alanları doldurunuz: Ad, Soyad, Rol ve Durum.", "Eksik Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                    db.Kullanicilar.Add(kullanicilar);
-                    db.SaveChanges();
-                    MessageBox.Show("Kullanıcı başarıyla eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+            try
+            {
+                // Kullanıcı ekleme işlemi
+                Kullanicilar kullanicilar = new Kullanicilar();
+                kullanicilar.kullaniciIsim = txtKullaniciIsim.Text;
+                kullanicilar.kullaniciSoyisim = txtKullaniciSoyisim.Text;
+                kullanicilar.kullaniciAdi = txtKullaniciAdi.Text;
+                kullanicilar.kullaniciSifre = txtKullaniciSifre.Text;
+                kullanicilar.kullaniciEposta = txtKullaniciEposta.Text;
+                kullanicilar.kullaniciRol = cmbKullaniciRol.Text.Trim();
+                kullanicilar.kullaniciDurumu = cmbKullaniciDurum.Text.Trim();
+
+                // Kullanıcıyı veritabanına ekle
+                db.Kullanicilar.Add(kullanicilar);
+                db.SaveChanges();
+                MessageBox.Show("Kullanıcı başarıyla eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void txtKullaniciIsim_TextChanged(object sender, EventArgs e)
         {
