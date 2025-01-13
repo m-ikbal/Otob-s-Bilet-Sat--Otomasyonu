@@ -293,7 +293,10 @@ namespace Otobus_Otomasyon
 
         private void CikisYapButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
+            this.Close();
+            GirisForm GirisFormu = new GirisForm();
+            GirisFormu.Show();
         }
 
         private void AracButton_Click(object sender, EventArgs e)

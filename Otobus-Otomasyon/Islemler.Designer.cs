@@ -69,10 +69,10 @@
             this.KullaniciButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel22 = new System.Windows.Forms.Panel();
             this.KullaniciEkleButton = new Guna.UI2.WinForms.Guna2Button();
-            this.CikisContainer = new System.Windows.Forms.Panel();
-            this.CikisYapButton = new Guna.UI2.WinForms.Guna2Button();
             this.AracContainer = new System.Windows.Forms.Panel();
             this.AracButton = new Guna.UI2.WinForms.Guna2Button();
+            this.CikisContainer = new System.Windows.Forms.Panel();
+            this.CikisYapButton = new Guna.UI2.WinForms.Guna2Button();
             this.SidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.BiletTimer = new System.Windows.Forms.Timer(this.components);
             this.SeferTimer = new System.Windows.Forms.Timer(this.components);
@@ -99,8 +99,8 @@
             this.panel20.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
-            this.CikisContainer.SuspendLayout();
             this.AracContainer.SuspendLayout();
+            this.CikisContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // Sidebar
@@ -680,34 +680,6 @@
             this.KullaniciEkleButton.TextOffset = new System.Drawing.Point(-45, 0);
             this.KullaniciEkleButton.Click += new System.EventHandler(this.KullaniciEkleButton_Click);
             // 
-            // CikisContainer
-            // 
-            this.CikisContainer.Controls.Add(this.CikisYapButton);
-            this.CikisContainer.Location = new System.Drawing.Point(3, 427);
-            this.CikisContainer.Name = "CikisContainer";
-            this.CikisContainer.Size = new System.Drawing.Size(291, 54);
-            this.CikisContainer.TabIndex = 2;
-            // 
-            // CikisYapButton
-            // 
-            this.CikisYapButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.CikisYapButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.CikisYapButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.CikisYapButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CikisYapButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.CikisYapButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CikisYapButton.ForeColor = System.Drawing.Color.Black;
-            this.CikisYapButton.Image = global::Otobus_Otomasyon.Properties.Resources.signout_106525;
-            this.CikisYapButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.CikisYapButton.ImageOffset = new System.Drawing.Point(33, 0);
-            this.CikisYapButton.Location = new System.Drawing.Point(-22, -8);
-            this.CikisYapButton.Name = "CikisYapButton";
-            this.CikisYapButton.Size = new System.Drawing.Size(323, 71);
-            this.CikisYapButton.TabIndex = 2;
-            this.CikisYapButton.Text = "Çıkış Yap";
-            this.CikisYapButton.TextOffset = new System.Drawing.Point(-55, 0);
-            this.CikisYapButton.Click += new System.EventHandler(this.CikisYapButton_Click);
-            // 
             // AracContainer
             // 
             this.AracContainer.Controls.Add(this.AracButton);
@@ -735,6 +707,34 @@
             this.AracButton.Text = "Araç İşlemleri";
             this.AracButton.TextOffset = new System.Drawing.Point(-40, 0);
             this.AracButton.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // CikisContainer
+            // 
+            this.CikisContainer.Controls.Add(this.CikisYapButton);
+            this.CikisContainer.Location = new System.Drawing.Point(3, 427);
+            this.CikisContainer.Name = "CikisContainer";
+            this.CikisContainer.Size = new System.Drawing.Size(291, 54);
+            this.CikisContainer.TabIndex = 2;
+            // 
+            // CikisYapButton
+            // 
+            this.CikisYapButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CikisYapButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CikisYapButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CikisYapButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CikisYapButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CikisYapButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CikisYapButton.ForeColor = System.Drawing.Color.Black;
+            this.CikisYapButton.Image = global::Otobus_Otomasyon.Properties.Resources.signout_106525;
+            this.CikisYapButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.CikisYapButton.ImageOffset = new System.Drawing.Point(33, 0);
+            this.CikisYapButton.Location = new System.Drawing.Point(-22, -8);
+            this.CikisYapButton.Name = "CikisYapButton";
+            this.CikisYapButton.Size = new System.Drawing.Size(323, 71);
+            this.CikisYapButton.TabIndex = 2;
+            this.CikisYapButton.Text = "Çıkış Yap";
+            this.CikisYapButton.TextOffset = new System.Drawing.Point(-55, 0);
+            this.CikisYapButton.Click += new System.EventHandler(this.CikisYapButton_Click);
             // 
             // SidebarTimer
             // 
@@ -804,8 +804,8 @@
             this.panel20.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
-            this.CikisContainer.ResumeLayout(false);
             this.AracContainer.ResumeLayout(false);
+            this.CikisContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
