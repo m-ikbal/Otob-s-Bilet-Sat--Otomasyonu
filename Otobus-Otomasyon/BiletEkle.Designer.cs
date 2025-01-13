@@ -684,6 +684,7 @@
             this.txtYolcuTc.SelectedText = "";
             this.txtYolcuTc.Size = new System.Drawing.Size(200, 36);
             this.txtYolcuTc.TabIndex = 4;
+            this.txtYolcuTc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYolcuTc_KeyPress);
             // 
             // panel9
             // 
