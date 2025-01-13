@@ -270,5 +270,41 @@ namespace Otobus_Otomasyon
                 e.Handled = true; // Eğer geçersiz bir karakter girildiyse, yazılmasını engelle
             }
         }
+
+        private void txtYolcuAdi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Eğer girilen karakter bir harf değilse, engelle
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Harf olmayan karakterlerin girişini engelle
+            }
+        }
+
+        private void txtYolcuSoyadi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Eğer girilen karakter bir harf değilse, engelle
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Harf olmayan karakterlerin girişini engelle
+            }
+        }
+
+        private void mskDogumTarih_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Sadece rakamlara (0-9) ve Backspace tuşuna izin ver
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Eğer geçersiz bir karakter girildiyse, yazılmasını engelle
+            }
+        }
+
+        private void mskTelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Sadece rakamlara (0-9) ve Backspace tuşuna izin ver
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Eğer geçersiz bir karakter girildiyse, yazılmasını engelle
+            }
+        }
     }
 }
