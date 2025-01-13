@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtAracKapasitesi = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -74,9 +74,10 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(420, 149);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(560, 183);
+            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(145, 27);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(191, 34);
             this.guna2HtmlLabel7.TabIndex = 25;
             this.guna2HtmlLabel7.Text = "Araç Kapasitesi  :";
             // 
@@ -93,13 +94,13 @@
             this.txtAracKapasitesi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAracKapasitesi.ForeColor = System.Drawing.Color.Black;
             this.txtAracKapasitesi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAracKapasitesi.Location = new System.Drawing.Point(566, 145);
-            this.txtAracKapasitesi.Margin = new System.Windows.Forms.Padding(6);
+            this.txtAracKapasitesi.Location = new System.Drawing.Point(755, 178);
+            this.txtAracKapasitesi.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtAracKapasitesi.Name = "txtAracKapasitesi";
             this.txtAracKapasitesi.PasswordChar = '\0';
             this.txtAracKapasitesi.PlaceholderText = "";
             this.txtAracKapasitesi.SelectedText = "";
-            this.txtAracKapasitesi.Size = new System.Drawing.Size(200, 36);
+            this.txtAracKapasitesi.Size = new System.Drawing.Size(267, 44);
             this.txtAracKapasitesi.TabIndex = 24;
             // 
             // guna2HtmlLabel8
@@ -107,9 +108,10 @@
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(445, 94);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(593, 116);
+            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(119, 27);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(155, 34);
             this.guna2HtmlLabel8.TabIndex = 23;
             this.guna2HtmlLabel8.Text = "Araç Plakası  :";
             // 
@@ -125,13 +127,13 @@
             this.txtAracPlakasi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAracPlakasi.ForeColor = System.Drawing.Color.Black;
             this.txtAracPlakasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAracPlakasi.Location = new System.Drawing.Point(566, 90);
-            this.txtAracPlakasi.Margin = new System.Windows.Forms.Padding(6);
+            this.txtAracPlakasi.Location = new System.Drawing.Point(755, 111);
+            this.txtAracPlakasi.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtAracPlakasi.Name = "txtAracPlakasi";
             this.txtAracPlakasi.PasswordChar = '\0';
             this.txtAracPlakasi.PlaceholderText = "";
             this.txtAracPlakasi.SelectedText = "";
-            this.txtAracPlakasi.Size = new System.Drawing.Size(200, 36);
+            this.txtAracPlakasi.Size = new System.Drawing.Size(267, 44);
             this.txtAracPlakasi.TabIndex = 22;
             // 
             // guna2HtmlLabel6
@@ -139,9 +141,10 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(56, 204);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(75, 251);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(91, 27);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(119, 34);
             this.guna2HtmlLabel6.TabIndex = 12;
             this.guna2HtmlLabel6.Text = "Araç Tipi :";
             // 
@@ -150,9 +153,10 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(61, 150);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(81, 185);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(88, 27);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(115, 34);
             this.guna2HtmlLabel5.TabIndex = 11;
             this.guna2HtmlLabel5.Text = "Araç Adı :";
             // 
@@ -161,9 +165,10 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(76, 93);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(101, 114);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(73, 27);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(95, 34);
             this.guna2HtmlLabel4.TabIndex = 10;
             this.guna2HtmlLabel4.Text = "AraçID :";
             // 
@@ -171,27 +176,30 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(1, 266);
+            this.panel9.Location = new System.Drawing.Point(1, 328);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(797, 1);
+            this.panel9.Size = new System.Drawing.Size(1063, 1);
             this.panel9.TabIndex = 3;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(798, 53);
+            this.panel7.Location = new System.Drawing.Point(1064, 65);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1, 214);
+            this.panel7.Size = new System.Drawing.Size(1, 264);
             this.panel7.TabIndex = 2;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 53);
+            this.panel5.Location = new System.Drawing.Point(0, 65);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1, 214);
+            this.panel5.Size = new System.Drawing.Size(1, 264);
             this.panel5.TabIndex = 1;
             // 
             // panel3
@@ -200,8 +208,9 @@
             this.panel3.Controls.Add(this.guna2HtmlLabel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(799, 53);
+            this.panel3.Size = new System.Drawing.Size(1065, 65);
             this.panel3.TabIndex = 0;
             // 
             // guna2HtmlLabel1
@@ -209,9 +218,10 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(342, 13);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(456, 16);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(115, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(150, 34);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Araç Bilgileri";
             // 
@@ -227,9 +237,10 @@
             this.cmbAracAdi.ItemHeight = 30;
             this.cmbAracAdi.Items.AddRange(new object[] {
             "Mercedes Travego"});
-            this.cmbAracAdi.Location = new System.Drawing.Point(150, 145);
+            this.cmbAracAdi.Location = new System.Drawing.Point(200, 178);
+            this.cmbAracAdi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbAracAdi.Name = "cmbAracAdi";
-            this.cmbAracAdi.Size = new System.Drawing.Size(198, 36);
+            this.cmbAracAdi.Size = new System.Drawing.Size(263, 36);
             this.cmbAracAdi.TabIndex = 27;
             // 
             // cmbAracTipi
@@ -245,9 +256,10 @@
             this.cmbAracTipi.Items.AddRange(new object[] {
             "2+2",
             "2+1"});
-            this.cmbAracTipi.Location = new System.Drawing.Point(150, 200);
+            this.cmbAracTipi.Location = new System.Drawing.Point(200, 246);
+            this.cmbAracTipi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbAracTipi.Name = "cmbAracTipi";
-            this.cmbAracTipi.Size = new System.Drawing.Size(198, 36);
+            this.cmbAracTipi.Size = new System.Drawing.Size(263, 36);
             this.cmbAracTipi.TabIndex = 28;
             // 
             // guna2HtmlLabel3
@@ -255,9 +267,10 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(458, 2);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(611, 2);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(179, 39);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(221, 48);
             this.guna2HtmlLabel3.TabIndex = 34;
             this.guna2HtmlLabel3.Text = "Araç İşlemleri";
             // 
@@ -270,9 +283,10 @@
             this.btnAracIptalEt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnAracIptalEt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAracIptalEt.ForeColor = System.Drawing.Color.White;
-            this.btnAracIptalEt.Location = new System.Drawing.Point(445, 804);
+            this.btnAracIptalEt.Location = new System.Drawing.Point(593, 990);
+            this.btnAracIptalEt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAracIptalEt.Name = "btnAracIptalEt";
-            this.btnAracIptalEt.Size = new System.Drawing.Size(185, 62);
+            this.btnAracIptalEt.Size = new System.Drawing.Size(247, 76);
             this.btnAracIptalEt.TabIndex = 36;
             this.btnAracIptalEt.Text = "Sil";
             this.btnAracIptalEt.Click += new System.EventHandler(this.btnAracIptalEt_Click);
@@ -286,9 +300,10 @@
             this.btnYenile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnYenile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnYenile.ForeColor = System.Drawing.Color.White;
-            this.btnYenile.Location = new System.Drawing.Point(648, 804);
+            this.btnYenile.Location = new System.Drawing.Point(864, 990);
+            this.btnYenile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnYenile.Name = "btnYenile";
-            this.btnYenile.Size = new System.Drawing.Size(193, 62);
+            this.btnYenile.Size = new System.Drawing.Size(257, 76);
             this.btnYenile.TabIndex = 35;
             this.btnYenile.Text = "Yenile";
             this.btnYenile.Click += new System.EventHandler(this.btnYenile_Click);
@@ -312,9 +327,10 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.cmbAracAdi);
             this.panel1.Controls.Add(this.cmbAracTipi);
-            this.panel1.Location = new System.Drawing.Point(148, 511);
+            this.panel1.Location = new System.Drawing.Point(197, 629);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(799, 267);
+            this.panel1.Size = new System.Drawing.Size(1065, 329);
             this.panel1.TabIndex = 33;
             // 
             // guna2HtmlLabel9
@@ -322,9 +338,10 @@
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(431, 204);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(575, 251);
+            this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(133, 27);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(171, 34);
             this.guna2HtmlLabel9.TabIndex = 30;
             this.guna2HtmlLabel9.Text = "Araç Durumu :";
             // 
@@ -335,15 +352,16 @@
             this.cmbAracDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAracDurumu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbAracDurumu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbAracDurumu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAracDurumu.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbAracDurumu.ForeColor = System.Drawing.Color.Black;
             this.cmbAracDurumu.ItemHeight = 30;
             this.cmbAracDurumu.Items.AddRange(new object[] {
-            "Aktif\t",
-            "Pasif"});
-            this.cmbAracDurumu.Location = new System.Drawing.Point(566, 195);
+            "aktif",
+            "pasif"});
+            this.cmbAracDurumu.Location = new System.Drawing.Point(755, 240);
+            this.cmbAracDurumu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbAracDurumu.Name = "cmbAracDurumu";
-            this.cmbAracDurumu.Size = new System.Drawing.Size(198, 36);
+            this.cmbAracDurumu.Size = new System.Drawing.Size(263, 36);
             this.cmbAracDurumu.TabIndex = 31;
             // 
             // txtAracId
@@ -359,13 +377,13 @@
             this.txtAracId.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAracId.ForeColor = System.Drawing.Color.Black;
             this.txtAracId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAracId.Location = new System.Drawing.Point(148, 90);
-            this.txtAracId.Margin = new System.Windows.Forms.Padding(6);
+            this.txtAracId.Location = new System.Drawing.Point(197, 111);
+            this.txtAracId.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtAracId.Name = "txtAracId";
             this.txtAracId.PasswordChar = '\0';
             this.txtAracId.PlaceholderText = "";
             this.txtAracId.SelectedText = "";
-            this.txtAracId.Size = new System.Drawing.Size(200, 36);
+            this.txtAracId.Size = new System.Drawing.Size(267, 44);
             this.txtAracId.TabIndex = 29;
             // 
             // btnAracGuncelle
@@ -377,9 +395,10 @@
             this.btnAracGuncelle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnAracGuncelle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAracGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnAracGuncelle.Location = new System.Drawing.Point(242, 804);
+            this.btnAracGuncelle.Location = new System.Drawing.Point(323, 990);
+            this.btnAracGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAracGuncelle.Name = "btnAracGuncelle";
-            this.btnAracGuncelle.Size = new System.Drawing.Size(185, 62);
+            this.btnAracGuncelle.Size = new System.Drawing.Size(247, 76);
             this.btnAracGuncelle.TabIndex = 37;
             this.btnAracGuncelle.Text = "Güncelle";
             this.btnAracGuncelle.Click += new System.EventHandler(this.btnAracGuncelle_Click);
@@ -393,9 +412,10 @@
             this.btnAracEkle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnAracEkle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAracEkle.ForeColor = System.Drawing.Color.White;
-            this.btnAracEkle.Location = new System.Drawing.Point(39, 804);
+            this.btnAracEkle.Location = new System.Drawing.Point(52, 990);
+            this.btnAracEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAracEkle.Name = "btnAracEkle";
-            this.btnAracEkle.Size = new System.Drawing.Size(185, 62);
+            this.btnAracEkle.Size = new System.Drawing.Size(247, 76);
             this.btnAracEkle.TabIndex = 38;
             this.btnAracEkle.Text = "Ekle";
             this.btnAracEkle.Click += new System.EventHandler(this.btnAracEkle_Click);
@@ -407,9 +427,10 @@
             this.panel43.Controls.Add(this.txtAraAracPlakasi);
             this.panel43.Controls.Add(this.guna2HtmlLabel36);
             this.panel43.Controls.Add(this.panel44);
-            this.panel43.Location = new System.Drawing.Point(149, 408);
+            this.panel43.Location = new System.Drawing.Point(199, 502);
+            this.panel43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(797, 97);
+            this.panel43.Size = new System.Drawing.Size(1063, 119);
             this.panel43.TabIndex = 39;
             // 
             // btnAracAra
@@ -421,9 +442,10 @@
             this.btnAracAra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnAracAra.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAracAra.ForeColor = System.Drawing.Color.White;
-            this.btnAracAra.Location = new System.Drawing.Point(605, 45);
+            this.btnAracAra.Location = new System.Drawing.Point(807, 55);
+            this.btnAracAra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAracAra.Name = "btnAracAra";
-            this.btnAracAra.Size = new System.Drawing.Size(146, 45);
+            this.btnAracAra.Size = new System.Drawing.Size(195, 55);
             this.btnAracAra.TabIndex = 37;
             this.btnAracAra.Text = "Ara";
             this.btnAracAra.Click += new System.EventHandler(this.btnAracAra_Click);
@@ -440,22 +462,23 @@
             this.txtAraAracPlakasi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAraAracPlakasi.ForeColor = System.Drawing.Color.Black;
             this.txtAraAracPlakasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAraAracPlakasi.Location = new System.Drawing.Point(245, 49);
-            this.txtAraAracPlakasi.Margin = new System.Windows.Forms.Padding(6);
+            this.txtAraAracPlakasi.Location = new System.Drawing.Point(327, 60);
+            this.txtAraAracPlakasi.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtAraAracPlakasi.Name = "txtAraAracPlakasi";
             this.txtAraAracPlakasi.PasswordChar = '\0';
             this.txtAraAracPlakasi.PlaceholderText = "";
             this.txtAraAracPlakasi.SelectedText = "";
-            this.txtAraAracPlakasi.Size = new System.Drawing.Size(334, 36);
+            this.txtAraAracPlakasi.Size = new System.Drawing.Size(445, 44);
             this.txtAraAracPlakasi.TabIndex = 2;
             // 
             // guna2HtmlLabel36
             // 
             this.guna2HtmlLabel36.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel36.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel36.Location = new System.Drawing.Point(120, 49);
+            this.guna2HtmlLabel36.Location = new System.Drawing.Point(160, 60);
+            this.guna2HtmlLabel36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel36.Name = "guna2HtmlLabel36";
-            this.guna2HtmlLabel36.Size = new System.Drawing.Size(119, 27);
+            this.guna2HtmlLabel36.Size = new System.Drawing.Size(155, 34);
             this.guna2HtmlLabel36.TabIndex = 1;
             this.guna2HtmlLabel36.Text = "Araç Plakası :";
             // 
@@ -465,8 +488,9 @@
             this.panel44.Controls.Add(this.guna2HtmlLabel2);
             this.panel44.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel44.Location = new System.Drawing.Point(0, 0);
+            this.panel44.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(797, 37);
+            this.panel44.Size = new System.Drawing.Size(1063, 46);
             this.panel44.TabIndex = 0;
             // 
             // guna2HtmlLabel2
@@ -474,9 +498,10 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(381, 5);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(508, 6);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(34, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(43, 34);
             this.guna2HtmlLabel2.TabIndex = 1;
             this.guna2HtmlLabel2.Text = "Ara";
             // 
@@ -489,42 +514,45 @@
             this.btnTumAraclariListele.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnTumAraclariListele.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTumAraclariListele.ForeColor = System.Drawing.Color.White;
-            this.btnTumAraclariListele.Location = new System.Drawing.Point(854, 804);
+            this.btnTumAraclariListele.Location = new System.Drawing.Point(1139, 990);
+            this.btnTumAraclariListele.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTumAraclariListele.Name = "btnTumAraclariListele";
-            this.btnTumAraclariListele.Size = new System.Drawing.Size(193, 62);
+            this.btnTumAraclariListele.Size = new System.Drawing.Size(257, 76);
             this.btnTumAraclariListele.TabIndex = 40;
             this.btnTumAraclariListele.Text = "Tüm Araçları Listele";
             this.btnTumAraclariListele.Click += new System.EventHandler(this.btnTumAraclariListele_Click);
             // 
             // dgwAraclar
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgwAraclar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgwAraclar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwAraclar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwAraclar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwAraclar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgwAraclar.ColumnHeadersHeight = 35;
             this.dgwAraclar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgwAraclar.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwAraclar.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgwAraclar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgwAraclar.Location = new System.Drawing.Point(12, 47);
+            this.dgwAraclar.Location = new System.Drawing.Point(16, 58);
+            this.dgwAraclar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgwAraclar.Name = "dgwAraclar";
             this.dgwAraclar.RowHeadersVisible = false;
+            this.dgwAraclar.RowHeadersWidth = 51;
             this.dgwAraclar.RowTemplate.Height = 30;
-            this.dgwAraclar.Size = new System.Drawing.Size(1070, 346);
+            this.dgwAraclar.Size = new System.Drawing.Size(1427, 426);
             this.dgwAraclar.TabIndex = 41;
             this.dgwAraclar.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgwAraclar.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -551,9 +579,9 @@
             // 
             // AracIslemleri
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 875);
+            this.ClientSize = new System.Drawing.Size(1459, 1055);
             this.Controls.Add(this.btnTumAraclariListele);
             this.Controls.Add(this.panel43);
             this.Controls.Add(this.btnAracEkle);
@@ -563,6 +591,7 @@
             this.Controls.Add(this.btnYenile);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgwAraclar);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AracIslemleri";
             this.Text = "AracIslemleri";
             this.Load += new System.EventHandler(this.AracIslemleri_Load);

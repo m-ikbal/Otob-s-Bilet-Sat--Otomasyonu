@@ -328,6 +328,7 @@ namespace Otobus_Otomasyon
             string aracTipi = dgwAraclar.CurrentRow.Cells[3].Value.ToString();
             string aracPlakasi = dgwAraclar.CurrentRow.Cells[2].Value.ToString();
             string aracKapasitesi = dgwAraclar.CurrentRow.Cells[4].Value.ToString();
+            string aracDurumu = dgwAraclar.CurrentRow.Cells[5].Value.ToString();
 
             txtAracId.Text = aracId;
             if (!string.IsNullOrEmpty(aracAdi))
@@ -354,6 +355,7 @@ namespace Otobus_Otomasyon
                 cmbAracTipi.SelectedItem = aracTipi;
             }
             txtAracKapasitesi.Text = aracKapasitesi;
+            cmbAracDurumu.Text = aracDurumu.ToLower().Trim();
         }
     }
 }
