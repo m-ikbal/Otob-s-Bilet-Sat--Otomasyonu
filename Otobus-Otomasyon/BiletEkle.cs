@@ -169,7 +169,7 @@ namespace Otobus_Otomasyon
                         seferId = seferId,
                         koltukId = koltukId,
                         PnrNumarasi = GenerateRandomCode(8),
-                        biletUcreti = int.Parse(txtBiletUcreti.Text),
+                        biletUcreti = Decimal.Parse(txtBiletUcreti.Text),
                         odemeYontemi = cmbOdemeTuru.Text,
                         BiletDurumu = "Aktif"
                     };
