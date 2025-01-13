@@ -82,61 +82,78 @@ namespace Otobus_Otomasyon
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            if (bosalankontrol.AreFieldsValid(this))
+            // Boş alan kontrolü
+            if (string.IsNullOrWhiteSpace(mskKalkisSaati.Text) ||
+                string.IsNullOrWhiteSpace(mskVarisSaati.Text) ||
+                string.IsNullOrWhiteSpace(cmbNereden.Text) ||
+                string.IsNullOrWhiteSpace(cmbNereye.Text) ||
+                string.IsNullOrWhiteSpace(cmbSeferDurumu.Text) ||
+                cmbAracId.SelectedValue == null ||
+                dgwSeferler.CurrentRow == null)
             {
-                try
+                MessageBox.Show("Lütfen gerekli alanları doldurunuz.");
+                return;
+            }
+
+            try
+            {
+                // Tarihleri al
+                DateTime tarih = dtpKalkisTarihi.Value;
+                DateTime tarih2 = dtpVarisTarihi.Value;
+
+                // Sefer ID
+                int seferId = Convert.ToInt32(dgwSeferler.CurrentRow.Cells["Sefer_Numarası"].Value);
+                Seferler sefer = db.Seferler.FirstOrDefault(x => x.seferId == seferId);
+
+                if (sefer == null)
                 {
-                    // Tarihleri al
-                    DateTime tarih = dtpKalkisTarihi.Value;
-                    DateTime tarih2 = dtpVarisTarihi.Value;
-
-                    // Sefer ID
-                    int seferId = Convert.ToInt32(dgwSeferler.CurrentRow.Cells["Sefer_Numarası"].Value);
-                    Seferler sefer = db.Seferler.FirstOrDefault(x => x.seferId == seferId);
-
-                    // Kalkış saati
-                    if (TimeSpan.TryParse(mskKalkisSaati.Text, out TimeSpan kalkisSaati))
-                    {
-                        sefer.KalkisSaati = kalkisSaati;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Kalkış saati geçerli bir formatta değil!");
-                        return;
-                    }
-
-                    // Varış saati
-                    if (TimeSpan.TryParse(mskVarisSaati.Text, out TimeSpan varisSaati))
-                    {
-                        sefer.VarisSaati = varisSaati;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Varış saati geçerli bir formatta değil!");
-                        return;
-                    }
-
-                    // Diğer alanları güncelle
-                    sefer.SeferKalkisTarihi = tarih.ToString("yyyy-MM-dd");
-                    sefer.SeferVarisTarihi = tarih2.ToString("yyyy-MM-dd");
-                    sefer.Kalkis = cmbNereden.Text;
-                    sefer.Varis = cmbNereye.Text;
-                    sefer.seferDurum = cmbSeferDurumu.Text;
-                    sefer.aracId = Convert.ToInt32(cmbAracId.SelectedValue);
-
-                    // Değişiklikleri kaydet
-                    db.SaveChanges();
-                    MessageBox.Show("Sefer Güncellendi");
-
-                    // Listeyi yenile
-                    dgwSeferler.DataSource = db.SeferListesi().ToList();
+                    MessageBox.Show("Güncellenecek sefer bulunamadı.");
+                    return;
                 }
-                catch (Exception ex)
+
+                // Kalkış saati
+                if (TimeSpan.TryParse(mskKalkisSaati.Text, out TimeSpan kalkisSaati))
                 {
-                    MessageBox.Show($"Hata: {ex.Message}\n{ex.StackTrace}");
+                    sefer.KalkisSaati = kalkisSaati;
                 }
+                else
+                {
+                    MessageBox.Show("Kalkış saati geçerli bir formatta değil!");
+                    return;
+                }
+
+                // Varış saati
+                if (TimeSpan.TryParse(mskVarisSaati.Text, out TimeSpan varisSaati))
+                {
+                    sefer.VarisSaati = varisSaati;
+                }
+                else
+                {
+                    MessageBox.Show("Varış saati geçerli bir formatta değil!");
+                    return;
+                }
+
+                // Diğer alanları güncelle
+                sefer.SeferKalkisTarihi = tarih.ToString("yyyy-MM-dd");
+                sefer.SeferVarisTarihi = tarih2.ToString("yyyy-MM-dd");
+                sefer.Kalkis = cmbNereden.Text;
+                sefer.Varis = cmbNereye.Text;
+                sefer.seferDurum = cmbSeferDurumu.Text;
+                sefer.aracId = Convert.ToInt32(cmbAracId.SelectedValue);
+
+                // Değişiklikleri kaydet
+                db.SaveChanges();
+                MessageBox.Show("Sefer Güncellendi");
+
+                // Listeyi yenile
+                dgwSeferler.DataSource = db.SeferListesi().ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hata: {ex.Message}\n{ex.StackTrace}");
             }
         }
+
 
 
         private void mskKalkisSaati_TextChanged(object sender, EventArgs e)
